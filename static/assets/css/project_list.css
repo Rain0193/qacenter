@@ -1,0 +1,127 @@
+.addBtn{
+    width: 100px;
+    height: 40px;
+    top: 132px;
+    left: 245px;
+    position: fixed;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-family:  'Arial';
+    color: #FFFFFF;
+    display:block;
+    background:#169BD5;
+    margin:0 auto;
+    text-align:center;
+    cursor:pointer;
+}
+
+.delBtn{
+    width: 100px;
+    height: 40px;
+    top: 132px;
+    left: 363px;
+    position: fixed;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-family:  'Arial';
+    color: #FFFFFF;
+    display:block;
+    background:#169BD5;
+    margin:0 auto;
+    text-align:center;
+    cursor:pointer;
+}
+
+.tab-statistics{
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 0px;
+    margin-left: 30px;
+}
+.tab-content{
+    width: auto;
+    height: auto;
+    color: #A1A1A1;
+    margin-left: 40px;
+}
+.tab-content .tab-span{
+    display: inline-block;
+    padding: 0 15px;
+    width: auto;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #F2F2F2;
+    border-radius: 5px 5px 0 0;
+    color: #A1A1A1;
+    margin-right: 1px;
+    font-family: Arial;
+    cursor: pointer;
+}
+
+.tab-content .select{
+    background: #169BD5;
+    color: #FFFFFF;
+}
+
+.table-statistics{
+    left: 245px;
+    top: 190px;
+    height: 40px;
+    width: 95%;
+    /*height: auto;*/
+    line-height: 40px;
+    color: #333333;
+    border:  #666;
+    font-family: Arial;
+    margin-left: 22px;
+    margin-top: 80px;
+}
+.table-statistics th{
+    margin-right: 5px;
+    background: #F2F2F2;
+    text-align: left;
+}
+.table-statistics td{
+    text-align: left;
+}
+.table-statistics tr:nth-child(2n+1){
+    background: #FBFBFB;
+}
+.table-statistics .td-red{
+    color: #FF0000;
+    font-weight: bold;
+}
+.table-statistics .td-green{
+    color: #009900;
+    font-weight: bold;
+}
+.table-statistics .td-gray{
+    color: #F2F2F2;
+    font-weight: bold;
+}
+.table-statistics .td-yellow{
+    color: #EEAD0E;
+    font-weight: bold;
+}
+.table-statistics .td-orange{
+    color: #FF8900;
+    font-weight: bold;
+}
+
+.btn-operate{
+    float: left;
+    border-radius: 0px;
+    border: 0px solid #dbdbdb;
+    background: #FFFFFF;
+    text-align: left;
+}
+    .btn-operate:hover{
+        background: #D0E1EC;color: #3498db;
+    }
+    .btn-operate:active{
+        background: #D0E1EC;color: #3498db;
+    }

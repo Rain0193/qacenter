@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}模块管理{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/module_list.css' %}">
+
+<div class="crumb">
+    <span>模块管理>模块列表</span>
+</div>
+<div class="content">
+
+    <div class="tab-statistics">
+        <div class="addBtn">删除模块</div>
+        <div class="delBtn" onclick="location='/qacenter/add_module/'">添加模块</div>
+        <div class="tab-content">
+            <span class="tab-span select">ALL</span>
+            {% for fool in project %}
+                <span class="tab-span">{{ fool.project_name }}</span>
+            {% endfor %}
+        </div>
+        <div class="table-statistics">
+            <table class="table-statistics">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" name="project_{{ foo.id }}" value="{{ foo.id }}"/></th>
+                        <th>序号</th>
+                        <th>模块名称</th>
+                        <th>所属项目</th>
+                        <th>测试人员</th>
+                        <th>开发人员</th>
+    {#                    <th>事务数量</th>#}
+                        <th>简要概述</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for foo in module %}
+                    <tr>
+                        <td><input type="checkbox" name="project_{{ foo.id }}" value="{{ foo.id }}"/></td>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ foo.module_name }}</td>
+                        <td>{{ foo.belong_project.project_name }}</td>
+                        <td>{{ foo.test_user }}</td>
+                        <td>{{ foo.dev_user }}</td>
+                        <td>{{ foo.simple_desc }}</td>
+                        <td>{{ foo.create_time }}</td>
+                        <td>
+                            <div class="btn-operate">
+                                <button class="btn-operate"><i class="iconfont icon-blue">&#xe60f;</i></button>
+                            </div>
+                            <div class="btn-operate">
+                                <button class="btn-operate"><i class="iconfont icon-red">&#xe602;</i></button>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{#    <span class="tab-span select">商品中心</span><span class="tab-span">交易系统</span><span class="tab-span">会员系统</span>#}
+{#    <div class="addBtn" onclick="location='/qacenter/add_module/'">添加模块</div>#}
+{#    <div class="delBtn">删除模块</div>#}
+{#    <div class="table-statistics">#}
+{#        <table class="table-statistics">#}
+{#            <thead>#}
+{#                <tr>#}
+{#                    <th><input type="checkbox" name="project_{{ foo.id }}" value="{{ foo.id }}"/></th>#}
+{#                    <th>序号</th>#}
+{#                    <th>模块名称</th>#}
+{#                    <th>所属项目</th>#}
+{#                    <th>测试人员</th>#}
+{#                    <th>开发人员</th>#}
+{#                    <th>事务数量</th>#}
+{#                    <th>简要概述</th>#}
+{#                    <th>创建时间</th>#}
+{#                    <th>操作</th>#}
+{#                </tr>#}
+{#            </thead>#}
+{#            <tbody>#}
+{#            {% for foo in module %}#}
+{#                <tr>#}
+{#                    <td><input type="checkbox" name="project_{{ foo.id }}" value="{{ foo.id }}"/></td>#}
+{#                    <td>{{ forloop.counter }}</td>#}
+{#                    <td>{{ foo.module_name }}</td>#}
+{#                    <td>{{ foo.belong_project.project_name }}</td>#}
+{#                    <td>{{ foo.test_user }}</td>#}
+{#                    <td>{{ foo.dev_user }}</td>#}
+{#                    <td>{{ foo.simple_desc }}</td>#}
+{#                    <td>{{ foo.create_time }}</td>#}
+{#                    <td>#}
+{#                        <div class="btn-operate">#}
+{#                            <button class="btn-operate"><i class="iconfont icon-blue">&#xe60f;</i></button>#}
+{#                        </div>#}
+{#                        <div class="btn-operate">#}
+{#                            <button class="btn-operate"><i class="iconfont icon-red">&#xe602;</i></button>#}
+{#                        </div>#}
+{#                    </td>#}
+{#                </tr>#}
+{#            {% endfor %}#}
+{#            </tbody>#}
+{#        </table>#}
+{#    </div>#}
+</div>
+
+
+{% endblock %}

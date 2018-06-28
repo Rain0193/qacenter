@@ -1,0 +1,174 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    {% load staticfiles %}
+    <meta name="apple-mobile-web-app-title" content="qacenter"/>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-fileinput/4.4.8/js/fileinput.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-fileinput/4.4.8/js/fileinput.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'assets/css/common.css' %}">
+
+    <script src="https://cdn.bootcss.com/jquery.serializeJSON/2.9.0/jquery.serializejson.min.js"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+    <script src="{% static 'assets/js/commons.js' %}"></script>
+
+
+
+</head>
+<body class="modal-open">
+<div class="fixed-top">
+    <div class="fixed-logo">
+        <img src="http://imgsize.52shangou.com/img/n/01/28/1453982752246_4107.png" width="30" height="30" class="logo"/>
+        <span class="fixed-title"><a href="/qacenter/applist">质量中心</a></span>
+    </div>
+    <div class="fixed-nav">
+{#        #foreach($app in $applicationList)#}
+{#            <span>#if($!curAppId==$!app.id)$!app.appName#end</span>#}
+{#        #end#}
+{#        <div class="fixed-nav-list">#}
+{#            #foreach($app in $applicationList)#}
+{#                <a href="$!app.url" target="_blank">$!app.appName</a>#}
+{#            #end#}
+{#        </div>#}
+        <span>qacenter</span>
+        <div class="fixed-nav-list">
+                <a href="www.baidu.com" target="_blank">qacenter</a>
+                <a href="www.baidu.com" target="_blank">CMIS</a>
+                <a href="www.baidu.com" target="_blank">JIRA</a>
+                <a href="www.baidu.com" target="_blank">禅道</a>
+        </div>
+    </div>
+    <div class="fixed-logout">Hi&nbsp;&nbsp;{{ account }}，欢迎登录质量中心<a href="javascript:void(0)"
+                                                                                      id="loginout">退出</a></div>
+</div>
+
+<div class="fixed-left">
+    <div class="nav-list">
+
+        <span class="nav-list-menu #if($menuId==20&&!$bizId&&!$tag)sel#end"><a href="/qacenter/td/allTD"><i
+                class="iconfont icon-all">
+            &#xe60d;</i>全部事务</a></span>
+        <span class="nav-list-menu #if($tag=='hot')sel#end"><a href="/qacenter/td/allTD?tag=hot" id="hotTD"> <i
+                class="iconfont icon-hot">
+            &#xe60e;</i>常用事务</a></span>
+        <span class="nav-list-menu #if($tag=='fav')sel#end"><a href="/qacenter/td/allTD?tag=fav" id="favTD"><i
+                class="iconfont icon-fav">
+            &#xe619;</i>我的收藏</a></span>
+{#        #foreach($biz in $bizVOs)#}
+{#            <span class="nav-list-menu #if($!bizId==$!biz.id)sel#end">#}
+{#            <a href="/qacenter/td/allTD?bizId=$!biz.id">#}
+{#                <i class="iconfont icon-fav">$!biz.bizIcon</i>#}
+{#                $!biz.bizName</a>#}
+{#                #if($allBizTagsMap[$!biz.bizName].size())#}
+{#                    <i id="icon-down" class="iconfont icon-toggle" title="点击展开">&#xe65d;</i>#}
+{##}
+{#                #end#}
+{#            </span>#}
+{#            <ul class="sub_menu #if($tagDO.bizId==$!biz.id)sub-menu-sel#end">#}
+{#                #foreach($tagVO in $!allBizTagsMap[$!biz.bizName])#}
+{#                    <li class="sub-menu-list #if($tagId==$tagVO.id)sub-sel#end">#}
+{#                        <a class="sub-menu-btn" href="/qacenter/td/allTD?tagId=${tagVO.id}" title="${tagVO.tag}">#}
+{#                            #if($tagVO.tag.length()>6)#}
+{#                                $tagVO.tag.substring(0,6)...#}
+{#                            #else#}
+{#                                $tagVO.tag#}
+{#                            #end#}
+{#                        </a>#}
+{#                    </li>#}
+{#                #end#}
+{#            </ul>#}
+{#        #end#}
+
+{#        #if($isTester)#}
+            <span class="nav-list-menu ful #if($menuId==30)sel#end"><a href="/qacenter/td/myTD"><i
+                    class="iconfont icon-fav">&#xe604;</i>我的事务模板</a></span>
+            <span class="nav-list-menu ful  #if($menuId==31)sel#end"><a href="/qacenter/td/addTD"><i
+                    class="iconfont icon-fav">&#xe605;</i>添加事务模板</a></span>
+            <span class="nav-list-menu ful #if($menuId==32)sel#end"><a href="/qacenter/project_list/1"><i
+                    class="iconfont icon-fav">&#xe611;</i>项目管理</a></span>
+            <span class="nav-list-menu ful #if($menuId==32)sel#end"><a href="/qacenter/module_list/1"><i
+                    class="iconfont icon-fav">&#xe60a;</i>模块管理</a></span>
+{#        #end#}
+        <span class="nav-list-menu ful #if($menuId==23)sel#end"><a href="/qacenter/td/record"><i
+                class="iconfont icon-fav">
+            &#xe617;</i>调用历史</a></span>
+        <span class="nav-list-menu ful #if($menuId==24)sel#end"><a href="/qacenter/td/summary"><i
+                class="iconfont icon-fav">&#xe603;</i>调用量统计</a></span>
+
+    </div>
+</div>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <script type="text/javascript">
+        jQuery(".sideMenu").slide({
+            titCell: "h3", //鼠标触发对象
+            targetCell: "ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+            effect: "slideDown", //targetCell下拉效果
+            delayTime: 300, //效果时间
+            triggerTime: 150, //鼠标延迟触发时间（默认150）
+            defaultPlay: true,//默认是否执行效果（默认true）
+            returnDefault: false //鼠标从.sideMen移走后返回默认状态（默认false）
+        });
+
+        function initFileInput(ctrlName) {
+            var control = $('#' + ctrlName);
+            control.fileinput({
+                resizeImage: true,
+                resizePreference: 'width',
+                uploadAsync: false,                             //采用同步上传
+                language: 'zh', //设置语言
+                uploadUrl: '/api/upload_file/',
+                allowedFileExtensions: ['yml', 'yaml', 'json'],//接收的文件后缀
+                showUpload: true, //是否显示上传按钮
+                showRemove: false,
+                showCaption: true,//是否显示标题
+                browseClass: "btn btn-primary", //按钮样式
+                previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+                maxFileCount: 10,
+                msgFilesTooMany: "选择文件超过了最大数量",
+                maxFileSize: 2000,
+                uploadExtraData:
+                    function () {     //上传时要传输的其他参数
+                        project_name = $('#project option:selected').val();//选中的文本
+                        module_name = $('#upload_belong_module_id option:selected').val();//选中的文本
+                        return {"project": project_name, "module": module_name};
+                    },
+                showClose: false,//显示右上角X关闭
+                overwriteInitial: false, //是否显示预览
+                dropZoneEnabled: false,//是否显示拖拽区域
+            });
+            control.on('fileerror', function (event, data, msg) {
+                myAlert(msg)
+            });
+            control.on("filebatchuploadsuccess", function (event, data) {
+                var obj = data.response;
+                $("#bulk_uploadcase").trigger('click');
+                if (obj.status.indexOf('/api/') !== -1) {
+                    window.location.href = obj.status;
+                } else {
+                    myAlert(obj.status);
+                }
+            });
+        }
+
+        initFileInput("uploadfile");
+    </script>
+</div>
+
+</body>
+</html>
