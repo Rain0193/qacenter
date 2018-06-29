@@ -8,8 +8,6 @@
     <span>项目管理>项目列表</span>
 </div>
 <div class="content">
-    <div class="addBtn" onclick="location='/qacenter/add_project/'">添加项目</div>
-    <div class="delBtn">删除项目</div>
 {#    <div class="standards standard-tmp">#}
 {#        <script type="text/template" id="standard-tmp">#}
 {#            {@each standards as standard,index}#}
@@ -36,7 +34,9 @@
 {#        </script>#}
 {#    </div>#}
 
-    <div class="table-statistics">
+    <div class="tab-statistics">
+        <div class="addBtn" onclick="location='/qacenter/add_project/'">添加项目</div>
+        <div class="delBtn">删除项目</div>
         <table class="table-statistics">
             <thead>
                 <tr>

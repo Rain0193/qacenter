@@ -7,11 +7,14 @@
     font-family:  'Arial';
     color: #FFFFFF;
     display:block;
-    background:#169BD5;
+    background:#3eb0f7;
     text-align:center;
     cursor:pointer;
     float: right;
     margin-top: 0px;
+}
+.delBtn:hover{
+    background-color: #1f96e0;
 }
 
 .addBtn{
@@ -23,19 +26,22 @@
     font-family:  'Arial';
     color: #FFFFFF;
     display:block;
-    background:#169BD5;
+    background:#3eb0f7;
     margin:0 auto;
     text-align:center;
     cursor:pointer;
     margin-top: 0px;
     margin-right: 120px;
 }
+.addBtn:hover{
+    background-color: #1f96e0;
+}
 
 .tab-statistics{
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: auto;
     overflow: hidden;
-    margin-left: 40px;
+    margin-left: 30px;
     margin-top: 40px;
 }
 .tab-content{
@@ -58,14 +64,18 @@
     margin-right: -2px;
     cursor: pointer;
 }
-
 .tab-content .select{
-    background: #169BD5;
+    background: #3eb0f7;
     color: #FFFFFF;
 }
+.tab-content .select:hover{
+    background: #1f96e0;
+    color: #FFFFFF;
+}
+
 .table-statistics {
     width: 100%;
-    /*height: auto;*/
+    height: auto;
     line-height: 40px;
     overflow: hidden;
     margin-top: 0.5px;

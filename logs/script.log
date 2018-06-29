@@ -3711,3 +3711,1306 @@ Traceback (most recent call last):
   File "E:\qacenter\DataManager\utils\pagination.py", line 162, in get_pager_info
     return page_list, info, sum, info_project
 UnboundLocalError: local variable 'info_project' referenced before assignment
+2018-06-28 18:21:42,172 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/allTD/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'DataManager.views' has no attribute 'td'
+2018-06-28 18:21:48,247 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/allTD/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'DataManager.views' has no attribute 'td'
+2018-06-28 18:30:51,526 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/allTD/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'DataManager.views' has no attribute 'td'
+2018-06-28 18:40:31,870 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/myTD/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'DataManager.views' has no attribute 'td'
+2018-06-28 18:40:59,740 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/myTD/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'DataManager.views' has no attribute 'td'
+2018-06-28 18:41:06,473 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'DataManager.views' has no attribute 'add_td'
+2018-06-28 18:52:08,332 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+2018-06-28 18:54:57,153 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_module/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-06-28 18:55:26,023 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_module/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-06-28 18:55:49,260 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\clickjacking.py", line 26, in process_response
+    if response.get('X-Frame-Options') is not None:
+AttributeError: 'str' object has no attribute 'get'
+2018-06-28 18:56:03,495 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/allTD/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'DataManager.views' has no attribute 'td'
+2018-06-28 19:00:30,103 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/register/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 48, in register
+    user_info = json.loads(request.body.encode('utf-8'))
+AttributeError: 'bytes' object has no attribute 'encode'
+2018-06-28 19:01:10,199 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/register/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 48, in register
+    user_info = json.loads(request.body.encode('utf-8'))
+AttributeError: 'bytes' object has no attribute 'encode'
+2018-06-29 10:29:43,168 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/applist/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'DataManager.views' has no attribute 'applist'
+2018-06-29 11:24:53,238 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+ModuleNotFoundError: No module named 'api'
+2018-06-29 11:46:22,556 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 185, in add_td
+    account = request.session["now_acount"]
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'now_acount'
+2018-06-29 13:21:02,775 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 185, in add_td
+    account = request.session["now_acount"]
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'now_acount'
+2018-06-29 15:50:37,596 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+NameError: name 'td_info_logic' is not defined
+2018-06-29 15:50:39,296 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+NameError: name 'td_info_logic' is not defined
+2018-06-29 15:50:40,008 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+NameError: name 'td_info_logic' is not defined
+2018-06-29 15:50:40,504 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+NameError: name 'td_info_logic' is not defined
+2018-06-29 15:51:08,288 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+NameError: name 'td_info_logic' is not defined
+2018-06-29 15:51:09,088 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+NameError: name 'td_info_logic' is not defined
+2018-06-29 15:51:09,737 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+NameError: name 'td_info_logic' is not defined
+2018-06-29 15:51:10,488 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+NameError: name 'td_info_logic' is not defined
+2018-06-29 15:51:11,391 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+NameError: name 'td_info_logic' is not defined
+2018-06-29 15:51:50,739 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+NameError: name 'td_info_logic' is not defined
+2018-06-29 16:09:01,606 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 16:09:42,634 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 16:10:23,918 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 16:10:35,013 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 16:12:55,316 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 16:15:32,898 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 16:15:38,571 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 16:16:13,233 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 16:44:50,010 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 153, in add_td_data
+    belong_module = kwargs.pop('module_name')
+KeyError: 'module_name'
+2018-06-29 17:00:32,055 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 187, in add_td
+    td_info = json.loads(request.body.decode('utf-8'))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-06-29 17:02:44,329 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    td_info = json.loads(dict(request.body.decode('utf-8')))
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-06-29 17:03:59,543 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    td_list = dict(request.body.decode('utf-8'))
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-06-29 17:04:13,083 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    td_list = dict(request.body.decode('utf-8'))
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-06-29 17:05:05,195 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    td_list = dict(request.body.decode('utf-8'))
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-06-29 17:06:34,042 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    td_list = dict(request.body.decode('utf-8'))
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-06-29 17:06:34,050 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    td_list = dict(request.body.decode('utf-8'))
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-06-29 17:11:26,736 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 17:15:37,154 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 17:17:24,570 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 17:17:24,571 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 17:17:52,229 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 17:18:51,493 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 17:22:32,028 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 17:26:03,006 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 17:27:20,380 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+  File "E:\qacenter\DataManager\views.py", line 9, in <module>
+    from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic
+  File "E:\qacenter\DataManager\utils\common.py", line 4, in <module>
+    from DataManager.utils.operation import add_register_data, add_project_data, add_module_data, add_td_data
+  File "E:\qacenter\DataManager\utils\operation.py", line 165
+    kwargs['belong_project'] = belong_project
+                                            ^
+IndentationError: unindent does not match any outer indentation level
+2018-06-29 17:27:23,917 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+  File "E:\qacenter\DataManager\views.py", line 9, in <module>
+    from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic
+  File "E:\qacenter\DataManager\utils\common.py", line 4, in <module>
+    from DataManager.utils.operation import add_register_data, add_project_data, add_module_data, add_td_data
+  File "E:\qacenter\DataManager\utils\operation.py", line 165
+    kwargs['belong_project'] = belong_project
+                                            ^
+IndentationError: unindent does not match any outer indentation level
+2018-06-29 17:27:39,745 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/login/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+  File "E:\qacenter\DataManager\views.py", line 9, in <module>
+    from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic
+  File "E:\qacenter\DataManager\utils\common.py", line 4, in <module>
+    from DataManager.utils.operation import add_register_data, add_project_data, add_module_data, add_td_data
+  File "E:\qacenter\DataManager\utils\operation.py", line 165
+    kwargs['belong_project'] = belong_project
+                                            ^
+IndentationError: unindent does not match any outer indentation level
+2018-06-29 17:47:31,392 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 152, in add_td_data
+    belong_project = kwargs.pop('belong_project')
+KeyError: 'belong_project'
+2018-06-29 17:59:15,411 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 152, in add_td_data
+    belong_project = kwargs.pop('belong_project')
+KeyError: 'belong_project'
+2018-06-29 18:00:45,377 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 188, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 152, in add_td_data
+    belong_project = kwargs.pop('belong_project')
+KeyError: 'belong_project'
+2018-06-29 18:24:30,391 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_project/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-06-29 18:26:42,625 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+TypeError: add_td() takes 1 positional argument but 2 were given
+2018-06-29 18:28:40,378 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+TypeError: add_td() takes 1 positional argument but 2 were given
+2018-06-29 18:28:55,038 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+TypeError: add_td() takes 1 positional argument but 2 were given
+2018-06-29 18:33:00,299 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+TypeError: add_td() takes 1 positional argument but 2 were given
+2018-06-29 18:42:39,537 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 189, in add_td
+    msg = td_info_logic(**td_info)
+TypeError: td_info_logic() argument after ** must be a mapping, not list
+2018-06-29 18:43:10,514 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 189, in add_td
+    msg = td_info_logic(td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 152, in add_td_data
+    belong_project = kwargs.pop('belong_project')
+KeyError: 'belong_project'
+2018-06-29 18:46:09,060 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 189, in add_td
+    td_info = dict(td_list)
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-06-29 18:47:28,386 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 189, in add_td
+    td_info = dict(td_list)
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-06-29 18:52:31,634 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+TypeError: add_td() takes 1 positional argument but 2 were given
+2018-06-29 18:53:25,688 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 18:53:53,278 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 18:54:10,893 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 18:55:22,741 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 18:59:52,650 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:01:57,645 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:02:57,557 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:16:10,722 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:17:16,470 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:19:48,658 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:20:13,347 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:25:50,624 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:26:27,199 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:27:52,817 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:33:32,667 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:39:28,580 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 155, in add_td_data
+    td_url = kwargs.pop('td_url')
+KeyError: 'td_url'
+2018-06-29 19:40:49,258 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 152, in add_td_data
+    belong_project = kwargs.pop('belong_project')
+KeyError: 'belong_project'
+2018-06-29 19:41:08,783 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:49:39,402 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:49:39,560 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 19:58:44,554 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 152, in add_td_data
+    belong_project = kwargs.pop('belong_project')
+KeyError: 'belong_project'
+2018-06-29 20:04:26,011 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 152, in add_td_data
+    belong_project = kwargs.pop('belong_project')
+KeyError: 'belong_project'
+2018-06-29 20:19:47,226 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 20:20:05,049 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 190, in add_td
+    msg = td_info_logic(**td_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 114, in td_info_logic
+    return add_td_data(type, **kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 157, in add_td_data
+    params = kwargs.pop('params')
+KeyError: 'params'
+2018-06-29 20:23:56,197 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+TypeError: add_td() takes 1 positional argument but 2 were given
+2018-06-29 20:30:31,793 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+TypeError: add_td() takes 1 positional argument but 2 were given
+2018-06-29 20:50:47,600 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+TypeError: add_td() takes 1 positional argument but 2 were given

@@ -176,6 +176,58 @@ function copy_data_ajax(id, url) {
     });
 }
 
+function td_ajax(tag) {
+    var forms = $('#params-rows');
+    console.log(forms);
+        params = [];
+    for (var i = 0; i < forms.length; i++) {
+        var formItem = forms.eq(i),
+            arr = formItem.serializeArray(),
+            obj = {};
+        arr.forEach(function(item, k) {
+            obj[item.name] = item.value;
+        });
+        params.push(obj);
+    }
+    console.log(params);
+    var info = $("#infoForm").serializeJSON();
+    var other = $("#otherForm").serializeJSON();
+    if (tag === 'edit') {
+        url = '/qacenter/edit_td/';
+    } else {
+        url = '/qacenter/add_td/';
+    }
+
+    const formData = {
+        "title": info.title,
+        "belong_project": info.belong_project,
+        "td_url": other.td_url,
+        "instruction": other.instruction,
+        "author": other.author,
+        "params": params
+    };
+    $.ajax({
+        url: url,
+        type: "post",
+        data: JSON.stringify(formData),
+        contentType: "application/json",
+        success: function (data) {
+            if (data === 'session invalid') {
+                window.location.href = "/qacenter/login/";
+            } else {
+                if (data.indexOf('/qacenter/') != -1) {
+                    window.location.href = data;
+                } else {
+                    myAlert(data);
+                }
+            }
+        },
+        error: function () {
+            myAlert('Sorry，服务器可能开小差啦, 请重试!');
+        }
+    });
+}
+
 function case_ajax(type, editor) {
     var url = $("#url").serializeJSON();
     var method = $("#method").serializeJSON();

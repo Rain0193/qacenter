@@ -4,7 +4,7 @@ from django.db import models
 
 class UserInfoManager(models.Manager):
     def insert_user(self, username, account_number, email, password):
-        self.create(username=username, account_number=account_number, email=email, password=password)
+        self.create(username=username, type=type, account_number=account_number, email=email, password=password)
 
     def query_user(self, account_number, password):
         return self.filter(account_number__exact=account_number, password__exact=password).count()
@@ -61,4 +61,19 @@ class ModuleInfoManager(models.Manager):
                 return self.get(id=id).module_name
             else:
                 return self.get(id=module_name)
+
+
+'''事务信息表操作'''
+class TdInfoManager(models.Manager):
+    def insert_Td(self, title, td_url, author, belong_project, params, instruction):
+        self.create(title=title, td_url=td_url, author=author, belong_project=belong_project, params=params, instruction=instruction)
+
+    def update_td(self, id, **kwargs):
+        obj = self.get(id=id)
+        obj.title = kwargs.get('title')
+        obj.td_url = kwargs.get('td_url')
+        obj.params = kwargs.get('params')
+        obj.instruction = kwargs.get('instruction')
+        obj.save()
+
 

@@ -16,13 +16,12 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;margin: 0;}
 
 @font-face {
   font-family: 'iconfont';  /* project id 717410 */
-  src: url('//at.alicdn.com/t/font_717410_ubsjblypdda.eot');
-  src: url('//at.alicdn.com/t/font_717410_ubsjblypdda.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_717410_ubsjblypdda.woff') format('woff'),
-  url('//at.alicdn.com/t/font_717410_ubsjblypdda.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_717410_ubsjblypdda.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_717410_te9qpzpvwnq.eot');
+  src: url('//at.alicdn.com/t/font_717410_te9qpzpvwnq.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_717410_te9qpzpvwnq.woff') format('woff'),
+  url('//at.alicdn.com/t/font_717410_te9qpzpvwnq.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_717410_te9qpzpvwnq.svg#iconfont') format('svg');
 }
-
 .iconfont{font-family:"iconfont";
 font-size:20px;font-style:normal;
 -webkit-font-smoothing: antialiased;display: inline-block;}
@@ -30,6 +29,8 @@ font-size:20px;font-style:normal;
 .icon-red{color: #CC0000}
 
 .icon-blue{color: #169BD5}
+
+.icon-black{color: #444444}
 
 
 /*	通用吊顶、左侧导航	 */
@@ -81,8 +82,19 @@ font-size:20px;font-style:normal;
     display: block;border-bottom: 1px solid #E5E9EF;line-height: 40px;color: #444444;letter-spacing: 1px;font-size: 14px;
 }
 .nav-list .sel{
-    background: #ECF0F5;
+    background: #3eb0f7;
+    border-radius: 5px;
+    color: #FFFFFF;
+    box-shadow: 0px 5px 15px 0px #3eb0f7;
+}.nav-list .sel:hover{
+    background: #1f96e0;
+    border-radius: 5px;
+    color: #FFFFFF;
 }
+.nav-list .sel a{
+    color: #FFFFFF;
+}
+
 .fixed-nav{
     position: absolute;left: 160px;top: 0;height: 50px;line-height: 50px;width: 140px;border-right: 1px solid #E5E9EF;
     text-indent: 1.8em;cursor: default;
@@ -404,12 +416,14 @@ td,th {
 .btn{
         display:block;
         width:70%;
-        height:35px;
+        height:40px;
         background:#169BD5;
         border-radius:5px;
         margin:0 auto;
         text-align:center;
-        line-height:35px;
+        display: table-cell;
+        vertical-align: middle;
+        line-height:40px;
         color:#fff;
         cursor:pointer;
 }
@@ -519,7 +533,8 @@ td,th {
     left: 200px;
     padding-top:10px;
     padding-bottom:30px;
-    overflow: hidden;
+    overflow: auto;
+    float: left;
 }
 
 .crumb{

@@ -35,7 +35,7 @@ body {
 .form-header .form-group{
     position: relative;
     margin:0 auto;
-    margin-top:30px;
+    margin-top:20px;
     width:70%;
     height: 40px;
     border: 1px solid #dbdbdb;
@@ -68,20 +68,23 @@ body {
     display:block;
     width:70%;
     height:40px;
-    background:#56ACEE;
+    background-color: #3eb0f7;
     border-radius:4px;
     margin:0 auto;
     text-align:center;
     line-height:40px;
     color:#fff;
 }
+.form-header .register-button:hover{
+    background-color: #1f96e0;
+}
 .form-header .register-btm-div{
     width:70%;
     margin:0 auto;
     margin-top:20px;
     font-family:'STHeitiSC-Light';
-    font-size:12px;
-    line-height:12px;
+    font-size:13px;
+    line-height:13px;
 }
 .form-header .save-pwd-btn{
     font-family:'STHeitiSC-Light';

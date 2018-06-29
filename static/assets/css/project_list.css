@@ -1,8 +1,6 @@
 .addBtn{
     width: 100px;
     height: 40px;
-    top: 132px;
-    left: 245px;
     position: fixed;
     line-height: 40px;
     border-radius: 5px;
@@ -10,17 +8,20 @@
     font-family:  'Arial';
     color: #FFFFFF;
     display:block;
-    background:#169BD5;
+    background:#3eb0f7;
     margin:0 auto;
     text-align:center;
     cursor:pointer;
+    margin-left: 22px;
+    margin-top: 20px;
+}
+.addBtn:hover{
+    background-color: #1f96e0;
 }
 
 .delBtn{
     width: 100px;
     height: 40px;
-    top: 132px;
-    left: 363px;
     position: fixed;
     line-height: 40px;
     border-radius: 5px;
@@ -28,14 +29,19 @@
     font-family:  'Arial';
     color: #FFFFFF;
     display:block;
-    background:#169BD5;
+    background:#3eb0f7;
     margin:0 auto;
     text-align:center;
     cursor:pointer;
+    margin-left: 142px;
+    margin-top: 20px;
+}
+.delBtn:hover{
+    background-color: #1f96e0;
 }
 
 .tab-statistics{
-    width: 90%;
+    width: 95%;
     height: auto;
     overflow: hidden;
     margin-top: 0px;
@@ -68,10 +74,8 @@
 }
 
 .table-statistics{
-    left: 245px;
-    top: 190px;
-    height: 40px;
-    width: 95%;
+    height: auto;
+    width: 100%;
     /*height: auto;*/
     line-height: 40px;
     color: #333333;

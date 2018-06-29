@@ -31,7 +31,7 @@
 <div class="fixed-top">
     <div class="fixed-logo">
         <img src="http://imgsize.52shangou.com/img/n/01/28/1453982752246_4107.png" width="30" height="30" class="logo"/>
-        <span class="fixed-title"><a href="/qacenter/applist">质量中心</a></span>
+        <span class="fixed-title"><a href="/qacenter/index">质量中心</a></span>
     </div>
     <div class="fixed-nav">
 {#        #foreach($app in $applicationList)#}
@@ -42,12 +42,13 @@
 {#                <a href="$!app.url" target="_blank">$!app.appName</a>#}
 {#            #end#}
 {#        </div>#}
-        <span>qacenter</span>
+        <span class="fixed-title">质量中心</span>
         <div class="fixed-nav-list">
-                <a href="www.baidu.com" target="_blank">qacenter</a>
+                <a href="www.baidu.com" target="_blank">数据工场</a>
+                <a href="www.baidu.com" target="_blank">代码覆盖率</a>
+                <a href="www.baidu.com" target="_blank">禅道</a>
                 <a href="www.baidu.com" target="_blank">CMIS</a>
                 <a href="www.baidu.com" target="_blank">JIRA</a>
-                <a href="www.baidu.com" target="_blank">禅道</a>
         </div>
     </div>
     <div class="fixed-logout">Hi&nbsp;&nbsp;{{ account }}，欢迎登录质量中心<a href="javascript:void(0)"
@@ -57,8 +58,8 @@
 <div class="fixed-left">
     <div class="nav-list">
 
-        <span class="nav-list-menu #if($menuId==20&&!$bizId&&!$tag)sel#end"><a href="/qacenter/td/allTD"><i
-                class="iconfont icon-all">
+        <span class="nav-list-menu sel"><a href="/qacenter/td/allTD"><i
+                class="iconfont icon-black">
             &#xe60d;</i>全部事务</a></span>
         <span class="nav-list-menu #if($tag=='hot')sel#end"><a href="/qacenter/td/allTD?tag=hot" id="hotTD"> <i
                 class="iconfont icon-hot">
@@ -94,7 +95,7 @@
 {#        #if($isTester)#}
             <span class="nav-list-menu ful #if($menuId==30)sel#end"><a href="/qacenter/td/myTD"><i
                     class="iconfont icon-fav">&#xe604;</i>我的事务模板</a></span>
-            <span class="nav-list-menu ful  #if($menuId==31)sel#end"><a href="/qacenter/td/addTD"><i
+            <span class="nav-list-menu ful  #if($menuId==31)sel#end"><a href="/qacenter/add_td/"><i
                     class="iconfont icon-fav">&#xe605;</i>添加事务模板</a></span>
             <span class="nav-list-menu ful #if($menuId==32)sel#end"><a href="/qacenter/project_list/1"><i
                     class="iconfont icon-fav">&#xe611;</i>项目管理</a></span>

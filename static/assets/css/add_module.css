@@ -100,11 +100,14 @@
     display:block;
     width:50%;
     height:40px;
-    background:#56ACEE;
+    background:#3eb0f7;
     border-radius:4px;
     text-align:center;
     line-height:40px;
     color:#fff;
+}
+.form-header .add-button:hover{
+    background-color: #1f96e0;
 }
 .form-header .login-btm-div{
     width:70%;

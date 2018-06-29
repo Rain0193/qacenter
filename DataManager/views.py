@@ -6,7 +6,7 @@ import platform
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
 from DataManager.models import UserInfo, ProjectInfo, ModuleInfo
-from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic
+from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic
 from DataManager.utils.operation import del_project_data, del_module_data
 from DataManager.utils.pagination import get_pager_info
 
@@ -45,7 +45,7 @@ def register(request):
     :return:
     """
     if request.is_ajax():
-        user_info = json.loads(request.body.encode('utf-8'))
+        user_info = json.loads(request.body.decode('utf-8'))
         msg = register_info_logic(**user_info)
         return HttpResponse(get_ajax_msg(msg, '恭喜您，账号已成功注册'))
     elif request.method == 'GET':
@@ -80,7 +80,7 @@ def project_list(request, id):
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
-            project_info = json.load(request.body.encode('utf-8'))
+            project_info = json.load(request.body.decode('utf-8'))
             if 'mode' == project_info.keys():
                 msg = del_project_data(project_info.pop('id'))
             else:
@@ -174,3 +174,27 @@ def add_module(request):
             return render_to_response('add_module.html', manage_info)
     else:
         return HttpResponseRedirect("/qacenter/login/")
+
+def add_td(request):
+    '''
+    添加事务模板
+    :param request:
+    :return:
+    '''
+    if request.session.get('login_status'):
+        account = request.session["now_account"]
+        if request.is_ajax():
+            td_info = json.loads(request.body.decode('utf-8'))
+            # td_list = list(request.body.decode('utf-8'))
+            # td_info = dict(td_list)
+            msg = td_info_logic(**td_info)
+            return HttpResponse(get_ajax_msg(msg, "/qacenter/add_td/1/"))
+        elif request.method == 'GET':
+            manage_info = {
+                'account': account,
+                'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time')
+            }
+            return render_to_response('add_td.html', manage_info)
+    else:
+         return HttpResponseRedirect("/api/login/")
+

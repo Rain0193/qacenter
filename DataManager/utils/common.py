@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 
-from DataManager.utils.operation import add_register_data, add_project_data, add_module_data
+from DataManager.utils.operation import add_register_data, add_project_data, add_module_data, add_td_data
 
 logger = logging.getLogger('qacenter')
 
@@ -88,10 +88,27 @@ def module_info_logic(type=True, **kwargs):
     """
     if kwargs.get('module_name') is '':
         return '模块名称不能为空'
-    if kwargs.get('belong_project') == '请选择':
+    if kwargs.get('belong_project') == '请选择所属项目':
         return '请选择项目，没有请先添加哦'
     if kwargs.get('test_user') is '':
         return '测试人员不能为空'
     if kwargs.get('dev_user') is '':
         return '开发人员不能为空'
     return add_module_data(type, **kwargs)
+
+def td_info_logic(type=True, **kwargs):
+    """
+    事务信息逻辑处理
+    :param type: boolean: True:默认新增事务模板
+    :param kwargs: dict: 模块信息
+    :return:
+    """
+    if kwargs.get('title') is '':
+        return '事务名称不能为空'
+    if kwargs.get('belong_project') == '0':
+        return '请选择项目，没有请先添加哦'
+    # if kwargs.get('belong_project') == '请选择所属模块':
+    #     return '请选择模块，没有请先添加哦'
+    if kwargs.get('url') is '':
+        return '事务url地址不能为空'
+    return add_td_data(type, **kwargs)

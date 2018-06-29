@@ -1,6 +1,6 @@
 from django.db import models
 
-from DataManager.managers import UserInfoManager, ProjectInfoManager, ModuleInfoManager
+from DataManager.managers import UserInfoManager, ProjectInfoManager, ModuleInfoManager, TdInfoManager
 # Create your models here.
 
 class BaseTable(models.Model):
@@ -19,6 +19,7 @@ class UserInfo(BaseTable):
         db_table = 'UserInfo'
 
     username = models.CharField('姓名',max_length=10)
+    type = models.IntegerField('角色',default=1)
     account_number = models.CharField('账号',max_length=20)
     email = models.EmailField('邮箱')
     password = models.CharField('密码', max_length=20)
@@ -49,3 +50,18 @@ class ModuleInfo(BaseTable):
     dev_user = models.CharField('开发人员', max_length=50)
     simple_desc = models.CharField('简要描述', max_length=100, null=True)
     objects = ModuleInfoManager()
+
+class TdInfo(BaseTable):
+    class Meta:
+        verbose_name = '事务信息'
+        db_table = 'TdInfo'
+
+    title = models.CharField('事务名称', max_length=50)
+    belong_project = models.ForeignKey(ProjectInfo, on_delete=models.CASCADE)
+    # belong_module = models.ForeignKey(ModuleInfo, on_delete=models.CASCADE)
+    td_url = models.CharField('事务地址', max_length=200)
+    author = models.CharField('编写人员', max_length=20)
+    run_count = models.IntegerField('调用次数',default=0)
+    params = models.TextField('入参列表')
+    instruction = models.TextField('帮助说明')
+    objects = TdInfoManager()

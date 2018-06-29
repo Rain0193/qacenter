@@ -68,12 +68,15 @@ body {
     display:block;
     width:70%;
     height:40px;
-    background:#56ACEE;
+    background:#3eb0f7;
     border-radius:4px;
     margin:0 auto;
     text-align:center;
     line-height:40px;
     color:#fff;
+}
+.form-header .login-button:hover{
+    background-color: #1f96e0;
 }
 .form-header .login-btm-div{
     width:70%;
