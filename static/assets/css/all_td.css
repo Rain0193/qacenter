@@ -1,0 +1,218 @@
+.icon-help{
+	color:#56ACEE;
+	cursor:pointer;
+}
+.td-dialog{
+	padding:10px 15px 30px;
+	width:400px;
+	height:auto;
+	margin-bottom:30px;
+}
+.td-title{
+		font-size:18px;
+		color:#3D4D62;
+		line-height:20px;
+		text-align:left;
+	}
+	.td-author{
+		margin-top:10px;
+		font-size:12px;
+		color:#999999;
+		line-height:12px;
+		text-align:left;
+		margin-bottom:25px;
+	}
+	.td-icon{
+		vertical-align:top;
+		float:right;
+		position: relative;
+	}
+        .td-icon .icon-fav-cancel,.icon-fav-add{
+			margin-left:12px;
+			margin-right:12px;
+			top: 2px;
+    		position: relative;
+    		z-index: 2;
+    		cursor:pointer;
+    		color:#777777;
+    		display: inline-block;
+		}
+		.td-icon .orange{
+			color:#FF8900;
+		}
+
+	.td-param{
+		width:100%;
+		height:30px;
+		line-height:30px;
+		margin-bottom:10px;
+		font-family:STHeitiSC-Light;
+		color:#444444;
+	}
+        .td-param .td-param-name{
+			width:100px;
+			display:inline-block;
+			text-align:right;
+		}
+		.td-param input,select{
+			padding-left:10px;
+			width:52%;
+			height:24px;
+			border:1px solid #DDDDDD;
+			border-radius:2px;
+			background:#FFF;
+		}
+		.td-param select{
+			width:55%;
+		}
+
+	.view-btn-row{
+		margin-top:30px;
+	}
+    .view-btn-row .view-btn{
+            width:200px;
+		}
+
+	.submit-btn-row{
+		margin-top:30px;
+	}
+    .submit-btn-row .submit{
+			width:200px;
+		}
+
+.help-dialog,.help-dialog0{
+	display:none;
+	position:fixed;
+	height:auto;
+	background:#FFF;
+	z-index:2002;
+	padding:15px 20px;
+	border-radius:3px;
+	background:#FFFFFF;
+	box-shadow:1px 2px 4px 1px #E5E9EF;
+	font-size:12px;
+	color:#444444;
+	line-height:15px;
+	text-align:left;
+}
+.help-dialog{
+	width:284px;
+	left:44.4%;
+    top:35%;
+}
+
+.help-dialog0{
+	width:400px;
+	left:58%;
+    top:20%;
+}
+    .help-dialog0 p{
+    	border-bottom:1px dashed #DDDDDD;
+    }
+    .help-dialog0 span{
+    	font-weight:bold;
+    	text-align:right;
+    }
+
+.td-help-dialog{
+	display: none;
+	width:284px;
+	left:-315px;
+    top:0;
+}
+.tds-content{
+	width:90%;
+	margin-left: 185px;
+	margin-right: 45px;
+	margin-top:50px;
+	padding-bottom:30px;
+}
+
+.td-panel{
+	width: 88%;
+    height: auto;
+    background: #FFF;
+    padding-top: 10px;
+    border-radius: 3px;
+    padding:10px 15px 30px;
+    margin-bottom:50px;
+    margin-left:20px;
+    float:left;
+}
+.left-panel{
+	width: 49%;
+	min-height: 500px;
+	float: left;
+
+}
+.right-panel{
+	width: 49%;
+	min-height: 500px;
+	float: right;
+}
+.td-help-dialog{
+	position: absolute;
+	right: 0;
+	top: 100%;
+}
+.td-panel{
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.td-panel::after{
+    width: 0;
+    height: 0;
+    transform: rotate(90deg);
+    border-width: 21px;
+    border-color: #FF8900 transparent transparent #FF8900;
+    border-style: solid;
+    border-top-left-radius: 3px;
+    z-index: 1;
+    content: attr(data-title);
+    position: absolute;
+    right: 0;
+    top: 0px;
+    display: block;
+}
+.td-panel::before{
+    position: absolute;
+    width: 80px;
+    height: 32px;
+    top: -8px;
+    right: -32px;
+    z-index: 2;
+    content: attr(data-text);
+    display: block;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 52px;
+    transform: rotate(45deg);
+}
+.td-div{
+	width: 400px;
+	height: auto;
+	position: relative;
+}
+.icon-hot0{
+	color:#EC0909;
+	position: absolute;
+	left:-1px;
+	top: 8px;
+	font-size: 18px;
+}
+.res-dialog{
+	display: none;
+}
+    .res-dialog .confirm-btn{
+		width: 30%;
+	}
+
+.succ-icon{
+	text-align:center;
+}
+    .succ-icon .icon-succ{
+	color:#94C050;
+	font-size: 40px;
+	}

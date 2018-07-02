@@ -51,14 +51,13 @@
                 <a href="www.baidu.com" target="_blank">JIRA</a>
         </div>
     </div>
-    <div class="fixed-logout">Hi&nbsp;&nbsp;{{ account }}，欢迎登录质量中心<a href="javascript:void(0)"
-                                                                                      id="loginout">退出</a></div>
+    <div class="fixed-logout">Hi&nbsp;&nbsp;{{ account }}，欢迎登录质量中心<a href="/qacenter/logout/">退出</a></div>
 </div>
 
 <div class="fixed-left">
     <div class="nav-list">
 
-        <span class="nav-list-menu sel"><a href="/qacenter/td/allTD"><i
+        <span class="nav-list-menu sel"><a href="/qacenter/all_td/"><i
                 class="iconfont icon-black">
             &#xe60d;</i>全部事务</a></span>
         <span class="nav-list-menu #if($tag=='hot')sel#end"><a href="/qacenter/td/allTD?tag=hot" id="hotTD"> <i

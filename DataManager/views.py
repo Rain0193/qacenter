@@ -5,7 +5,9 @@ import platform
 
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
-from DataManager.models import UserInfo, ProjectInfo, ModuleInfo
+from urllib3.connectionpool import xrange
+
+from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo
 from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic
 from DataManager.utils.operation import del_project_data, del_module_data
 from DataManager.utils.pagination import get_pager_info
@@ -29,13 +31,29 @@ def login(request):
             logger.info('{account_number} 登录成功'.format(account_number=account))
             request.session["login_status"] = True
             request.session["now_account"] = account
-            return HttpResponseRedirect('/qacenter/index/')
+            return HttpResponseRedirect('/qacenter/all_td/')
         else:
             logger.info('{account_number} 登录失败, 请检查用户名或者密码'.format(account_number=account))
             request.session["login_status"] = False
             return render_to_response("login.html")
     elif request.method == 'GET':
         return render_to_response("login.html")
+
+def logout(request):
+    """
+    注销登录
+    :param request:
+    :return:
+    """
+    if request.method == 'GET':
+        logger.info('{username}退出'.format(username=request.session['now_account']))
+        try:
+            del request.session['now_account']
+            del request.session['login_status']
+            init_filter_session(request, type=False)
+        except KeyError:
+            logger.error('session invalid')
+        return HttpResponseRedirect("/qacenter/login")
 
 
 def register(request):
@@ -52,20 +70,29 @@ def register(request):
         return render_to_response("register.html")
 
 
-def index(request):
+def all_td(request):
     """
     首页
     :param request:
     :return:
     """
+    tdinfo = TdInfo.objects.all()
+    params = TdInfo.objects.all().values("params")
+    tdinfo = list(tdinfo)
+    params = list(params)
+    for k in xrange(len(tdinfo)):
+        if k%2 == 0:
+            tdinfo[k].right = 'true'
+        else:
+            tdinfo[k].right = 'false'
     if request.session.get('login_status'):
-        # applicationList = get_pager_info(
-        #     Application, None, '/qacenter/index')
-        manage_info = {'account': request.session["now_account"],
-                       # 'applicationList' : applicationList
-                       }
+        manage_info = {
+            'account': request.session["now_account"],
+            'tdList': tdinfo,
+            'params': params
+        }
         init_filter_session(request)
-        return render_to_response('index.html', manage_info)
+        return render_to_response('all_td.html', manage_info)
     else:
         return HttpResponseRedirect("/qacenter/login/")
 
@@ -185,10 +212,8 @@ def add_td(request):
         account = request.session["now_account"]
         if request.is_ajax():
             td_info = json.loads(request.body.decode('utf-8'))
-            # td_list = list(request.body.decode('utf-8'))
-            # td_info = dict(td_list)
             msg = td_info_logic(**td_info)
-            return HttpResponse(get_ajax_msg(msg, "/qacenter/add_td/1/"))
+            return HttpResponse(get_ajax_msg(msg, '/qacenter/add_td/1/'))
         elif request.method == 'GET':
             manage_info = {
                 'account': account,
@@ -196,5 +221,21 @@ def add_td(request):
             }
             return render_to_response('add_td.html', manage_info)
     else:
-         return HttpResponseRedirect("/api/login/")
+         return HttpResponseRedirect("/qacenter/login/")
 
+
+def get_module_by_project(request):
+    '''
+    根据项目获取模块
+    :param request:
+    :return:
+    '''
+    account = request.session["now_account"]
+    info = json.loads(request.body.decode('utf-8'))
+    belong_project = info.get('belong_project')
+    if request.method == 'GET':
+        manage_info = {
+            'account': account,
+            'module': ModuleInfo.objects.filter(belong_project=belong_project)
+        }
+        return render_to_response('add_td.html', manage_info)

@@ -64,27 +64,12 @@ function info_ajax(id, url) {
 
 }
 
-function auto_load(id, url, target, type) {
+function auto_load(id, url, target, flag) {
     var data = $(id).serializeJSON();
-    if (id === '#form_message') {
+    if (id === '#infoForm') {
         data = {
-            "test": {
-                "name": data,
-                "type": type
-            }
-        }
-    } else if (id === '#form_config') {
-        data = {
-            "config": {
-                "name": data,
-                "type": type
-            }
-        }
-    } else {
-        data = {
-            "task": {
-                "name": data,
-            }
+            "name": data,
+            "flag": flag
         }
     }
     $.ajax({
@@ -177,13 +162,14 @@ function copy_data_ajax(id, url) {
 }
 
 function td_ajax(tag) {
-    var forms = $('#params-rows');
-    console.log(forms);
-        params = [];
-    for (var i = 0; i < forms.length; i++) {
-        var formItem = forms.eq(i),
-            arr = formItem.serializeArray(),
-            obj = {};
+    var formArr = $('#paramForm').serializeArray();
+    formArr = formArr.reverse();
+    console.log(formArr);
+    params = [];
+    for (var i = 0; i < document.getElementById("params-rows").children.length; i++) {
+        obj = {};
+        arr = [formArr.pop(1),formArr.pop(2),formArr.pop(3)]
+        console.log(arr)
         arr.forEach(function(item, k) {
             obj[item.name] = item.value;
         });
@@ -200,7 +186,8 @@ function td_ajax(tag) {
 
     const formData = {
         "title": info.title,
-        "belong_project": info.belong_project,
+        "project": info.project,
+        "module": info.module,
         "td_url": other.td_url,
         "instruction": other.instruction,
         "author": other.author,

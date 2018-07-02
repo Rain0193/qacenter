@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% block title %}全部事务{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/all_td.css' %}">
+
+<div class="crumb">
+    <span>全部事务</span>
+</div>
+
+{#    <div class="tab-statistics">#}
+{#    <table class="table-statistics">#}
+{#            <thead>#}
+{#                <tr>#}
+{#                    <th><input type="checkbox" name="project_{{ foo.id }}" value="{{ foo.id }}"/></th>#}
+{#                    <th>序号</th>#}
+{#                    <th>项目名称</th>#}
+{#                    <th>负责人</th>#}
+{#                    <th>测试人员</th>#}
+{#                    <th>事务数量</th>#}
+{#                    <th>简要概述</th>#}
+{#                    <th>创建日期</th>#}
+{#                    <th>操作</th>#}
+{#                </tr>#}
+{#            </thead>#}
+{#            <tbody>#}
+{#            {% for foo in tdList %}#}
+{#                <tr>#}
+{#                    <td><input type="checkbox" name="project_{{ foo.id }}" value="{{ foo.id }}"/></td>#}
+{#                    <td>{{ forloop.counter }}</td>#}
+{#                    <td>{{ foo.title }}</td>#}
+{#                    <td>{{ foo.td_url }}</td>#}
+{#                    <td>{{ foo.author }}</td>#}
+{#                    <td>{{ foo.run_count }}</td>#}
+{#                    <td>{{ foo.create_time }}</td>#}
+{#                    <td>#}
+{#                        <div class="btn-operate">#}
+{#                            <button class="btn-operate"><i class="iconfont icon-blue">&#xe60f;</i></button>#}
+{#                        </div>#}
+{#                        <div class="btn-operate">#}
+{#                            <button class="btn-operate"><i class="iconfont icon-red">&#xe602;</i></button>#}
+{#                        </div>#}
+{#                    </td>#}
+{#                </tr>#}
+{#            {% endfor %}#}
+{#            </tbody>#}
+{#        </table>#}
+{#    </div>#}
+
+
+    <div class="tds-content tds-tmp">
+        <div class="left-panel">
+            {% for tds in tdList %}
+            {% ifequal tds.right 'true' %}
+            <div id="tdPanel{{forloop.counter}}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
+                <input type="hidden" name="id" value="{{ tds.title }}"/>
+                <form id="tdForm{{forloop.counter}}" class="tdForm{{tds.id}}">
+                    <div class="td-title">
+                        {{ tds.title }}
+                        <span id="td-icon{{forloop.counter}}" class="td-icon">
+{#                            {@if tds.instruction.length!=0}#}
+{#                            <i id="icon-help" class="iconfont icon-help">&#xe63a;</i>#}
+{#                            <div id="td-help-dialog-add"#}
+{#                                 class="help-dialog td-help-dialog td-help-dialog${index}"></div>#}
+{#                            {@/if}#}
+                            <i class="iconfont icon-fav-cancel gray" {@if td.isFav} style="display: none" {@else}
+                               style="display: inline-block" {@/if}>&#xe60d;</i>
+                            <i class="iconfont icon-fav-add orange" {@if td.isFav} style="display: inline-block" {@else}
+                               style="display:none" {@/if}>&#xe60c;</i>
+                        </span>
+                    </div>
+                    <div class="td-author">作者：{{ tds.author }}</div>
+                    {% for foo in params.params %}
+                    <div class="td-param">
+                        <span class="td-param-name">{{ foo.param }}：</span>
+                        {% ifequal foo.type 0 %}
+                        <input type="text" class="param-input" name="param{{forloop.counter}}" value="" placeholder="{{ foo.exp }}"
+                               autocomplete="off"/>
+                        {% else %}
+                        <select name="param{{forloop.counter}}">
+
+                        </select>
+                        {% endifequal %}
+                        <div class="bdsug">
+                            <ul>
+
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <input type="hidden" name="url" value="{{ tds.url }}"/>
+
+                    <div class="submit-btn-row"><a class="submit btn">确定</a></div>
+                </form>
+            </div>
+            {% endifequal %}
+            {% endfor %}
+        </div>
+        <div class="right-panel">
+            {% for tds in tdList %}
+            {% ifequal tds.right 'false' %}
+            <div id="tdPanel{{forloop.counter}}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
+                <input type="hidden" name="id" value="{{ tds.title }}"/>
+                <form id="tdForm{{forloop.counter}}" class="tdForm{{tds.id}}">
+                    <div class="td-title">
+                        {{ tds.title }}
+                        <span id="td-icon{{forloop.counter}}" class="td-icon">
+                            {@if td.instruction.length!=0}
+                            <i id="icon-help" class="iconfont icon-help">&#xe63a;</i>
+                            <div id="td-help-dialog-add"
+                                 class="help-dialog td-help-dialog td-help-dialog${index}"></div>
+                            {@/if}
+                            <i class="iconfont icon-fav-cancel gray" {@if td.isFav} style="display: none" {@else}
+                               style="display: inline-block" {@/if}>&#xe60d;</i>
+                            <i class="iconfont icon-fav-add orange" {@if td.isFav} style="display: inline-block" {@else}
+                               style="display:none" {@/if}>&#xe60c;</i>
+                        </span>
+                    </div>
+                    <div class="td-author">作者：${td.author}</div>
+                    {@each td.attributes as attr,index}
+                    <div class="td-param">
+                        <span class="td-param-name">${attr.param}：</span>
+                        {@if attr.type==0}
+                        <input type="text" class="param-input" name="param${index}" value="" placeholder="${attr.exp}"
+                               autocomplete="off"/>
+                        {@else}
+                        <select name="param${index}">
+
+                        </select>
+                        {@/if}
+                        <div class="bdsug">
+                            <ul>
+
+                            </ul>
+                        </div>
+                    </div>
+                    {@/each}
+                    <input type="hidden" name="url" value="${td.url}"/>
+
+                    <div class="submit-btn-row"><a class="submit btn">确定</a></div>
+                </form>
+            </div>
+            {% endifequal %}
+            {% endfor %}
+        </div>
+</div>
+
+
+{% endblock %}

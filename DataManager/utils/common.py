@@ -3,6 +3,8 @@ import logging
 
 from DataManager.utils.operation import add_register_data, add_project_data, add_module_data, add_td_data
 
+from DataManager.models import ModuleInfo
+
 logger = logging.getLogger('qacenter')
 
 def register_info_logic(**kwargs):
@@ -103,12 +105,40 @@ def td_info_logic(type=True, **kwargs):
     :param kwargs: dict: 模块信息
     :return:
     """
-    if kwargs.get('title') is '':
-        return '事务名称不能为空'
-    if kwargs.get('belong_project') == '0':
-        return '请选择项目，没有请先添加哦'
-    # if kwargs.get('belong_project') == '请选择所属模块':
-    #     return '请选择模块，没有请先添加哦'
-    if kwargs.get('url') is '':
-        return '事务url地址不能为空'
-    return add_td_data(type, **kwargs)
+
+    '''
+        动态展示模块
+    '''
+    if 'params' not in kwargs.keys():
+        flag = kwargs.pop('flag')
+        if flag == 'module':
+            return load_modules(**kwargs)
+
+    else:
+        if kwargs.get('title') is '':
+            return '事务名称不能为空'
+        if kwargs.get('project') == '0':
+            return '请选择项目，没有请先添加哦'
+        if kwargs.get('belong_project') == '请选择':
+            return '请选择模块，没有请先添加哦'
+        if kwargs.get('url') is '':
+            return '事务url地址不能为空'
+        return add_td_data(type, **kwargs)
+
+
+def load_modules(**kwargs):
+    """
+    加载对应项目的模块信息，用户前端ajax请求返回
+    :param kwargs:  dict：项目相关信息
+    :return: str: module_info
+    """
+    belong_project = kwargs.get('name').get('project')
+    module_info = ModuleInfo.objects.filter(belong_project__project_name=belong_project) \
+        .values_list('id', 'module_name').order_by('-create_time')
+    module_info = list(module_info)
+    string = ''
+    for value in module_info:
+        string = string + str(value[0]) + '^=' + value[1] + 'replaceFlag'
+    return string[:len(string) - 11]
+
+

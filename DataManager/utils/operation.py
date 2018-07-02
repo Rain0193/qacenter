@@ -149,8 +149,8 @@ def add_td_data(type, **kwargs):
     :return: ok or tips
     '''
     td_opt = TdInfo.objects
-    belong_project = kwargs.pop('belong_project')
-    # belong_module = kwargs.pop('module_name')
+    belong_project = kwargs.pop('project')
+    module = kwargs.pop('module')
     title = kwargs.pop('title')
     td_url = kwargs.pop('td_url')
     author = kwargs.pop('author')
@@ -162,16 +162,16 @@ def add_td_data(type, **kwargs):
         except ObjectDoesNotExist:
             logging.error('项目信息读取失败：{belong_project}'.format(belong_project=belong_project))
             return '项目信息读取失败，请重试'
-        # try:
-        #     belong_module = ModuleInfo.objects.get_pro_name(belong_module, type=False)
-        # except ObjectDoesNotExist:
-        #     logging.error('模块信息读取失败：{belong_module}'.format(belong_module=belong_module))
-        #     return '模块信息读取失败，请重试'
+        try:
+            belong_module = ModuleInfo.objects.get_module_name(module, type=False)
+        except ObjectDoesNotExist:
+            logging.error('模块信息读取失败：{belong_module}'.format(belong_module=belong_module))
+            return '模块信息读取失败，请重试'
         # kwargs['belong_project'] = belong_project
         # kwargs['belong_module'] = belong_module
         try:
             # td_opt.insert_Td(**kwargs)
-            td_opt.insert_Td(title=title, td_url=td_url, author=author, belong_project=belong_project, params=params, instruction=instruction)
+            td_opt.insert_Td(title=title, td_url=td_url, author=author, belong_project=belong_project, belong_module=belong_module,  params=params, instruction=instruction)
         except DataError:
             return '事务信息过长'
         except Exception:
