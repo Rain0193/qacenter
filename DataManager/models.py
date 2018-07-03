@@ -1,11 +1,28 @@
 from django.db import models
 
 from DataManager.managers import UserInfoManager, ProjectInfoManager, ModuleInfoManager, TdInfoManager
+from django.db.models.fields.related import ManyToManyField
 # Create your models here.
 
 class BaseTable(models.Model):
     create_time = models.DateTimeField('创建时间',auto_now_add=True)
     update_time = models.DateTimeField('更新时间',auto_now=True)
+
+    def __repr__(self):
+        return str(self.to_dict())
+
+    def to_dict(self):
+        opts = self._meta
+        data = {}
+        for f in opts.concrete_fields + opts.many_to_many:
+            if isinstance(f, ManyToManyField):
+                if self.pk is None:
+                    data[f.name] = []
+                else:
+                    data[f.name] = list(f.value_from_object(self).values_list('pk', flat=True))
+            else:
+                data[f.name] = f.value_from_object(self)
+        return data
 
     class Meta:
         abstract = True

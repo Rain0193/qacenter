@@ -5,7 +5,6 @@ from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo
 from django.db import DataError
 from django.core.exceptions import ObjectDoesNotExist
 
-
 logger = logging.getLogger('qacenter')
 
 def add_register_data(**kwargs):

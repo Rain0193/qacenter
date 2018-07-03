@@ -12,7 +12,7 @@
     {% load staticfiles %}
     <meta name="apple-mobile-web-app-title" content="qacenter"/>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap-fileinput/4.4.8/js/fileinput.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap-fileinput/4.4.8/js/fileinput.min.js"></script>
@@ -23,6 +23,7 @@
     <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
     <script src="{% static 'assets/js/commons.js' %}"></script>
+    <script src="{% static 'assets/js/dialog.js' %}"></script>
 
 
 
@@ -115,60 +116,65 @@
     {% endblock %}
 
     <script type="text/javascript">
-        jQuery(".sideMenu").slide({
-            titCell: "h3", //鼠标触发对象
-            targetCell: "ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
-            effect: "slideDown", //targetCell下拉效果
-            delayTime: 300, //效果时间
-            triggerTime: 150, //鼠标延迟触发时间（默认150）
-            defaultPlay: true,//默认是否执行效果（默认true）
-            returnDefault: false //鼠标从.sideMen移走后返回默认状态（默认false）
-        });
+        {#jQuery(".sideMenu").slide({#}
+        {#    titCell: "h3", //鼠标触发对象#}
+        {#    targetCell: "ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏#}
+        {#    effect: "slideDown", //targetCell下拉效果#}
+        {#    delayTime: 300, //效果时间#}
+        {#    triggerTime: 150, //鼠标延迟触发时间（默认150）#}
+        {#    defaultPlay: true,//默认是否执行效果（默认true）#}
+        {#    returnDefault: false //鼠标从.sideMen移走后返回默认状态（默认false）#}
+        {#});#}
+        {##}
+        {#function initFileInput(ctrlName) {#}
+        {#    var control = $('#' + ctrlName);#}
+        {#    control.fileinput({#}
+        {#        resizeImage: true,#}
+        {#        resizePreference: 'width',#}
+        {#        uploadAsync: false,                             //采用同步上传#}
+        {#        language: 'zh', //设置语言#}
+        {#        uploadUrl: '/api/upload_file/',#}
+        {#        allowedFileExtensions: ['yml', 'yaml', 'json'],//接收的文件后缀#}
+        {#        showUpload: true, //是否显示上传按钮#}
+        {#        showRemove: false,#}
+        {#        showCaption: true,//是否显示标题#}
+        {#        browseClass: "btn btn-primary", //按钮样式#}
+        {#        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",#}
+        {#        maxFileCount: 10,#}
+        {#        msgFilesTooMany: "选择文件超过了最大数量",#}
+        {#        maxFileSize: 2000,#}
+        {#        uploadExtraData:#}
+        {#            function () {     //上传时要传输的其他参数#}
+        {#                project_name = $('#project option:selected').val();//选中的文本#}
+        {#                module_name = $('#upload_belong_module_id option:selected').val();//选中的文本#}
+        {#                return {"project": project_name, "module": module_name};#}
+        {#            },#}
+        {#        showClose: false,//显示右上角X关闭#}
+        {#        overwriteInitial: false, //是否显示预览#}
+        {#        dropZoneEnabled: false,//是否显示拖拽区域#}
+        {#    });#}
+        {#    control.on('fileerror', function (event, data, msg) {#}
+        {#        myAlert(msg)#}
+        {#    });#}
+        {#    control.on("filebatchuploadsuccess", function (event, data) {#}
+        {#        var obj = data.response;#}
+        {#        $("#bulk_uploadcase").trigger('click');#}
+        {#        if (obj.status.indexOf('/api/') !== -1) {#}
+        {#            window.location.href = obj.status;#}
+        {#        } else {#}
+        {#            myAlert(obj.status);#}
+        {#        }#}
+        {#    });#}
+        {#}#}
 
-        function initFileInput(ctrlName) {
-            var control = $('#' + ctrlName);
-            control.fileinput({
-                resizeImage: true,
-                resizePreference: 'width',
-                uploadAsync: false,                             //采用同步上传
-                language: 'zh', //设置语言
-                uploadUrl: '/api/upload_file/',
-                allowedFileExtensions: ['yml', 'yaml', 'json'],//接收的文件后缀
-                showUpload: true, //是否显示上传按钮
-                showRemove: false,
-                showCaption: true,//是否显示标题
-                browseClass: "btn btn-primary", //按钮样式
-                previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
-                maxFileCount: 10,
-                msgFilesTooMany: "选择文件超过了最大数量",
-                maxFileSize: 2000,
-                uploadExtraData:
-                    function () {     //上传时要传输的其他参数
-                        project_name = $('#project option:selected').val();//选中的文本
-                        module_name = $('#upload_belong_module_id option:selected').val();//选中的文本
-                        return {"project": project_name, "module": module_name};
-                    },
-                showClose: false,//显示右上角X关闭
-                overwriteInitial: false, //是否显示预览
-                dropZoneEnabled: false,//是否显示拖拽区域
-            });
-            control.on('fileerror', function (event, data, msg) {
-                myAlert(msg)
-            });
-            control.on("filebatchuploadsuccess", function (event, data) {
-                var obj = data.response;
-                $("#bulk_uploadcase").trigger('click');
-                if (obj.status.indexOf('/api/') !== -1) {
-                    window.location.href = obj.status;
-                } else {
-                    myAlert(obj.status);
-                }
-            });
-        }
+        $(document).ready(function() {
+        }).on('click','.nav-list-menu',function(){
+            $('.nav-list-menu').removeClass('sel');
+            $(this).addClass('sel');
+        });
 
         initFileInput("uploadfile");
     </script>
-</div>
 
 </body>
 </html>

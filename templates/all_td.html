@@ -8,46 +8,6 @@
     <span>全部事务</span>
 </div>
 
-{#    <div class="tab-statistics">#}
-{#    <table class="table-statistics">#}
-{#            <thead>#}
-{#                <tr>#}
-{#                    <th><input type="checkbox" name="project_{{ foo.id }}" value="{{ foo.id }}"/></th>#}
-{#                    <th>序号</th>#}
-{#                    <th>项目名称</th>#}
-{#                    <th>负责人</th>#}
-{#                    <th>测试人员</th>#}
-{#                    <th>事务数量</th>#}
-{#                    <th>简要概述</th>#}
-{#                    <th>创建日期</th>#}
-{#                    <th>操作</th>#}
-{#                </tr>#}
-{#            </thead>#}
-{#            <tbody>#}
-{#            {% for foo in tdList %}#}
-{#                <tr>#}
-{#                    <td><input type="checkbox" name="project_{{ foo.id }}" value="{{ foo.id }}"/></td>#}
-{#                    <td>{{ forloop.counter }}</td>#}
-{#                    <td>{{ foo.title }}</td>#}
-{#                    <td>{{ foo.td_url }}</td>#}
-{#                    <td>{{ foo.author }}</td>#}
-{#                    <td>{{ foo.run_count }}</td>#}
-{#                    <td>{{ foo.create_time }}</td>#}
-{#                    <td>#}
-{#                        <div class="btn-operate">#}
-{#                            <button class="btn-operate"><i class="iconfont icon-blue">&#xe60f;</i></button>#}
-{#                        </div>#}
-{#                        <div class="btn-operate">#}
-{#                            <button class="btn-operate"><i class="iconfont icon-red">&#xe602;</i></button>#}
-{#                        </div>#}
-{#                    </td>#}
-{#                </tr>#}
-{#            {% endfor %}#}
-{#            </tbody>#}
-{#        </table>#}
-{#    </div>#}
-
-
     <div class="tds-content tds-tmp">
         <div class="left-panel">
             {% for tds in tdList %}
@@ -59,26 +19,26 @@
                         {{ tds.title }}
                         <span id="td-icon{{forloop.counter}}" class="td-icon">
 {#                            {@if tds.instruction.length!=0}#}
-{#                            <i id="icon-help" class="iconfont icon-help">&#xe63a;</i>#}
-{#                            <div id="td-help-dialog-add"#}
-{#                                 class="help-dialog td-help-dialog td-help-dialog${index}"></div>#}
+                            <i id="icon-help" class="iconfont icon-help">&#xe61e;</i>
+                            <div id="td-help-dialog-add"
+                                 class="help-dialog td-help-dialog td-help-dialog${index}"></div>
 {#                            {@/if}#}
-                            <i class="iconfont icon-fav-cancel gray" {@if td.isFav} style="display: none" {@else}
-                               style="display: inline-block" {@/if}>&#xe60d;</i>
-                            <i class="iconfont icon-fav-add orange" {@if td.isFav} style="display: inline-block" {@else}
-                               style="display:none" {@/if}>&#xe60c;</i>
+                            <i class="iconfont icon-fav-cancel gray" style="display: inline-block"
+                               style="display: inline-block">&#xe620;</i>
+                            <i class="iconfont icon-fav-add orange" style="display: none"
+                               style="display:none">&#xe61f;</i>
                         </span>
                     </div>
                     <div class="td-author">作者：{{ tds.author }}</div>
-                    {% for foo in params.params %}
+                    {% for foo in tds.params %}
                     <div class="td-param">
                         <span class="td-param-name">{{ foo.param }}：</span>
-                        {% ifequal foo.type 0 %}
+                        {% ifequal foo.type '0' %}
                         <input type="text" class="param-input" name="param{{forloop.counter}}" value="" placeholder="{{ foo.exp }}"
                                autocomplete="off"/>
                         {% else %}
                         <select name="param{{forloop.counter}}">
-
+                            <option value="请选择">请选择</option>
                         </select>
                         {% endifequal %}
                         <div class="bdsug">
@@ -105,37 +65,37 @@
                     <div class="td-title">
                         {{ tds.title }}
                         <span id="td-icon{{forloop.counter}}" class="td-icon">
-                            {@if td.instruction.length!=0}
-                            <i id="icon-help" class="iconfont icon-help">&#xe63a;</i>
+{#                            {@if tds.instruction.length!=0}#}
+                            <i id="icon-help" class="iconfont icon-help">&#xe61e;</i>
                             <div id="td-help-dialog-add"
                                  class="help-dialog td-help-dialog td-help-dialog${index}"></div>
-                            {@/if}
-                            <i class="iconfont icon-fav-cancel gray" {@if td.isFav} style="display: none" {@else}
-                               style="display: inline-block" {@/if}>&#xe60d;</i>
-                            <i class="iconfont icon-fav-add orange" {@if td.isFav} style="display: inline-block" {@else}
-                               style="display:none" {@/if}>&#xe60c;</i>
+{#                            {@/if}#}
+                            <i class="iconfont icon-fav-cancel gray" style="display: inline-block"
+                               style="display: inline-block" >&#xe62a;</i>
+                            <i class="iconfont icon-fav-add orange" style="display: none"
+                               style="display:none">&#xe61f;</i>
                         </span>
                     </div>
-                    <div class="td-author">作者：${td.author}</div>
-                    {@each td.attributes as attr,index}
+                    <div class="td-author">作者：{{ tds.author }}</div>
+                    {% for foo in tds.params %}
                     <div class="td-param">
-                        <span class="td-param-name">${attr.param}：</span>
-                        {@if attr.type==0}
-                        <input type="text" class="param-input" name="param${index}" value="" placeholder="${attr.exp}"
+                        <span class="td-param-name">{{ foo.param }}：</span>
+                        {% ifequal foo.type '0' %}
+                        <input type="text" class="param-input" name="param{{forloop.counter}}" value="" placeholder="{{ foo.exp }}"
                                autocomplete="off"/>
-                        {@else}
-                        <select name="param${index}">
-
+                        {% else %}
+                        <select name="param{{forloop.counter}}">
+                            <option value="请选择">请选择</option>
                         </select>
-                        {@/if}
+                        {% endifequal %}
                         <div class="bdsug">
                             <ul>
 
                             </ul>
                         </div>
                     </div>
-                    {@/each}
-                    <input type="hidden" name="url" value="${td.url}"/>
+                    {% endfor %}
+                    <input type="hidden" name="url" value="{{ tds.url }}"/>
 
                     <div class="submit-btn-row"><a class="submit btn">确定</a></div>
                 </form>
@@ -145,5 +105,117 @@
         </div>
 </div>
 
+<script>
+
+    $(document).ready(function() {
+        }).on('click', '.icon-help', function() {
+            var isShow = $(this).next().css('display');
+            if (isShow == 'none') {
+                $(this).next().show();
+            } else {
+                $(this).next().hide();
+            }
+        }).on('click', 'body', function() { //点击空白处，隐藏帮助说明
+            var eventId = event.srcElement.id;
+            if (eventId == 'td-help-dialog-add' || eventId == 'icon-help') {
+                return;
+            }  else {
+                $('.td-help-dialog').hide();
+            }
+        }).on('click', '.submit', function() {
+        var formId = $(this).parent().parent().attr('id');
+        var formData = $("#" + formId).serializeArray();
+        var url = $(this).parent().parent().find('input[name="url"]').val();
+        var id = $(this).parent().parent().parent().find('input[name="id"]').val();
+        var env = $(this).parent().parent().parent().find('input[name="env"]').val();
+        var isRecord = $(this).parent().parent().parent().find('input[name="isRecord"]').val();
+        var kwMap = {};
+        var host = window.location.host;
+        if (env == 1) { //开启本地调试
+            url = url.replace(host, "localhost:8080");
+        }
+        $.each(formData, function (index, data) {
+            var array = kwMap[index];
+            if (data.name.indexOf('param') >= 0) {
+                if (array == undefined) {
+                    array = new Array();
+                }
+                if ($.trim(data.value).length != 0) {
+                    array.push(data.value);
+                }
+                kwMap[index] = array;
+            }
+        });
+        var kwMap0 = JSON.parse(localStorage.getItem("TD_INPUT_" + id));
+        if (kwMap0 != null) {
+            $.each(kwMap0, function (index, kwArray) {
+                $.each(kwArray, function (k, v) {
+                    kwMap[index].push(v);
+                });
+                //超过5个，移除最前面的记录
+                var kwArray1 = kwMap[index];
+                $.unique(kwArray1); //去重
+                if (kwArray1.length > 5) {
+                    kwArray1.splice(5, 1);
+                }
+
+            });
+        }
+        var kwStr = JSON.stringify(kwMap);
+        // console.log(kwMap);
+        localStorage.setItem("TD_INPUT_" + id, kwStr);
+        $.ajax({
+            url: url,
+            type: "POST",
+            data: formData,
+            success: function (res) {
+                if (res.responseCode == 1) {
+                    self.addTDPv(id);
+                    var tpl = $('#td-res-dialog-tmp').html();
+                    var content = juicer(tpl, {});
+                    dialog.init({
+                        dialogId: 'td-res-dialog',
+                        type: 1,
+                        content: content
+                    });
+                    jsonformat.init();
+                    jsonformat.processFormat(res.entry);
+                    var jsonStr = JSON.stringify(res.entry);
+
+                    if (isRecord == 1) {
+                        self.addTDRecord(id, jsonStr);
+                    }
+                } else {
+                    if (res.responseCode == 10212) {
+                        dialog.init({
+                            dialogId: 'sessionout_dialog_add',
+                            msg: '登录超时',
+                        });
+                        window.location.reload();
+                    } else {
+                        dialog.init({
+                            dialogId: 'params_error_dialog_add',
+                            msg: res.message,
+                        });
+                    }
+                }
+            },
+            error: function (XMLHttpRequest, res) {
+                if (XMLHttpRequest.status == 500) {
+                    dialog.init({
+                        dialogId: 'function_not_variable',
+                        msg: '接口内部错误,status=500',
+                    });
+                } else {
+                    dialog.init({
+                        dialogId: 'function_not_variable',
+                        msg: '该功能还在开发中，请联系作者哦~~',
+                    });
+                }
+            }
+        });
+});
+
+</script>
 
 {% endblock %}

@@ -6,11 +6,13 @@ import platform
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
 from urllib3.connectionpool import xrange
+from django.forms.models import model_to_dict
 
 from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo
 from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic
 from DataManager.utils.operation import del_project_data, del_module_data
 from DataManager.utils.pagination import get_pager_info
+from DataManager.utils.executesqlToDict import executeQuery
 
 logger = logging.getLogger('qacenter')
 
@@ -76,20 +78,40 @@ def all_td(request):
     :param request:
     :return:
     """
+    # sql = 'select * from tdinfo'
+    # tdinfo = executeQuery(sql)
+    # for k in xrange(len(tdinfo)):
+    #     params = eval(tdinfo.__getitem__(k).pop('params'))
+    #     print(params)
+    # params = eval(tdinfo.__getitem__(0).pop('params'))
     tdinfo = TdInfo.objects.all()
-    params = TdInfo.objects.all().values("params")
-    tdinfo = list(tdinfo)
-    params = list(params)
+    tdlist = []
     for k in xrange(len(tdinfo)):
-        if k%2 == 0:
-            tdinfo[k].right = 'true'
+        td= {}
+        if k % 2 == 0:
+            td.setdefault('right','true')
         else:
-            tdinfo[k].right = 'false'
+            td.setdefault('right','false')
+        td.setdefault('title', tdinfo[k].title)
+        td.setdefault('td_url', tdinfo[k].td_url)
+        td.setdefault('author', tdinfo[k].author)
+        td.setdefault('params', eval(tdinfo[k].params))
+        td.setdefault('instruction', tdinfo[k].instruction)
+        td.setdefault('belong_project', tdinfo[k].belong_project)
+        td.setdefault('belong_module', tdinfo[k].belong_module)
+        tdlist.append(td)
+        print(td)
+    print(tdlist)
+    # tdinfo = list(tdinfo)
+    # for k in xrange(len(tdinfo)):
+    #     if k%2 == 0:
+    #         tdinfo['right'] = 'true'
+    #     else:
+    #         tdinfo['right'] = 'false'
     if request.session.get('login_status'):
         manage_info = {
             'account': request.session["now_account"],
-            'tdList': tdinfo,
-            'params': params
+            'tdList': tdlist
         }
         init_filter_session(request)
         return render_to_response('all_td.html', manage_info)

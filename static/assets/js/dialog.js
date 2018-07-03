@@ -1,4 +1,4 @@
-define('dialog', function(require, exports, module) {
+function dialog() {
 	var dialog = {
 		init: function(obj) {
 			var self = this;
@@ -43,7 +43,7 @@ define('dialog', function(require, exports, module) {
 					'<div class="err-txt">' + self.obj.msg + '</div>',
 					'</div>'
 				].join('');
-			} 
+			}
 			dialogHtml = '<div class="dialog-mask"></div>' + dialogHtml;
 			$("body").append(dialogHtml);
 		},
@@ -66,5 +66,4 @@ define('dialog', function(require, exports, module) {
 			$("#" + self.obj.dialogId).remove();
 		}
 	};
-	module.exports = dialog;
-});
+};

@@ -123,6 +123,7 @@ def td_info_logic(type=True, **kwargs):
             return '请选择模块，没有请先添加哦'
         if kwargs.get('url') is '':
             return '事务url地址不能为空'
+
         return add_td_data(type, **kwargs)
 
 
@@ -140,5 +141,4 @@ def load_modules(**kwargs):
     for value in module_info:
         string = string + str(value[0]) + '^=' + value[1] + 'replaceFlag'
     return string[:len(string) - 11]
-
 
