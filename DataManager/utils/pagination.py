@@ -104,7 +104,6 @@ def get_pager_info(Model, filter_query, url, id, per_items=12):
         user = filter_query.get('user')
 
     obj = Model.objects
-    obj_project = ProjectInfo.objects
 
     if url == '/qacenter/project_list/':
         obj = obj.filter(project_name__contains=name) if name is not '' else obj.filter(responsible_name__contains=user)
@@ -112,11 +111,10 @@ def get_pager_info(Model, filter_query, url, id, per_items=12):
 
     elif url == '/qacenter/module_list/':
         if belong_project is not '':
-            obj = obj.filter(belong_project__project_name__contains=belong_project)
-            obj_project = obj_project.filter(project_name__contains=name)
+            obj = obj.filter(belong_project__project_name__exact=belong_project)
         else:
-            obj_project = obj_project.filter(project_name__contains=name)
-            obj = obj.filter(module_name__contains=name) if name is not '' else obj.filter(test_user__contains=user)
+            obj = obj.all()
+            # obj = obj.filter(module_name__contains=name) if name is not '' else obj.filter(test_user__contains=user)
 
     elif url != '/qacenter/env_list/':
         obj = obj.filter(type__exact=1) if url == '/qacenter/test_list/' else obj.filter(type__exact=2)
@@ -153,11 +151,5 @@ def get_pager_info(Model, filter_query, url, id, per_items=12):
                 project_name = model.belong_project.project_name
 
         page_list = customer_pager(url, id, page_info.total_page)
-
-    if url == '/qacenter/module_list/':
-        total_project = obj_project.count()
-        page_info_project = PageInfo(id, total_project, per_items=per_items)
-        info_project = obj_project[page_info_project.start:page_info_project.end]
-        return page_list, info, sum, info_project
 
     return page_list, info, sum

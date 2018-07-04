@@ -49,7 +49,7 @@ class ProjectInfo(BaseTable):
         verbose_name = '项目信息'
         db_table = 'ProjectInfo'
 
-    project_name = models.CharField('项目名称',max_length=50)
+    project_name = models.CharField('项目名称', max_length=50)
     responsible_name = models.CharField('项目负责人', max_length=20)
     test_user = models.CharField('测试人员', max_length=100)
     simple_desc = models.CharField('简要描述', max_length=100, null=True)

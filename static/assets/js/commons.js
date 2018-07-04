@@ -349,6 +349,7 @@ function config_ajax(type) {
     });
 }
 
+
 /*提示 弹出*/
 function myAlert(data) {
     $('#my-alert_print').text(data);
@@ -357,7 +358,9 @@ function myAlert(data) {
     });
 }
 
-function post(url, params) {
+function module_by_project_post(url, id) {
+    var params = []
+    params['belong_project'] = id;
     var temp = document.createElement("form");
     temp.action = url;
     temp.method = "post";

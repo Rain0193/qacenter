@@ -16,11 +16,11 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;margin: 0;}
 
 @font-face {
   font-family: 'iconfont';  /* project id 717410 */
-  src: url('//at.alicdn.com/t/font_717410_a0o75fbjkde.eot');
-  src: url('//at.alicdn.com/t/font_717410_a0o75fbjkde.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_717410_a0o75fbjkde.woff') format('woff'),
-  url('//at.alicdn.com/t/font_717410_a0o75fbjkde.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_717410_a0o75fbjkde.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_717410_x5cttpz1in.eot');
+  src: url('//at.alicdn.com/t/font_717410_x5cttpz1in.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_717410_x5cttpz1in.woff') format('woff'),
+  url('//at.alicdn.com/t/font_717410_x5cttpz1in.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_717410_x5cttpz1in.svg#iconfont') format('svg');
 }
 .iconfont{font-family:"iconfont";
 font-size:20px;font-style:normal;
@@ -81,6 +81,11 @@ font-size:20px;font-style:normal;
 .nav-list-menu{
     display: block;border-bottom: 1px solid #E5E9EF;line-height: 40px;color: #444444;letter-spacing: 1px;font-size: 14px;
 }
+
+.nav-list-menu-project{
+    display: block;border-bottom: 1px solid #E5E9EF;line-height: 40px;color: #444444;letter-spacing: 1px;font-size: 14px;
+}
+
 .nav-list .sel{
     background: #3eb0f7;
     border-radius: 5px;
@@ -414,18 +419,18 @@ td,th {
 
 /***By pengxin***/
 .btn{
-        display:block;
         width:70%;
         height:40px;
+        line-height:40px;
         background:#169BD5;
         border-radius:5px;
         margin:0 auto;
         text-align:center;
         display: table-cell;
         vertical-align: middle;
-        line-height:40px;
         color:#fff;
         cursor:pointer;
+
 }
 
 .dialog-mask{
@@ -444,7 +449,7 @@ td,th {
     left:40%;
     top:30%;
     width:280px;
-    height:180px;
+    height:200px;
     background:#FFF;
     z-index:2001;
     padding-top:10px;
@@ -602,7 +607,7 @@ td,th {
 
 .icon-toggle{
 	color: #ccc;
-	float: right;
+	float: left;
 	padding-right: 5px;
 	cursor: pointer;
 }

@@ -1,5 +1,4 @@
-function dialog() {
-	var dialog = {
+ var dialog = {
 		init: function(obj) {
 			var self = this;
 			self.obj = obj;
@@ -30,7 +29,7 @@ function dialog() {
 			} else if (self.obj.type == 3) {
 				dialogHtml = [
 					'<div id ="' + self.obj.dialogId + '" class="confirm-dialog dialog">',
-					'<div class="confirm-icon"><i class="iconfont icon-confirm">&#xe63a;</i></div>',
+					'<div class="confirm-icon"><i class="iconfont icon-confirm">&#xe62b;</i></div>',
 					'<div class="confirm-txt">' + self.obj.msg + '</div>',
 					'<div class="confirm-btn"><a class="btn" id="' + self.obj.confirmBtnId + '">确认</a><a class="btn" id="J_dialog_del">取消</a></div>',
 					'<input type="hidden" value="' + self.obj.id + '">',
@@ -66,4 +65,3 @@ function dialog() {
 			$("#" + self.obj.dialogId).remove();
 		}
 	};
-};

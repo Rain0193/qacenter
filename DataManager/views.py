@@ -6,13 +6,11 @@ import platform
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
 from urllib3.connectionpool import xrange
-from django.forms.models import model_to_dict
 
 from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo
 from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic
 from DataManager.utils.operation import del_project_data, del_module_data
 from DataManager.utils.pagination import get_pager_info
-from DataManager.utils.executesqlToDict import executeQuery
 
 logger = logging.getLogger('qacenter')
 
@@ -71,6 +69,24 @@ def register(request):
     elif request.method == 'GET':
         return render_to_response("register.html")
 
+def base(request):
+    """
+    导航
+    :param request:
+    :return:
+    """
+    projectInfo = ProjectInfo.objects.all()
+    print(projectInfo)
+    if request.session.get('login_status'):
+        manage_info = {
+            'account': request.session["now_account"],
+            'projects': projectInfo
+        }
+        init_filter_session(request)
+        return render_to_response('base.html', manage_info)
+    else:
+        return HttpResponseRedirect("/qacenter/login/")
+
 
 def all_td(request):
     """
@@ -78,12 +94,8 @@ def all_td(request):
     :param request:
     :return:
     """
-    # sql = 'select * from tdinfo'
-    # tdinfo = executeQuery(sql)
-    # for k in xrange(len(tdinfo)):
-    #     params = eval(tdinfo.__getitem__(k).pop('params'))
-    #     print(params)
-    # params = eval(tdinfo.__getitem__(0).pop('params'))
+    projectInfo = ProjectInfo.objects.all()
+    print(projectInfo)
     tdinfo = TdInfo.objects.all()
     tdlist = []
     for k in xrange(len(tdinfo)):
@@ -100,18 +112,11 @@ def all_td(request):
         td.setdefault('belong_project', tdinfo[k].belong_project)
         td.setdefault('belong_module', tdinfo[k].belong_module)
         tdlist.append(td)
-        print(td)
-    print(tdlist)
-    # tdinfo = list(tdinfo)
-    # for k in xrange(len(tdinfo)):
-    #     if k%2 == 0:
-    #         tdinfo['right'] = 'true'
-    #     else:
-    #         tdinfo['right'] = 'false'
     if request.session.get('login_status'):
         manage_info = {
             'account': request.session["now_account"],
-            'tdList': tdlist
+            'tdList': tdlist,
+            'projects': projectInfo
         }
         init_filter_session(request)
         return render_to_response('all_td.html', manage_info)
@@ -126,6 +131,8 @@ def project_list(request, id):
     :param id: str or int：当前页
     :return:
     """
+    projectInfo = ProjectInfo.objects.all()
+    print(projectInfo)
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
@@ -145,6 +152,7 @@ def project_list(request, id):
                 'page_list': pro_list[0],
                 'info': filter_query,
                 'sum': pro_list[2],
+                'projects': projectInfo
             }
             return render_to_response('project_list.html', manage_info)
     else:
@@ -156,6 +164,8 @@ def add_project(request):
     :param request:
     :return:
     """
+    projectInfo = ProjectInfo.objects.all()
+    print(projectInfo)
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
@@ -165,7 +175,8 @@ def add_project(request):
 
         elif request.method == 'GET':
             manage_info = {
-                'account': account
+                'account': account,
+                'projects': projectInfo
             }
             return render_to_response('add_project.html', manage_info)
     else:
@@ -179,6 +190,16 @@ def module_list(request, id):
     :param id: str or int：当前页
     :return:
     """
+    projectInfo = ProjectInfo.objects.all()
+    projectInfoList = []
+    pro1 = {'project_name': 'All'}
+    projectInfoList.append(pro1)
+    for k in xrange(len(projectInfo)):
+        pro2 = {}
+        pro2.setdefault('project_name', projectInfo[k].project_name)
+        projectInfoList.append(pro2)
+    print(projectInfoList)
+
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
@@ -189,26 +210,33 @@ def module_list(request, id):
                 msg = module_info_logic(type=False, **module_info)
             return HttpResponse(get_ajax_msg(msg, 'ok'))
         else:
-            filter_query = set_filter_session(request)
+            projectName = request.POST.get('belong_project')
+            if projectName == 'All' or projectName is None:
+                projectName = ''
+            print(projectName)
+            filter_query = {
+                'belong_project': projectName,
+            }
             module_list = get_pager_info(
                 ModuleInfo, filter_query, '/qacenter/module_list/', id)
             manage_info = {
                 'account': account,
                 'module': module_list[1],
                 'page_list': module_list[0],
-                'info': filter_query,
-                'sum': module_list[2],
-                'project': module_list[3]
+                'project': projectInfoList,
+                'projects': projectInfo
             }
             return render_to_response('module_list.html', manage_info)
     else:
-        return HttpResponseRedirect("/api/login/")
+        return HttpResponseRedirect("/qacenter/login/")
 
 def add_module(request):
     '''
     新增模块
     :return:
     '''
+    projectInfo = ProjectInfo.objects.all()
+    print(projectInfo)
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
@@ -218,7 +246,8 @@ def add_module(request):
         elif request.method == 'GET':
             manage_info = {
                 'account': account,
-                'data': ProjectInfo.objects.all().values('project_name')
+                'data': ProjectInfo.objects.all().values('project_name'),
+                'projects': projectInfo
             }
             return render_to_response('add_module.html', manage_info)
     else:
@@ -230,6 +259,8 @@ def add_td(request):
     :param request:
     :return:
     '''
+    projectInfo = ProjectInfo.objects.all()
+    print(projectInfo)
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
@@ -239,7 +270,8 @@ def add_td(request):
         elif request.method == 'GET':
             manage_info = {
                 'account': account,
-                'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time')
+                'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time'),
+                'projects': projectInfo
             }
             return render_to_response('add_td.html', manage_info)
     else:
