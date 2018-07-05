@@ -8,6 +8,7 @@
     <span>全部事务</span>
 </div>
 
+
     <div class="tds-content tds-tmp">
         <div class="left-panel">
             {% for tds in tdList %}
@@ -55,8 +56,8 @@
             </div>
             {% endifequal %}
             {% endfor %}
-        </div>
-        <div class="right-panel">
+    </div>
+    <div class="right-panel">
             {% for tds in tdList %}
             {% ifequal tds.right 'false' %}
             <div id="tdPanel{{forloop.counter}}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
@@ -71,7 +72,7 @@
                                  class="help-dialog td-help-dialog td-help-dialog${index}"></div>
 {#                            {@/if}#}
                             <i class="iconfont icon-fav-cancel gray" style="display: inline-block"
-                               style="display: inline-block" >&#xe62a;</i>
+                               style="display: inline-block" >&#xe620;</i>
                             <i class="iconfont icon-fav-add orange" style="display: none"
                                style="display:none">&#xe61f;</i>
                         </span>
@@ -102,10 +103,12 @@
             </div>
             {% endifequal %}
             {% endfor %}
-        </div>
+     </div>
 </div>
 
-<script id="td-res-dialog-tmp">
+<script  id="td-res-dialog-tmp">
+
+
 
     $(document).ready(function() {
         }).on('click', '.icon-help', function() {
@@ -131,9 +134,6 @@
         {#var isRecord = $(this).parent().parent().parent().find('input[name="isRecord"]').val();#}
         var kwMap = {};
         var host = window.location.host;
-        {#if (env == 1) { //开启本地调试#}
-        {#    url = url.replace(host, "localhost:8080");#}
-        {#}#}
         $.each(formData, function (index, data) {
             var array = kwMap[index];
             if (data.name.indexOf('param') >= 0) {
@@ -162,7 +162,7 @@
             });
         }
         var kwStr = JSON.stringify(kwMap);
-        // console.log(kwMap);
+        //console.log(kwMap);
         localStorage.setItem("TD_INPUT_" + id, kwStr);
         $.ajax({
             url: url,
@@ -170,22 +170,16 @@
             data: formData,
             header: 'Access-Control-Allow-Methods:*',
             success: function (res) {
-                if (res.responseCode == 1) {
-                    var content = res.content;
+                var jsonObj = eval('(' + res + ")");
+                if (jsonObj.responseCode == 1) {
+                    var content = JSON.stringify(jsonObj.entry);
                     dialog.init({
                         dialogId: 'td-res-dialog',
                         type: 1,
                         content: content
                     });
-                    jsonformat.init();
-                    jsonformat.processFormat(res.entry);
-                    var jsonStr = JSON.stringify(res.entry);
-
-                    if (isRecord == 1) {
-                        self.addTDRecord(id, jsonStr);
-                    }
                 } else {
-                    if (res.responseCode == 10212) {
+                    if (jsonObj.responseCode == 10212) {
                         dialog.init({
                             dialogId: 'sessionout_dialog_add',
                             msg: '登录超时',
@@ -213,7 +207,8 @@
                 }
             }
         });
-});
+    });
+
 
 </script>
 

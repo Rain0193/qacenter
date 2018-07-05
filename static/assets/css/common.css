@@ -16,11 +16,11 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;margin: 0;}
 
 @font-face {
   font-family: 'iconfont';  /* project id 717410 */
-  src: url('//at.alicdn.com/t/font_717410_y33kxsmutfs.eot');
-  src: url('//at.alicdn.com/t/font_717410_y33kxsmutfs.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_717410_y33kxsmutfs.woff') format('woff'),
-  url('//at.alicdn.com/t/font_717410_y33kxsmutfs.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_717410_y33kxsmutfs.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_717410_5ibwv90ugxc.eot');
+  src: url('//at.alicdn.com/t/font_717410_5ibwv90ugxc.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_717410_5ibwv90ugxc.woff') format('woff'),
+  url('//at.alicdn.com/t/font_717410_5ibwv90ugxc.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_717410_5ibwv90ugxc.svg#iconfont') format('svg');
 }
 .iconfont{font-family:"iconfont";
 font-size:20px;font-style:normal;
@@ -520,11 +520,24 @@ td,th {
 .confirm-btn{
 	margin-top:30px;
 }
-.confirm-btn .btn{
-	width:30%;
-	margin-left:40px;
-	display: inline-block;
+    .confirm-btn .btn{
+        width:30%;
+        margin-left:40px;
+        display: inline-block;
+    }
+.confirm-btn-result{
+    margin-top:30px;
+    display: flex;
+    width: 30%;
+    vertical-align: middle;
+    text-align: center;
 }
+    .confirm-btn-result .span-result{
+        text-align: center;
+        line-height: 30px;
+        width: 100%;
+    }
+
 .err-btn{
     margin-top:30px;
     text-align: center;

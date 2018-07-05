@@ -1,0 +1,116 @@
+div.Canvas
+
+{
+
+  font-family: Lucida Console, Georgia;
+
+  font-size: 13px;
+
+  color:#000000;
+
+}
+
+.ObjectBrace
+
+{
+
+    color:#00AA00;
+
+    font-weight:bold;
+
+}
+
+.ArrayBrace
+
+{
+
+    color:#0033FF;
+
+    font-weight:bold;
+
+}
+
+.PropertyName
+
+{
+
+    color:#EC0909;
+
+}
+
+.String
+
+{
+
+    color:green;
+
+}
+
+.Number
+
+{
+
+    color:#AA00AA;
+
+}
+
+.Boolean
+
+{
+
+  color:#0000FF;
+
+}
+
+.Function
+
+{
+
+  color:#AA6633;
+
+  text-decoration:italic;
+
+}
+
+.Null
+
+{
+
+  color:#0000FF;
+
+}
+
+.Comma
+
+{
+
+  color:#000000;
+
+  font-weight:bold;
+
+}
+
+PRE.CodeContainer{
+  margin-top:0px;
+  margin-bottom:0px;
+  word-wrap: break-word;
+  word-break: normal;
+  padding-left:200px;
+}
+
+PRE.CodeContainer1{
+  margin-top:0px;
+  margin-bottom:0px;
+  word-wrap: break-word;
+  word-break: normal;
+  text-align: center;
+}
+
+PRE.CodeContainer img{
+
+  cursor:pointer;
+
+  border:none;
+
+  margin-bottom:-1px;
+}
