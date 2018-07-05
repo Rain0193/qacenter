@@ -136,9 +136,9 @@ def project_list(request, id):
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
-            project_info = json.load(request.body.decode('utf-8'))
-            if 'mode' == project_info.keys():
-                msg = del_project_data(project_info.pop('id'))
+            project_info = json.loads(request.body.decode('utf-8'))
+            if 'mode' in project_info.keys():
+                msg = del_project_data(list(eval(project_info.pop('id'))))
             else:
                 msg = project_info_logic(type=False, **project_info)
             return HttpResponse(get_ajax_msg(msg, 'ok'))
@@ -205,7 +205,7 @@ def module_list(request, id):
         if request.is_ajax():
             module_info = json.loads(request.body.decode('utf-8'))
             if 'mode' in module_info.keys():  # del module
-                msg = del_module_data(module_info.pop('id'))
+                msg = del_module_data(list(eval(module_info.pop('id'))))
             else:
                 msg = module_info_logic(type=False, **module_info)
             return HttpResponse(get_ajax_msg(msg, 'ok'))

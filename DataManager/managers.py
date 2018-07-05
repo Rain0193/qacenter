@@ -29,7 +29,7 @@ class ProjectInfoManager(models.Manager):
             return self.filter(project_name__exact=pro_name).count()
         else:
             if id is not None:
-                return self.get(id=id).project_name
+                return self.filter(id__in=id).values('project_name')
             return self.get(project_name__exact=pro_name)
 
     def get_pro_info(self, type=True):
@@ -58,9 +58,9 @@ class ModuleInfoManager(models.Manager):
             return self.filter(module_name__exact=module_name).count()
         else:
             if id is not None:
-                return self.get(id=id).module_name
+                return self.values('module_name').filter(id__in=id)
             else:
-                return self.get(id=module_name)
+                return self.filter(id__in=module_name)
 
     def get_module_by_id(self, id):
         return self.filter(id__exact=id).count()

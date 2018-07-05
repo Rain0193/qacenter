@@ -36,11 +36,11 @@
 
     <div class="tab-statistics">
         <div class="addBtn" onclick="location='/qacenter/add_project/'">添加项目</div>
-        <div class="delBtn">删除项目</div>
+        <div class="delBtn" onclick="alldel()">删除项目</div>
         <table class="table-statistics">
             <thead>
                 <tr>
-                    <th><input type="checkbox" name="project_{{ foo.id }}" value="{{ foo.id }}"/></th>
+                    <th><input type="checkbox" name="ck" value="{{ foo.id }}"/></th>
                     <th>序号</th>
                     <th>项目名称</th>
                     <th>负责人</th>
@@ -54,7 +54,7 @@
             <tbody>
             {% for foo in project %}
                 <tr>
-                    <td><input type="checkbox" name="project_{{ foo.id }}" value="{{ foo.id }}"/></td>
+                    <td><input type="checkbox" name="ck" value="{{ foo.id }}"/></td>
                     <td>{{ forloop.counter }}</td>
                     <td>{{ foo.project_name }}</td>
                     <td>{{ foo.responsible_name }}</td>
@@ -66,7 +66,7 @@
                             <button class="btn-operate"><i class="iconfont icon-blue">&#xe60f;</i></button>
                         </div>
                         <div class="btn-operate">
-                            <button class="btn-operate"><i class="iconfont icon-red">&#xe602;</i></button>
+                            <button class="btn-operate"><i class="iconfont icon-red" onclick="invalid('{{ foo.id }}')">&#xe602;</i></button>
                         </div>
                     </td>
                 </tr>
@@ -74,6 +74,65 @@
             </tbody>
         </table>
     </div>
+    <ul class="pagination">
+      {{ page_list }}
+    </ul>
 </div>
 
+    <script type="text/javascript">
+
+    //批量删除
+        function alldel() {
+            var f = false;
+            //得到要删除的主键id
+            var arr = [];//用于存要删除的选中的id值
+
+            var ck = document.getElementsByName("ck");//得到一组checkbox  相当于数组
+            //循环这一组checkbox让每一个checkbox选中
+            for (var i = 0; i < ck.length; i++) {
+                if (ck[i].checked == true) {//代表选中
+                    arr.push(ck[i].value);
+                    f = true;
+                }
+            }
+            if (f==true){
+                //二次确认框
+                dialog.init({
+                    dialogId: 'all_delete_dialog',
+                    msg: '亲，此操作会删除该模块下所有事务，请谨慎操作！！！',
+                    confirmBtnId: 'del-btn-confirm',
+                    type: 3,
+                    id: arr
+                });
+            }else {
+                dialog.init({
+                    dialogId: 'all_delete_dialog',
+                    msg: '亲，请至少选中一条进行批量删除',
+                    confirmBtnId: 'del-btn-confirm',
+                    type: 0,
+                    id: arr
+                });
+            }
+        }
+
+        function invalid(name) {
+            var id = name;
+            //二次确认框
+            dialog.init({
+                dialogId: 'delete-confirm-dialog',
+                msg: '亲，此操作会删除该模块下所有模块和事务，请谨慎操作！！！',
+                confirmBtnId: 'del-btn-confirm',
+                type: 3,
+                id: id
+            });
+        }
+
+         $(document).ready(function() {
+        }).on('click', '#del-btn-confirm', function() {
+            var id = $(this).parent().next().val();
+            del_data_ajax(id, '/qacenter/project_list/1/')
+        })
+
+
+    </script>
 {% endblock %}

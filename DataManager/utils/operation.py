@@ -117,9 +117,9 @@ def del_project_data(id):
     try:
         project_name = ProjectInfo.objects.get_pro_name('', type=False, id=id)
 
-        ModuleInfo.objects.filter(belong_project__project_name=project_name).delete()
+        ModuleInfo.objects.filter(belong_project__project_name__in=project_name).delete()
 
-        ProjectInfo.objects.get(id=id).delete()
+        ProjectInfo.objects.filter(id__in=id).delete()
 
     except ObjectDoesNotExist:
         return '删除异常，请重试'
@@ -134,7 +134,7 @@ def del_module_data(id):
     '''
     try:
         module_name = ModuleInfo.objects.get_module_name('', type=False, id=id)
-        ModuleInfo.objects.get(id=id).delete()
+        ModuleInfo.objects.filter(id__in=id).delete()
     except ObjectDoesNotExist:
         return '删除异常，请重试'
     logger.info('{module_name} 模块已删除'.format(module_name=module_name))

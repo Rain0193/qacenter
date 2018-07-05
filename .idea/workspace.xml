@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/utils/pagination.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/utils/pagination.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/managers.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/managers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/utils/operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/utils/operation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/script.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/script.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/assets/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/assets/css/module_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/module_list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/commons.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/commons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/assets/js/dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/dialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/add_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_td.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/module_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/module_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/project_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/project_list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +28,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="managers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataManager/managers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.virtualenvs/Python36-32-XfPJqKt7/Lib/site-packages/django/db/models/manager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="176" selection-start-line="176" selection-end-line="176" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="213" column="58" selection-start-line="213" selection-start-column="58" selection-end-line="213" selection-end-column="58" />
+            <state relative-caret-position="318">
+              <caret line="140" selection-start-line="140" selection-end-line="140" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
@@ -44,37 +58,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="operation.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="operation.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataManager/utils/operation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="128" column="24" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="24" />
+            <state relative-caret-position="281">
+              <caret line="119" column="66" selection-start-line="119" selection-start-column="66" selection-end-line="119" selection-end-column="66" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/module_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commons.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/assets/js/commons.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="115" column="9" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,56 +73,53 @@
       <file leaf-file-name="activator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/qacenter/activator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="345">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pagination.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataManager/utils/pagination.py">
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.virtualenvs/Python36-32-XfPJqKt7/Lib/site-packages/django/core/handlers/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="373">
+              <caret line="125" selection-start-line="125" selection-end-line="125" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/assets/css/common.css">
+      <file leaf-file-name="module_list.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/assets/css/module_list.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="451" column="13" selection-start-line="451" selection-start-column="13" selection-end-line="451" selection-end-column="13" />
+            <state relative-caret-position="983">
+              <caret line="136" selection-start-line="136" selection-end-line="136" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <file leaf-file-name="module_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/module_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+            <state relative-caret-position="891">
+              <caret line="128" column="65" selection-start-line="128" selection-start-column="65" selection-end-line="128" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dialog.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/assets/js/dialog.js">
+      <file leaf-file-name="project_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/project_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
+            <state relative-caret-position="-644">
+              <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/utils/common.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="101" column="7" lean-forward="true" selection-start-line="101" selection-start-column="7" selection-end-line="101" selection-end-column="7" />
+            <state relative-caret-position="166">
+              <caret line="129" selection-start-line="129" selection-end-line="129" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
               </folding>
@@ -144,10 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>belong_module_id</find>
-      <find>belong_project</find>
-      <find>module</find>
-      <find>type</find>
       <find>add_project</find>
       <find>get_all_td</find>
       <find>belong_module</find>
@@ -171,9 +154,13 @@
       <find>post</find>
       <find>a</find>
       <find>.a</find>
-      <find>btn</find>
-      <find>dialog</find>
       <find>filter_query</find>
+      <find>dialog</find>
+      <find>td-delete-confirm-dialog</find>
+      <find>confirm-btn</find>
+      <find>err-btn</find>
+      <find>btn</find>
+      <find>err-icon</find>
     </findStrings>
     <replaceStrings>
       <replace>1px solid #E5E9EF;</replace>
@@ -190,28 +177,28 @@
         <option value="$PROJECT_DIR$/static/assets/css/login.css" />
         <option value="$PROJECT_DIR$/static/assets/css/add_module.css" />
         <option value="$PROJECT_DIR$/static/assets/css/add_project.css" />
-        <option value="$PROJECT_DIR$/templates/project_list.html" />
         <option value="$PROJECT_DIR$/static/assets/css/project_list.css" />
         <option value="$PROJECT_DIR$/static/assets/css/add_td.css" />
-        <option value="$PROJECT_DIR$/DataManager/managers.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/DataManager/utils/sqlToDict.py" />
         <option value="$PROJECT_DIR$/DataManager/utils/executesqlToDict.py" />
-        <option value="$PROJECT_DIR$/DataManager/utils/operation.py" />
         <option value="$PROJECT_DIR$/static/assets/css/all_td.css" />
         <option value="$PROJECT_DIR$/static/assets/js/jquery.sticky.js" />
         <option value="$PROJECT_DIR$/templates/all_td.html" />
         <option value="$PROJECT_DIR$/templates/add_td.html" />
         <option value="$PROJECT_DIR$/DataManager/models.py" />
-        <option value="$PROJECT_DIR$/static/assets/css/module_list.css" />
         <option value="$PROJECT_DIR$/DataManager/utils/common.py" />
         <option value="$PROJECT_DIR$/DataManager/utils/pagination.py" />
         <option value="$PROJECT_DIR$/static/assets/js/commons.js" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/static/assets/js/dialog.js" />
+        <option value="$PROJECT_DIR$/static/assets/css/module_list.css" />
         <option value="$PROJECT_DIR$/static/assets/css/common.css" />
-        <option value="$PROJECT_DIR$/templates/module_list.html" />
+        <option value="$PROJECT_DIR$/static/assets/js/dialog.js" />
         <option value="$PROJECT_DIR$/DataManager/views.py" />
+        <option value="$PROJECT_DIR$/templates/module_list.html" />
+        <option value="$PROJECT_DIR$/templates/project_list.html" />
+        <option value="$PROJECT_DIR$/DataManager/managers.py" />
+        <option value="$PROJECT_DIR$/DataManager/utils/operation.py" />
       </list>
     </option>
   </component>
@@ -492,11 +479,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DataManager/views.py</url>
-          <line>148</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DataManager/utils/operation.py</url>
           <line>149</line>
           <option name="timeStamp" value="8" />
@@ -523,28 +505,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DataManager/views.py</url>
-          <line>160</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DataManager/views.py</url>
-          <line>168</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DataManager/views.py</url>
           <line>90</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DataManager/views.py</url>
-          <line>185</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DataManager/views.py</url>
-          <line>192</line>
-          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DataManager/utils/common.py</url>
@@ -562,27 +524,40 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DataManager/utils/pagination.py</url>
-          <line>98</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DataManager/utils/operation.py</url>
           <line>135</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataManager/views.py</url>
+          <line>133</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataManager/views.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataManager/managers.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataManager/utils/operation.py</url>
+          <line>117</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataManager/managers.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="37" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DataManager/managers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1610">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1357">
@@ -725,24 +700,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/Python36-32-XfPJqKt7/Lib/site-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="138" selection-start-line="138" selection-end-line="138" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qacenter/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/project_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -760,13 +721,6 @@
           <folding>
             <element signature="e#15#60#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/managers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -867,13 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/css/module_list.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="135" selection-start-line="135" selection-end-line="135" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
@@ -898,40 +845,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/js/dialog.js">
+    <entry file="file://$PROJECT_DIR$/DataManager/utils/pagination.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="451" column="13" selection-start-line="451" selection-start-column="13" selection-end-line="451" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qacenter/activator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/utils/operation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="128" column="24" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="24" />
+        <state relative-caret-position="-978">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
           <folding>
-            <element signature="e#24#38#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/assets/js/commons.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
+        <state relative-caret-position="-1">
           <caret line="115" column="9" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
@@ -942,37 +868,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/module_list.html">
+    <entry file="file://$PROJECT_DIR$/static/assets/js/dialog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
+        <state relative-caret-position="184">
+          <caret line="14" column="81" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/utils/pagination.py">
+    <entry file="file://$PROJECT_DIR$/static/assets/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        <state relative-caret-position="322">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/assets/css/module_list.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="983">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/Python36-32-XfPJqKt7/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/project_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-644">
+          <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/module_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="128" column="65" selection-start-line="128" selection-start-column="65" selection-end-line="128" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/Python36-32-XfPJqKt7/Lib/site-packages/django/db/models/manager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="176" selection-start-line="176" selection-end-line="176" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qacenter/activator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/utils/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#24#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="213" column="58" selection-start-line="213" selection-start-column="58" selection-end-line="213" selection-end-column="58" />
+        <state relative-caret-position="318">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/utils/common.py">
+    <entry file="file://$PROJECT_DIR$/DataManager/managers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="101" column="7" lean-forward="true" selection-start-line="101" selection-start-column="7" selection-end-line="101" selection-end-column="7" />
+        <state relative-caret-position="281">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/utils/operation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="119" column="66" selection-start-line="119" selection-start-column="66" selection-end-line="119" selection-end-column="66" />
           <folding>
             <element signature="e#24#38#0" expanded="true" />
           </folding>

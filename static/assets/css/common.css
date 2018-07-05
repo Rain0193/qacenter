@@ -16,11 +16,11 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;margin: 0;}
 
 @font-face {
   font-family: 'iconfont';  /* project id 717410 */
-  src: url('//at.alicdn.com/t/font_717410_x5cttpz1in.eot');
-  src: url('//at.alicdn.com/t/font_717410_x5cttpz1in.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_717410_x5cttpz1in.woff') format('woff'),
-  url('//at.alicdn.com/t/font_717410_x5cttpz1in.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_717410_x5cttpz1in.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_717410_y33kxsmutfs.eot');
+  src: url('//at.alicdn.com/t/font_717410_y33kxsmutfs.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_717410_y33kxsmutfs.woff') format('woff'),
+  url('//at.alicdn.com/t/font_717410_y33kxsmutfs.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_717410_y33kxsmutfs.svg#iconfont') format('svg');
 }
 .iconfont{font-family:"iconfont";
 font-size:20px;font-style:normal;
@@ -448,8 +448,8 @@ td,th {
     position:absolute;
     left:40%;
     top:30%;
-    width:280px;
-    height:200px;
+    width:300px;
+    height:210px;
     background:#FFF;
     z-index:2001;
     padding-top:10px;
@@ -517,7 +517,7 @@ td,th {
 	text-align:center;
 	padding: 0 10px;
 }
-.err-btn,.confirm-btn{
+.confirm-btn{
 	margin-top:30px;
 }
 .confirm-btn .btn{
@@ -525,6 +525,15 @@ td,th {
 	margin-left:40px;
 	display: inline-block;
 }
+.err-btn{
+    margin-top:30px;
+    text-align: center;
+}
+.err-btn .btn{
+	width:30%;
+	display: inline-block;
+}
+
 .dialog-mask{
 	display:none;
 }
@@ -771,7 +780,41 @@ td,th {
 		 -webkit-animation-delay:1.04s;
 	}
 
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    float: right;
+    margin-right: 50px;
+}
 
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.pagination li:first-child a {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pagination li:last-child a {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
 
 
 

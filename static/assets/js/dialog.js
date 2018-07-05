@@ -12,7 +12,7 @@
 			if (self.obj.type == 0 || !self.obj.type) {
 				dialogHtml = [
 					'<div id ="' + self.obj.dialogId + '" class="err-dialog dialog">',
-					'<div class="err-icon"><i class="iconfont icon-warn">&#xe635;</i></div>',
+					'<div class="err-icon"><i class="iconfont icon-warn">&#xe623;</i></div>',
 					'<div class="err-txt">' + self.obj.msg + '</div>',
 					'<div class="err-btn"><a class="btn" id="J_dialog_del">知道了</a></div>',
 					'</div>'
