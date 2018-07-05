@@ -13,17 +13,18 @@
         <div class="left-panel">
             {% for tds in tdList %}
             {% ifequal tds.right 'true' %}
-            <div id="tdPanel{{forloop.counter}}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
-                <input type="hidden" name="id" value="{{ tds.title }}"/>
-                <form id="tdForm{{forloop.counter}}" class="tdForm{{tds.id}}">
+            <div id="tdPanel{{forloop.counter0}}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
+                <input type="hidden" name="id" value="{{ tds.id }}"/>
+                <form id="tdForm{{forloop.counter0}}" class="tdForm{{tds.id}}">
                     <div class="td-title">
                         {{ tds.title }}
-                        <span id="td-icon{{forloop.counter}}" class="td-icon">
-{#                            {@if tds.instruction.length!=0}#}
-                            <i id="icon-help" class="iconfont icon-help">&#xe61e;</i>
-                            <div id="td-help-dialog-add"
+                        <span id="td-icon{{forloop.counter0}}" class="td-icon">
+                            {% if tds.params.length == 0 %}
+                            {% else %}
+                                <i id="icon-help" class="iconfont icon-help">&#xe61e;</i>
+                                <div id="td-help-dialog-add"
                                  class="help-dialog td-help-dialog td-help-dialog${index}"></div>
-{#                            {@/if}#}
+                            {% endif %}
                             <i class="iconfont icon-fav-cancel gray" style="display: inline-block"
                                style="display: inline-block">&#xe620;</i>
                             <i class="iconfont icon-fav-add orange" style="display: none"
@@ -35,10 +36,10 @@
                     <div class="td-param">
                         <span class="td-param-name">{{ foo.param }}：</span>
                         {% ifequal foo.type '0' %}
-                        <input type="text" class="param-input" name="param{{forloop.counter}}" value="" placeholder="{{ foo.exp }}"
+                        <input type="text" class="param-input" name="param{{forloop.counter0}}" value="" placeholder="{{ foo.exp }}"
                                autocomplete="off"/>
                         {% else %}
-                        <select name="param{{forloop.counter}}">
+                        <select name="param{{forloop.counter0}}">
                             <option value="请选择">请选择</option>
                         </select>
                         {% endifequal %}
@@ -55,22 +56,25 @@
                 </form>
             </div>
             {% endifequal %}
+            {% empty %}
+                <span>抱歉，列表为空</span>
             {% endfor %}
     </div>
     <div class="right-panel">
             {% for tds in tdList %}
             {% ifequal tds.right 'false' %}
-            <div id="tdPanel{{forloop.counter}}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
-                <input type="hidden" name="id" value="{{ tds.title }}"/>
-                <form id="tdForm{{forloop.counter}}" class="tdForm{{tds.id}}">
+            <div id="tdPanel{{forloop.counter0}}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
+                <input type="hidden" name="id" value="{{ tds.id }}"/>
+                <form id="tdForm{{forloop.counter0}}" class="tdForm{{tds.id}}">
                     <div class="td-title">
                         {{ tds.title }}
-                        <span id="td-icon{{forloop.counter}}" class="td-icon">
-{#                            {@if tds.instruction.length!=0}#}
-                            <i id="icon-help" class="iconfont icon-help">&#xe61e;</i>
-                            <div id="td-help-dialog-add"
+                        <span id="td-icon{{forloop.counter0}}" class="td-icon">
+                            {% if tds.params.length == 0 %}
+                            {% else %}
+                                <i id="icon-help" class="iconfont icon-help">&#xe61e;</i>
+                                <div id="td-help-dialog-add"
                                  class="help-dialog td-help-dialog td-help-dialog${index}"></div>
-{#                            {@/if}#}
+                            {% endif %}
                             <i class="iconfont icon-fav-cancel gray" style="display: inline-block"
                                style="display: inline-block" >&#xe620;</i>
                             <i class="iconfont icon-fav-add orange" style="display: none"
@@ -82,11 +86,11 @@
                     <div class="td-param">
                         <span class="td-param-name">{{ foo.param }}：</span>
                         {% ifequal foo.type '0' %}
-                        <input type="text" class="param-input" name="param{{forloop.counter}}" value="" placeholder="{{ foo.exp }}"
+                        <input type="text" class="param-input" name="param{{forloop.counter0}}" value="" placeholder="{{ foo.exp }}"
                                autocomplete="off"/>
                         {% else %}
-                        <select name="param{{forloop.counter}}">
-                            <option value="请选择">请选择</option>
+                        <select name="param{{forloop.counter0}}">
+                            <option value="请选择" onclick="getOptions({{ foo.exp }})">请选择</option>
                         </select>
                         {% endifequal %}
                         <div class="bdsug">
@@ -102,15 +106,46 @@
                 </form>
             </div>
             {% endifequal %}
+            {% empty %}
+                <span>抱歉，列表为空</span>
             {% endfor %}
      </div>
 </div>
 
 <script  id="td-res-dialog-tmp">
 
+    function getOptions(){
 
+    }
 
     $(document).ready(function() {
+        }).on('dblclick', '.param-input', function() {
+            var obj = $(this);
+            var inputVal = obj.val();
+            var tdId = $(this).parent().parent().parent().find('input[name="id"]').val();
+            var clsName = $(this).attr('name');
+            var index = clsName.substring("param".length, clsName.length);
+            var kwMap = JSON.parse(localStorage.getItem("TD_INPUT_" + tdId));
+            //输入框为空时，双击弹出
+            if (inputVal.length == 0) {
+                var kwHtml = "<ul>";
+                var liHtml = "";
+                $.each(kwMap[index], function(n, kw) {
+                    liHtml = liHtml + "<li>" + kw + "</li>";
+                })
+                kwHtml = kwHtml + liHtml + "</ul>";
+                $(this).next().html(kwHtml);
+                $(".bdsug").hide();
+                $(this).next().show();
+            }
+        }).on('click', '.bdsug li', function() {
+            var curKw = $(this).text();
+            $(this).parent().parent().prev().val(curKw);
+            $(this).parent().parent().prev().focus();
+        }).on('click', 'body', function(e) {
+            if ($(e.target).closest(".param-input").length == 0) {
+                $(".bdsug").hide();
+            }
         }).on('click', '.icon-help', function() {
             var isShow = $(this).next().css('display');
             if (isShow == 'none') {

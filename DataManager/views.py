@@ -104,6 +104,7 @@ def all_td(request):
             td.setdefault('right','true')
         else:
             td.setdefault('right','false')
+        td.setdefault('id',tdinfo[k].id)
         td.setdefault('title', tdinfo[k].title)
         td.setdefault('td_url', tdinfo[k].td_url)
         td.setdefault('author', tdinfo[k].author)
