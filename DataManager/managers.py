@@ -59,8 +59,7 @@ class ModuleInfoManager(models.Manager):
         else:
             if id is not None:
                 return self.values('module_name').filter(id__in=id)
-            else:
-                return self.filter(id__in=module_name)
+            return self.get(id__exact=module_name)
 
     def get_module_by_id(self, id):
         return self.filter(id__exact=id).count()
@@ -68,8 +67,11 @@ class ModuleInfoManager(models.Manager):
 
 '''事务信息表操作'''
 class TdInfoManager(models.Manager):
-    def insert_Td(self, title, td_url, author, belong_project,belong_module, params, instruction):
+    def insert_td(self, title, td_url, author, belong_project, belong_module, params, instruction):
         self.create(title=title, td_url=td_url, author=author, belong_project=belong_project, belong_module=belong_module, params=params, instruction=instruction)
+
+    def insert_td_no_module(self, title, td_url, author, belong_project, belong_module, params, instruction):
+        self.create(title=title, td_url=td_url, author=author, belong_project=belong_project, params=params, instruction=instruction)
 
     def update_td(self, id, **kwargs):
         obj = self.get(id=id)

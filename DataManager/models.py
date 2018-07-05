@@ -75,7 +75,7 @@ class TdInfo(BaseTable):
 
     title = models.CharField('事务名称', max_length=50)
     belong_project = models.ForeignKey(ProjectInfo, on_delete=models.CASCADE)
-    belong_module = models.ForeignKey(ModuleInfo, on_delete=models.CASCADE)
+    belong_module = models.ForeignKey(ModuleInfo, on_delete=models.CASCADE, default=0)
     td_url = models.CharField('事务地址', max_length=200)
     author = models.CharField('编写人员', max_length=20)
     run_count = models.IntegerField('调用次数', default=0)
