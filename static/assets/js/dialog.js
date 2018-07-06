@@ -9,7 +9,7 @@
 		buildHTML: function() {
 			var self = this;
 			var dialogHtml;
-			if (self.obj.type == 0 || !self.obj.type) {
+			if (self.obj.type == 0 || !self.obj.type) {		//知道了
 				dialogHtml = [
 					'<div id ="' + self.obj.dialogId + '" class="err-dialog dialog">',
 					'<div class="err-icon"><i class="iconfont icon-warn">&#xe623;</i></div>',
@@ -17,7 +17,7 @@
 					'<div class="err-btn"><a class="btn" id="J_dialog_del">知道了</a></div>',
 					'</div>'
 				].join('');
-			} else if (self.obj.type == 1) {
+			} else if (self.obj.type == 1) {	//确定
 				dialogHtml = [
 					'<div id="' + self.obj.dialogId + '" class="td-res-dialog res-dialog">',
         			'<div class="succ-icon"><i class="iconfont icon-succ">&#xe635;</i></div>',
@@ -26,14 +26,14 @@
     				'</div>'
 				].join('');
 				// dialogHtml = self.obj.content;
-			} else if (self.obj.type == 2) {
+			} else if (self.obj.type == 2) {	//成功
 				dialogHtml = [
 					'<div id ="' + self.obj.dialogId + '" class="info-dialog dialog">',
-					'<div class="info-icon"><i class="iconfont icon-info">&#xe630;</i></div>',
+					'<div class="info-icon"><i class="iconfont icon-info">&#xe635;</i></div>',
 					'<div class="info-txt">' + self.obj.msg + '</div>',
 					'</div>'
 				].join('');
-			} else if (self.obj.type == 3) {
+			} else if (self.obj.type == 3) {	//确认 or 取消
 				dialogHtml = [
 					'<div id ="' + self.obj.dialogId + '" class="confirm-dialog dialog">',
 					'<div class="confirm-icon"><i class="iconfont icon-confirm">&#xe62b;</i></div>',
@@ -42,10 +42,10 @@
 					'<input type="hidden" value="' + self.obj.id + '">',
 					'</div>'
 				].join('');
-			}else if (self.obj.type == 4) {
+			}else if (self.obj.type == 4) {		//失败
 				dialogHtml = [
 					'<div id ="' + self.obj.dialogId + '" class="err-unconfirm-dialog dialog">',
-					'<div class="err-icon"><i class="iconfont icon-error">&#xe62f;</i></div>',
+					'<div class="err-icon"><i class="iconfont icon-error">&#xe677;</i></div>',
 					'<div class="err-txt">' + self.obj.msg + '</div>',
 					'</div>'
 				].join('');

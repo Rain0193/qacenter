@@ -166,7 +166,6 @@ def add_project(request):
     :return:
     """
     projectInfo = ProjectInfo.objects.all()
-    print(projectInfo)
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
@@ -180,6 +179,36 @@ def add_project(request):
                 'projects': projectInfo
             }
             return render_to_response('add_project.html', manage_info)
+    else:
+        return HttpResponseRedirect("/qacenter/login/")
+
+def edit_project(request, id):
+    """
+    编辑项目
+    :param request:
+    :return:
+    """
+    projectsInfo = ProjectInfo.objects.all()
+    if request.session.get('login_status'):
+        account = request.session["now_account"]
+        if request.is_ajax():
+            project_info = json.loads(request.body.decode('utf-8'))
+            msg = project_info_logic(False, **project_info)
+            return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_project/' + id + '/'))
+            # return HttpResponse(get_ajax_msg(msg, '/qacenter/project_list/1/'))
+
+        elif request.method == 'GET':
+            projectInfo = ProjectInfo.objects.get(id=id)
+            manage_info = {
+                'account': account,
+                'id': projectInfo.id,
+                'project_name': projectInfo.project_name,
+                'responsible_name': projectInfo.responsible_name,
+                'test_user': projectInfo.test_user,
+                'simple_desc': projectInfo.simple_desc,
+                'projects': projectsInfo
+            }
+            return render_to_response('edit_project.html', manage_info)
     else:
         return HttpResponseRedirect("/qacenter/login/")
 
@@ -253,6 +282,67 @@ def add_module(request):
             return render_to_response('add_module.html', manage_info)
     else:
         return HttpResponseRedirect("/qacenter/login/")
+
+def edit_project(request, id):
+    """
+    编辑项目
+    :param request:
+    :return:
+    """
+    projectsInfo = ProjectInfo.objects.all()
+    if request.session.get('login_status'):
+        account = request.session["now_account"]
+        if request.is_ajax():
+            project_info = json.loads(request.body.decode('utf-8'))
+            msg = project_info_logic(False, **project_info)
+            return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_project/' + id + '/'))
+            # return HttpResponse(get_ajax_msg(msg, '/qacenter/project_list/1/'))
+
+        elif request.method == 'GET':
+            projectInfo = ProjectInfo.objects.get(id=id)
+            manage_info = {
+                'account': account,
+                'id': projectInfo.id,
+                'project_name': projectInfo.project_name,
+                'responsible_name': projectInfo.responsible_name,
+                'test_user': projectInfo.test_user,
+                'simple_desc': projectInfo.simple_desc,
+                'projects': projectsInfo
+            }
+            return render_to_response('edit_project.html', manage_info)
+    else:
+        return HttpResponseRedirect("/qacenter/login/")
+
+def edit_module(request, id):
+    """
+    编辑模块
+    :param request:
+    :return:
+    """
+    projectsInfo = ProjectInfo.objects.all()
+    if request.session.get('login_status'):
+        account = request.session["now_account"]
+        if request.is_ajax():
+            module_info = json.loads(request.body.decode('utf-8'))
+            msg = module_info_logic(False, **module_info)
+            return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_module/' + id + '/'))
+
+        elif request.method == 'GET':
+            moduleInfo = ModuleInfo.objects.get(id=id)
+            manage_info = {
+                'account': account,
+                'id': moduleInfo.id,
+                'module_name': moduleInfo.module_name,
+                'belong_project': moduleInfo.belong_project,
+                'test_user': moduleInfo.test_user,
+                'simple_desc': moduleInfo.simple_desc,
+                'dev_user': moduleInfo.dev_user,
+                'projects': projectsInfo
+            }
+            return render_to_response('edit_module.html', manage_info)
+    else:
+        return HttpResponseRedirect("/qacenter/login/")
+
 
 def add_td(request):
     '''

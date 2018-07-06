@@ -56,10 +56,8 @@ def add_project_data(type, **kwargs):
         else:
             return '该项目已存在，请重新命名'
     else:
-        if project_name != project_opt.get_pro_info('', type=False, id=kwargs.get('index')) and project_opt.get_pro_info(project_name) > 0:
-            return '该项目已存在，请重新命名'
         try:
-            project_opt.update_project(kwargs.pop('index'), **kwargs)
+            project_opt.update_project(kwargs.pop('id'), **kwargs)
         except DataError:
             return '项目信息过长'
         except Exception:
@@ -98,7 +96,7 @@ def add_module_data(type, **kwargs):
             return '该模块已在项目中存在，请重新编辑'
     else:
         try:
-            module_opt.update_module(kwargs.pop('index'), **kwargs)
+            module_opt.update_module(kwargs.pop('id'), **kwargs)
         except DataError:
             return '模块信息过长'
         except Exception:

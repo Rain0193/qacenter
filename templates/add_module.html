@@ -44,13 +44,11 @@
 
             <div>
                 <label class="form-label" for="simple_desc">简要描述:</label>
-                <div class="form-group-text">
-                    <input type="text" class="form-control-text" id="simple_desc" name="simple_desc" placeholder="项目简单概述" value=""/>
-                </div>
+                <textarea id="simple_desc" name="simple_desc" class="form-group-text form-control" placeholder="模块简单概述" >{{ simple_desc }}</textarea>
             </div>
 
             <div class="add-button-div">
-                <input type="submit" id="login" class="add-button" value="保存" onclick="info_ajax('#add_module', '/qacenter/add_module/')">
+                <input type="button" id="login" class="add-button" value="保存" onclick="info_ajax('#add_module', '/qacenter/add_module/')">
             </div>
         </form>
     </div>

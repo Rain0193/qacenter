@@ -30,15 +30,6 @@ function show_case(case_info, id) {
 /*表单信息异步传输*/
 function info_ajax(id, url) {
     var data = $(id).serializeJSON();
-    if (id === '#add_task') {
-        var include = [];
-        var i = 0;
-        $("ul#pre_case li a").each(function () {
-            include[i++] = [$(this).attr('id'), $(this).text()];
-        });
-        data['module'] = include;
-    }
-
     $.ajax({
         type: 'post',
         url: url,
@@ -47,18 +38,18 @@ function info_ajax(id, url) {
         success: function (data) {
             if (data !== 'ok') {
                 if (data.indexOf('/qacenter/') !== -1) {
+                    myAlertSuccess("成功");
                     window.location.href = data;
                 } else {
-                    myAlert(data);
+                    myAlertSuccess(data);
                 }
             }
             else {
-                window.location.reload();
+                myAlertFail(data);
             }
-        }
-        ,
+        },
         error: function () {
-            myAlert('Sorry，服务器可能开小差啦, 请重试!');
+            myAlertFail('Sorry，服务器可能开小差啦, 请重试!');
         }
     });
 
@@ -351,11 +342,31 @@ function config_ajax(type) {
 
 
 /*提示 弹出*/
-function myAlert(data) {
-    $('#my-alert_print').text(data);
-    $('#my-alert').modal({
-        relatedTarget: this
+function myAlertSuccess(data) {
+    dialog.init({
+        dialogId: 'myAlert',
+        msg: data,
+        type: 2
     });
+    var t=setTimeout(next,1000);
+    function next()
+    {
+        dialog.hide();
+    }
+}
+
+/*提示 弹出*/
+function myAlertFail(data) {
+    dialog.init({
+        dialogId: 'myAlert',
+        msg: data,
+        type: 4
+    });
+    var t=setTimeout(next,1000);
+    function next()
+    {
+        dialog.hide();
+    }
 }
 
 function module_by_project_post(url, id) {
@@ -461,8 +472,18 @@ function init_acs(language, theme, editor) {
         enableLiveAutocompletion: true,
         autoScrollEditorIntoView: true
     });
+}
 
 
+function sleep(n) {
+    var start = new Date().getTime();
+    //  console.log('休眠前：' + start);
+    while (true) {
+        if (new Date().getTime() - start > n) {
+            break;
+        }
+    }
+    // console.log('休眠后：' + new Date().getTime());
 }
 
 

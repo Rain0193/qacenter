@@ -96,6 +96,7 @@ def module_info_logic(type=True, **kwargs):
         return '测试人员不能为空'
     if kwargs.get('dev_user') is '':
         return '开发人员不能为空'
+
     return add_module_data(type, **kwargs)
 
 def td_info_logic(type=True, **kwargs):

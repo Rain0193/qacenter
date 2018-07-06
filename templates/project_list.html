@@ -63,7 +63,9 @@
                     <td>{{ foo.create_time }}</td>
                     <td>
                         <div class="btn-operate">
-                            <button class="btn-operate"><i class="iconfont icon-blue">&#xe60f;</i></button>
+                            <a href="/qacenter/edit_project/{{ foo.id }}/">
+                                <button class="btn-operate"><i class="iconfont icon-blue" >&#xe60f;</i></button>
+                            </a>
                         </div>
                         <div class="btn-operate">
                             <button class="btn-operate"><i class="iconfont icon-red" onclick="invalid('{{ foo.id }}')">&#xe602;</i></button>

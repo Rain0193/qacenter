@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}编辑项目{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/add_project.css' %}">
+    <div class="crumb">
+        <span>项目管理>编辑项目</span>
+    </div>
+
+    <div class="add_content">
+        <form class="form-header" action="/qacenter/edit_project/" role="form" method="POST" id="edit_project">
+
+             <div class="form-group" hidden>
+                 <label class="form-label" for="id" hidden>索引值：</label>
+                 <div class="form-group">
+                     <input name="id" type="text" class="form-control" id="id" placeholder="索引值" value="{{ id }}" hidden>
+                 </div>
+            </div>
+
+            <div class="">
+                <label class="form-label" for="project_name">*项目名称:</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="project_name" name="project_name" placeholder="请输入项目名称" value="{{ project_name }}" readonly>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label" for="responsible_name">*负责人:</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="responsible_name" name="responsible_name" placeholder="请输入负责人" value="{{ responsible_name }}"/>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label" for="test_user">*测试人员:</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="test_user" name="test_user" placeholder="请输入测试人员" value="{{ test_user }}"/>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label" for="simple_desc">简要描述:</label>
+                <textarea id="simple_desc" name="simple_desc" class="form-group-text form-control" placeholder="项目简单概述" >{{ simple_desc }}</textarea>
+            </div>
+
+            <div class="add-button-div">
+                <input type="button" id="login" class="add-button" value="保存" onclick="info_ajax('#edit_project', '/qacenter/edit_project/{{ id }}/')">
+            </div>
+        </form>
+    </div>
+
+<script>
+
+</script>
+
+{% endblock %}
