@@ -68,7 +68,7 @@ Key Features
 ![注册页面](https://github.com/wangyinguang/qacenter/blob/master/images/register.png)<br>
 ![登录页面](https://github.com/wangyinguang/qacenter/blob/master/images/login.png)<br>
 <br>
-2、登陆后默认跳转到首页,左侧为菜单栏
+2、登陆后默认跳转到首页,左侧为菜单栏,右侧为事务列表，可以输入参数，点击确定进行调用后端平台http接口进行造数据
 ![首页/所有事务](https://github.com/wangyinguang/qacenter/blob/master/images/all_td.png)<br>
 <br>
 3、首先应该先添加一个项目,事务都是以项目为维度进行管理,注意只有简描述信息可以为空
