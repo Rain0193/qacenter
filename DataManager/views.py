@@ -267,7 +267,7 @@ def add_td(request):
         if request.is_ajax():
             td_info = json.loads(request.body.decode('utf-8'))
             msg = td_info_logic(**td_info)
-            return HttpResponse(get_ajax_msg(msg, '/qacenter/add_td/1/'))
+            return HttpResponse(get_ajax_msg(msg, '/qacenter/add_td/'))
         elif request.method == 'GET':
             manage_info = {
                 'account': account,

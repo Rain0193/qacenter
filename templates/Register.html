@@ -17,14 +17,14 @@
 </head>
 <body>
 
-    <div class="register-form">
+    <div class="register-forms">
         <div class="logo-img"><img src="{% static "assets/img/logo-words.png" %}" width="100"
                                    height="130"></div>
 
         <form class="form-header" role="form" id="register_form">
             <div class="form-group">
                 <i class="icon iconfont">&#xe61d;</i>
-                <input type="text" class="form-control" id="username" name="username" placeholder="请输入姓名" value="">
+                <input type="text" class="form-control" id="username" name="username" placeholder="请输入姓名">
             </div>
             <div class="form-group">
                 <i class="icon iconfont">&#xe613;</i>
@@ -36,25 +36,25 @@
             </div>
             <div class="form-group">
                 <i class="icon iconfont">&#xe621;</i>
-                <input type="text" class="form-control" id="email" name="email" placeholder="请输入邮箱" value="">
+                <input type="text" class="form-control" id="email" name="email" placeholder="请输入邮箱">
             </div>
             <div class="form-group">
                 <i class="icon iconfont">&#xe61c;</i>
-                <input type="text" class="form-control" id="account" name="account" placeholder="请输入账号" value="">
+                <input type="text" class="form-control" id="account" name="account" placeholder="请输入账号">
             </div>
             <div class="form-group">
                 <i class="icon iconfont">&#xe610;</i>
-                <input class="form-control" type="password" id="password" name="password" placeholder="请输入密码" value=""/>
+                <input class="form-control" type="password" id="password" name="password" placeholder="请输入密码"/>
             </div>
             <div class="form-group">
                 <i class="icon iconfont">&#xe610;</i>
-                <input class="form-control" type="password" id="repassword" name="repassword" placeholder="请再次输入密码" value=""/>
+                <input class="form-control" type="password" id="repassword" name="repassword" placeholder="请再次输入密码"/>
             </div>
             <div class="register-button-div">
-                <input type="submit" id="register" class="register-button" value="注册" onclick="register_ajax('#register_form')">
+                <input type="button" id="register" class="register-button" value="注册" onclick="register_ajax('#register_form')">
             </div>
             <div class="register-btm-div">
-                <span class="fr"><a href="/qacenter/login" class="fgt-pwd-btn">去登录</a></span>
+                <span class="fr"><a href="/qacenter/login/" class="fgt-pwd-btn">去登录</a></span>
             </div>
         </form>
     </div>

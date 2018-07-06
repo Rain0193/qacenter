@@ -552,6 +552,7 @@ td,th {
 }
 
 .content{
+    z-index: 1000;
     background-color: #FFF;
     position: fixed;
     right: 50px;
@@ -660,13 +661,13 @@ td,th {
 .bdsug ul{
 	height: auto;
 	color: #222;
-	font-family: 'Microsoft YaHei';
 	font-size: 13px;
+    list-style-type: none;
+    padding: 0px;
 }
     .bdsug ul li{
-		line-height: 25px;
-		padding: 2px 10px;
-
+        line-height: 25px;
+        padding: 2px 10px;
 	}
 
 .bdsug ul li:hover{

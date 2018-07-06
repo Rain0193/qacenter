@@ -73,6 +73,29 @@
             }
         });
     });
+
+    $(document).ready(function() {
+        var localStorage = window.localStorage;
+        if (localStorage.getItem("QACENTER_USER")) {
+            $("#account").val(localStorage.getItem("QACENTER_USER"));
+        }
+        if (localStorage.getItem("QACENTER_PWD")) {
+            $(".save-pwd-btn").attr("checked", true);
+            $("#password").val(localStorage.getItem("QACENTER_PWD"));
+        } else {
+            $(".save-pwd-btn").attr("checked", false);
+        }
+    }).on('click', '#login', function() {
+        var user = $("input[name='account']").val();
+        var password = $("input[name='password']").val();
+        var isSave = $("input[name='savePwd']").is(':checked');
+        if (isSave) {
+            localStorage.setItem("QACENTER_USER", user);
+            localStorage.setItem("QACENTER_PWD", password);
+        } else {
+            localStorage.removeItem("QACENTER_PWD");
+        }
+    })
 </script>
 
 </body>
