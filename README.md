@@ -4,7 +4,7 @@ DataManager
 Design Philosophy
 -----------------
 
-基于Django的数据工厂平台：本篇只是造数据的事务管理平台，还需要搭建一套基于spring框架，封装开发dubbo接口集合的后端平台，再通过DataManager平台调用后端平台的http接口实现造数据功能。没有编写后端平台的童鞋可以在部署个flash的mock功能
+基于Django的数据工厂平台：本篇只是造数据的事务管理平台，还需要搭建一套基于spring框架，封装开发dubbo接口集合的后端平台，再通过DataManager平台调用后端平台的http接口实现造数据功能。没有编写后端平台的童鞋可以先部署个flash的mock功能来体验下DataManager的魅力
 
 Key Features
 ------------
