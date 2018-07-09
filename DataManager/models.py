@@ -1,6 +1,6 @@
 from django.db import models
 
-from DataManager.managers import UserInfoManager, ProjectInfoManager, ModuleInfoManager, TdInfoManager
+from DataManager.managers import UserInfoManager, ProjectInfoManager, ModuleInfoManager, TdInfoManager, FavTdManager
 from django.db.models.fields.related import ManyToManyField
 # Create your models here.
 
@@ -75,10 +75,19 @@ class TdInfo(BaseTable):
 
     title = models.CharField('事务名称', max_length=50)
     belong_project = models.ForeignKey(ProjectInfo, on_delete=models.CASCADE)
-    belong_module = models.ForeignKey(ModuleInfo, on_delete=models.CASCADE, default=0)
+    belong_module = models.ForeignKey(ModuleInfo, on_delete=models.CASCADE)
     td_url = models.CharField('事务地址', max_length=200)
     author = models.CharField('编写人员', max_length=20)
     run_count = models.IntegerField('调用次数', default=0)
     params = models.TextField('入参列表')
     instruction = models.TextField('帮助说明')
     objects = TdInfoManager()
+
+class FavTd(BaseTable):
+    class Meta:
+        verbose_name = '我收藏的事务'
+        db_table = 'Fav_Td'
+
+    user = models.CharField('用户', max_length=20)
+    belong_td = models.ForeignKey(TdInfo, on_delete=models.CASCADE)
+    objects = FavTdManager()

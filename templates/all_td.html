@@ -18,18 +18,21 @@
                 <form id="tdForm{{forloop.counter0}}" class="tdForm{{tds.id}}">
                     <div class="td-title">
                         {{ tds.title }}
-                        <span id="td-icon{{forloop.counter0}}" class="td-icon">
+                        <div id="td-icon{{forloop.counter0}}" class="td-icon">
                             {% if tds.params.length == 0 %}
                             {% else %}
                                 <i id="icon-help" class="iconfont icon-help">&#xe61e;</i>
-                                <div id="td-help-dialog-add"
-                                 class="help-dialog td-help-dialog td-help-dialog${index}"></div>
+                                <div id="td-help-dialog-add" class="help-dialog td-help-dialog td-help-dialog${index}"></div>
                             {% endif %}
-                            <i class="iconfont icon-fav-cancel gray" style="display: inline-block"
-                               style="display: inline-block">&#xe620;</i>
-                            <i class="iconfont icon-fav-add orange" style="display: none"
-                               style="display:none">&#xe61f;</i>
-                        </span>
+                            {% ifequal tds.isFav 'true' %}
+                                <i class="iconfont icon-fav-cancel gray" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/', true)" style="display: none">&#xe620;</i>
+                                <i class="iconfont icon-fav-add orange" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/', false)" style="display: inline-block">&#xe61f;</i>
+                            {% else %}
+                                <i class="iconfont icon-fav-cancel gray" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/', true)" style="display: inline-block">&#xe620;</i>
+                                <i class="iconfont icon-fav-add orange" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/', false)" style="display: none">&#xe61f;</i>
+                            {% endifequal %}
+
+                        </div>
                     </div>
                     <div class="td-author">作者：{{ tds.author }}</div>
                     {% for foo in tds.params %}
@@ -68,18 +71,21 @@
                 <form id="tdForm{{forloop.counter0}}" class="tdForm{{tds.id}}">
                     <div class="td-title">
                         {{ tds.title }}
-                        <span id="td-icon{{forloop.counter0}}" class="td-icon">
+                        <div id="td-icon{{forloop.counter0}}" class="td-icon">
                             {% if tds.params.length == 0 %}
                             {% else %}
                                 <i id="icon-help" class="iconfont icon-help">&#xe61e;</i>
                                 <div id="td-help-dialog-add"
                                  class="help-dialog td-help-dialog td-help-dialog${index}"></div>
                             {% endif %}
-                            <i class="iconfont icon-fav-cancel gray" style="display: inline-block"
-                               style="display: inline-block" >&#xe620;</i>
-                            <i class="iconfont icon-fav-add orange" style="display: none"
-                               style="display:none">&#xe61f;</i>
-                        </span>
+                            {% ifequal tds.isFav 'true' %}
+                                <i class="iconfont icon-fav-cancel gray" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/', true)" style="display: none">&#xe620;</i>
+                                <i class="iconfont icon-fav-add orange" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/', false)" style="display: inline-block">&#xe61f;</i>
+                            {% else %}
+                                <i class="iconfont icon-fav-cancel gray" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/', true)" style="display: inline-block">&#xe620;</i>
+                                <i class="iconfont icon-fav-add orange" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/', false)" style="display: none">&#xe61f;</i>
+                            {% endifequal %}
+                        </div>
                     </div>
                     <div class="td-author">作者：{{ tds.author }}</div>
                     {% for foo in tds.params %}

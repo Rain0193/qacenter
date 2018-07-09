@@ -14,37 +14,47 @@
 	margin-bottom:30px;
 }
 .td-title{
-		font-size:18px;
-		color:#3D4D62;
-		line-height:20px;
-		text-align:left;
+	font-size:18px;
+	color:#3D4D62;
+	line-height:20px;
+	text-align:left;
+}
+.td-author{
+	margin-top:10px;
+	font-size:12px;
+	color:#999999;
+	line-height:12px;
+	text-align:left;
+	margin-bottom:25px;
+}
+
+.td-icon{
+	vertical-align:top;
+	float:right;
+	position: relative;
+}
+	.td-icon .help-icon{
+		float: left;
+		margin-left: 0px;
 	}
-	.td-author{
-		margin-top:10px;
-		font-size:12px;
-		color:#999999;
-		line-height:12px;
-		text-align:left;
-		margin-bottom:25px;
+	.td-icon .addOrCancel_fav{
+		float: right;
+		margin-right: 0px;
 	}
-	.td-icon{
-		vertical-align:top;
-		float:right;
+	.td-icon .icon-fav-cancel,.icon-fav-add{
+		margin-left:12px;
+		margin-right:30px;
+		top: 2px;
 		position: relative;
+		z-index: 2;
+		cursor:pointer;
+		color:#777777;
+		display: inline-block;
 	}
-        .td-icon .icon-fav-cancel,.icon-fav-add{
-			margin-left:12px;
-			margin-right:30px;
-			top: 2px;
-    		position: relative;
-    		z-index: 2;
-    		cursor:pointer;
-    		color:#777777;
-    		display: inline-block;
-		}
-		.td-icon .orange{
-			color:#FF8900;
-		}
+	.td-icon .orange{
+		color:#FF8900;
+	}
+
 
 	.td-param{
 		width:100%;

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 
-from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo
+from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo, FavTd
 from django.db import DataError
 from django.core.exceptions import ObjectDoesNotExist
 
@@ -213,3 +213,35 @@ def add_td_data(type, **kwargs):
                 return '更新失败，请重试'
         logger.info('事务更新成功：{kwargs}'.format(kwargs=kwargs))
     return 'ok'
+
+
+def add_td_data(type, **kwargs):
+    '''
+    我的收藏信息落地
+    :param type: boolean: true: 新增， false：更新
+    :param kwargs: dict
+    :return: ok or tips
+    '''
+    favTd_opt = FavTd.objects
+    id = kwargs.get('id')
+    user = kwargs.get('user')
+    if type:
+        try:
+            belong_td = TdInfo.objects.get_td_by_id(id)
+        except ObjectDoesNotExist:
+            logging.error('事务信息读取失败：{belong_project}'.format(belong_td=belong_td))
+            return '事务信息读取失败，请重试'
+        try:
+            favTd_opt.insert_fav(user=user, belong_td=belong_td)
+        except DataError:
+            return '收藏信息过长'
+        except Exception:
+            logger.error('收藏添加异常： {kwargs}'.format(kwargs=kwargs))
+            return '订阅失败，请重试'
+        return '订阅成功'
+    else:
+        try:
+            favTd_opt.filter(belong_td=id).delete()
+        except ObjectDoesNotExist:
+            return '删除异常，请重试'
+        return '取消订阅成功'

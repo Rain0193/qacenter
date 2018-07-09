@@ -102,3 +102,15 @@ class TdInfoManager(models.Manager):
             return self.filter(belong_module=belong_module).count()
         else:
             return self.all()
+
+    def get_td_by_id(self, id):
+        return self.get(id=id)
+
+
+'''我收藏的事务表操作'''
+class FavTdManager(models.Manager):
+    def insert_fav(self, user, belong_td):
+        self.create(user=user, belong_td=belong_td)
+
+    def get_fav_by_tdAndUser(self, user, belong_td):
+        return self.filter(user=user, belong_td=belong_td).count()

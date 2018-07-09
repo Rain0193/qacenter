@@ -21516,3 +21516,1732 @@ Traceback (most recent call last):
   File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
     return int(value)
 ValueError: invalid literal for int() with base 10: '勿删'
+2018-07-09 11:51:22,579 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'DataManager.views' has no attribute 'td'
+2018-07-09 13:39:44,416 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/all_td/$!biz.id
+2018-07-09 13:49:39,806 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/all_td/$!biz.id
+2018-07-09 13:49:47,733 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/all_td/$!biz.id
+2018-07-09 14:40:10,002 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/addFavTDs
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8008/qacenter/td/addFavTDs/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-07-09 14:40:10,661 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/addFavTDs
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8008/qacenter/td/addFavTDs/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-07-09 14:40:10,917 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/addFavTDs
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8008/qacenter/td/addFavTDs/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-07-09 14:40:11,133 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/addFavTDs
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8008/qacenter/td/addFavTDs/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-07-09 14:57:57,314 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/addFavTDs
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8008/qacenter/td/addFavTDs/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-07-09 14:57:58,598 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/addFavTDs
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8008/qacenter/td/addFavTDs/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-07-09 14:58:09,384 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/addFavTDs
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8008/qacenter/td/addFavTDs/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-07-09 15:12:43,162 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/addFavTDs
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8008/qacenter/td/addFavTDs/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-07-09 15:12:44,924 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/addFavTDs
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8008/qacenter/td/addFavTDs/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-07-09 15:13:10,501 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/addFavTDs
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8008/qacenter/td/addFavTDs/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-07-09 15:17:24,194 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-07-09 15:17:38,815 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-07-09 15:18:28,481 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-07-09 15:18:35,676 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-07-09 15:19:08,748 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-07-09 15:19:21,505 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-07-09 15:19:41,844 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-07-09 15:20:18,801 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-07-09 15:21:14,016 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-07-09 15:23:18,199 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-07-09 15:23:53,096 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 139, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view qacenter.activator.process didn't return an HttpResponse object. It returned None instead.
+2018-07-09 15:54:52,692 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 119, in all_td
+    kwargs['user'] = request.session["now_account"]
+TypeError: list indices must be integers or slices, not str
+2018-07-09 16:11:46,142 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(account, belong_td)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.filter(user=user, belong_td=belong_td).count()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\fields\related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'wangyinguang'
+2018-07-09 16:13:43,658 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:14:11,243 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:15:07,465 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:15:30,505 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:15:37,032 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:17:34,420 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:20:19,734 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:20:37,928 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:20:45,142 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:21:50,717 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:21:55,118 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:23:14,560 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(belong_td, account)
+NameError: name 'belong_td' is not defined
+2018-07-09 16:23:54,016 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.filter(user=user).filter(belong_td__belong_td_id=belong_td).count()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1076, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: belong_td_id
+2018-07-09 16:23:55,648 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.filter(user=user).filter(belong_td__belong_td_id=belong_td).count()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1076, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: belong_td_id
+2018-07-09 16:25:12,087 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:25:12,910 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:25:13,552 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:25:13,757 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:25:13,918 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:25:14,094 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:25:14,272 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:19,082 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:20,511 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:20,782 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:20,958 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:21,119 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:21,262 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:36,526 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:37,264 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:37,472 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:37,647 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:37,804 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:37,965 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:46,639 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:46,816 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:27:47,764 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.filter(user=user).filter(belong_td__id__in=belong_td).count()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 204, in get_prep_lookup
+    for rhs_value in self.rhs:
+TypeError: 'int' object is not iterable
+2018-07-09 16:27:50,128 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.filter(user=user).get(belong_td__id__in=belong_td).count()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 204, in get_prep_lookup
+    for rhs_value in self.rhs:
+TypeError: 'int' object is not iterable
+2018-07-09 16:27:51,136 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.filter(user=user).get(belong_td__id__in=belong_td).count()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 204, in get_prep_lookup
+    for rhs_value in self.rhs:
+TypeError: 'int' object is not iterable
+2018-07-09 16:27:51,318 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.filter(user=user).get(belong_td__id__in=belong_td).count()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 204, in get_prep_lookup
+    for rhs_value in self.rhs:
+TypeError: 'int' object is not iterable
+2018-07-09 16:28:02,236 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id__in=belong_td).filter(user=user).count()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 204, in get_prep_lookup
+    for rhs_value in self.rhs:
+TypeError: 'int' object is not iterable
+2018-07-09 16:28:02,401 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id__in=belong_td).filter(user=user).count()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 204, in get_prep_lookup
+    for rhs_value in self.rhs:
+TypeError: 'int' object is not iterable
+2018-07-09 16:28:09,075 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id__in=belong_td).count()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 204, in get_prep_lookup
+    for rhs_value in self.rhs:
+TypeError: 'int' object is not iterable
+2018-07-09 16:28:09,825 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id__in=belong_td).count()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\lookups.py", line 204, in get_prep_lookup
+    for rhs_value in self.rhs:
+TypeError: 'int' object is not iterable
+2018-07-09 16:28:36,504 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:28:37,232 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:28:37,472 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:28:37,662 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:28:37,821 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:28:38,000 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:28:38,159 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:28:38,320 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:28:38,494 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    count = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:28:56,487 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:28:57,103 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:28:57,327 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:28:57,554 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if count > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:29:56,531 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account).get('id') > 0:
+AttributeError: 'NoneType' object has no attribute 'get'
+2018-07-09 16:30:06,644 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account) > 0:
+AttributeError: 'NoneType' object has no attribute 'get'
+2018-07-09 16:30:07,713 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account) > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:30:07,838 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account) > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:30:07,885 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account) > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:30:07,949 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account) > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:30:15,586 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account) > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:30:16,635 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account) > 0:
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:30:16,781 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account) > 0:
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:30:16,826 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account) > 0:
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:30:16,889 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account) > 0:
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:31:04,438 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if str(fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)) > 0:
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:31:16,303 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if str(fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)) == '1':
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:31:16,881 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if str(fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)) == '1':
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.get(belong_td__id=belong_td).count()
+AttributeError: 'FavTd' object has no attribute 'count'
+2018-07-09 16:32:11,059 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    if fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account) > 0:
+TypeError: '>' not supported between instances of 'NoneType' and 'int'
+2018-07-09 16:40:12,019 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 104, in all_td
+    flag = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.filter(belong_td__contains=belong_td).filter(user=user).count()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1153, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1015, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'belong_project' into field. Choices are: belong_td, belong_td_id, create_time, id, update_time, user
+2018-07-09 16:40:45,341 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 104, in all_td
+    flag = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.filter(belong_td__belong_td_id__contains=belong_td).filter(user=user).count()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1207, in build_filter
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookups[0]))
+django.core.exceptions.FieldError: Related Field got invalid lookup: belong_td_id
+2018-07-09 16:46:47,452 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 104, in all_td
+    flag = fav_opt.get_fav_by_tdAndUser(tdinfo[k].id, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.filter(belong_td__belong_td_id__contains=belong_td).filter(user=user).count()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1207, in build_filter
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookups[0]))
+django.core.exceptions.FieldError: Related Field got invalid lookup: belong_td_id
+2018-07-09 16:52:22,351 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    belong_td = TdInfoManager.get_td_by_id(tdinfo[k].id)
+TypeError: get_td_by_id() missing 1 required positional argument: 'id'
+2018-07-09 16:53:04,460 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 105, in all_td
+    belong_td = TdInfoManager.get_td_by_id(tdinfo[k].id)
+TypeError: get_td_by_id() missing 1 required positional argument: 'id'
+2018-07-09 16:55:12,178 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    belong_td = TdInfoManager.get_td_by_id(idddd)
+TypeError: get_td_by_id() missing 1 required positional argument: 'id'
+2018-07-09 16:55:32,897 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    belong_td = TdInfoManager.get_td_by_id(idddd)
+TypeError: get_td_by_id() missing 1 required positional argument: 'id'
+2018-07-09 16:56:03,430 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    belong_td = TdInfoManager.get_td_by_id(idddd)
+TypeError: get_td_by_id() missing 1 required positional argument: 'id'
+2018-07-09 16:56:58,455 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 106, in all_td
+    belong_td = TdInfoManager.get_td_by_id(idddd)
+TypeError: get_td_by_id() missing 1 required positional argument: 'id'
+2018-07-09 17:03:27,989 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    flag = fav_opt.get_fav_by_tdAndUser(belong_td.title, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.filter(belong_td__belong_title__exact=belong_td).filter(user=user).count()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1207, in build_filter
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookups[0]))
+django.core.exceptions.FieldError: Related Field got invalid lookup: belong_title
+2018-07-09 17:05:29,531 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    flag = fav_opt.get_fav_by_tdAndUser(belong_td, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.filter(belong_td__belong_td_id__exact=belong_td).filter(user=user).count()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1207, in build_filter
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookups[0]))
+django.core.exceptions.FieldError: Related Field got invalid lookup: belong_td_id
+2018-07-09 17:21:31,604 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 107, in all_td
+    flag = fav_opt.get_fav_by_tdAndUser(belong_td.title, account)
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    self.filter(belong_td__id=belong_td, user=user).count()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\lookups.py", line 68, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '根据店铺id查询店铺信息'
+2018-07-09 18:06:16,166 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 108, in all_td
+    if str(fav_opt.get_fav_by_tdAndUser(tdinfo[k].title, account)) == 1:
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    return self.filter(user=user, belong_td=belong_td).count()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\fields\related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'wangyinguang'
+2018-07-09 18:06:40,081 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 108, in all_td
+    if fav_opt.get_fav_by_tdAndUser(tdinfo[k].title, account) == 1:
+  File "E:\qacenter\DataManager\managers.py", line 116, in get_fav_by_tdAndUser
+    return self.filter(user=user, belong_td=belong_td).count()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\fields\related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\fields\__init__.py", line 947, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'wangyinguang'
+2018-07-09 18:26:21,054 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/all_td/取消订阅成功/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+TypeError: all_td() takes 1 positional argument but 2 were given

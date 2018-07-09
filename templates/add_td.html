@@ -16,13 +16,13 @@
                     <span class="tmp-title">*事务名称：</span>
                     <input class="tmp-input" id="title" name="title" value="" placeholder="请填写事务名称"/>
                     <select id="belong_project" name="project" class="tmp-select" onchange="auto_load('#infoForm', '/qacenter/add_td/', '#belong_module_id', 'module')">
-                        <option value="0">请选择所属项目</option>
+                        <option value="0">请选择所属项目(必填)</option>
                         {% for foo in project %}
                             <option value="{{ foo.project_name }}">{{ foo.project_name }}</option>
                         {% endfor %}
                     </select>
                     <select id="belong_module_id" name="module" class="tmp-select">
-                        <option value="0">请选择模块(非必填)</option>
+                        <option value="0">请选择模块(必填)</option>
                     </select>
                 </div>
             </form>

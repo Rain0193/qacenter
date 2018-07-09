@@ -93,19 +93,27 @@
 {#                    <i id="icon-down" class="iconfont icon-toggle" title="点击展开">&#xe65d;</i>#}
 {#                #end#}
             </span>
-            <ul class="sub_menu #if($tagDO.bizId==$!biz.id)sub-menu-sel#end">
-                {% for module in foo.module %}
-                    <li class="sub-menu-list #if($tagId==$tagVO.id)sub-sel#end">
-                        <a class="sub-menu-btn" href="/qacenter/td/allTD?tagId=${tagVO.id}" title="${tagVO.tag}">
-                            #if($tagVO.tag.length()>6)
-                                $tagVO.tag.substring(0,6)...
-                            #else
-                                $tagVO.tag
-                            #end
-                        </a>
-                    </li>
-                {% endfor %}
+            <ul>
+                <li>
+                    <a class="test" style="list-style-type: none;" title="test">test1</a>
+                    <a class="test" title="test">test2</a>
+                    <a class="test" title="test">test3</a>
+                    <a class="test" title="test">test4</a>
+                </li>
             </ul>
+{#            <ul class="sub_menu #if($tagDO.bizId==$!biz.id)sub-menu-sel#end">#}
+{#                {% for module in foo.module %}#}
+{#                    <li class="sub-menu-list #if($tagId==$tagVO.id)sub-sel#end">#}
+{#                        <a class="sub-menu-btn" href="/qacenter/td/allTD?tagId=${tagVO.id}" title="${tagVO.tag}">#}
+{#                            #if($tagVO.tag.length()>6)#}
+{#                                $tagVO.tag.substring(0,6)...#}
+{#                            #else#}
+{#                                $tagVO.tag#}
+{#                            #end#}
+{#                        </a>#}
+{#                    </li>#}
+{#                {% endfor %}#}
+{#            </ul>#}
         {% endfor %}
 
 

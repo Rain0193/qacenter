@@ -7,10 +7,11 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
 from urllib3.connectionpool import xrange
 
-from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo
+from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo, FavTd
 from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic
-from DataManager.utils.operation import del_project_data, del_module_data
+from DataManager.utils.operation import del_project_data, del_module_data, add_td_data
 from DataManager.utils.pagination import get_pager_info
+from DataManager.managers import TdInfoManager
 
 logger = logging.getLogger('qacenter')
 
@@ -76,7 +77,6 @@ def base(request):
     :return:
     """
     projectInfo = ProjectInfo.objects.all()
-    print(projectInfo)
     if request.session.get('login_status'):
         manage_info = {
             'account': request.session["now_account"],
@@ -94,17 +94,24 @@ def all_td(request):
     :param request:
     :return:
     """
+    account = request.session["now_account"]
     projectInfo = ProjectInfo.objects.all()
-    print(projectInfo)
+    fav_opt = FavTd.objects
     tdinfo = TdInfo.objects.all()
+    kwargs = {}
     tdlist = []
     for k in xrange(len(tdinfo)):
-        td= {}
-        if k % 2 == 0:
-            td.setdefault('right','true')
+        td = {}
+        flag = fav_opt.get_fav_by_tdAndUser(account, tdinfo[k].id)
+        if flag == 1:
+            td.setdefault('isFav', 'true')
         else:
-            td.setdefault('right','false')
-        td.setdefault('id',tdinfo[k].id)
+            td.setdefault('isFav', 'false')
+        if k % 2 == 0:
+            td.setdefault('right', 'true')
+        else:
+            td.setdefault('right', 'false')
+        td.setdefault('id', tdinfo[k].id)
         td.setdefault('title', tdinfo[k].title)
         td.setdefault('td_url', tdinfo[k].td_url)
         td.setdefault('author', tdinfo[k].author)
@@ -114,13 +121,23 @@ def all_td(request):
         td.setdefault('belong_module', tdinfo[k].belong_module)
         tdlist.append(td)
     if request.session.get('login_status'):
-        manage_info = {
-            'account': request.session["now_account"],
-            'tdList': tdlist,
-            'projects': projectInfo
-        }
-        init_filter_session(request)
-        return render_to_response('all_td.html', manage_info)
+        if request.is_ajax():
+            td_info = json.loads(request.body.decode('utf-8'))
+            kwargs['user'] = request.session["now_account"]
+            kwargs['id'] = td_info.pop('id')
+            if td_info.pop('type'):
+                msg = add_td_data(True, **kwargs)
+            else:
+                msg = add_td_data(False, **kwargs)
+            return HttpResponse(get_ajax_msg(msg, 'ok'))
+        else:
+            manage_info = {
+                'account': request.session["now_account"],
+                'tdList': tdlist,
+                'projects': projectInfo
+            }
+            init_filter_session(request)
+            return render_to_response('all_td.html', manage_info)
     else:
         return HttpResponseRedirect("/qacenter/login/")
 
@@ -133,7 +150,6 @@ def project_list(request, id):
     :return:
     """
     projectInfo = ProjectInfo.objects.all()
-    print(projectInfo)
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
@@ -142,7 +158,7 @@ def project_list(request, id):
                 msg = del_project_data(list(eval(project_info.pop('id'))))
             else:
                 msg = project_info_logic(type=False, **project_info)
-            return HttpResponse(get_ajax_msg(msg, 'ok'))
+            return HttpResponse(get_ajax_msg(msg, '/qacenter/all_td/'))
         else:
             filter_query = set_filter_session(request)
             pro_list = get_pager_info(
@@ -441,3 +457,4 @@ def my_tds(request):
             return render_to_response('my_tds.html', manage_info)
     else:
         return HttpResponseRedirect("/qacenter/login/")
+
