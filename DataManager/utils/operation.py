@@ -146,16 +146,16 @@ def add_td_data(type, **kwargs):
     :return: ok or tips
     '''
     td_opt = TdInfo.objects
-    belong_project = kwargs.pop('project')
-    module = kwargs.pop('module')
-    title = kwargs.pop('title')
-    td_url = kwargs.pop('td_url')
-    author = kwargs.pop('author')
-    params = kwargs.pop('params')
-    instruction = kwargs.pop('instruction')
+    project = kwargs.get('project')
+    module = kwargs.get('module')
+    title = kwargs.get('title')
+    td_url = kwargs.get('td_url')
+    author = kwargs.get('author')
+    params = kwargs.get('params')
+    instruction = kwargs.get('instruction')
     if type:
         try:
-            belong_project = ProjectInfo.objects.get_pro_name(belong_project, type=False)
+            belong_project = ProjectInfo.objects.get_pro_name(project, type=False)
         except ObjectDoesNotExist:
             logging.error('项目信息读取失败：{belong_project}'.format(belong_project=belong_project))
             return '项目信息读取失败，请重试'
@@ -183,11 +183,33 @@ def add_td_data(type, **kwargs):
         logger.info('事务添加成功：{kwargs}'.format(kwargs=kwargs))
     else:
         try:
-            td_opt.update_td(kwargs.pop('index'), **kwargs)
-        except DataError:
-            return '事务信息过长'
-        except Exception:
-            logger.error('更新事务失败:{kwargs}'.format(kwargs=kwargs))
-            return '更新失败，请重试'
-        logger.info('更新事务成功：{kwargs}'.format(kwargs=kwargs))
+            belong_project = ProjectInfo.objects.get_pro_name(project, type=False)
+        except ObjectDoesNotExist:
+            logging.error('项目信息读取失败：{belong_project}'.format(belong_project=belong_project))
+            return '项目信息读取失败，请重试'
+        kwargs['belong_project'] = belong_project
+        if module != '0':
+            try:
+                belong_module = ModuleInfo.objects.get_module_name(module, type=False)
+            except ObjectDoesNotExist:
+                logging.error('模块信息读取失败：{belong_module}'.format(belong_module=belong_module))
+                return '模块信息读取失败，请重试'
+            kwargs['belong_module'] = belong_module
+            try:
+                td_opt.update_td(kwargs.pop('id'), **kwargs)
+            except DataError:
+                return '事务信息过长'
+            except Exception:
+                logger.error('更新事务失败:{kwargs}'.format(kwargs=kwargs))
+                return '更新失败，请重试'
+            logger.info('更新事务成功：{kwargs}'.format(kwargs=kwargs))
+        else:
+            try:
+                td_opt.update_td_no_module(id=id, title=title, td_url=td_url, author=author, belong_project=belong_project, params=params, instruction=instruction)
+            except DataError:
+                return '事务信息过长'
+            except Exception:
+                logger.error('事务更新异常： {kwargs}'.format(kwargs=kwargs))
+                return '更新失败，请重试'
+        logger.info('事务更新成功：{kwargs}'.format(kwargs=kwargs))
     return 'ok'

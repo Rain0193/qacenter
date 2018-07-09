@@ -59,10 +59,11 @@ class ModuleInfoManager(models.Manager):
         else:
             if id is not None:
                 return self.values('module_name').filter(id__in=id)
-            return self.get(id__exact=module_name)
+            else:
+                return self.get(id=module_name)
 
     def get_module_by_id(self, id):
-        return self.filter(id__exact=id).count()
+        return self.filter(id__in=id)
 
 
 '''事务信息表操作'''
@@ -77,8 +78,21 @@ class TdInfoManager(models.Manager):
         obj = self.get(id=id)
         obj.title = kwargs.get('title')
         obj.td_url = kwargs.get('td_url')
+        obj.author = kwargs.get('author')
+        obj.belong_project = kwargs.get('belong_project')
+        obj.belong_module = kwargs.get('belong_module')
         obj.params = kwargs.get('params')
         obj.instruction = kwargs.get('instruction')
+        obj.save()
+
+    def update_td_no_module(self, id, title, td_url, author, project, params, instruction):
+        obj = self.get(id=id)
+        obj.title = title
+        obj.td_url = td_url
+        obj.author = author
+        obj.belong_project = project
+        obj.params = params
+        obj.instruction = instruction
         obj.save()
 
     def get_td_info(self, belong_project=None, belong_module=None):

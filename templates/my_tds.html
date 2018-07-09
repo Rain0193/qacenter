@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block title %}我的事务模板{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'assets/css/all_td.css' %}">
+
+<div class="crumb">
+    <span>我的事务模板</span>
+</div>
+
+
+    <div class="tds-content tds-tmp">
+        <div class="left-panel">
+            {% for tds in tdList %}
+            {% ifequal tds.right 'true' %}
+            <div id="tdPanel{{forloop.counter0}}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
+                <input type="hidden" name="id" value="{{ tds.id }}"/>
+                <form id="tdForm{{forloop.counter0}}" class="tdForm{{tds.id}}">
+                    <div class="td-title">
+                        {{ tds.title }}
+                        <span id="td-icon{{forloop.counter0}}" class="td-icon">
+                            {% if tds.params.length == 0 %}
+                            {% else %}
+                                <i id="icon-help" class="iconfont icon-help">&#xe61e;</i>
+                                <div id="td-help-dialog-add"
+                                 class="help-dialog td-help-dialog td-help-dialog${index}"></div>
+                            {% endif %}
+                            <i class="iconfont icon-fav-cancel gray" style="display: inline-block"
+                               style="display: inline-block"></i>
+                            <i class="iconfont icon-fav-add orange" style="display: none"
+                               style="display:none"></i>
+                        </span>
+                    </div>
+                    <div class="td-author">作者：{{ tds.author }}</div>
+                    {% for foo in tds.params %}
+                    <div class="td-param">
+                        <span class="td-param-name">{{ foo.param }}：</span>
+                        {% ifequal foo.type '0' %}
+                        <input type="text" class="param-input" name="param{{forloop.counter0}}" value="" placeholder="{{ foo.exp }}"
+                               autocomplete="off" readonly/>
+                        {% else %}
+                        <select name="param{{forloop.counter0}}">
+                            <option value="请选择">请选择</option>
+                        </select>
+                        {% endifequal %}
+                        <div class="bdsug">
+                            <ul>
+
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <input type="hidden" name="url" value="{{ tds.td_url }}"/>
+
+                    <div class="submit-btn-row"><a href="/qacenter/edit_td/{{ tds.id }}/" class="submit btn">编辑</a></div>
+                </form>
+            </div>
+            {% endifequal %}
+            {% empty %}
+                <span>抱歉，列表为空</span>
+            {% endfor %}
+    </div>
+    <div class="right-panel">
+            {% for tds in tdList %}
+            {% ifequal tds.right 'false' %}
+            <div id="tdPanel{{forloop.counter0}}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
+                <input type="hidden" name="id" value="{{ tds.id }}"/>
+                <form id="tdForm{{forloop.counter0}}" class="tdForm{{tds.id}}">
+                    <div class="td-title">
+                        {{ tds.title }}
+                        <span id="td-icon{{forloop.counter0}}" class="td-icon">
+                            {% if tds.params.length == 0 %}
+                            {% else %}
+                                <i id="icon-help" class="iconfont icon-help">&#xe61e;</i>
+                                <div id="td-help-dialog-add"
+                                 class="help-dialog td-help-dialog td-help-dialog${index}"></div>
+                            {% endif %}
+                            <i class="iconfont icon-fav-cancel gray" style="display: inline-block"
+                               style="display: inline-block" ></i>
+                            <i class="iconfont icon-fav-add orange" style="display: none"
+                               style="display:none"></i>
+                        </span>
+                    </div>
+                    <div class="td-author">作者：{{ tds.author }}</div>
+                    {% for foo in tds.params %}
+                    <div class="td-param">
+                        <span class="td-param-name">{{ foo.param }}：</span>
+                        {% ifequal foo.type '0' %}
+                        <input type="text" class="param-input" name="param{{forloop.counter0}}" value="" placeholder="{{ foo.exp }}"
+                               autocomplete="off" readonly/>
+                        {% else %}
+                        <select name="param{{forloop.counter0}}">
+                            <option value="请选择" onclick="getOptions({{ foo.exp }})">请选择</option>
+                        </select>
+                        {% endifequal %}
+                        <div class="bdsug">
+                            <ul>
+
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <input type="hidden" name="url" value="{{ tds.td_url }}"/>
+
+                    <div class="submit-btn-row"><a href="/qacenter/edit_td/{{ tds.id }}/" class="submit btn">编辑</a></div>
+                </form>
+            </div>
+            {% endifequal %}
+            {% empty %}
+                <span>抱歉，列表为空</span>
+            {% endfor %}
+     </div>
+</div>
+
+{% endblock %}

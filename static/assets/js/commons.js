@@ -152,7 +152,7 @@ function copy_data_ajax(id, url) {
     });
 }
 
-function td_ajax(tag) {
+function td_ajax(tag, id) {
     var formArr = $('#paramForm').serializeArray();
     formArr = formArr.reverse();
     console.log(formArr);
@@ -170,12 +170,13 @@ function td_ajax(tag) {
     var info = $("#infoForm").serializeJSON();
     var other = $("#otherForm").serializeJSON();
     if (tag === 'edit') {
-        url = '/qacenter/edit_td/';
+        url = '/qacenter/edit_td/'+id+'/';
     } else {
         url = '/qacenter/add_td/';
     }
 
     const formData = {
+        "id": info.id,
         "title": info.title,
         "project": info.project,
         "module": info.module,

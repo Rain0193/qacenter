@@ -186,6 +186,7 @@ def edit_project(request, id):
     """
     编辑项目
     :param request:
+    :param id: 项目id
     :return:
     """
     projectsInfo = ProjectInfo.objects.all()
@@ -287,6 +288,7 @@ def edit_project(request, id):
     """
     编辑项目
     :param request:
+    :param id: 模块id
     :return:
     """
     projectsInfo = ProjectInfo.objects.all()
@@ -320,8 +322,8 @@ def edit_module(request, id):
     :return:
     """
     projectsInfo = ProjectInfo.objects.all()
+    account = request.session["now_account"]
     if request.session.get('login_status'):
-        account = request.session["now_account"]
         if request.is_ajax():
             module_info = json.loads(request.body.decode('utf-8'))
             msg = module_info_logic(False, **module_info)
@@ -351,7 +353,6 @@ def add_td(request):
     :return:
     '''
     projectInfo = ProjectInfo.objects.all()
-    print(projectInfo)
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
@@ -369,18 +370,74 @@ def add_td(request):
          return HttpResponseRedirect("/qacenter/login/")
 
 
-def get_module_by_project(request):
+def edit_td(request, id):
     '''
-    根据项目获取模块
+    编辑事务模板
+    :param request:
+    :param id: 事务id
+    :return:
+    '''
+    projectInfo = ProjectInfo.objects.all()
+    account = request.session["now_account"]
+    tdinfo = TdInfo.objects.get(id=id)
+    td = {}
+    td.setdefault('id', tdinfo.id)
+    td.setdefault('title', tdinfo.title)
+    td.setdefault('td_url', tdinfo.td_url)
+    td.setdefault('author', tdinfo.author)
+    td.setdefault('params', eval(tdinfo.params))
+    td.setdefault('instruction', tdinfo.instruction)
+    td.setdefault('belong_project', tdinfo.belong_project)
+    td.setdefault('belong_module', tdinfo.belong_module)
+    if request.session.get('login_status'):
+        if request.is_ajax():
+            td_info = json.loads(request.body.decode('utf-8'))
+            msg = td_info_logic(False, **td_info)
+            return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_td/' + id + '/'))
+
+        elif request.method == 'GET':
+            manage_info = {
+                'account': account,
+                'tdList': td,
+                'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time'),
+                'projects': projectInfo
+            }
+            return render_to_response('edit_td.html', manage_info)
+    else:
+        return HttpResponseRedirect("/qacenter/login/")
+
+
+def my_tds(request):
+    '''
+    获取我的事务模板
     :param request:
     :return:
     '''
     account = request.session["now_account"]
-    info = json.loads(request.body.decode('utf-8'))
-    belong_project = info.get('belong_project')
-    if request.method == 'GET':
-        manage_info = {
-            'account': account,
-            'module': ModuleInfo.objects.filter(belong_project=belong_project)
-        }
-        return render_to_response('add_td.html', manage_info)
+    tdinfo = TdInfo.objects.filter(author=account)
+    projectInfo = ProjectInfo.objects.all()
+    tdlist = []
+    for k in xrange(len(tdinfo)):
+        td = {}
+        if k % 2 == 0:
+            td.setdefault('right', 'true')
+        else:
+            td.setdefault('right', 'false')
+        td.setdefault('id', tdinfo[k].id)
+        td.setdefault('title', tdinfo[k].title)
+        td.setdefault('td_url', tdinfo[k].td_url)
+        td.setdefault('author', tdinfo[k].author)
+        td.setdefault('params', eval(tdinfo[k].params))
+        td.setdefault('instruction', tdinfo[k].instruction)
+        td.setdefault('belong_project', tdinfo[k].belong_project)
+        td.setdefault('belong_module', tdinfo[k].belong_module)
+        tdlist.append(td)
+    if request.session.get('login_status'):
+        if request.method == 'GET':
+            manage_info = {
+                'tdList': tdlist,
+                'projects': projectInfo
+            }
+            return render_to_response('my_tds.html', manage_info)
+    else:
+        return HttpResponseRedirect("/qacenter/login/")
