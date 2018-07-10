@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 
-from DataManager.utils.operation import add_register_data, add_project_data, add_module_data, add_td_data
+from DataManager.utils.operation import add_register_data, add_project_data, add_module_data, add_td_data, add_record_data
 
 from DataManager.models import ModuleInfo
 
@@ -143,3 +143,10 @@ def load_modules(**kwargs):
         string = string + str(value[0]) + '^=' + value[1] + 'replaceFlag'
     return string[:len(string) - 11]
 
+def record_info_logic(**kwargs):
+    """
+    调用历史信息逻辑处理
+    :param kwargs: dict: 调用信息
+    :return:
+    """
+    return add_record_data(**kwargs)

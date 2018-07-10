@@ -95,6 +95,12 @@ class TdInfoManager(models.Manager):
         obj.instruction = instruction
         obj.save()
 
+    def update_td_pv(self, id, count):
+        obj = self.get(id=id)
+        obj.run_count = count
+        obj.save()
+
+
     def get_td_info(self, belong_project=None, belong_module=None):
         if belong_project is not None:
             return self.filter(belong_project=belong_project).count()
@@ -114,3 +120,9 @@ class FavTdManager(models.Manager):
 
     def get_fav_by_tdAndUser(self, user, belong_td):
         return self.filter(user=user, belong_td=belong_td).count()
+
+
+'''调用历史表操作'''
+class RecordManager(models.Manager):
+    def insert_record(self, user, belong_td, request, result):
+        self.create(user=user, belong_td=belong_td, request=request, result=result)

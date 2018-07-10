@@ -78,29 +78,32 @@
             <span class="nav-list-menu ful "><a href="/qacenter/module_list/1"><i
                     class="iconfont icon-fav">&#xe60a;</i>模块管理</a></span>
 {#        #end#}
-        <span class="nav-list-menu ful"><a href="/qacenter/td/record"><i
+        <span class="nav-list-menu ful"><a href="/qacenter/record/"><i
                 class="iconfont icon-fav">
             &#xe617;</i>调用历史</a></span>
-        <span class="nav-list-menu ful "><a href="/qacenter/td/summary"><i
+        <span class="nav-list-menu ful "><a href="/qacenter/summary"><i
                 class="iconfont icon-fav">&#xe603;</i>调用量统计</a></span>
 
         {% for foo in projects %}
             <span class="nav-list-menu-project">
-            <a href="/qacenter/all_td/$!biz.id">
-                <i class="iconfont icon-fav">&#xe618;</i>
-                {{ foo.project_name }}</a>
-{#                #if($allBizTagsMap[$!foo.name].size())#}
-{#                    <i id="icon-down" class="iconfont icon-toggle" title="点击展开">&#xe65d;</i>#}
-{#                #end#}
+                <span name="index" hidden>{{ forloop.counter0 }}</span>
+                <a>
+
+                    <i class="iconfont icon-fav">&#xe618;</i>
+                    {{ foo.project_name|truncatechars:6 }}</a>
+    {#                #if($allBizTagsMap[$!foo.name].size())#}
+    {#                    <i id="icon-down" class="iconfont icon-toggle" title="点击展开">&#xe65d;</i>#}
+    {#                #end#}
+                <ul class="ul-menu" name="ul-menu{{ forloop.counter0 }}" hidden>
+                    <li>
+                        <a class="test" title="test">test1</a>
+                        <a class="test" title="test">test2</a>
+                        <a class="test" title="test">test3</a>
+                        <a class="test" title="test">test4</a>
+                    </li>
+                </ul>
             </span>
-            <ul>
-                <li>
-                    <a class="test" style="list-style-type: none;" title="test">test1</a>
-                    <a class="test" title="test">test2</a>
-                    <a class="test" title="test">test3</a>
-                    <a class="test" title="test">test4</a>
-                </li>
-            </ul>
+
 {#            <ul class="sub_menu #if($tagDO.bizId==$!biz.id)sub-menu-sel#end">#}
 {#                {% for module in foo.module %}#}
 {#                    <li class="sub-menu-list #if($tagId==$tagVO.id)sub-sel#end">#}
@@ -128,10 +131,13 @@
         $(document).ready(function() {
             var index = localStorage.getItem("currentNav",index);
             $('.nav-list-menu').eq(index).addClass("sel").siblings().removeClass("sel");
+            $('.ul-menu').hide()
         }).on('click','.nav-list-menu',function(){
             var index = $(this).index();
             localStorage.setItem("currentNav",index);
             $(this).addClass("sel").siblings().removeClass("sel");
+        }).on('click','.nav-list-menu-project',function(){
+            $('.ul-menu').show()
         })
 
     </script>

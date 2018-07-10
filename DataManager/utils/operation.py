@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 
-from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo, FavTd
+from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo, FavTd, Record
 from django.db import DataError
 from django.core.exceptions import ObjectDoesNotExist
 
@@ -245,3 +245,40 @@ def add_fav_data(type, **kwargs):
         except ObjectDoesNotExist:
             return '删除异常，请重试'
         return '取消订阅成功'
+
+
+def add_td_pv(id):
+    '''
+    事务pv
+    :param type: boolean: true: 新增， false：更新
+    :param kwargs: dict
+    :return: ok or tips
+    '''
+    td_opt = TdInfo.objects
+    try:
+        pv = td_opt.values('run_count').filter(id=id)
+        count = pv[0]['run_count'] + 1
+        td_opt.update_td_pv(id, count)
+    except ObjectDoesNotExist:
+        logger.error('事务pv更新异常： {kwargs}'.format(id=id))
+        return '更新失败，请重试'
+    return '事务pv更新成功'
+
+def add_record_data(**kwargs):
+    '''
+    调用历史
+    :param kwargs: dict
+    :return: ok or tips
+    '''
+    record_opt = Record.objects
+    user = kwargs.get('user')
+    tdId = kwargs.get('belong_td')
+    request = kwargs.get('request')
+    result = kwargs.get('result')
+    try:
+        belong_td = TdInfo.objects.get_td_by_id(tdId)
+        record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+    except ObjectDoesNotExist:
+        logger.error('调用历史添加异常： {kwargs}'.format(kwargs=kwargs))
+        return '调用历史添加失败，请重试'
+    return '调用历史添加成功'

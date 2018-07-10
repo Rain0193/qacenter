@@ -84,7 +84,65 @@ function id_ajax(id, url, type) {
             myAlertFail('Sorry，服务器可能开小差啦, 请重试!');
         }
     });
+}
 
+/*事务pv异步传输*/
+function pv_ajax(id, url, model, type) {
+    data = {
+        'id': id,
+        'type': type,
+        'model': model
+    }
+    $.ajax({
+        type: 'post',
+        url: url,
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        success: function (data) {
+            if (data !== 'ok') {
+                if (data.indexOf('/qacenter/') !== -1) {
+                    myAlertSuccess(data);
+                } else {
+                }
+            }
+            else {
+                myAlertFail(data);
+            }
+        },
+        error: function () {
+            myAlertFail('Sorry，事务pv更新失败!');
+        }
+    });
+}
+
+/*调用历史异步传输*/
+function record_ajax(tdId, user, request, result, url) {
+    data = {
+        'belong_td': tdId,
+        'user': user,
+        'request': request,
+        'result': result
+    }
+    $.ajax({
+        type: 'post',
+        url: url,
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        success: function (data) {
+            if (data !== 'ok') {
+                if (data.indexOf('/qacenter/') !== -1) {
+                    myAlertSuccess(data);
+                } else {
+                }
+            }
+            else {
+                myAlertFail(data);
+            }
+        },
+        error: function () {
+            myAlertFail('Sorry，调用历史添加失败!');
+        }
+    });
 }
 
 function auto_load(id, url, target, flag) {

@@ -27,7 +27,7 @@
         <div class="addBtn" onclick="location='/qacenter/add_module/'">添加模块</div>
         <div class="tab-content">
             {% for fool in project %}
-                <span id="tab-span" class="tab-span {% ifequal fool.project_name 'All' %}select {% else %}{% endifequal %}" onclick="module_by_project_post('/qacenter/module_list/1/','{{ fool.project_name }}')">{{ fool.project_name }}</span>
+                <span id="tab-span" class="tab-span {% ifequal fool.project_name 'All' %}select {% else %}{% endifequal %}" onclick="module_by_project_post('/qacenter/module_list/1/','{{ fool.project_name }}')">{{ fool.project_name|truncatechars:6 }}</span>
             {% endfor %}
         </div>
         <div class="table-statistics">
@@ -41,8 +41,8 @@
                         <th>测试人员</th>
                         <th>开发人员</th>
     {#                    <th>事务数量</th>#}
-                        <th>简要概述</th>
                         <th>创建时间</th>
+                        <th>简要概述</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -55,8 +55,8 @@
                         <td>{{ foo.belong_project.project_name }}</td>
                         <td>{{ foo.test_user }}</td>
                         <td>{{ foo.dev_user }}</td>
-                        <td>{{ foo.simple_desc }}</td>
                         <td>{{ foo.create_time }}</td>
+                        <td>{{ foo.simple_desc|truncatechars:15 }}</td>
                         <td>
                             <div class="btn-operate">
                                  <a href="/qacenter/edit_module/{{ foo.id }}/">

@@ -7,9 +7,9 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
 from urllib3.connectionpool import xrange
 
-from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo, FavTd
-from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic
-from DataManager.utils.operation import del_project_data, del_module_data, add_fav_data
+from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo, FavTd, Record
+from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic, record_info_logic
+from DataManager.utils.operation import del_project_data, del_module_data, add_fav_data, add_td_pv
 from DataManager.utils.pagination import get_pager_info
 
 logger = logging.getLogger('qacenter')
@@ -124,10 +124,13 @@ def all_td(request):
             td_info = json.loads(request.body.decode('utf-8'))
             kwargs['user'] = request.session["now_account"]
             kwargs['id'] = td_info.pop('id')
-            if td_info.pop('type'):
-                msg = add_fav_data(True, **kwargs)
+            if td_info.get('model') == 'pv':
+                msg = add_td_pv(kwargs['id'])
             else:
-                msg = add_fav_data(False, **kwargs)
+                if td_info.pop('type'):
+                    msg = add_fav_data(True, **kwargs)
+                else:
+                    msg = add_fav_data(False, **kwargs)
             return HttpResponse(get_ajax_msg(msg, 'ok'))
         else:
             manage_info = {
@@ -502,3 +505,55 @@ def my_fav(request):
             return render_to_response('my_fav.html', manage_info)
     else:
         return HttpResponseRedirect("/qacenter/login/")
+
+
+def record(request):
+    '''
+    调用历史
+    :param request:
+    :return:
+    '''
+    account = request.session["now_account"]
+    projectInfo = ProjectInfo.objects.all()
+    record_opt = Record.objects.all()
+    recordlist = []
+    for k in xrange(len(record_opt)):
+        record = {}
+        record.setdefault('name', record_opt[k].belong_td.title)
+        record.setdefault('user', record_opt[k].user)
+        record.setdefault('create_time', record_opt[k].create_time)
+        record.setdefault('request', record_opt[k].request)
+        record.setdefault('result', record_opt[k].result)
+        recordlist.append(record)
+    if request.session.get('login_status'):
+        if request.is_ajax():
+            record_info = json.loads(request.body.decode('utf-8'))
+            msg = record_info_logic(**record_info)
+            return HttpResponse(get_ajax_msg(msg, '/qacenter/record/'))
+
+        if request.method == 'GET':
+            manage_info = {
+                'account': account,
+                'recordList': recordlist,
+                'projects': projectInfo
+            }
+            return render_to_response('record.html', manage_info)
+    else:
+        return HttpResponseRedirect("/qacenter/login/")
+
+
+def summary(request):
+    '''
+    调用量统计
+    :param request:
+    :return:
+    '''
+    account = request.session["now_account"]
+    projectInfo = ProjectInfo.objects.all()
+    if request.method == 'GET':
+        manage_info = {
+            'account': account,
+            'projects': projectInfo,
+            'summary': '功能开发中~~~'
+        }
+        return render_to_response('summary.html', manage_info)

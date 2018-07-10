@@ -801,7 +801,7 @@ ul.pagination {
     margin-right: 50px;
 }
 
-ul.pagination li {display: inline;}
+ul.pagination li {display: none;}
 
 ul.pagination li a {
     color: black;

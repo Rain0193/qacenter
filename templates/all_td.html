@@ -8,8 +8,8 @@
     <span>全部事务</span>
 </div>
 
-
     <div class="tds-content tds-tmp">
+        <div class="account" hidden><input name="account" value="{{ account }}"></div>
         <div class="left-panel">
             {% for tds in tdList %}
             {% ifequal tds.right 'true' %}
@@ -25,11 +25,11 @@
                                 <div id="td-help-dialog-add" class="help-dialog td-help-dialog td-help-dialog${index}"></div>
                             {% endif %}
                             {% ifequal tds.isFav 'true' %}
-                                <i class="iconfont icon-fav-cancel gray" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/', true)" style="display: none">&#xe620;</i>
-                                <i class="iconfont icon-fav-add orange" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/', false)" style="display: inline-block">&#xe61f;</i>
+                                <i class="iconfont icon-fav-cancel gray" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/',true)" style="display: none">&#xe620;</i>
+                                <i class="iconfont icon-fav-add orange" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/',false)" style="display: inline-block">&#xe61f;</i>
                             {% else %}
-                                <i class="iconfont icon-fav-cancel gray" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/', true)" style="display: inline-block">&#xe620;</i>
-                                <i class="iconfont icon-fav-add orange" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/', false)" style="display: none">&#xe61f;</i>
+                                <i class="iconfont icon-fav-cancel gray" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/',true)" style="display: inline-block">&#xe620;</i>
+                                <i class="iconfont icon-fav-add orange" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/',false)" style="display: none">&#xe61f;</i>
                             {% endifequal %}
 
                         </div>
@@ -55,15 +55,15 @@
                     {% endfor %}
                     <input type="hidden" name="url" value="{{ tds.td_url }}"/>
 
-                    <div class="submit-btn-row"><a class="submit btn">确定</a></div>
+                    <div class="submit-btn-row"><a class="submit btn" onclick="pv_ajax('{{ tds.id }}', '/qacenter/all_td/', 'pv', true)" >确定</a></div>
                 </form>
             </div>
             {% endifequal %}
             {% empty %}
                 <span>抱歉，列表为空</span>
             {% endfor %}
-    </div>
-    <div class="right-panel">
+        </div>
+        <div class="right-panel">
             {% for tds in tdList %}
             {% ifequal tds.right 'false' %}
             <div id="tdPanel{{forloop.counter0}}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
@@ -108,7 +108,7 @@
                     {% endfor %}
                     <input type="hidden" name="url" value="{{ tds.td_url }}"/>
 
-                    <div class="submit-btn-row"><a class="submit btn">确定</a></div>
+                    <div class="submit-btn-row"><a class="submit btn" onclick="pv_ajax('{{ tds.id }}', '/qacenter/all_td/', 'pv', true)">确定</a></div>
                 </form>
             </div>
             {% endifequal %}
@@ -167,88 +167,89 @@
                 $('.td-help-dialog').hide();
             }
         }).on('click', '.submit', function() {
-        var formId = $(this).parent().parent().attr('id');
-        var formData = $("#" + formId).serializeArray();
-        var url = $(this).parent().parent().find('input[name="url"]').val();
-        var id = $(this).parent().parent().parent().find('input[name="id"]').val();
-        {#var env = $(this).parent().parent().parent().find('input[name="env"]').val();#}
-        {#var isRecord = $(this).parent().parent().parent().find('input[name="isRecord"]').val();#}
-        var kwMap = {};
-        var host = window.location.host;
-        $.each(formData, function (index, data) {
-            var array = kwMap[index];
-            if (data.name.indexOf('param') >= 0) {
-                if (array == undefined) {
-                    array = new Array();
+            var formId = $(this).parent().parent().attr('id');
+            var formData = $("#" + formId).serializeArray();
+            var url = $(this).parent().parent().find('input[name="url"]').val();
+            var id = $(this).parent().parent().parent().find('input[name="id"]').val();
+            var account = $(this).parent().parent().parent().parent().parent().find('input[name="account"]').val();
+            console.log(account)
+            var kwMap = {};
+            var host = window.location.host;
+            $.each(formData, function (index, data) {
+                var array = kwMap[index];
+                if (data.name.indexOf('param') >= 0) {
+                    if (array == undefined) {
+                        array = new Array();
+                    }
+                    if ($.trim(data.value).length != 0) {
+                        array.push(data.value);
+                    }
+                    kwMap[index] = array;
                 }
-                if ($.trim(data.value).length != 0) {
-                    array.push(data.value);
-                }
-                kwMap[index] = array;
-            }
-        });
-        var kwMap0 = JSON.parse(localStorage.getItem("TD_INPUT_" + id));
-        if (kwMap0 != null) {
-            $.each(kwMap0, function (index, kwArray) {
-                $.each(kwArray, function (k, v) {
-                    kwMap[index].push(v);
-                });
-                //超过5个，移除最前面的记录
-                var kwArray1 = kwMap[index];
-                $.unique(kwArray1); //去重
-                if (kwArray1.length > 5) {
-                    kwArray1.splice(5, 1);
-                }
-
             });
-        }
-        var kwStr = JSON.stringify(kwMap);
-        //console.log(kwMap);
-        localStorage.setItem("TD_INPUT_" + id, kwStr);
-        $.ajax({
-            url: url,
-            type: "POST",
-            data: formData,
-            header: 'Access-Control-Allow-Methods:*',
-            success: function (res) {
-                var jsonObj = eval('(' + res + ")");
-                if (jsonObj.responseCode == 1) {
-                    var content = JSON.stringify(jsonObj.entry);
-                    dialog.init({
-                        dialogId: 'td-res-dialog',
-                        type: 1,
-                        content: content
+            var kwMap0 = JSON.parse(localStorage.getItem("TD_INPUT_" + id));
+            if (kwMap0 != null) {
+                $.each(kwMap0, function (index, kwArray) {
+                    $.each(kwArray, function (k, v) {
+                        kwMap[index].push(v);
                     });
-                } else {
-                    if (jsonObj.responseCode == 10212) {
+                    //超过5个，移除最前面的记录
+                    var kwArray1 = kwMap[index];
+                    $.unique(kwArray1); //去重
+                    if (kwArray1.length > 5) {
+                        kwArray1.splice(5, 1);
+                    }
+
+                });
+            }
+            var kwStr = JSON.stringify(kwMap);
+            var content
+            localStorage.setItem("TD_INPUT_" + id, kwStr);
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: formData,
+                header: 'Access-Control-Allow-Methods:*',
+                success: function (res) {
+                    var jsonObj = eval('(' + res + ")");
+                    content = JSON.stringify(jsonObj.entry);
+                    if (jsonObj.responseCode == 1) {
+                        record_ajax(id, account, formData, content, '/qacenter/record/')
                         dialog.init({
-                            dialogId: 'sessionout_dialog_add',
-                            msg: '登录超时',
+                            dialogId: 'td-res-dialog',
+                            type: 1,
+                            content: content
                         });
-                        window.location.reload();
+                    } else {
+                        if (jsonObj.responseCode == 10212) {
+                            dialog.init({
+                                dialogId: 'sessionout_dialog_add',
+                                msg: '登录超时',
+                            });
+                            window.location.reload();
+                        } else {
+                            dialog.init({
+                                dialogId: 'params_error_dialog_add',
+                                msg: res.message,
+                            });
+                        }
+                    }
+                },
+                error: function (XMLHttpRequest, res) {
+                    if (XMLHttpRequest.status == 500) {
+                        dialog.init({
+                            dialogId: 'function_not_variable',
+                            msg: '接口内部错误,status=500',
+                        });
                     } else {
                         dialog.init({
-                            dialogId: 'params_error_dialog_add',
-                            msg: res.message,
+                            dialogId: 'function_not_variable',
+                            msg: '该功能还在开发中，请联系作者哦~~',
                         });
                     }
                 }
-            },
-            error: function (XMLHttpRequest, res) {
-                if (XMLHttpRequest.status == 500) {
-                    dialog.init({
-                        dialogId: 'function_not_variable',
-                        msg: '接口内部错误,status=500',
-                    });
-                } else {
-                    dialog.init({
-                        dialogId: 'function_not_variable',
-                        msg: '该功能还在开发中，请联系作者哦~~',
-                    });
-                }
-            }
+            });
         });
-    });
 
 
 </script>

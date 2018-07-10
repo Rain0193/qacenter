@@ -1,6 +1,6 @@
 from django.db import models
 
-from DataManager.managers import UserInfoManager, ProjectInfoManager, ModuleInfoManager, TdInfoManager, FavTdManager
+from DataManager.managers import UserInfoManager, ProjectInfoManager, ModuleInfoManager, TdInfoManager, FavTdManager, RecordManager
 from django.db.models.fields.related import ManyToManyField
 # Create your models here.
 
@@ -91,3 +91,15 @@ class FavTd(BaseTable):
     user = models.CharField('用户', max_length=20)
     belong_td = models.ForeignKey(TdInfo, on_delete=models.CASCADE)
     objects = FavTdManager()
+
+
+class Record(BaseTable):
+    class Meta:
+        verbose_name = '调用历史'
+        db_table = 'record'
+
+    user = models.CharField('用户', max_length=20)
+    belong_td = models.ForeignKey(TdInfo, on_delete=models.CASCADE)
+    request = models.TextField('请求参数')
+    result = models.TextField('返回结果')
+    objects = RecordManager()

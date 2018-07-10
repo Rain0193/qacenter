@@ -55,7 +55,7 @@
                     {% endfor %}
                     <input type="hidden" name="url" value="{{ tds.td_url }}"/>
 
-                    <div class="submit-btn-row"><a class="submit btn">确定</a></div>
+                    <div class="submit-btn-row"><a class="submit btn" onclick="pv_ajax('{{ tds.id }}', '/qacenter/all_td/', 'pv', true)">确定</a></div>
                 </form>
             </div>
             {% endifequal %}
@@ -108,7 +108,7 @@
                     {% endfor %}
                     <input type="hidden" name="url" value="{{ tds.td_url }}"/>
 
-                    <div class="submit-btn-row"><a class="submit btn">确定</a></div>
+                    <div class="submit-btn-row"><a class="submit btn" onclick="pv_ajax('{{ tds.id }}', '/qacenter/all_td/', 'pv', true)">确定</a></div>
                 </form>
             </div>
             {% endifequal %}

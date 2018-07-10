@@ -46,8 +46,8 @@
                     <th>负责人</th>
                     <th>测试人员</th>
 {#                    <th>事务数量</th>#}
-                    <th>简要概述</th>
                     <th>创建日期</th>
+                    <th>简要概述</th>
                     <th>操作</th>
                 </tr>
             </thead>
@@ -59,8 +59,8 @@
                     <td>{{ foo.project_name }}</td>
                     <td>{{ foo.responsible_name }}</td>
                     <td>{{ foo.test_user }}</td>
-                    <td>{{ foo.simple_desc }}</td>
                     <td>{{ foo.create_time }}</td>
+                    <td>{{ foo.simple_desc|truncatechars:15 }}</td>
                     <td>
                         <div class="btn-operate">
                             <a href="/qacenter/edit_project/{{ foo.id }}/">
