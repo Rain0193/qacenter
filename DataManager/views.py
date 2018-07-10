@@ -9,9 +9,8 @@ from urllib3.connectionpool import xrange
 
 from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo, FavTd
 from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic
-from DataManager.utils.operation import del_project_data, del_module_data, add_td_data
+from DataManager.utils.operation import del_project_data, del_module_data, add_fav_data
 from DataManager.utils.pagination import get_pager_info
-from DataManager.managers import TdInfoManager
 
 logger = logging.getLogger('qacenter')
 
@@ -126,9 +125,9 @@ def all_td(request):
             kwargs['user'] = request.session["now_account"]
             kwargs['id'] = td_info.pop('id')
             if td_info.pop('type'):
-                msg = add_td_data(True, **kwargs)
+                msg = add_fav_data(True, **kwargs)
             else:
-                msg = add_td_data(False, **kwargs)
+                msg = add_fav_data(False, **kwargs)
             return HttpResponse(get_ajax_msg(msg, 'ok'))
         else:
             manage_info = {
@@ -432,9 +431,15 @@ def my_tds(request):
     account = request.session["now_account"]
     tdinfo = TdInfo.objects.filter(author=account)
     projectInfo = ProjectInfo.objects.all()
+    fav_opt = FavTd.objects
     tdlist = []
     for k in xrange(len(tdinfo)):
         td = {}
+        flag = fav_opt.get_fav_by_tdAndUser(account, tdinfo[k].id)
+        if flag == 1:
+            td.setdefault('isFav', 'true')
+        else:
+            td.setdefault('isFav', 'false')
         if k % 2 == 0:
             td.setdefault('right', 'true')
         else:
@@ -458,3 +463,42 @@ def my_tds(request):
     else:
         return HttpResponseRedirect("/qacenter/login/")
 
+
+def my_fav(request):
+    '''
+    我的收藏
+    :param request:
+    :return:
+    '''
+    account = request.session["now_account"]
+    tdInfo = TdInfo.objects
+    projectInfo = ProjectInfo.objects.all()
+    favlist = FavTd.objects.filter(user=account).values('belong_td')
+    tdlist = []
+    for k in xrange(len(favlist)):
+        td = {}
+        td_id = favlist[k]['belong_td']
+        tdinfo = tdInfo.filter(id=td_id)
+        if k % 2 == 0:
+            td.setdefault('right', 'true')
+        else:
+            td.setdefault('right', 'false')
+        td.setdefault('isFav', 'true')
+        td.setdefault('id', tdinfo[0].id)
+        td.setdefault('title', tdinfo[0].title)
+        td.setdefault('td_url', tdinfo[0].td_url)
+        td.setdefault('author', tdinfo[0].author)
+        td.setdefault('params', eval(tdinfo[0].params))
+        td.setdefault('instruction', tdinfo[0].instruction)
+        td.setdefault('belong_project', tdinfo[0].belong_project)
+        td.setdefault('belong_module', tdinfo[0].belong_module)
+        tdlist.append(td)
+    if request.session.get('login_status'):
+        if request.method == 'GET':
+            manage_info = {
+                'tdList': tdlist,
+                'projects': projectInfo
+            }
+            return render_to_response('my_fav.html', manage_info)
+    else:
+        return HttpResponseRedirect("/qacenter/login/")

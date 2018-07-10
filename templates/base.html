@@ -61,27 +61,27 @@
         <span class="nav-list-menu sel"><a href="/qacenter/all_td/"><i
                 class="iconfont icon-black">
             &#xe60d;</i>全部事务</a></span>
-        <span class="nav-list-menu #if($tag=='hot')sel#end"><a href="/qacenter/td/allTD?tag=hot" id="hotTD"> <i
+        <span class="nav-list-menu "><a href="/qacenter/td/allTD?tag=hot" id="hotTD"> <i
                 class="iconfont icon-hot">
             &#xe60e;</i>常用事务</a></span>
-        <span class="nav-list-menu #if($tag=='fav')sel#end"><a href="/qacenter/td/allTD?tag=fav" id="favTD"><i
+        <span class="nav-list-menu "><a href="/qacenter/my_fav" id="favTD"><i
                 class="iconfont icon-fav">
             &#xe619;</i>我的收藏</a></span>
 
 {#        #if($isTester)#}
-            <span class="nav-list-menu ful #if($menuId==30)sel#end"><a href="/qacenter/my_tds/"><i
+            <span class="nav-list-menu ful "><a href="/qacenter/my_tds/"><i
                     class="iconfont icon-fav">&#xe604;</i>我的事务模板</a></span>
-            <span class="nav-list-menu ful  #if($menuId==31)sel#end"><a href="/qacenter/add_td/"><i
+            <span class="nav-list-menu ful  "><a href="/qacenter/add_td/"><i
                     class="iconfont icon-fav">&#xe605;</i>添加事务模板</a></span>
-            <span class="nav-list-menu ful #if($menuId==32)sel#end"><a href="/qacenter/project_list/1"><i
+            <span class="nav-list-menu ful "><a href="/qacenter/project_list/1"><i
                     class="iconfont icon-fav">&#xe611;</i>项目管理</a></span>
-            <span class="nav-list-menu ful #if($menuId==32)sel#end"><a href="/qacenter/module_list/1"><i
+            <span class="nav-list-menu ful "><a href="/qacenter/module_list/1"><i
                     class="iconfont icon-fav">&#xe60a;</i>模块管理</a></span>
 {#        #end#}
-        <span class="nav-list-menu ful #if($menuId==23)sel#end"><a href="/qacenter/td/record"><i
+        <span class="nav-list-menu ful"><a href="/qacenter/td/record"><i
                 class="iconfont icon-fav">
             &#xe617;</i>调用历史</a></span>
-        <span class="nav-list-menu ful #if($menuId==24)sel#end"><a href="/qacenter/td/summary"><i
+        <span class="nav-list-menu ful "><a href="/qacenter/td/summary"><i
                 class="iconfont icon-fav">&#xe603;</i>调用量统计</a></span>
 
         {% for foo in projects %}

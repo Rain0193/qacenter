@@ -215,7 +215,7 @@ def add_td_data(type, **kwargs):
     return 'ok'
 
 
-def add_td_data(type, **kwargs):
+def add_fav_data(type, **kwargs):
     '''
     我的收藏信息落地
     :param type: boolean: true: 新增， false：更新

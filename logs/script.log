@@ -23245,3 +23245,107 @@ Traceback (most recent call last):
   File "E:\qacenter\qacenter\activator.py", line 15, in process
     result = fun(request, index) if index else fun(request)
 TypeError: all_td() takes 1 positional argument but 2 were given
+2018-07-10 08:16:01,804 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/allTD/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'DataManager.views' has no attribute 'td'
+2018-07-10 08:41:46,862 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/my_fav/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 475, in my_fav
+    td_id = favlist['belong_td']
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 282, in __getitem__
+    raise TypeError
+TypeError
+2018-07-10 08:43:53,761 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/my_fav/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 475, in my_fav
+    td_id = favlist[k].belong_td
+AttributeError: 'dict' object has no attribute 'belong_td'
+2018-07-10 08:47:24,610 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/my_fav/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 473, in my_fav
+    for k in xrange(len(eval(favlist))):
+TypeError: eval() arg 1 must be a string, bytes or code object
+2018-07-10 08:47:52,602 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/my_fav/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 471, in my_fav
+    favlist = FavTd.objects.values('belong_td').get(user=account)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 407, in get
+    (self.model._meta.object_name, num)
+DataManager.models.MultipleObjectsReturned: get() returned more than one FavTd -- it returned 3!
+2018-07-10 08:48:14,578 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/my_fav/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 473, in my_fav
+    for k in xrange(len(eval(favlist))):
+TypeError: eval() arg 1 must be a string, bytes or code object
+2018-07-10 08:50:07,949 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/my_fav/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 475, in my_fav
+    td_id = favlist[k].belong_td
+AttributeError: 'dict' object has no attribute 'belong_td'
+2018-07-10 09:13:22,336 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/td/allTD/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 12, in process
+    fun = getattr(view, fun)
+AttributeError: module 'DataManager.views' has no attribute 'td'
