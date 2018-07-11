@@ -96,7 +96,7 @@ def all_td(request):
     account = request.session["now_account"]
     projectlist = projectAndModule
     fav_opt = FavTd.objects
-    tdinfo = TdInfo.objects.all()
+    tdinfo = TdInfo.objects.all().order_by("-run_count")
     kwargs = {}
     tdlist = []
     for k in xrange(len(tdinfo)):
@@ -154,7 +154,7 @@ def project_td(request, id):
     presentProject = ProjectInfo.objects.values('project_name').filter(id=id)
     projectlist = projectAndModule
     fav_opt = FavTd.objects
-    tdinfo = TdInfo.objects.filter(belong_project__id=id)
+    tdinfo = TdInfo.objects.filter(belong_project__id=id).order_by("-run_count")
     kwargs = {}
     tdlist = []
     for k in xrange(len(tdinfo)):
@@ -213,7 +213,7 @@ def module_td(request, id):
     presentModule = ModuleInfo.objects.values('module_name').filter(id=id)
     projectlist = projectAndModule
     fav_opt = FavTd.objects
-    tdinfo = TdInfo.objects.filter(belong_module__id=id)
+    tdinfo = TdInfo.objects.filter(belong_module__id=id).order_by("-run_count")
     kwargs = {}
     tdlist = []
     for k in xrange(len(tdinfo)):
@@ -379,7 +379,6 @@ def module_list(request, id):
             projectName = request.POST.get('belong_project')
             if projectName == 'All' or projectName is None:
                 projectName = ''
-            print(projectName)
             filter_query = {
                 'belong_project': projectName,
             }
@@ -625,34 +624,30 @@ def my_fav(request):
         return HttpResponseRedirect("/qacenter/login/")
 
 
-def record(request):
+def record(request, id):
     '''
     调用历史
     :param request:
+    :param id str or int：当前页
     :return:
     '''
     account = request.session["now_account"]
     projectlist = projectAndModule
-    record_opt = Record.objects.all()
-    recordlist = []
-    for k in xrange(len(record_opt)):
-        record = {}
-        record.setdefault('name', record_opt[k].belong_td.title)
-        record.setdefault('user', record_opt[k].user)
-        record.setdefault('create_time', record_opt[k].create_time)
-        record.setdefault('request', record_opt[k].request)
-        record.setdefault('result', record_opt[k].result)
-        recordlist.append(record)
     if request.session.get('login_status'):
         if request.is_ajax():
             record_info = json.loads(request.body.decode('utf-8'))
             msg = record_info_logic(**record_info)
-            return HttpResponse(get_ajax_msg(msg, '/qacenter/record/'))
+            return HttpResponse(get_ajax_msg(msg, '/qacenter/record/' + id + '/'))
 
         if request.method == 'GET':
+            filter_query = {}
+            record_list = get_pager_info(
+                Record, filter_query, '/qacenter/record/', id, 15)
             manage_info = {
                 'account': account,
-                'recordList': recordlist,
+                'record': record_list[1],
+                'page_list': record_list[0],
+                'sum': record_list[2],
                 'projects': projectlist
             }
             return render_to_response('record.html', manage_info)

@@ -26150,3 +26150,212 @@ Traceback (most recent call last):
   File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
     raise utils.IntegrityError(*tuple(e.args))
 django.db.utils.IntegrityError: (1048, "Column 'user' cannot be null")
+2018-07-11 17:11:42,777 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/my_fav/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 598, in my_fav
+    for k in xrange(len(favlist)):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 254, in __len__
+    self._fetch_all()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 106, in __iter__
+    for row in compiler.results_iter(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1017, in results_iter
+    results = self.execute_sql(MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1053, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 446, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 51, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 316, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 663, in find_ordering_name
+    field, targets, alias, joins, path, opts = self._setup_joins(pieces, opts, alias)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 696, in _setup_joins
+    pieces, opts, alias)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1448, in setup_joins
+    names, opts, allow_many, fail_on_missing=True)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'run_count' into field. Choices are: belong_td, belong_td_id, create_time, id, update_time, user
+2018-07-11 17:29:25,287 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+TypeError: record() missing 1 required positional argument: 'id'
+2018-07-11 17:29:56,781 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+TypeError: record() missing 1 required positional argument: 'id'
+2018-07-11 17:30:02,775 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 646, in record
+    recordInfo, filter_query, '/qacenter/record/', id)
+  File "E:\qacenter\DataManager\utils\pagination.py", line 107, in get_pager_info
+    obj = Model.objects
+AttributeError: 'RecordManager' object has no attribute 'objects'
+2018-07-11 17:30:05,169 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 646, in record
+    recordInfo, filter_query, '/qacenter/record/', id)
+  File "E:\qacenter\DataManager\utils\pagination.py", line 107, in get_pager_info
+    obj = Model.objects
+AttributeError: 'RecordManager' object has no attribute 'objects'
+2018-07-11 17:30:05,717 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 646, in record
+    recordInfo, filter_query, '/qacenter/record/', id)
+  File "E:\qacenter\DataManager\utils\pagination.py", line 107, in get_pager_info
+    obj = Model.objects
+AttributeError: 'RecordManager' object has no attribute 'objects'
+2018-07-11 17:30:05,967 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 646, in record
+    recordInfo, filter_query, '/qacenter/record/', id)
+  File "E:\qacenter\DataManager\utils\pagination.py", line 107, in get_pager_info
+    obj = Model.objects
+AttributeError: 'RecordManager' object has no attribute 'objects'
+2018-07-11 17:30:06,242 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 646, in record
+    recordInfo, filter_query, '/qacenter/record/', id)
+  File "E:\qacenter\DataManager\utils\pagination.py", line 107, in get_pager_info
+    obj = Model.objects
+AttributeError: 'RecordManager' object has no attribute 'objects'
+2018-07-11 17:30:06,494 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 646, in record
+    recordInfo, filter_query, '/qacenter/record/', id)
+  File "E:\qacenter\DataManager\utils\pagination.py", line 107, in get_pager_info
+    obj = Model.objects
+AttributeError: 'RecordManager' object has no attribute 'objects'
+2018-07-11 17:30:06,799 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 646, in record
+    recordInfo, filter_query, '/qacenter/record/', id)
+  File "E:\qacenter\DataManager\utils\pagination.py", line 107, in get_pager_info
+    obj = Model.objects
+AttributeError: 'RecordManager' object has no attribute 'objects'
+2018-07-11 17:30:07,089 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 646, in record
+    recordInfo, filter_query, '/qacenter/record/', id)
+  File "E:\qacenter\DataManager\utils\pagination.py", line 107, in get_pager_info
+    obj = Model.objects
+AttributeError: 'RecordManager' object has no attribute 'objects'
+2018-07-11 17:30:07,327 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 646, in record
+    recordInfo, filter_query, '/qacenter/record/', id)
+  File "E:\qacenter\DataManager\utils\pagination.py", line 107, in get_pager_info
+    obj = Model.objects
+AttributeError: 'RecordManager' object has no attribute 'objects'
+2018-07-11 17:30:07,554 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 646, in record
+    recordInfo, filter_query, '/qacenter/record/', id)
+  File "E:\qacenter\DataManager\utils\pagination.py", line 107, in get_pager_info
+    obj = Model.objects
+AttributeError: 'RecordManager' object has no attribute 'objects'

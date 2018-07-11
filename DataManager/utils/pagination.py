@@ -117,6 +117,9 @@ def get_pager_info(Model, filter_query, url, id, per_items=12):
             obj = obj.all()
             # obj = obj.filter(module_name__contains=name) if name is not '' else obj.filter(test_user__contains=user)
 
+    elif url == '/qacenter/record/':
+        obj = obj.all()
+
     elif url != '/qacenter/env_list/':
         obj = obj.filter(type__exact=1) if url == '/qacenter/test_list/' else obj.filter(type__exact=2)
 
