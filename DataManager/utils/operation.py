@@ -4,6 +4,7 @@ import logging
 from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo, FavTd, Record
 from django.db import DataError
 from django.core.exceptions import ObjectDoesNotExist
+from urllib3.connectionpool import xrange
 
 logger = logging.getLogger('qacenter')
 
@@ -282,3 +283,20 @@ def add_record_data(**kwargs):
         logger.error('调用历史添加异常： {kwargs}'.format(kwargs=kwargs))
         return '调用历史添加失败，请重试'
     return '调用历史添加成功'
+
+def projectAndModule():
+    '''
+    查询项目和模块列表
+    :param kwargs: dict
+    :return: ok or tips
+    '''
+    projectInfo = ProjectInfo.objects.all()
+    projectlist = []
+    for k in xrange(len(projectInfo)):
+        pro = {}
+        moduleInfo = ModuleInfo.objects.filter(belong_project__id=projectInfo[k].id)
+        pro.setdefault("id", projectInfo[k].id)
+        pro.setdefault("project_name", projectInfo[k].project_name)
+        pro.setdefault("moduleList", moduleInfo)
+        projectlist.append(pro)
+    return projectlist

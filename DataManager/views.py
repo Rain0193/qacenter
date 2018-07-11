@@ -9,7 +9,7 @@ from urllib3.connectionpool import xrange
 
 from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo, FavTd, Record
 from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic, record_info_logic
-from DataManager.utils.operation import del_project_data, del_module_data, add_fav_data, add_td_pv
+from DataManager.utils.operation import del_project_data, del_module_data, add_fav_data, add_td_pv, projectAndModule
 from DataManager.utils.pagination import get_pager_info
 
 logger = logging.getLogger('qacenter')
@@ -75,11 +75,11 @@ def base(request):
     :param request:
     :return:
     """
-    projectInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     if request.session.get('login_status'):
         manage_info = {
             'account': request.session["now_account"],
-            'projects': projectInfo
+            'projects': projectlist
         }
         init_filter_session(request)
         return render_to_response('base.html', manage_info)
@@ -94,7 +94,7 @@ def all_td(request):
     :return:
     """
     account = request.session["now_account"]
-    projectInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     fav_opt = FavTd.objects
     tdinfo = TdInfo.objects.all()
     kwargs = {}
@@ -136,10 +136,128 @@ def all_td(request):
             manage_info = {
                 'account': request.session["now_account"],
                 'tdList': tdlist,
-                'projects': projectInfo
+                'projects': projectlist
             }
             init_filter_session(request)
             return render_to_response('all_td.html', manage_info)
+    else:
+        return HttpResponseRedirect("/qacenter/login/")
+
+
+def project_td(request, id):
+    '''
+    项目的事务
+    :param request:
+    :return:
+    '''
+    account = request.session["now_account"]
+    presentProject = ProjectInfo.objects.values('project_name').filter(id=id)
+    projectlist = projectAndModule
+    fav_opt = FavTd.objects
+    tdinfo = TdInfo.objects.filter(belong_project__id=id)
+    kwargs = {}
+    tdlist = []
+    for k in xrange(len(tdinfo)):
+        td = {}
+        flag = fav_opt.get_fav_by_tdAndUser(account, tdinfo[k].id)
+        if flag == 1:
+            td.setdefault('isFav', 'true')
+        else:
+            td.setdefault('isFav', 'false')
+        if k % 2 == 0:
+            td.setdefault('right', 'true')
+        else:
+            td.setdefault('right', 'false')
+        td.setdefault('id', tdinfo[k].id)
+        td.setdefault('title', tdinfo[k].title)
+        td.setdefault('td_url', tdinfo[k].td_url)
+        td.setdefault('author', tdinfo[k].author)
+        td.setdefault('params', eval(tdinfo[k].params))
+        td.setdefault('instruction', tdinfo[k].instruction)
+        td.setdefault('belong_project', tdinfo[k].belong_project)
+        td.setdefault('belong_module', tdinfo[k].belong_module)
+        tdlist.append(td)
+    if request.session.get('login_status'):
+        if request.is_ajax():
+            td_info = json.loads(request.body.decode('utf-8'))
+            kwargs['user'] = request.session["now_account"]
+            kwargs['id'] = td_info.pop('id')
+            if td_info.get('model') == 'pv':
+                msg = add_td_pv(kwargs['id'])
+            else:
+                if td_info.pop('type'):
+                    msg = add_fav_data(True, **kwargs)
+                else:
+                    msg = add_fav_data(False, **kwargs)
+            return HttpResponse(get_ajax_msg(msg, 'ok'))
+        else:
+            manage_info = {
+                'account': request.session["now_account"],
+                'presentProject': presentProject[0]['project_name'],
+                'tdList': tdlist,
+                'projects': projectlist
+            }
+            init_filter_session(request)
+            return render_to_response('project_td.html', manage_info)
+    else:
+        return HttpResponseRedirect("/qacenter/login/")
+
+
+def module_td(request, id):
+    '''
+    模块的事务
+    :param request:
+    :return:
+    '''
+    account = request.session["now_account"]
+    presentModule = ModuleInfo.objects.values('module_name').filter(id=id)
+    projectlist = projectAndModule
+    fav_opt = FavTd.objects
+    tdinfo = TdInfo.objects.filter(belong_module__id=id)
+    kwargs = {}
+    tdlist = []
+    for k in xrange(len(tdinfo)):
+        td = {}
+        flag = fav_opt.get_fav_by_tdAndUser(account, tdinfo[k].id)
+        if flag == 1:
+            td.setdefault('isFav', 'true')
+        else:
+            td.setdefault('isFav', 'false')
+        if k % 2 == 0:
+            td.setdefault('right', 'true')
+        else:
+            td.setdefault('right', 'false')
+        td.setdefault('id', tdinfo[k].id)
+        td.setdefault('title', tdinfo[k].title)
+        td.setdefault('td_url', tdinfo[k].td_url)
+        td.setdefault('author', tdinfo[k].author)
+        td.setdefault('params', eval(tdinfo[k].params))
+        td.setdefault('instruction', tdinfo[k].instruction)
+        td.setdefault('belong_project', tdinfo[k].belong_project)
+        td.setdefault('belong_module', tdinfo[k].belong_module)
+        tdlist.append(td)
+    if request.session.get('login_status'):
+        if request.is_ajax():
+            td_info = json.loads(request.body.decode('utf-8'))
+            kwargs['user'] = request.session["now_account"]
+            kwargs['id'] = td_info.pop('id')
+            if td_info.get('model') == 'pv':
+                msg = add_td_pv(kwargs['id'])
+            else:
+                if td_info.pop('type'):
+                    msg = add_fav_data(True, **kwargs)
+                else:
+                    msg = add_fav_data(False, **kwargs)
+            return HttpResponse(get_ajax_msg(msg, 'ok'))
+        else:
+            manage_info = {
+                'account': request.session["now_account"],
+                'presentModule': presentModule[0]['module_name'],
+                'tdList': tdlist,
+                'projects': projectlist
+            }
+            init_filter_session(request)
+            return render_to_response('module_td.html', manage_info)
     else:
         return HttpResponseRedirect("/qacenter/login/")
 
@@ -151,7 +269,7 @@ def project_list(request, id):
     :param id: str or int：当前页
     :return:
     """
-    projectInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
@@ -171,7 +289,7 @@ def project_list(request, id):
                 'page_list': pro_list[0],
                 'info': filter_query,
                 'sum': pro_list[2],
-                'projects': projectInfo
+                'projects': projectlist
             }
             return render_to_response('project_list.html', manage_info)
     else:
@@ -183,7 +301,7 @@ def add_project(request):
     :param request:
     :return:
     """
-    projectInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
@@ -194,7 +312,7 @@ def add_project(request):
         elif request.method == 'GET':
             manage_info = {
                 'account': account,
-                'projects': projectInfo
+                'projects': projectlist
             }
             return render_to_response('add_project.html', manage_info)
     else:
@@ -207,7 +325,7 @@ def edit_project(request, id):
     :param id: 项目id
     :return:
     """
-    projectsInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
@@ -225,7 +343,7 @@ def edit_project(request, id):
                 'responsible_name': projectInfo.responsible_name,
                 'test_user': projectInfo.test_user,
                 'simple_desc': projectInfo.simple_desc,
-                'projects': projectsInfo
+                'projects': projectlist
             }
             return render_to_response('edit_project.html', manage_info)
     else:
@@ -239,6 +357,7 @@ def module_list(request, id):
     :param id: str or int：当前页
     :return:
     """
+    projectlist = projectAndModule
     projectInfo = ProjectInfo.objects.all()
     projectInfoList = []
     pro1 = {'project_name': 'All'}
@@ -247,7 +366,6 @@ def module_list(request, id):
         pro2 = {}
         pro2.setdefault('project_name', projectInfo[k].project_name)
         projectInfoList.append(pro2)
-    print(projectInfoList)
 
     if request.session.get('login_status'):
         account = request.session["now_account"]
@@ -273,7 +391,7 @@ def module_list(request, id):
                 'module': module_list[1],
                 'page_list': module_list[0],
                 'project': projectInfoList,
-                'projects': projectInfo
+                'projects': projectlist
             }
             return render_to_response('module_list.html', manage_info)
     else:
@@ -284,7 +402,7 @@ def add_module(request):
     新增模块
     :return:
     '''
-    projectInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     print(projectInfo)
     if request.session.get('login_status'):
         account = request.session["now_account"]
@@ -296,7 +414,7 @@ def add_module(request):
             manage_info = {
                 'account': account,
                 'data': ProjectInfo.objects.all().values('project_name'),
-                'projects': projectInfo
+                'projects': projectlist
             }
             return render_to_response('add_module.html', manage_info)
     else:
@@ -309,14 +427,13 @@ def edit_project(request, id):
     :param id: 模块id
     :return:
     """
-    projectsInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
             project_info = json.loads(request.body.decode('utf-8'))
             msg = project_info_logic(False, **project_info)
             return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_project/' + id + '/'))
-            # return HttpResponse(get_ajax_msg(msg, '/qacenter/project_list/1/'))
 
         elif request.method == 'GET':
             projectInfo = ProjectInfo.objects.get(id=id)
@@ -327,7 +444,7 @@ def edit_project(request, id):
                 'responsible_name': projectInfo.responsible_name,
                 'test_user': projectInfo.test_user,
                 'simple_desc': projectInfo.simple_desc,
-                'projects': projectsInfo
+                'projects': projectlist
             }
             return render_to_response('edit_project.html', manage_info)
     else:
@@ -339,7 +456,7 @@ def edit_module(request, id):
     :param request:
     :return:
     """
-    projectsInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     account = request.session["now_account"]
     if request.session.get('login_status'):
         if request.is_ajax():
@@ -357,7 +474,7 @@ def edit_module(request, id):
                 'test_user': moduleInfo.test_user,
                 'simple_desc': moduleInfo.simple_desc,
                 'dev_user': moduleInfo.dev_user,
-                'projects': projectsInfo
+                'projects': projectlist
             }
             return render_to_response('edit_module.html', manage_info)
     else:
@@ -370,7 +487,7 @@ def add_td(request):
     :param request:
     :return:
     '''
-    projectInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
@@ -381,7 +498,7 @@ def add_td(request):
             manage_info = {
                 'account': account,
                 'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time'),
-                'projects': projectInfo
+                'projects': projectlist
             }
             return render_to_response('add_td.html', manage_info)
     else:
@@ -395,7 +512,7 @@ def edit_td(request, id):
     :param id: 事务id
     :return:
     '''
-    projectInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     account = request.session["now_account"]
     tdinfo = TdInfo.objects.get(id=id)
     td = {}
@@ -418,7 +535,7 @@ def edit_td(request, id):
                 'account': account,
                 'tdList': td,
                 'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time'),
-                'projects': projectInfo
+                'projects': projectlist
             }
             return render_to_response('edit_td.html', manage_info)
     else:
@@ -433,7 +550,7 @@ def my_tds(request):
     '''
     account = request.session["now_account"]
     tdinfo = TdInfo.objects.filter(author=account)
-    projectInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     fav_opt = FavTd.objects
     tdlist = []
     for k in xrange(len(tdinfo)):
@@ -460,7 +577,7 @@ def my_tds(request):
         if request.method == 'GET':
             manage_info = {
                 'tdList': tdlist,
-                'projects': projectInfo
+                'projects': projectlist
             }
             return render_to_response('my_tds.html', manage_info)
     else:
@@ -475,7 +592,7 @@ def my_fav(request):
     '''
     account = request.session["now_account"]
     tdInfo = TdInfo.objects
-    projectInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     favlist = FavTd.objects.filter(user=account).values('belong_td')
     tdlist = []
     for k in xrange(len(favlist)):
@@ -500,7 +617,7 @@ def my_fav(request):
         if request.method == 'GET':
             manage_info = {
                 'tdList': tdlist,
-                'projects': projectInfo
+                'projects': projectlist
             }
             return render_to_response('my_fav.html', manage_info)
     else:
@@ -514,7 +631,7 @@ def record(request):
     :return:
     '''
     account = request.session["now_account"]
-    projectInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     record_opt = Record.objects.all()
     recordlist = []
     for k in xrange(len(record_opt)):
@@ -535,7 +652,7 @@ def record(request):
             manage_info = {
                 'account': account,
                 'recordList': recordlist,
-                'projects': projectInfo
+                'projects': projectlist
             }
             return render_to_response('record.html', manage_info)
     else:
@@ -549,11 +666,11 @@ def summary(request):
     :return:
     '''
     account = request.session["now_account"]
-    projectInfo = ProjectInfo.objects.all()
+    projectlist = projectAndModule
     if request.method == 'GET':
         manage_info = {
             'account': account,
-            'projects': projectInfo,
+            'projects': projectlist,
             'summary': '功能开发中~~~'
         }
         return render_to_response('summary.html', manage_info)
