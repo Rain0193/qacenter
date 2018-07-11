@@ -616,6 +616,7 @@ def my_fav(request):
     if request.session.get('login_status'):
         if request.method == 'GET':
             manage_info = {
+                'account': account,
                 'tdList': tdlist,
                 'projects': projectlist
             }

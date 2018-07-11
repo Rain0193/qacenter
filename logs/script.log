@@ -24640,3 +24640,1513 @@ Traceback (most recent call last):
   File "E:\qacenter\qacenter\activator.py", line 12, in process
     fun = getattr(view, fun)
 AttributeError: module 'DataManager.views' has no attribute 'td'
+2018-07-11 14:23:55,435 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 14:24:10,483 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 14:25:06,450 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 14:27:35,678 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 14:28:47,519 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 14:32:11,597 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 14:36:31,113 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 14:37:05,391 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 14:55:34,297 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 15:00:19,747 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 15:01:29,228 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 15:01:38,408 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 15:02:16,130 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 15:02:34,610 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 15:03:31,707 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 15:04:09,111 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 15:04:54,216 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 15:05:00,890 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 15:05:41,765 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 15:06:36,183 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 15:09:18,333 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'result' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'result' cannot be null")
+2018-07-11 15:41:26,738 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 494, in add_td
+    td_info = json.loads(request.body.decode('utf-8'))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-07-11 15:41:27,807 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 494, in add_td
+    td_info = json.loads(request.body.decode('utf-8'))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-07-11 15:41:30,162 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 494, in add_td
+    td_info = json.loads(request.body.decode('utf-8'))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-07-11 16:18:26,464 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/module_td/13/≤‚ ‘11
+2018-07-11 16:19:40,182 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/record/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 247, in execute
+    res = self._query(query)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\cursors.py", line 374, in _do_query
+    db.query(q)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\MySQLdb\connections.py", line 277, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1048, "Column 'user' cannot be null")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 648, in record
+    msg = record_info_logic(**record_info)
+  File "E:\qacenter\DataManager\utils\common.py", line 152, in record_info_logic
+    return add_record_data(**kwargs)
+  File "E:\qacenter\DataManager\utils\operation.py", line 281, in add_record_data
+    record_opt.insert_record(user=user, belong_td=belong_td, request=request, result=result)
+  File "E:\qacenter\DataManager\managers.py", line 128, in insert_record
+    self.create(user=user, belong_td=belong_td, request=request, result=result)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\models\sql\compiler.py", line 1283, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    raise utils.IntegrityError(*tuple(e.args))
+django.db.utils.IntegrityError: (1048, "Column 'user' cannot be null")

@@ -115,10 +115,15 @@
             {% empty %}
                 <span>抱歉，列表为空</span>
             {% endfor %}
-     </div>
-</div>
+        </div>
+    </div>
+    <div id="td-res-dialog" class="td-res-dialog res-dialog">
+        <div class="succ-icon"><i class="iconfont icon-succ">&#xe635;</i></div>
+        <div id="Canvas" class="Canvas"></div>
+        <div class="confirm-btn-row"><a id="J_dialog_del" class="confirm-btn btn" onclick="location.reload()">确定</a></div>
+    </div>
 
-<script  id="td-res-dialog-tmp">
+<script id="td-res-dialog-tmp">
 
     function getOptions(){
 
@@ -172,7 +177,6 @@
             var url = $(this).parent().parent().find('input[name="url"]').val();
             var id = $(this).parent().parent().parent().find('input[name="id"]').val();
             var account = $(this).parent().parent().parent().parent().parent().find('input[name="account"]').val();
-            console.log(account)
             var kwMap = {};
             var host = window.location.host;
             $.each(formData, function (index, data) {
@@ -215,10 +219,12 @@
                     content = JSON.stringify(jsonObj.entry);
                     if (jsonObj.responseCode == 1) {
                         record_ajax(id, account, formData, content, '/qacenter/record/')
+                        jsonformat.init();
+                        content_can = jsonformat.processFormat(content);
                         dialog.init({
                             dialogId: 'td-res-dialog',
                             type: 1,
-                            content: content
+                            content: content_can
                         });
                     } else {
                         if (jsonObj.responseCode == 10212) {
@@ -230,7 +236,7 @@
                         } else {
                             dialog.init({
                                 dialogId: 'params_error_dialog_add',
-                                msg: res.message,
+                                msg: jsonObj.message,
                             });
                         }
                     }

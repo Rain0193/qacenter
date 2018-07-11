@@ -1,4 +1,4 @@
- var dialog = {
+	var dialog = {
 		init: function(obj) {
 			var self = this;
 			self.obj = obj;
@@ -18,14 +18,7 @@
 					'</div>'
 				].join('');
 			} else if (self.obj.type == 1) {	//确定
-				dialogHtml = [
-					'<div id="' + self.obj.dialogId + '" class="td-res-dialog res-dialog">',
-        			'<div class="succ-icon"><i class="iconfont icon-succ">&#xe635;</i></div>',
-        			'<div id="Canvas" class="Canvas">' + self.obj.content + '</div>',
-        			'<div class="confirm-btn-row"><a id="J_dialog_del" class="confirm-btn-result btn"><span class="span-result">确定</span></a></div>',
-    				'</div>'
-				].join('');
-				// dialogHtml = self.obj.content;
+				dialogHtml = self.obj.content;
 			} else if (self.obj.type == 2) {	//成功
 				dialogHtml = [
 					'<div id ="' + self.obj.dialogId + '" class="info-dialog dialog">',

@@ -457,7 +457,7 @@ td,th {
 }
 .res-dialog{
     position:absolute;
-    left:25%;
+    left:35%;
     top:8%;
     width:680px;
     min-height:200px;
@@ -506,7 +506,7 @@ td,th {
     margin-top:20px;
 }
     .confirm-icon .icon-confirm{
-    margin:0 auto;
+        margin:0 auto;
         line-height:50px;
         font-size:40px;
         color:#FF8900;
@@ -523,7 +523,6 @@ td,th {
     .confirm-btn .btn{
         width:30%;
         margin-left:40px;
-        display: inline-block;
     }
 .confirm-btn-result{
     margin-top:30px;

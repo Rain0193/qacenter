@@ -91,11 +91,13 @@ div.Canvas
 }
 
 PRE.CodeContainer{
-  margin-top:0px;
-  margin-bottom:0px;
-  word-wrap: break-word;
-  word-break: normal;
-  padding-left:200px;
+    margin-top:0px;
+    margin-bottom:0px;
+    word-wrap: break-word;
+    word-break: normal;
+    padding-left:10px;
+    background: #FFFFFF;
+    border: none;
 }
 
 PRE.CodeContainer1{

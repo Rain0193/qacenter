@@ -1,4 +1,4 @@
-var jsonformat = {
+	var jsonformat = {
 		init: function(obj) {
 			var self = this;
 			self.obj = obj;
@@ -154,7 +154,5 @@ var jsonformat = {
 			return tabs + data;
 		},
 		bindEvt: function() {
-
 		}
-
 	};

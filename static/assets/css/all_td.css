@@ -241,6 +241,8 @@
 }
     .res-dialog .confirm-btn{
 		width: 30%;
+		text-align: center;
+		margin-left: 100px;
 	}
 
 .succ-icon{
@@ -250,3 +252,7 @@
 	color:#94C050;
 	font-size: 40px;
 	}
+
+.confirm-btn-row{
+	margin-left: 250px;
+}
