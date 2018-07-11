@@ -94,7 +94,7 @@
                     {{ foo.project_name|truncatechars:6 }}</a>
                 <ul class="ul-menu" id="ul-menu{{ forloop.counter0 }}" hidden>
                     {% for fool in foo.moduleList %}
-                        <li>
+                        <li class="li-menu">
                             <a href="/qacenter/module_td/{{ fool.id }}/">{{ fool.module_name|truncatechars:8 }}</a>
                         </li>
                     {% endfor %}

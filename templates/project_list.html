@@ -45,7 +45,7 @@
                     <th>项目名称</th>
                     <th>负责人</th>
                     <th>测试人员</th>
-{#                    <th>事务数量</th>#}
+                    <th>事务数量</th>
                     <th>创建日期</th>
                     <th>简要概述</th>
                     <th>操作</th>
@@ -59,6 +59,11 @@
                     <td>{{ foo.project_name }}</td>
                     <td>{{ foo.responsible_name }}</td>
                     <td>{{ foo.test_user }}</td>
+                    {% for key, value in sum.items %}
+                        {% ifequal foo.id key %}
+                            <td>{{ value }}</td>
+                        {% endifequal %}
+                    {% endfor %}
                     <td>{{ foo.create_time }}</td>
                     <td>{{ foo.simple_desc|truncatechars:15 }}</td>
                     <td>

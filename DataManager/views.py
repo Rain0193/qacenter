@@ -332,7 +332,6 @@ def edit_project(request, id):
             project_info = json.loads(request.body.decode('utf-8'))
             msg = project_info_logic(False, **project_info)
             return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_project/' + id + '/'))
-            # return HttpResponse(get_ajax_msg(msg, '/qacenter/project_list/1/'))
 
         elif request.method == 'GET':
             projectInfo = ProjectInfo.objects.get(id=id)
@@ -390,6 +389,7 @@ def module_list(request, id):
                 'account': account,
                 'module': module_list[1],
                 'page_list': module_list[0],
+                'sum': module_list[2],
                 'project': projectInfoList,
                 'projects': projectlist
             }

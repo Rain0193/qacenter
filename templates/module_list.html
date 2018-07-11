@@ -9,19 +9,6 @@
 </div>
 <div class="content">
 
-{#    <div class="am-modal am-modal-confirm" tabindex="-1" id="my-invalid">#}
-{#        <div class="am-modal-dialog">#}
-{#            <div class="am-modal-hd">HttpRunnerManager</div>#}
-{#            <div class="am-modal-bd">#}
-{#                亲，此操作会删除该模块下所有用例和配置，请谨慎操作！！！#}
-{#            </div>#}
-{#            <div class="am-modal-footer">#}
-{#                <span class="am-modal-btn" data-am-modal-cancel>取消</span>#}
-{#                <span class="am-modal-btn" data-am-modal-confirm>确定</span>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-
     <div class="tab-statistics">
         <div class="delBtn" onclick="alldel()">删除模块</div>
         <div class="addBtn" onclick="location='/qacenter/add_module/'">添加模块</div>
@@ -40,7 +27,7 @@
                         <th>所属项目</th>
                         <th>测试人员</th>
                         <th>开发人员</th>
-    {#                    <th>事务数量</th>#}
+                        <th>事务数量</th>
                         <th>创建时间</th>
                         <th>简要概述</th>
                         <th>操作</th>
@@ -55,6 +42,11 @@
                         <td>{{ foo.belong_project.project_name }}</td>
                         <td>{{ foo.test_user }}</td>
                         <td>{{ foo.dev_user }}</td>
+                        {% for key, value in sum.items %}
+                            {% ifequal foo.id key %}
+                                <td>{{ value }}</td>
+                            {% endifequal %}
+                        {% endfor %}
                         <td>{{ foo.create_time }}</td>
                         <td>{{ foo.simple_desc|truncatechars:15 }}</td>
                         <td>

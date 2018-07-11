@@ -1,6 +1,7 @@
 from django.utils.safestring import mark_safe
 
-from DataManager.models import ModuleInfo, ProjectInfo
+from DataManager.models import ModuleInfo, ProjectInfo, TdInfo
+
 
 class PageInfo(object):
     """
@@ -142,13 +143,15 @@ def get_pager_info(Model, filter_query, url, id, per_items=12):
     if total != 0:
         if url == '/qacenter/project_list/':
             for model in info:
-                pro_name = model.project_name
-                module_count = str(ModuleInfo.objects.filter(belong_project__project_name__exact=pro_name).count())
+                project_id = model.id
+                td_count = str(TdInfo.objects.filter(belong_project__id=project_id).count())
+                sum.setdefault(model.id, td_count)
 
         elif url == '/qacenter/module_list/':
             for model in info:
-                module_name = model.module_name
-                project_name = model.belong_project.project_name
+                module_id = model.id
+                td_count = str(TdInfo.objects.filter(belong_module__id=module_id).count())
+                sum.setdefault(model.id, td_count)
 
         page_list = customer_pager(url, id, page_info.total_page)
 
