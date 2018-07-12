@@ -69,6 +69,7 @@ Key Features
 ![登录页面](https://github.com/wangyinguang/qacenter/blob/master/images/login.png)<br>
 <br>
 2、登陆后默认跳转到首页,左侧为菜单栏,右侧为事务列表，可以输入参数，点击确定进行调用后端平台http接口进行造数据,参数输入有两种形式：1种是文本框方式，另一种是下拉框方式，下拉框方式是通过调http接口拿到select下拉框内容，访问的地址在事务模板里配置
+对于兄弟系统：后端平台http接口返回需要统一，示例：{'status': true,'responseCode': 1,'message': '登录成功','entry': {'type1': 'buyer','type2': 'seller','type3': '测试','type4': '开发'}}
 ![首页/所有事务](https://github.com/wangyinguang/qacenter/blob/master/images/all_td.png)<br>
 ![首页/所有事务/调用结果显示](https://github.com/wangyinguang/qacenter/blob/master/images/all_td_result.png)<br>
 <br>
