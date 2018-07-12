@@ -37,14 +37,6 @@
         <span class="fixed-title"><a href="/qacenter/index">质量中心</a></span>
     </div>
     <div class="fixed-nav">
-{#        #foreach($app in $applicationList)#}
-{#            <span>#if($!curAppId==$!app.id)$!app.appName#end</span>#}
-{#        #end#}
-{#        <div class="fixed-nav-list">#}
-{#            #foreach($app in $applicationList)#}
-{#                <a href="$!app.url" target="_blank">$!app.appName</a>#}
-{#            #end#}
-{#        </div>#}
         <span class="fixed-title">质量中心</span>
         <div class="fixed-nav-list">
                 <a href="www.baidu.com" target="_blank">数据工场</a>
@@ -63,9 +55,9 @@
         <div class="nav-list-menu sel"><a href="/qacenter/all_td/"><i
                 class="iconfont icon-black">
             &#xe60d;</i>全部事务</a></div>
-        <div class="nav-list-menu "><a href="/qacenter/td/allTD?tag=hot" id="hotTD"> <i
-                class="iconfont icon-hot">
-            &#xe60e;</i>常用事务</a></div>
+{#        <div class="nav-list-menu "><a href="/qacenter/td/allTD?tag=hot" id="hotTD"> <i#}
+{#                class="iconfont icon-hot">#}
+{#            &#xe60e;</i>常用事务</a></div>#}
         <div class="nav-list-menu "><a href="/qacenter/my_fav" id="favTD"><i
                 class="iconfont icon-fav">
             &#xe619;</i>我的收藏</a></div>

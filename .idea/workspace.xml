@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/DataManager/utils/httpGet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/script.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/script.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/commons.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/commons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/all_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/all_td.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/module_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/module_td.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/my_fav.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_fav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/project_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/project_td.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="commons.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="commons.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/assets/js/commons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
+            <state relative-caret-position="500">
               <caret line="317" column="48" selection-start-line="317" selection-start-column="48" selection-end-line="317" selection-end-column="48" />
             </state>
           </provider>
@@ -76,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+            <state relative-caret-position="69">
+              <caret line="57" column="85" selection-start-line="57" selection-start-column="85" selection-end-line="59" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -210,7 +201,6 @@
         <option value="$PROJECT_DIR$/static/assets/css/common.css" />
         <option value="$PROJECT_DIR$/templates/project_list.html" />
         <option value="$PROJECT_DIR$/templates/module_list.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/DataManager/models.py" />
         <option value="$PROJECT_DIR$/DataManager/utils/pagination.py" />
         <option value="$PROJECT_DIR$/templates/record.html" />
@@ -221,6 +211,7 @@
         <option value="$PROJECT_DIR$/templates/all_td.html" />
         <option value="$PROJECT_DIR$/DataManager/views.py" />
         <option value="$PROJECT_DIR$/static/assets/js/commons.js" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -850,13 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/record.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -904,8 +888,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/assets/js/commons.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
+        <state relative-caret-position="500">
           <caret line="317" column="48" selection-start-line="317" selection-start-column="48" selection-end-line="317" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="57" column="85" selection-start-line="57" selection-start-column="85" selection-end-line="59" selection-end-column="40" />
         </state>
       </provider>
     </entry>
