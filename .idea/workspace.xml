@@ -4,7 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/DataManager/utils/pagination.py" line="139" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="" />
+    <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/templates/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,20 +76,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="758">
-              <caret line="92" column="42" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
+            <state relative-caret-position="183">
+              <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataManager/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="142" column="65" selection-start-line="142" selection-start-column="65" selection-end-line="142" selection-end-column="65" />
+            <state relative-caret-position="157">
+              <caret line="59" column="12" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="12" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
@@ -120,7 +122,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>submit</find>
       <find>localStorage</find>
       <find>xrange</find>
       <find>ul</find>
@@ -150,6 +151,7 @@
       <find>ProjectInfo</find>
       <find>tdPanel</find>
       <find>render</find>
+      <find>register</find>
     </findStrings>
     <replaceStrings>
       <replace>1px solid #E5E9EF;</replace>
@@ -267,6 +269,11 @@
               <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
               <item name="qacenter" type="462c0819:PsiDirectoryNode" />
               <item name="qacenter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
@@ -400,6 +407,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
@@ -598,7 +606,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Register.html">
+    <entry file="file://$PROJECT_DIR$/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="57" column="45" lean-forward="true" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="45" />
@@ -841,16 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="142" column="65" selection-start-line="142" selection-start-column="65" selection-end-line="142" selection-end-column="65" />
-          <folding>
-            <element signature="e#24#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/assets/js/commons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -867,8 +865,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="758">
-          <caret line="92" column="42" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
+        <state relative-caret-position="183">
+          <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="12" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
