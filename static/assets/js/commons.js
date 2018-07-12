@@ -299,4 +299,34 @@ function module_by_project_post(url, id) {
     return temp;
 }
 
-
+function getOptions(url, tdIndex, paramIndex) {
+    var host = window.location.host;
+    var env = $('#tdPanel' + tdIndex).find('input[name="env"]').val();
+    if (env == 1) { //开启本地调试
+        url = url.replace(host, "localhost:8080");
+    }
+    $.ajax({
+        url: url,
+        type: "POST",
+        header: 'Access-Control-Allow-Methods:*',
+        success: function(res) {
+        var options = '';
+        var select = $('#tdForm' + tdIndex).find('select[name="param' + paramIndex + '"]');
+        var jsonObj = eval('(' + res + ")");
+        content = JSON.stringify(jsonObj.entry);
+        if (jsonObj.responseCode == 1) {
+            var obj = eval('(' + content + ')');
+            $.each(obj, function(name, value) {
+                options += '<option value="' + name + '">' + value + '</option>';
+            })
+            select.html(options);
+        } else {
+            options = '<option value="">' + res.message + '</option>';
+            select.html(options);
+        }
+    },
+        error: function(res) {
+            console.log(res);
+        }
+    });
+}

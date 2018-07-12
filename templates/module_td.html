@@ -13,9 +13,9 @@
         <div class="left-panel">
             {% for tds in tdList %}
             {% ifequal tds.right 'true' %}
-            <div id="tdPanel{{forloop.counter0}}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
+            <div id="tdPanel{{ tds.id }}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
                 <input type="hidden" name="id" value="{{ tds.id }}"/>
-                <form id="tdForm{{forloop.counter0}}" class="tdForm{{tds.id}}">
+                <form id="tdForm{{ tds.id }}" class="tdForm{{ tds.id }}">
                     <div class="td-title">
                         {{ tds.title }}
                         <div id="td-icon{{forloop.counter0}}" class="td-icon">
@@ -42,7 +42,7 @@
                         <input type="text" class="param-input" name="param{{forloop.counter0}}" value="" placeholder="{{ foo.exp }}"
                                autocomplete="off"/>
                         {% else %}
-                        <select name="param{{forloop.counter0}}">
+                        <select name="param{{forloop.counter0}}" onmouseover="getOptions('{{ foo.exp }}', {{ tds.id }}, {{ forloop.counter0 }})">
                             <option value="请选择">请选择</option>
                         </select>
                         {% endifequal %}
@@ -66,9 +66,9 @@
         <div class="right-panel">
             {% for tds in tdList %}
             {% ifequal tds.right 'false' %}
-            <div id="tdPanel{{forloop.counter0}}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
+            <div id="tdPanel{{ tds.id }}" class="td-panel" data-text="{{ tds.belong_project.project_name }}">
                 <input type="hidden" name="id" value="{{ tds.id }}"/>
-                <form id="tdForm{{forloop.counter0}}" class="tdForm{{tds.id}}">
+                <form id="tdForm{{ tds.id }}" class="tdForm{{ tds.id }}">
                     <div class="td-title">
                         {{ tds.title }}
                         <div id="td-icon{{forloop.counter0}}" class="td-icon">
@@ -95,8 +95,8 @@
                         <input type="text" class="param-input" name="param{{forloop.counter0}}" value="" placeholder="{{ foo.exp }}"
                                autocomplete="off"/>
                         {% else %}
-                        <select name="param{{forloop.counter0}}">
-                            <option value="请选择" onclick="getOptions({{ foo.exp }})">请选择</option>
+                        <select name="param{{forloop.counter0}}" onmouseover="getOptions('{{ foo.exp }}', {{ tds.id }}, {{ forloop.counter0 }})">
+                            <option value="请选择">请选择</option>
                         </select>
                         {% endifequal %}
                         <div class="bdsug">
@@ -124,10 +124,6 @@
     </div>
 
 <script  id="td-res-dialog-tmp">
-
-    function getOptions(){
-
-    }
 
     $(document).ready(function() {
         }).on('dblclick', '.param-input', function() {
@@ -219,7 +215,7 @@
                     var jsonObj = eval('(' + res + ")");
                     content = JSON.stringify(jsonObj.entry);
                     if (jsonObj.responseCode == 1) {
-                        record_ajax(id, account, formData, content, '/qacenter/record/')
+                        record_ajax(id, account, formData, content, '/qacenter/record/'+ id + '/')
                         jsonformat.init();
                         content_can = jsonformat.processFormat(content);
                         dialog.init({

@@ -4,11 +4,12 @@ import logging
 import platform
 
 from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 from urllib3.connectionpool import xrange
 
 from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo, FavTd, Record
 from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic, record_info_logic
+from DataManager.utils.httpGet import httpGet
 from DataManager.utils.operation import del_project_data, del_module_data, add_fav_data, add_td_pv, projectAndModule
 from DataManager.utils.pagination import get_pager_info
 
@@ -114,10 +115,10 @@ def all_td(request):
         td.setdefault('title', tdinfo[k].title)
         td.setdefault('td_url', tdinfo[k].td_url)
         td.setdefault('author', tdinfo[k].author)
-        td.setdefault('params', eval(tdinfo[k].params))
         td.setdefault('instruction', tdinfo[k].instruction)
         td.setdefault('belong_project', tdinfo[k].belong_project)
         td.setdefault('belong_module', tdinfo[k].belong_module)
+        td.setdefault('params', eval(tdinfo[k].params))
         tdlist.append(td)
     if request.session.get('login_status'):
         if request.is_ajax():
@@ -402,7 +403,6 @@ def add_module(request):
     :return:
     '''
     projectlist = projectAndModule
-    print(projectInfo)
     if request.session.get('login_status'):
         account = request.session["now_account"]
         if request.is_ajax():
