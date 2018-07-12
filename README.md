@@ -68,8 +68,9 @@ Key Features
 ![注册页面](https://github.com/wangyinguang/qacenter/blob/master/images/register.png)<br>
 ![登录页面](https://github.com/wangyinguang/qacenter/blob/master/images/login.png)<br>
 <br>
-2、登陆后默认跳转到首页,左侧为菜单栏,右侧为事务列表，可以输入参数，点击确定进行调用后端平台http接口进行造数据
+2、登陆后默认跳转到首页,左侧为菜单栏,右侧为事务列表，可以输入参数，点击确定进行调用后端平台http接口进行造数据,参数输入有两种形式：1种是文本框方式，另一种是下拉框方式，下拉框方式是通过调http接口拿到select下拉框内容，访问的地址在事务模板里配置
 ![首页/所有事务](https://github.com/wangyinguang/qacenter/blob/master/images/all_td.png)<br>
+![首页/所有事务/调用结果显示](https://github.com/wangyinguang/qacenter/blob/master/images/all_td_result.png)<br>
 <br>
 3、首先应该先添加一个项目,事务都是以项目为维度进行管理,注意只有简描述信息可以为空
 ![新增项目](https://github.com/wangyinguang/qacenter/blob/master/images/add_project.png)<br>
@@ -80,9 +81,18 @@ Key Features
 5、当前项目可以新增模块了，之后事务都会归属模块下，必须指定模块所属的项目,模块列表与项目列表类似，故不赘述
 ![新增模块](https://github.com/wangyinguang/qacenter/blob/master/images/add_module.png)<br>
 <br>
-6、添加事务模板，添加的事务模板需要配合后端平台http接口的地址、参数进行录入，同时参数支持文本框和下拉框两种形式，下拉框方式输入url地址，所有事务页面会根据url地址获取下拉框内容
+6、添加事务模板，添加的事务模板需要配合后端平台http接口的地址、参数进行录入，同时参数支持文本框和下拉框两种形式，下拉框方式输入url地址，事务列表页面会根据url地址获取下拉框内容
 ![添加事务模板](https://github.com/wangyinguang/qacenter/blob/master/images/add_td.png)<br>
 <br>
-7、常用事务、我的收藏、我的事务模板、调用历史、调用量统计等模块待续
+7、我的收藏，事务有收藏的功能，点击每个事务右上角的五角星，可以收藏和取消收藏，我的收藏页面显示的是该用户收藏的事务
+![我的收藏](https://github.com/wangyinguang/qacenter/blob/master/images/my_fav.png)<br>
+<br>
+8、我的事务模板是事务编辑页面，平铺显示该用户添加的事务模板，无法调用，只能点击编辑按钮跳转到编辑页面
+![我的事务模板](https://github.com/wangyinguang/qacenter/blob/master/images/my_tds.png)<br>
+<br>
+9、调用历史显示所有事务每次调用情况，入参和返回。只统计调用成功，没有统计调用失败的
+![调用历史](https://github.com/wangyinguang/qacenter/blob/master/images/record.png)<br>
+<br>
+10、调用量统计等模块待续
 
 
