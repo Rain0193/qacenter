@@ -18,11 +18,11 @@
                 <form id="tdForm{{ tds.id }}" class="tdForm{{ tds.id }}">
                     <div class="td-title">
                         {{ tds.title }}
-                        <div id="td-icon{{forloop.counter0}}" class="td-icon">
+                        <div id="td-icon{{ forloop.counter0 }}" class="td-icon">
                             {% if tds.params.length == 0 %}
                             {% else %}
                                 <i id="icon-help" class="iconfont icon-help">&#xe61e;</i>
-                                <div id="td-help-dialog-add" class="help-dialog td-help-dialog td-help-dialog${index}"></div>
+                                <div id="td-help-dialog-add" class="help-dialog td-help-dialog td-help-dialog{{ forloop.counter0 }}">{{ tds.instruction }}</div>
                             {% endif %}
                             {% ifequal tds.isFav 'true' %}
                                 <i class="iconfont icon-fav-cancel gray" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/',true)" style="display: none">&#xe620;</i>
@@ -75,8 +75,7 @@
                             {% if tds.params.length == 0 %}
                             {% else %}
                                 <i id="icon-help" class="iconfont icon-help">&#xe61e;</i>
-                                <div id="td-help-dialog-add"
-                                 class="help-dialog td-help-dialog td-help-dialog${index}"></div>
+                                <div id="td-help-dialog-add" class="help-dialog td-help-dialog td-help-dialog{{ forloop.counter0 }}">{{ tds.instruction }}</div>
                             {% endif %}
                             {% ifequal tds.isFav 'true' %}
                                 <i class="iconfont icon-fav-cancel gray" onclick="id_ajax('{{ tds.id }}', '/qacenter/all_td/', true)" style="display: none">&#xe620;</i>

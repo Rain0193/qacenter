@@ -242,12 +242,12 @@ function td_ajax(tag, id) {
                 if (data.indexOf('/qacenter/') != -1) {
                     window.location.href = data;
                 } else {
-                    myAlert(data);
+                    myAlertFail(data);
                 }
             }
         },
         error: function () {
-            myAlert('Sorry，服务器可能开小差啦, 请重试!');
+            myAlertFail('Sorry，服务器可能开小差啦, 请重试!');
         }
     });
 }
