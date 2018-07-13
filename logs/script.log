@@ -29389,3 +29389,22 @@ Traceback (most recent call last):
 json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 2018-07-13 14:13:51,191 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/project_td/1/≤‚ ‘11
 2018-07-13 14:14:07,404 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/project_td/1/≤‚ ‘11
+2018-07-13 14:47:24,597 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 536, in add_td
+    td_info = json.loads(request.body.decode('utf-8'))
+  File "c:\users\10067610\appdata\local\programs\python\python36-32\Lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "c:\users\10067610\appdata\local\programs\python\python36-32\Lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\users\10067610\appdata\local\programs\python\python36-32\Lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

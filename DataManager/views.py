@@ -144,6 +144,49 @@ def all_td(request):
     else:
         return HttpResponseRedirect("/qacenter/login/")
 
+def hot_td(request):
+    """
+    常用事务：调用量前十
+    :param request:
+    :return:
+    """
+    account = request.session["now_account"]
+    projectlist = projectAndModule
+    fav_opt = FavTd.objects
+    tdinfo = TdInfo.objects.all().order_by('-run_count')[:10]
+    tdlist = []
+    for k in xrange(len(tdinfo)):
+        td = {}
+        flag = fav_opt.get_fav_by_tdAndUser(account, tdinfo[k].id)
+        if flag == 1:
+            td.setdefault('isFav', 'true')
+        else:
+            td.setdefault('isFav', 'false')
+        if k % 2 == 0:
+            td.setdefault('right', 'true')
+        else:
+            td.setdefault('right', 'false')
+        td.setdefault('id', tdinfo[k].id)
+        td.setdefault('title', tdinfo[k].title)
+        td.setdefault('td_url', tdinfo[k].td_url)
+        td.setdefault('author', tdinfo[k].author)
+        td.setdefault('instruction', tdinfo[k].instruction)
+        td.setdefault('belong_project', tdinfo[k].belong_project)
+        td.setdefault('belong_module', tdinfo[k].belong_module)
+        td.setdefault('params', eval(tdinfo[k].params))
+        tdlist.append(td)
+    if request.session.get('login_status'):
+        if request.method == 'GET':
+            manage_info = {
+                'account': account,
+                'tdList': tdlist,
+                'projects': projectlist
+            }
+            init_filter_session(request)
+            return render_to_response('hot_td.html', manage_info)
+    else:
+        return HttpResponseRedirect("/qacenter/login/")
+
 
 def project_td(request, id):
     '''
