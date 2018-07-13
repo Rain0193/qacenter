@@ -22,7 +22,7 @@ Key Features
 
 本地开发环境部署
 --------
-1. 安装mysql数据库服务端(推荐5.7+),并设置为utf-8编码，创建相应HttpRunner数据库，设置好相应用户名、密码，启动mysql
+1. 安装mysql数据库服务端(推荐5.7+),并设置为utf-8编码，创建相应qacenter数据库，设置好相应用户名、密码，启动mysql
 
 2. 修改:qacenter/DataManager/settings.py里DATABASES字典和邮件发送账号相关配置
    ```python
