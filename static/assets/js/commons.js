@@ -312,9 +312,8 @@ function getOptions(url, tdIndex, paramIndex) {
         success: function(res) {
         var options = '';
         var select = $('#tdForm' + tdIndex).find('select[name="param' + paramIndex + '"]');
-        var jsonObj = eval('(' + res + ")");
-        content = JSON.stringify(jsonObj.entry);
-        if (jsonObj.responseCode == 1) {
+        content = JSON.stringify(res.entry);
+        if (res.responseCode == 1) {
             var obj = eval('(' + content + ')');
             $.each(obj, function(name, value) {
                 options += '<option value="' + name + '">' + value + '</option>';

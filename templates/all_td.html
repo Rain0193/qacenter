@@ -181,11 +181,11 @@
         }).on('click', '.submit', function() {
             var formId = $(this).parent().parent().attr('id');
             var formData = $("#" + formId).serializeArray();
+            console.log(formData)
             var url = $(this).parent().parent().find('input[name="url"]').val();
             var id = $(this).parent().parent().parent().find('input[name="id"]').val();
             var account = $(this).parent().parent().parent().parent().parent().find('input[name="account"]').val();
             var kwMap = {};
-            var host = window.location.host;
             $.each(formData, function (index, data) {
                 var array = kwMap[index];
                 if (data.name.indexOf('param') >= 0) {
@@ -220,21 +220,21 @@
                 url: url,
                 type: "POST",
                 data: formData,
-                header: 'Access-Control-Allow-Methods:*',
                 success: function (res) {
-                    var jsonObj = eval('(' + res + ")");
-                    content = JSON.stringify(jsonObj.entry);
-                    if (jsonObj.responseCode == 1) {
+                    content = JSON.stringify(res.entry);
+                    console.log(content)
+                    if (res.responseCode == 1) {
                         record_ajax(id, account, formData, content, '/qacenter/record/'+ id + '/')
                         jsonformat.init();
                         content_can = jsonformat.processFormat(content);
+                        console.log(content_can)
                         dialog.init({
                             dialogId: 'td-res-dialog',
                             type: 1,
                             content: content_can
                         });
                     } else {
-                        if (jsonObj.responseCode == 10212) {
+                        if (res.responseCode == 10212) {
                             dialog.init({
                                 dialogId: 'sessionout_dialog_add',
                                 msg: '登录超时',
@@ -243,7 +243,7 @@
                         } else {
                             dialog.init({
                                 dialogId: 'params_error_dialog_add',
-                                msg: jsonObj.message,
+                                msg: res.message,
                             });
                         }
                     }
