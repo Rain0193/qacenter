@@ -461,13 +461,14 @@ td,th {
     top:8%;
     width:680px;
     min-height:200px;
-    height:auto;
+    height: 800px !important;
     background:#FFF;
     z-index:2001;
     padding-top:10px;
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-radius:3px;
+    overflow: scroll;
 }
 .err-icon{
     width:100%;
