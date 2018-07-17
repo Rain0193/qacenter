@@ -4,7 +4,7 @@ DataManager
 Design Philosophy
 -----------------
 
-基于Django的数据工厂平台：本篇只是造数据的事务管理平台，还需要搭建一套基于spring框架，封装开发dubbo接口集合的后端平台，再通过DataManager平台调用后端平台的http接口实现造数据功能。没有编写后端平台的童鞋可以先部署个flash的mock功能来体验下DataManager的魅力
+基于Django的数据工厂平台：本篇只是造数据的事务管理平台，还需要搭建一套基于springBoot框架，封装开发dubbo接口集合的后端平台，再通过DataManager平台调用后端平台的http接口实现造数据功能。没有编写后端平台的童鞋可以先部署个flash的mock功能来体验下DataManager的魅力
 
 Key Features
 ------------
@@ -94,6 +94,10 @@ Key Features
 9、调用历史显示所有事务每次调用情况，入参和返回。只统计调用成功，没有统计调用失败的
 ![调用历史](https://github.com/wangyinguang/qacenter/blob/master/images/record.png)<br>
 <br>
-10、调用量统计等模块待续
+10、调用量统计等模块待续...
 
 
+兄弟项目
+--------
+基于springBoot框架的兄弟项目，这个项目配合起来才能用哦
+https://github.com/DataFactorys/xinyu-qacenter
