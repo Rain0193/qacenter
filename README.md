@@ -34,7 +34,7 @@ Key Features
 --------
 1. 安装mysql数据库服务端(推荐5.7+),并设置为utf-8编码，创建相应qacenter数据库，设置好相应用户名、密码，启动mysql
 
-2. 修改:qacenter/DataManager/settings.py里DATABASES字典和邮件发送账号相关配置
+2. 修改:qacenter/qacenter/settings.py里DATABASES字典和邮件发送账号相关配置
    ```python
         DATABASES = {
             'default': {
@@ -50,7 +50,7 @@ Key Features
 
 3. 命令行窗口执行pip install -r requirements.txt 安装工程所依赖的库文件
 
-4. 命令行窗口切换到DataManager目录 生成数据库迁移脚本,并生成表结构
+4. 命令行窗口切换到qacenter目录 生成数据库迁移脚本,并生成表结构
     ```bash
         python manage.py makemigrations DataManager #生成数据迁移脚本
         python manage.py migrate  #应用到db生成数据表
