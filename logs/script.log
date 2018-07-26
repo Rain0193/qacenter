@@ -31273,3 +31273,29 @@ Traceback (most recent call last):
   File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
     'url': request.get_host() + new_path,
 RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8008/qacenter/hot_td/%E6%B5%8B%E8%AF%9511/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-07-26 11:14:51,911 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data(list(eval(project_info.pop('id'))))
+TypeError: 'int' object is not iterable
+2018-07-26 11:14:55,198 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\qacenter\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data(list(eval(project_info.pop('id'))))
+TypeError: 'int' object is not iterable

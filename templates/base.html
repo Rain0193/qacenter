@@ -33,11 +33,12 @@
 <body class="modal-open">
 <div class="fixed-top">
     <div class="fixed-logo">
-        <img src="http://imgsize.52shangou.com/img/n/01/28/1453982752246_4107.png" width="30" height="30" class="logo"/>
+{#        <img src="http://imgsize.52shangou.com/img/n/01/28/1453982752246_4107.png" width="30" height="30" class="logo"/>#}
+        <i class="iconfont icon-white">&#xe629;</i>
         <span class="fixed-title"><a href="/qacenter/index">质量中心</a></span>
     </div>
     <div class="fixed-nav">
-        <span class="fixed-title">质量中心</span>
+        <span class="fixed-title">数据工场 <i class="iconfont icon-nav">&#xe625;</i></span>
         <div class="fixed-nav-list">
                 <a href="/qacenter/all_td/" target="_blank">数据工场</a>
                 <a href="/qacenter/all_td/" target="_blank">代码覆盖率</a>
@@ -51,9 +52,11 @@
 
 <div class="fixed-left">
     <div class="nav-list">
-
+        <div class="nav-list-menu logo-menu"><a class="logo-a" href="/qacenter/all_td/"><i
+                class="iconfont logo-icon">
+            &#xe624;</i></a></div>
         <div class="nav-list-menu sel"><a href="/qacenter/all_td/"><i
-                class="iconfont icon-black">
+                class="iconfont">
             &#xe60d;</i>全部事务</a></div>
         <div class="nav-list-menu "><a href="/qacenter/hot_td/" id="hotTD"> <i
                 class="iconfont icon-hot">
@@ -86,7 +89,7 @@
                     {{ foo.project_name|truncatechars:6 }}</a>
                 <ul class="ul-menu" id="ul-menu{{ forloop.counter0 }}" hidden>
                     {% for fool in foo.moduleList %}
-                        <li class="li-menu">
+                        <li class="li-menu li-hover">
                             <a href="/qacenter/module_td/{{ fool.id }}/">{{ fool.module_name|truncatechars:8 }}</a>
                         </li>
                     {% endfor %}
