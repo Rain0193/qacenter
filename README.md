@@ -1,21 +1,10 @@
 DataManager
 =================
 
-项目地址
------------------
-https://github.com/DataFactorys/qacenter
-
 Design Philosophy
 -----------------
 
-基于Django的数据工厂平台：本篇只是造数据的事务管理平台，还需要搭建一套基于springBoot框架，封装开发dubbo接口集合的后端平台，再通过DataManager平台调用后端平台的http接口实现造数据功能。
-
-
-兄弟项目
---------
-基于springBoot框架的兄弟项目，这个项目配合起来才能用哦
-https://github.com/DataFactorys/xinyu-qacenter
-
+基于Django的数据工厂平台：本篇只是造数据的事务管理平台，还需要搭建一套基于spring框架，封装开发dubbo接口集合的后端平台，再通过DataManager平台调用后端平台的http接口实现造数据功能。没有编写后端平台的童鞋可以先部署个flash的mock功能来体验下DataManager的魅力
 
 Key Features
 ------------
@@ -27,12 +16,13 @@ Key Features
 - 全部事务：所有事务铺开展示，可以执行调用接口、收藏事务
 - 常用事务：按调用量统计显示前10的常用事务
 - 我的收藏：显示用户本人收藏的事务
+- 环境管理：可添加运行环境，运行用例时可以一键切换环境
 - 调用历史：查看事务被调用情况
 - 调用量统计：图标展示所有事务被调用情况
 
 本地开发环境部署
 --------
-1. 安装mysql数据库服务端(推荐5.7+),并设置为utf-8编码，创建相应qacenter数据库，设置好相应用户名、密码，启动mysql
+1. 安装mysql数据库服务端(推荐5.7+),并设置为utf-8编码，排序规则utf8_general_ci，创建相应qacenter数据库，设置好相应用户名、密码，启动mysql
 
 2. 修改:qacenter/qacenter/settings.py里DATABASES字典和邮件发送账号相关配置
    ```python
@@ -68,6 +58,10 @@ Key Features
 
 7. 浏览器输入：http://127.0.0.1:8000/qacenter/register/  注册用户，开始尽情享用平台吧
 
+12. 浏览器输入http://127.0.0.1:8000/admin/  输入步骤6设置的用户名、密码，登录后台运维管理系统，可后台管理数据
+
+### 生产环境uwsgi+nginx部署参考：https://www.jianshu.com/p/d6f9138fab7b
+
 新手入门手册
 -----------
 1、首先需要注册一个新用户,注册成功后会自动跳转到登录页面,正常登录即可访问页面
@@ -100,5 +94,6 @@ Key Features
 9、调用历史显示所有事务每次调用情况，入参和返回。只统计调用成功，没有统计调用失败的
 ![调用历史](https://github.com/wangyinguang/qacenter/blob/master/images/record.png)<br>
 <br>
-10、调用量统计等模块待续...
+10、调用量统计等模块待续
+
 

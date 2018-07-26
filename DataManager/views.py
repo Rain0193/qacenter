@@ -18,6 +18,15 @@ logger = logging.getLogger('qacenter')
 # Create your views here.
 separator = '\\' if platform.system() == 'Windows' else '/'
 
+def login_check(func):
+    def wrapper(request, *args, **kwargs):
+        if not request.session.get('login_status'):
+            return HttpResponseRedirect('/qacenter/login/')
+        return func(request, *args, **kwargs)
+
+    return wrapper
+
+
 def login(request):
     """
     登录
@@ -40,6 +49,7 @@ def login(request):
     elif request.method == 'GET':
         return render_to_response("login.html")
 
+@login_check
 def logout(request):
     """
     注销登录
@@ -70,6 +80,7 @@ def register(request):
     elif request.method == 'GET':
         return render_to_response("register.html")
 
+@login_check
 def base(request):
     """
     导航
@@ -77,17 +88,15 @@ def base(request):
     :return:
     """
     projectlist = projectAndModule
-    if request.session.get('login_status'):
-        manage_info = {
-            'account': request.session["now_account"],
-            'projects': projectlist
-        }
-        init_filter_session(request)
-        return render_to_response('base.html', manage_info)
-    else:
-        return HttpResponseRedirect("/qacenter/login/")
+    manage_info = {
+        'account': request.session["now_account"],
+        'projects': projectlist
+    }
+    init_filter_session(request)
+    return render_to_response('base.html', manage_info)
 
 
+@login_check
 def all_td(request):
     """
     首页
@@ -120,30 +129,28 @@ def all_td(request):
         td.setdefault('belong_module', tdinfo[k].belong_module)
         td.setdefault('params', eval(tdinfo[k].params))
         tdlist.append(td)
-    if request.session.get('login_status'):
-        if request.is_ajax():
-            td_info = json.loads(request.body.decode('utf-8'))
-            kwargs['user'] = request.session["now_account"]
-            kwargs['id'] = td_info.pop('id')
-            if td_info.get('model') == 'pv':
-                msg = add_td_pv(kwargs['id'])
-            else:
-                if td_info.pop('type'):
-                    msg = add_fav_data(True, **kwargs)
-                else:
-                    msg = add_fav_data(False, **kwargs)
-            return HttpResponse(get_ajax_msg(msg, 'ok'))
+    if request.is_ajax():
+        td_info = json.loads(request.body.decode('utf-8'))
+        kwargs['user'] = request.session["now_account"]
+        kwargs['id'] = td_info.pop('id')
+        if td_info.get('model') == 'pv':
+            msg = add_td_pv(kwargs['id'])
         else:
-            manage_info = {
-                'account': request.session["now_account"],
-                'tdList': tdlist,
-                'projects': projectlist
-            }
-            init_filter_session(request)
-            return render_to_response('all_td.html', manage_info)
+            if td_info.pop('type'):
+                msg = add_fav_data(True, **kwargs)
+            else:
+                msg = add_fav_data(False, **kwargs)
+        return HttpResponse(get_ajax_msg(msg, 'ok'))
     else:
-        return HttpResponseRedirect("/qacenter/login/")
+        manage_info = {
+            'account': request.session["now_account"],
+            'tdList': tdlist,
+            'projects': projectlist
+        }
+        init_filter_session(request)
+        return render_to_response('all_td.html', manage_info)
 
+@login_check
 def hot_td(request):
     """
     常用事务：调用量前十
@@ -175,19 +182,16 @@ def hot_td(request):
         td.setdefault('belong_module', tdinfo[k].belong_module)
         td.setdefault('params', eval(tdinfo[k].params))
         tdlist.append(td)
-    if request.session.get('login_status'):
-        if request.method == 'GET':
-            manage_info = {
-                'account': account,
-                'tdList': tdlist,
-                'projects': projectlist
-            }
-            init_filter_session(request)
-            return render_to_response('hot_td.html', manage_info)
-    else:
-        return HttpResponseRedirect("/qacenter/login/")
+    if request.method == 'GET':
+        manage_info = {
+            'account': account,
+            'tdList': tdlist,
+            'projects': projectlist
+        }
+        init_filter_session(request)
+        return render_to_response('hot_td.html', manage_info)
 
-
+@login_check
 def project_td(request, id):
     '''
     项目的事务
@@ -221,32 +225,29 @@ def project_td(request, id):
         td.setdefault('belong_project', tdinfo[k].belong_project)
         td.setdefault('belong_module', tdinfo[k].belong_module)
         tdlist.append(td)
-    if request.session.get('login_status'):
-        if request.is_ajax():
-            td_info = json.loads(request.body.decode('utf-8'))
-            kwargs['user'] = request.session["now_account"]
-            kwargs['id'] = td_info.pop('id')
-            if td_info.get('model') == 'pv':
-                msg = add_td_pv(kwargs['id'])
-            else:
-                if td_info.pop('type'):
-                    msg = add_fav_data(True, **kwargs)
-                else:
-                    msg = add_fav_data(False, **kwargs)
-            return HttpResponse(get_ajax_msg(msg, 'ok'))
+    if request.is_ajax():
+        td_info = json.loads(request.body.decode('utf-8'))
+        kwargs['user'] = request.session["now_account"]
+        kwargs['id'] = td_info.pop('id')
+        if td_info.get('model') == 'pv':
+            msg = add_td_pv(kwargs['id'])
         else:
-            manage_info = {
-                'account': request.session["now_account"],
-                'presentProject': presentProject[0]['project_name'],
-                'tdList': tdlist,
-                'projects': projectlist
-            }
-            init_filter_session(request)
-            return render_to_response('project_td.html', manage_info)
+            if td_info.pop('type'):
+                msg = add_fav_data(True, **kwargs)
+            else:
+                msg = add_fav_data(False, **kwargs)
+        return HttpResponse(get_ajax_msg(msg, 'ok'))
     else:
-        return HttpResponseRedirect("/qacenter/login/")
+        manage_info = {
+            'account': request.session["now_account"],
+            'presentProject': presentProject[0]['project_name'],
+            'tdList': tdlist,
+            'projects': projectlist
+        }
+        init_filter_session(request)
+        return render_to_response('project_td.html', manage_info)
 
-
+@login_check
 def module_td(request, id):
     '''
     模块的事务
@@ -280,32 +281,29 @@ def module_td(request, id):
         td.setdefault('belong_project', tdinfo[k].belong_project)
         td.setdefault('belong_module', tdinfo[k].belong_module)
         tdlist.append(td)
-    if request.session.get('login_status'):
-        if request.is_ajax():
-            td_info = json.loads(request.body.decode('utf-8'))
-            kwargs['user'] = request.session["now_account"]
-            kwargs['id'] = td_info.pop('id')
-            if td_info.get('model') == 'pv':
-                msg = add_td_pv(kwargs['id'])
-            else:
-                if td_info.pop('type'):
-                    msg = add_fav_data(True, **kwargs)
-                else:
-                    msg = add_fav_data(False, **kwargs)
-            return HttpResponse(get_ajax_msg(msg, 'ok'))
+    if request.is_ajax():
+        td_info = json.loads(request.body.decode('utf-8'))
+        kwargs['user'] = request.session["now_account"]
+        kwargs['id'] = td_info.pop('id')
+        if td_info.get('model') == 'pv':
+            msg = add_td_pv(kwargs['id'])
         else:
-            manage_info = {
-                'account': request.session["now_account"],
-                'presentModule': presentModule[0]['module_name'],
-                'tdList': tdlist,
-                'projects': projectlist
-            }
-            init_filter_session(request)
-            return render_to_response('module_td.html', manage_info)
+            if td_info.pop('type'):
+                msg = add_fav_data(True, **kwargs)
+            else:
+                msg = add_fav_data(False, **kwargs)
+        return HttpResponse(get_ajax_msg(msg, 'ok'))
     else:
-        return HttpResponseRedirect("/qacenter/login/")
+        manage_info = {
+            'account': request.session["now_account"],
+            'presentModule': presentModule[0]['module_name'],
+            'tdList': tdlist,
+            'projects': projectlist
+        }
+        init_filter_session(request)
+        return render_to_response('module_td.html', manage_info)
 
-
+@login_check
 def project_list(request, id):
     """
     项目列表
@@ -314,31 +312,29 @@ def project_list(request, id):
     :return:
     """
     projectlist = projectAndModule
-    if request.session.get('login_status'):
-        account = request.session["now_account"]
-        if request.is_ajax():
-            project_info = json.loads(request.body.decode('utf-8'))
-            if 'mode' in project_info.keys():
-                msg = del_project_data(list(eval(project_info.pop('id'))))
-            else:
-                msg = project_info_logic(type=False, **project_info)
-            return HttpResponse(get_ajax_msg(msg, '/qacenter/all_td/'))
+    account = request.session["now_account"]
+    if request.is_ajax():
+        project_info = json.loads(request.body.decode('utf-8'))
+        if 'mode' in project_info.keys():
+            msg = del_project_data(list(eval(project_info.pop('id'))))
         else:
-            filter_query = set_filter_session(request)
-            pro_list = get_pager_info(
-                ProjectInfo, filter_query, '/qacenter/project_list/', id)
-            manage_info = {
-                'account': account,
-                'project': pro_list[1],
-                'page_list': pro_list[0],
-                'info': filter_query,
-                'sum': pro_list[2],
-                'projects': projectlist
-            }
-            return render_to_response('project_list.html', manage_info)
+            msg = project_info_logic(type=False, **project_info)
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/all_td/'))
     else:
-        return HttpResponseRedirect("/qacenter/login/")
+        filter_query = set_filter_session(request)
+        pro_list = get_pager_info(
+            ProjectInfo, filter_query, '/qacenter/project_list/', id)
+        manage_info = {
+            'account': account,
+            'project': pro_list[1],
+            'page_list': pro_list[0],
+            'info': filter_query,
+            'sum': pro_list[2],
+            'projects': projectlist
+        }
+        return render_to_response('project_list.html', manage_info)
 
+@login_check
 def add_project(request):
     """
     新增项目
@@ -346,22 +342,20 @@ def add_project(request):
     :return:
     """
     projectlist = projectAndModule
-    if request.session.get('login_status'):
-        account = request.session["now_account"]
-        if request.is_ajax():
-            project_info = json.loads(request.body.decode('utf-8'))
-            msg = project_info_logic(**project_info)
-            return HttpResponse(get_ajax_msg(msg, '/qacenter/project_list/1/'))
+    account = request.session["now_account"]
+    if request.is_ajax():
+        project_info = json.loads(request.body.decode('utf-8'))
+        msg = project_info_logic(**project_info)
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/project_list/1/'))
 
-        elif request.method == 'GET':
-            manage_info = {
-                'account': account,
-                'projects': projectlist
-            }
-            return render_to_response('add_project.html', manage_info)
-    else:
-        return HttpResponseRedirect("/qacenter/login/")
+    elif request.method == 'GET':
+        manage_info = {
+            'account': account,
+            'projects': projectlist
+        }
+        return render_to_response('add_project.html', manage_info)
 
+@login_check
 def edit_project(request, id):
     """
     编辑项目
@@ -370,29 +364,26 @@ def edit_project(request, id):
     :return:
     """
     projectlist = projectAndModule
-    if request.session.get('login_status'):
-        account = request.session["now_account"]
-        if request.is_ajax():
-            project_info = json.loads(request.body.decode('utf-8'))
-            msg = project_info_logic(False, **project_info)
-            return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_project/' + id + '/'))
+    account = request.session["now_account"]
+    if request.is_ajax():
+        project_info = json.loads(request.body.decode('utf-8'))
+        msg = project_info_logic(False, **project_info)
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_project/' + id + '/'))
 
-        elif request.method == 'GET':
-            projectInfo = ProjectInfo.objects.get(id=id)
-            manage_info = {
-                'account': account,
-                'id': projectInfo.id,
-                'project_name': projectInfo.project_name,
-                'responsible_name': projectInfo.responsible_name,
-                'test_user': projectInfo.test_user,
-                'simple_desc': projectInfo.simple_desc,
-                'projects': projectlist
-            }
-            return render_to_response('edit_project.html', manage_info)
-    else:
-        return HttpResponseRedirect("/qacenter/login/")
+    elif request.method == 'GET':
+        projectInfo = ProjectInfo.objects.get(id=id)
+        manage_info = {
+            'account': account,
+            'id': projectInfo.id,
+            'project_name': projectInfo.project_name,
+            'responsible_name': projectInfo.responsible_name,
+            'test_user': projectInfo.test_user,
+            'simple_desc': projectInfo.simple_desc,
+            'projects': projectlist
+        }
+        return render_to_response('edit_project.html', manage_info)
 
-
+@login_check
 def module_list(request, id):
     """
     模块列表
@@ -409,59 +400,54 @@ def module_list(request, id):
         pro2 = {}
         pro2.setdefault('project_name', projectInfo[k].project_name)
         projectInfoList.append(pro2)
-
-    if request.session.get('login_status'):
-        account = request.session["now_account"]
-        if request.is_ajax():
-            module_info = json.loads(request.body.decode('utf-8'))
-            if 'mode' in module_info.keys():  # del module
-                msg = del_module_data(list(eval(module_info.pop('id'))))
-            else:
-                msg = module_info_logic(type=False, **module_info)
-            return HttpResponse(get_ajax_msg(msg, 'ok'))
+    account = request.session["now_account"]
+    if request.is_ajax():
+        module_info = json.loads(request.body.decode('utf-8'))
+        if 'mode' in module_info.keys():  # del module
+            msg = del_module_data(list(eval(module_info.pop('id'))))
         else:
-            projectName = request.POST.get('belong_project')
-            if projectName == 'All' or projectName is None:
-                projectName = ''
-            filter_query = {
-                'belong_project': projectName,
-            }
-            module_list = get_pager_info(
-                ModuleInfo, filter_query, '/qacenter/module_list/', id)
-            manage_info = {
-                'account': account,
-                'module': module_list[1],
-                'page_list': module_list[0],
-                'sum': module_list[2],
-                'project': projectInfoList,
-                'projects': projectlist
-            }
-            return render_to_response('module_list.html', manage_info)
+            msg = module_info_logic(type=False, **module_info)
+        return HttpResponse(get_ajax_msg(msg, 'ok'))
     else:
-        return HttpResponseRedirect("/qacenter/login/")
+        projectName = request.POST.get('belong_project')
+        if projectName == 'All' or projectName is None:
+            projectName = ''
+        filter_query = {
+            'belong_project': projectName,
+        }
+        module_list = get_pager_info(
+            ModuleInfo, filter_query, '/qacenter/module_list/', id)
+        manage_info = {
+            'account': account,
+            'module': module_list[1],
+            'page_list': module_list[0],
+            'sum': module_list[2],
+            'project': projectInfoList,
+            'projects': projectlist
+        }
+        return render_to_response('module_list.html', manage_info)
 
+@login_check
 def add_module(request):
     '''
     新增模块
     :return:
     '''
     projectlist = projectAndModule
-    if request.session.get('login_status'):
-        account = request.session["now_account"]
-        if request.is_ajax():
-            module_info = json.loads(request.body.decode('utf-8'))
-            msg = module_info_logic(**module_info)
-            return HttpResponse(get_ajax_msg(msg, '/qacenter/module_list/1'))
-        elif request.method == 'GET':
-            manage_info = {
-                'account': account,
-                'data': ProjectInfo.objects.all().values('project_name'),
-                'projects': projectlist
-            }
-            return render_to_response('add_module.html', manage_info)
-    else:
-        return HttpResponseRedirect("/qacenter/login/")
+    account = request.session["now_account"]
+    if request.is_ajax():
+        module_info = json.loads(request.body.decode('utf-8'))
+        msg = module_info_logic(**module_info)
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/module_list/1'))
+    elif request.method == 'GET':
+        manage_info = {
+            'account': account,
+            'data': ProjectInfo.objects.all().values('project_name'),
+            'projects': projectlist
+        }
+        return render_to_response('add_module.html', manage_info)
 
+@login_check
 def edit_project(request, id):
     """
     编辑项目
@@ -470,28 +456,26 @@ def edit_project(request, id):
     :return:
     """
     projectlist = projectAndModule
-    if request.session.get('login_status'):
-        account = request.session["now_account"]
-        if request.is_ajax():
-            project_info = json.loads(request.body.decode('utf-8'))
-            msg = project_info_logic(False, **project_info)
-            return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_project/' + id + '/'))
+    account = request.session["now_account"]
+    if request.is_ajax():
+        project_info = json.loads(request.body.decode('utf-8'))
+        msg = project_info_logic(False, **project_info)
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_project/' + id + '/'))
 
-        elif request.method == 'GET':
-            projectInfo = ProjectInfo.objects.get(id=id)
-            manage_info = {
-                'account': account,
-                'id': projectInfo.id,
-                'project_name': projectInfo.project_name,
-                'responsible_name': projectInfo.responsible_name,
-                'test_user': projectInfo.test_user,
-                'simple_desc': projectInfo.simple_desc,
-                'projects': projectlist
-            }
-            return render_to_response('edit_project.html', manage_info)
-    else:
-        return HttpResponseRedirect("/qacenter/login/")
+    elif request.method == 'GET':
+        projectInfo = ProjectInfo.objects.get(id=id)
+        manage_info = {
+            'account': account,
+            'id': projectInfo.id,
+            'project_name': projectInfo.project_name,
+            'responsible_name': projectInfo.responsible_name,
+            'test_user': projectInfo.test_user,
+            'simple_desc': projectInfo.simple_desc,
+            'projects': projectlist
+        }
+        return render_to_response('edit_project.html', manage_info)
 
+@login_check
 def edit_module(request, id):
     """
     编辑模块
@@ -500,29 +484,26 @@ def edit_module(request, id):
     """
     projectlist = projectAndModule
     account = request.session["now_account"]
-    if request.session.get('login_status'):
-        if request.is_ajax():
-            module_info = json.loads(request.body.decode('utf-8'))
-            msg = module_info_logic(False, **module_info)
-            return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_module/' + id + '/'))
+    if request.is_ajax():
+        module_info = json.loads(request.body.decode('utf-8'))
+        msg = module_info_logic(False, **module_info)
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_module/' + id + '/'))
 
-        elif request.method == 'GET':
-            moduleInfo = ModuleInfo.objects.get(id=id)
-            manage_info = {
-                'account': account,
-                'id': moduleInfo.id,
-                'module_name': moduleInfo.module_name,
-                'belong_project': moduleInfo.belong_project,
-                'test_user': moduleInfo.test_user,
-                'simple_desc': moduleInfo.simple_desc,
-                'dev_user': moduleInfo.dev_user,
-                'projects': projectlist
-            }
-            return render_to_response('edit_module.html', manage_info)
-    else:
-        return HttpResponseRedirect("/qacenter/login/")
+    elif request.method == 'GET':
+        moduleInfo = ModuleInfo.objects.get(id=id)
+        manage_info = {
+            'account': account,
+            'id': moduleInfo.id,
+            'module_name': moduleInfo.module_name,
+            'belong_project': moduleInfo.belong_project,
+            'test_user': moduleInfo.test_user,
+            'simple_desc': moduleInfo.simple_desc,
+            'dev_user': moduleInfo.dev_user,
+            'projects': projectlist
+        }
+        return render_to_response('edit_module.html', manage_info)
 
-
+@login_check
 def add_td(request):
     '''
     添加事务模板
@@ -530,23 +511,20 @@ def add_td(request):
     :return:
     '''
     projectlist = projectAndModule
-    if request.session.get('login_status'):
-        account = request.session["now_account"]
-        if request.is_ajax():
-            td_info = json.loads(request.body.decode('utf-8'))
-            msg = td_info_logic(**td_info)
-            return HttpResponse(get_ajax_msg(msg, '/qacenter/add_td/'))
-        elif request.method == 'GET':
-            manage_info = {
-                'account': account,
-                'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time'),
-                'projects': projectlist
-            }
-            return render_to_response('add_td.html', manage_info)
-    else:
-         return HttpResponseRedirect("/qacenter/login/")
+    account = request.session["now_account"]
+    if request.is_ajax():
+        td_info = json.loads(request.body.decode('utf-8'))
+        msg = td_info_logic(**td_info)
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/add_td/'))
+    elif request.method == 'GET':
+        manage_info = {
+            'account': account,
+            'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time'),
+            'projects': projectlist
+        }
+        return render_to_response('add_td.html', manage_info)
 
-
+@login_check
 def edit_td(request, id):
     '''
     编辑事务模板
@@ -566,24 +544,21 @@ def edit_td(request, id):
     td.setdefault('instruction', tdinfo.instruction)
     td.setdefault('belong_project', tdinfo.belong_project)
     td.setdefault('belong_module', tdinfo.belong_module)
-    if request.session.get('login_status'):
-        if request.is_ajax():
-            td_info = json.loads(request.body.decode('utf-8'))
-            msg = td_info_logic(False, **td_info)
-            return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_td/' + id + '/'))
+    if request.is_ajax():
+        td_info = json.loads(request.body.decode('utf-8'))
+        msg = td_info_logic(False, **td_info)
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_td/' + id + '/'))
 
-        elif request.method == 'GET':
-            manage_info = {
-                'account': account,
-                'tdList': td,
-                'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time'),
-                'projects': projectlist
-            }
-            return render_to_response('edit_td.html', manage_info)
-    else:
-        return HttpResponseRedirect("/qacenter/login/")
+    elif request.method == 'GET':
+        manage_info = {
+            'account': account,
+            'tdList': td,
+            'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time'),
+            'projects': projectlist
+        }
+        return render_to_response('edit_td.html', manage_info)
 
-
+@login_check
 def my_tds(request):
     '''
     获取我的事务模板
@@ -615,17 +590,14 @@ def my_tds(request):
         td.setdefault('belong_project', tdinfo[k].belong_project)
         td.setdefault('belong_module', tdinfo[k].belong_module)
         tdlist.append(td)
-    if request.session.get('login_status'):
-        if request.method == 'GET':
-            manage_info = {
-                'tdList': tdlist,
-                'projects': projectlist
-            }
-            return render_to_response('my_tds.html', manage_info)
-    else:
-        return HttpResponseRedirect("/qacenter/login/")
+    if request.method == 'GET':
+        manage_info = {
+            'tdList': tdlist,
+            'projects': projectlist
+        }
+        return render_to_response('my_tds.html', manage_info)
 
-
+@login_check
 def my_fav(request):
     '''
     我的收藏
@@ -655,18 +627,15 @@ def my_fav(request):
         td.setdefault('belong_project', tdinfo[0].belong_project)
         td.setdefault('belong_module', tdinfo[0].belong_module)
         tdlist.append(td)
-    if request.session.get('login_status'):
-        if request.method == 'GET':
-            manage_info = {
-                'account': account,
-                'tdList': tdlist,
-                'projects': projectlist
-            }
-            return render_to_response('my_fav.html', manage_info)
-    else:
-        return HttpResponseRedirect("/qacenter/login/")
+    if request.method == 'GET':
+        manage_info = {
+            'account': account,
+            'tdList': tdlist,
+            'projects': projectlist
+        }
+        return render_to_response('my_fav.html', manage_info)
 
-
+@login_check
 def record(request, id):
     '''
     调用历史
@@ -676,28 +645,25 @@ def record(request, id):
     '''
     account = request.session["now_account"]
     projectlist = projectAndModule
-    if request.session.get('login_status'):
-        if request.is_ajax():
-            record_info = json.loads(request.body.decode('utf-8'))
-            msg = record_info_logic(**record_info)
-            return HttpResponse(get_ajax_msg(msg, '/qacenter/record/' + id + '/'))
+    if request.is_ajax():
+        record_info = json.loads(request.body.decode('utf-8'))
+        msg = record_info_logic(**record_info)
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/record/' + id + '/'))
 
-        if request.method == 'GET':
-            filter_query = {}
-            record_list = get_pager_info(
-                Record, filter_query, '/qacenter/record/', id, 15)
-            manage_info = {
-                'account': account,
-                'record': record_list[1],
-                'page_list': record_list[0],
-                'sum': record_list[2],
-                'projects': projectlist
-            }
-            return render_to_response('record.html', manage_info)
-    else:
-        return HttpResponseRedirect("/qacenter/login/")
+    if request.method == 'GET':
+        filter_query = {}
+        record_list = get_pager_info(
+            Record, filter_query, '/qacenter/record/', id, 15)
+        manage_info = {
+            'account': account,
+            'record': record_list[1],
+            'page_list': record_list[0],
+            'sum': record_list[2],
+            'projects': projectlist
+        }
+        return render_to_response('record.html', manage_info)
 
-
+@login_check
 def summary(request):
     '''
     调用量统计
