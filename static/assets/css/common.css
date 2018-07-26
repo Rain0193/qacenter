@@ -156,6 +156,7 @@ li-menu {
 }
 .fixed-nav-list a{
     display: block;line-height: 40px;border-top: 0px solid #E5E9EF;color: #777;background: #09C;
+    text-decoration:none;
 }
 .fixed-nav:hover .fixed-nav-list{
     -webkit-transform: translateY(100%);
@@ -603,7 +604,7 @@ td,th {
     position: fixed;
     left: 200px;
     top: 60px;
-    width: 150px;
+    width: 250px;
     height: 30px;
     line-height: 30px;
     font-size: 16px;
