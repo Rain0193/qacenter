@@ -31299,3 +31299,4 @@ Traceback (most recent call last):
   File "E:\qacenter\DataManager\views.py", line 322, in project_list
     msg = del_project_data(list(eval(project_info.pop('id'))))
 TypeError: 'int' object is not iterable
+2018-07-26 11:36:04,787 [django.request:93] [base:get_response] [WARNING]- Not Found: /favicon.ico

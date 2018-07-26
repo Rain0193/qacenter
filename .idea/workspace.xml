@@ -7,8 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/script.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/script.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qacenter/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/qacenter/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/img/favicon.ico" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,15 +40,33 @@
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
-              <caret line="54" column="55" lean-forward="true" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="61" />
+              <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qacenter/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/qacenter/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/assets/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
+            <state relative-caret-position="-1265">
               <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
             </state>
           </provider>
@@ -132,7 +152,6 @@
         <option value="$PROJECT_DIR$/static/assets/js/jquery.sticky.js" />
         <option value="$PROJECT_DIR$/static/assets/css/module_list.css" />
         <option value="$PROJECT_DIR$/static/assets/css/add_td.css" />
-        <option value="$PROJECT_DIR$/qacenter/urls.py" />
         <option value="$PROJECT_DIR$/static/assets/css/register.css" />
         <option value="$PROJECT_DIR$/static/assets/css/edit_project.css" />
         <option value="$PROJECT_DIR$/templates/add_project.html" />
@@ -176,6 +195,7 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/static/assets/css/common.css" />
+        <option value="$PROJECT_DIR$/qacenter/urls.py" />
       </list>
     </option>
   </component>
@@ -617,13 +637,6 @@
     <entry file="file://$PROJECT_DIR$/images/record.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/qacenter/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qacenter/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -671,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qacenter/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/managers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2921">
@@ -709,26 +715,40 @@
     <entry file="file://$PROJECT_DIR$/static/assets/img/loading.GIF">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/img/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/assets/img/bg.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/static/assets/img/logo-words.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/static/assets/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="54" column="55" lean-forward="true" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="61" />
+        <state relative-caret-position="-1265">
+          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/css/common.css">
+    <entry file="file://$PROJECT_DIR$/static/assets/img/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+        <state relative-caret-position="414">
+          <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qacenter/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qacenter/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
