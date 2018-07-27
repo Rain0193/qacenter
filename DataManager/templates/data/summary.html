@@ -1,0 +1,14 @@
+{% extends "data/base.html" %}
+{% block title %}调用量统计{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'data/assets/css/record.css' %}">
+
+<div class="crumb">
+    <span>调用量统计</span>
+</div>
+<div class="content">
+    <div>{{ summary }}</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>注册</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load staticfiles %}
+    <!-- CSS Files -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <!-- Colors -->
+    <link href="{% static "data//assets/css/common.css" %}" rel="stylesheet" media="screen">
+    <link href="{% static "data//assets/css/register.css" %}" rel="stylesheet" media="screen">
+    <link href="https://cdn.bootcss.com/bootstrap-validator/0.5.3/css/bootstrapValidator.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="register-forms">
+        <div class="logo-img"><img src="{% static "data/assets/img/logo-words.png" %}" width="100"
+                                   height="130"></div>
+
+        <form class="form-header" role="form" id="register_form">
+            <div class="form-group">
+                <i class="icon iconfont">&#xe61d;</i>
+                <input type="text" class="form-control" id="username" name="username" placeholder="请输入姓名">
+            </div>
+            <div class="form-group">
+                <i class="icon iconfont">&#xe613;</i>
+                <select name="type" id="type" class="form-control">
+                        <option value="请选择角色">请选择角色</option>
+                        <option value="1">测试</option>
+                        <option value="2">开发</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <i class="icon iconfont">&#xe621;</i>
+                <input type="text" class="form-control" id="email" name="email" placeholder="请输入邮箱">
+            </div>
+            <div class="form-group">
+                <i class="icon iconfont">&#xe61c;</i>
+                <input type="text" class="form-control" id="account" name="account" placeholder="请输入账号">
+            </div>
+            <div class="form-group">
+                <i class="icon iconfont">&#xe610;</i>
+                <input class="form-control" type="password" id="password" name="password" placeholder="请输入密码"/>
+            </div>
+            <div class="form-group">
+                <i class="icon iconfont">&#xe610;</i>
+                <input class="form-control" type="password" id="repassword" name="repassword" placeholder="请再次输入密码"/>
+            </div>
+            <div class="register-button-div">
+                <input type="button" id="register" class="register-button" value="注册" onclick="register_ajax('#register_form')">
+            </div>
+            <div class="register-btm-div">
+                <span class="fr"><a href="/qacenter/data/login/" class="fgt-pwd-btn">去登录</a></span>
+                <span class="fr">已经注册？</span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.serializeJSON/2.9.0/jquery.serializejson.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="{% static "data/assets/js/custom.js" %}"></script>
+<script src="{% static "data/assets/js/jquery.sticky.js" %}"></script>
+<script src="{% static "data/assets/js/wow.min.js" %}"></script>
+<script src="{% static "data/assets/js/owl.carousel.min.js" %}"></script>
+<script src="https://cdn.bootcss.com/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $('form').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                username: {
+                    message: '姓名验证失败',
+                    validators: {
+                        stringLength: {
+                            min: 2,
+                            max: 10,
+                            message: '姓名长度必须在2到10位之间'
+                        }
+                    }
+                },
+                email: {
+                    validators: {
+                        emailAddress: {
+                            message: '邮箱地址格式有误'
+                        }
+                    }
+                },
+                account: {
+                    message: '用户名验证失败',
+                    validators: {
+                        stringLength: {
+                            min: 3,
+                            max: 15,
+                            message: '用户名长度必须在3到15位之间'
+                        },
+                        regexp: {
+                            regexp: /^[a-z0-9_-]{3,16}$/,
+                            message: '用户名只能包含、小写、数字和下划线'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        stringLength: {
+                            min: 6,
+                            max: 18,
+                            message: '密码长度必须在6到18位之间'
+                        },
+                        regexp: {
+                            regexp: /^[a-z0-9_-]{3,16}$/,
+                            message: '密码只能包含、小写、数字和下划线'
+                        }
+                    }
+                },
+                repassword: {
+                    message: '密码无效',
+                    validators: {
+                        identical: {//相同
+                            field: 'password',
+                            message: '两次密码不一致'
+                        },
+                    }
+                }
+            }
+        });
+    });
+
+    /*表单信息异步传输*/
+    function register_ajax(id) {
+        if ($(id).data('bootstrapValidator').isValid()) {
+            var data = $(id).serializeJSON();
+            var url;
+            if (id === "#register_form") {
+                url = '/qacenter/data/register/';
+            }
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: JSON.stringify(data),
+                contentType: "application/json",
+                success: function (data) {
+                    if (data === '恭喜您，账号已成功注册') {
+                        window.location.href = '/qacenter/data/login/';
+                    } else {
+                        alert(data);
+                    }
+                },
+                error: function () {
+                    alert('Sorry，服务器可能开小差啦, 请重试!')
+                }
+            });
+        }
+    }
+</script>
+
+</body>
+</html>

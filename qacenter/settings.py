@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
+import djcelery
 from django.conf.global_settings import SESSION_COOKIE_AGE
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -38,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 注册自己的APP
     'DataManager',
+    'ApiManager',
+    'djcelery',
 ]
 
 MIDDLEWARE = [
@@ -143,10 +147,36 @@ else:
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS=(
+    'qacenter/static',
+    'ApiManager/static/',
+    'DataManager/static/',
+)
+
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder'
 )
+
+SESSION_COOKIE_AGE = 300 * 60
+
+djcelery.setup_loader()
+CELERY_ENABLE_UTC = True
+CELERY_TIMEZONE = 'Asia/Shanghai'
+BROKER_URL = 'amqp://dev:zwc123@192.168.91.45:5672//' if DEBUG else 'amqp://dev:zwc123@192.168.91.45:5672//'
+CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
+CELERY_RESULT_BACKEND = 'djcelery.backends.database:DatabaseBackend'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
+CELERY_TASK_RESULT_EXPIRES = 7200  # celery任务执行结果的超时时间，
+CELERYD_CONCURRENCY = 1 if DEBUG else 10 # celery worker的并发数 也是命令行-c指定的数目 根据服务器配置实际更改 一般25即可
+CELERYD_MAX_TASKS_PER_CHILD = 100  # 每个worker执行了多少任务就会死掉，我建议数量可以大一些，比如200
+
+
+EMAIL_SEND_USERNAME = 'quanwang.yin@hstong.com'  # 定时任务报告发送邮箱，支持163,qq,sina,企业qq邮箱等，注意需要开通smtp服务
+EMAIL_SEND_PASSWORD = 'TANGxinbing135!'     # 邮箱密码
 
 LOGGING = {
     'version': 1,

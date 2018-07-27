@@ -21,7 +21,7 @@ separator = '\\' if platform.system() == 'Windows' else '/'
 def login_check(func):
     def wrapper(request, *args, **kwargs):
         if not request.session.get('login_status'):
-            return HttpResponseRedirect('/qacenter/login/')
+            return HttpResponseRedirect('/qacenter/data/login/')
         return func(request, *args, **kwargs)
 
     return wrapper
@@ -41,13 +41,13 @@ def login(request):
             logger.info('{account_number} 登录成功'.format(account_number=account))
             request.session["login_status"] = True
             request.session["now_account"] = account
-            return HttpResponseRedirect('/qacenter/all_td/')
+            return HttpResponseRedirect('/qacenter/data/all_td/')
         else:
             logger.info('{account_number} 登录失败, 请检查用户名或者密码'.format(account_number=account))
             request.session["login_status"] = False
-            return render_to_response("login.html")
+            return render_to_response("data/login.html")
     elif request.method == 'GET':
-        return render_to_response("login.html")
+        return render_to_response("data/login.html")
 
 @login_check
 def logout(request):
@@ -64,7 +64,7 @@ def logout(request):
             init_filter_session(request, type=False)
         except KeyError:
             logger.error('session invalid')
-        return HttpResponseRedirect("/qacenter/login")
+        return HttpResponseRedirect("/qacenter/data/login")
 
 
 def register(request):
@@ -78,7 +78,7 @@ def register(request):
         msg = register_info_logic(**user_info)
         return HttpResponse(get_ajax_msg(msg, '恭喜您，账号已成功注册'))
     elif request.method == 'GET':
-        return render_to_response("register.html")
+        return render_to_response("data/register.html")
 
 @login_check
 def base(request):
@@ -93,7 +93,7 @@ def base(request):
         'projects': projectlist
     }
     init_filter_session(request)
-    return render_to_response('base.html', manage_info)
+    return render_to_response('data/base.html', manage_info)
 
 
 @login_check
@@ -148,7 +148,7 @@ def all_td(request):
             'projects': projectlist
         }
         init_filter_session(request)
-        return render_to_response('all_td.html', manage_info)
+        return render_to_response('data/all_td.html', manage_info)
 
 @login_check
 def hot_td(request):
@@ -189,7 +189,7 @@ def hot_td(request):
             'projects': projectlist
         }
         init_filter_session(request)
-        return render_to_response('hot_td.html', manage_info)
+        return render_to_response('data/hot_td.html', manage_info)
 
 @login_check
 def project_td(request, id):
@@ -245,7 +245,7 @@ def project_td(request, id):
             'projects': projectlist
         }
         init_filter_session(request)
-        return render_to_response('project_td.html', manage_info)
+        return render_to_response('data/project_td.html', manage_info)
 
 @login_check
 def module_td(request, id):
@@ -301,7 +301,7 @@ def module_td(request, id):
             'projects': projectlist
         }
         init_filter_session(request)
-        return render_to_response('module_td.html', manage_info)
+        return render_to_response('data/module_td.html', manage_info)
 
 @login_check
 def project_list(request, id):
@@ -319,11 +319,11 @@ def project_list(request, id):
             msg = del_project_data(list(eval(project_info.pop('id'))))
         else:
             msg = project_info_logic(type=False, **project_info)
-        return HttpResponse(get_ajax_msg(msg, '/qacenter/all_td/'))
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/data/all_td/'))
     else:
         filter_query = set_filter_session(request)
         pro_list = get_pager_info(
-            ProjectInfo, filter_query, '/qacenter/project_list/', id)
+            ProjectInfo, filter_query, '/qacenter/data/project_list/', id)
         manage_info = {
             'account': account,
             'project': pro_list[1],
@@ -332,7 +332,7 @@ def project_list(request, id):
             'sum': pro_list[2],
             'projects': projectlist
         }
-        return render_to_response('project_list.html', manage_info)
+        return render_to_response('data/project_list.html', manage_info)
 
 @login_check
 def add_project(request):
@@ -346,14 +346,14 @@ def add_project(request):
     if request.is_ajax():
         project_info = json.loads(request.body.decode('utf-8'))
         msg = project_info_logic(**project_info)
-        return HttpResponse(get_ajax_msg(msg, '/qacenter/project_list/1/'))
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/data/project_list/1/'))
 
     elif request.method == 'GET':
         manage_info = {
             'account': account,
             'projects': projectlist
         }
-        return render_to_response('add_project.html', manage_info)
+        return render_to_response('data/add_project.html', manage_info)
 
 @login_check
 def edit_project(request, id):
@@ -368,7 +368,7 @@ def edit_project(request, id):
     if request.is_ajax():
         project_info = json.loads(request.body.decode('utf-8'))
         msg = project_info_logic(False, **project_info)
-        return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_project/' + id + '/'))
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/data/edit_project/' + id + '/'))
 
     elif request.method == 'GET':
         projectInfo = ProjectInfo.objects.get(id=id)
@@ -381,7 +381,7 @@ def edit_project(request, id):
             'simple_desc': projectInfo.simple_desc,
             'projects': projectlist
         }
-        return render_to_response('edit_project.html', manage_info)
+        return render_to_response('data/edit_project.html', manage_info)
 
 @login_check
 def module_list(request, id):
@@ -416,7 +416,7 @@ def module_list(request, id):
             'belong_project': projectName,
         }
         module_list = get_pager_info(
-            ModuleInfo, filter_query, '/qacenter/module_list/', id)
+            ModuleInfo, filter_query, '/qacenter/data/module_list/', id)
         manage_info = {
             'account': account,
             'module': module_list[1],
@@ -425,7 +425,7 @@ def module_list(request, id):
             'project': projectInfoList,
             'projects': projectlist
         }
-        return render_to_response('module_list.html', manage_info)
+        return render_to_response('data/module_list.html', manage_info)
 
 @login_check
 def add_module(request):
@@ -438,14 +438,14 @@ def add_module(request):
     if request.is_ajax():
         module_info = json.loads(request.body.decode('utf-8'))
         msg = module_info_logic(**module_info)
-        return HttpResponse(get_ajax_msg(msg, '/qacenter/module_list/1'))
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/data/module_list/1'))
     elif request.method == 'GET':
         manage_info = {
             'account': account,
             'data': ProjectInfo.objects.all().values('project_name'),
             'projects': projectlist
         }
-        return render_to_response('add_module.html', manage_info)
+        return render_to_response('data/add_module.html', manage_info)
 
 @login_check
 def edit_project(request, id):
@@ -460,7 +460,7 @@ def edit_project(request, id):
     if request.is_ajax():
         project_info = json.loads(request.body.decode('utf-8'))
         msg = project_info_logic(False, **project_info)
-        return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_project/' + id + '/'))
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/data/edit_project/' + id + '/'))
 
     elif request.method == 'GET':
         projectInfo = ProjectInfo.objects.get(id=id)
@@ -473,7 +473,7 @@ def edit_project(request, id):
             'simple_desc': projectInfo.simple_desc,
             'projects': projectlist
         }
-        return render_to_response('edit_project.html', manage_info)
+        return render_to_response('data/edit_project.html', manage_info)
 
 @login_check
 def edit_module(request, id):
@@ -487,7 +487,7 @@ def edit_module(request, id):
     if request.is_ajax():
         module_info = json.loads(request.body.decode('utf-8'))
         msg = module_info_logic(False, **module_info)
-        return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_module/' + id + '/'))
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/data/edit_module/' + id + '/'))
 
     elif request.method == 'GET':
         moduleInfo = ModuleInfo.objects.get(id=id)
@@ -501,7 +501,7 @@ def edit_module(request, id):
             'dev_user': moduleInfo.dev_user,
             'projects': projectlist
         }
-        return render_to_response('edit_module.html', manage_info)
+        return render_to_response('data/edit_module.html', manage_info)
 
 @login_check
 def add_td(request):
@@ -515,14 +515,14 @@ def add_td(request):
     if request.is_ajax():
         td_info = json.loads(request.body.decode('utf-8'))
         msg = td_info_logic(**td_info)
-        return HttpResponse(get_ajax_msg(msg, '/qacenter/add_td/'))
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/data/add_td/'))
     elif request.method == 'GET':
         manage_info = {
             'account': account,
             'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time'),
             'projects': projectlist
         }
-        return render_to_response('add_td.html', manage_info)
+        return render_to_response('data/add_td.html', manage_info)
 
 @login_check
 def edit_td(request, id):
@@ -547,7 +547,7 @@ def edit_td(request, id):
     if request.is_ajax():
         td_info = json.loads(request.body.decode('utf-8'))
         msg = td_info_logic(False, **td_info)
-        return HttpResponse(get_ajax_msg(msg, '/qacenter/edit_td/' + id + '/'))
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/data/edit_td/' + id + '/'))
 
     elif request.method == 'GET':
         manage_info = {
@@ -556,7 +556,7 @@ def edit_td(request, id):
             'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time'),
             'projects': projectlist
         }
-        return render_to_response('edit_td.html', manage_info)
+        return render_to_response('data/edit_td.html', manage_info)
 
 @login_check
 def my_tds(request):
@@ -595,7 +595,7 @@ def my_tds(request):
             'tdList': tdlist,
             'projects': projectlist
         }
-        return render_to_response('my_tds.html', manage_info)
+        return render_to_response('data/my_tds.html', manage_info)
 
 @login_check
 def my_fav(request):
@@ -633,7 +633,7 @@ def my_fav(request):
             'tdList': tdlist,
             'projects': projectlist
         }
-        return render_to_response('my_fav.html', manage_info)
+        return render_to_response('data/my_fav.html', manage_info)
 
 @login_check
 def record(request, id):
@@ -648,12 +648,12 @@ def record(request, id):
     if request.is_ajax():
         record_info = json.loads(request.body.decode('utf-8'))
         msg = record_info_logic(**record_info)
-        return HttpResponse(get_ajax_msg(msg, '/qacenter/record/' + id + '/'))
+        return HttpResponse(get_ajax_msg(msg, '/qacenter/data/record/' + id + '/'))
 
     if request.method == 'GET':
         filter_query = {}
         record_list = get_pager_info(
-            Record, filter_query, '/qacenter/record/', id, 15)
+            Record, filter_query, '/qacenter/data/record/', id, 15)
         manage_info = {
             'account': account,
             'record': record_list[1],
@@ -661,7 +661,7 @@ def record(request, id):
             'sum': record_list[2],
             'projects': projectlist
         }
-        return render_to_response('record.html', manage_info)
+        return render_to_response('data/record.html', manage_info)
 
 @login_check
 def summary(request):
@@ -678,4 +678,4 @@ def summary(request):
             'projects': projectlist,
             'summary': '功能开发中~~~'
         }
-        return render_to_response('summary.html', manage_info)
+        return render_to_response('data/summary.html', manage_info)

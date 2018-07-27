@@ -33,7 +33,7 @@ class BaseTable(models.Model):
 class UserInfo(BaseTable):
     class Meta:
         verbose_name = '用户信息'
-        db_table = 'UserInfo'
+        db_table = 'Data_UserInfo'
 
     username = models.CharField('姓名',max_length=10)
     type = models.IntegerField('角色',default=1)
@@ -47,7 +47,7 @@ class UserInfo(BaseTable):
 class ProjectInfo(BaseTable):
     class Meta:
         verbose_name = '项目信息'
-        db_table = 'ProjectInfo'
+        db_table = 'Data_ProjectInfo'
 
     project_name = models.CharField('项目名称', max_length=50)
     responsible_name = models.CharField('项目负责人', max_length=20)
@@ -59,7 +59,7 @@ class ProjectInfo(BaseTable):
 class ModuleInfo(BaseTable):
     class Meta:
         verbose_name = '模块信息'
-        db_table = 'ModuleInfo'
+        db_table = 'Data_ModuleInfo'
 
     module_name = models.CharField('模块名称', max_length=50)
     belong_project = models.ForeignKey(ProjectInfo, on_delete=models.CASCADE)
@@ -71,7 +71,7 @@ class ModuleInfo(BaseTable):
 class TdInfo(BaseTable):
     class Meta:
         verbose_name = '事务信息'
-        db_table = 'TdInfo'
+        db_table = 'Data_TdInfo'
 
     title = models.CharField('事务名称', max_length=50)
     belong_project = models.ForeignKey(ProjectInfo, on_delete=models.CASCADE)
@@ -86,7 +86,7 @@ class TdInfo(BaseTable):
 class FavTd(BaseTable):
     class Meta:
         verbose_name = '我收藏的事务'
-        db_table = 'Fav_Td'
+        db_table = 'Data_Fav_Td'
 
     user = models.CharField('用户', max_length=20)
     belong_td = models.ForeignKey(TdInfo, on_delete=models.CASCADE)
@@ -96,7 +96,7 @@ class FavTd(BaseTable):
 class Record(BaseTable):
     class Meta:
         verbose_name = '调用历史'
-        db_table = 'record'
+        db_table = 'Data_record'
 
     user = models.CharField('用户', max_length=20)
     belong_td = models.ForeignKey(TdInfo, on_delete=models.CASCADE)

@@ -1,0 +1,139 @@
+{% extends "data/base.html" %}
+{% load staticfiles %}
+{% block title %}模块管理{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'data/assets/css/module_list.css' %}">
+
+<div class="crumb">
+    <span>模块管理>模块列表</span>
+</div>
+<div class="content">
+
+    <div class="tab-statistics">
+        <div class="delBtn" onclick="alldel()">删除模块</div>
+        <div class="addBtn" onclick="location='/qacenter/data/add_module/'">添加模块</div>
+        <div class="tab-content">
+            {% for fool in project %}
+                <span id="tab-span" class="tab-span {% ifequal fool.project_name 'All' %}select {% else %}{% endifequal %}" onclick="module_by_project_post('/qacenter/data/module_list/1/','{{ fool.project_name }}')">{{ fool.project_name|truncatechars:6 }}</span>
+            {% endfor %}
+        </div>
+        <div class="table-statistics">
+            <table class="table-statistics">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" name="ck" value="{{ foo.id }}"/></th>
+                        <th>序号</th>
+                        <th>模块名称</th>
+                        <th>所属项目</th>
+                        <th>测试人员</th>
+                        <th>开发人员</th>
+                        <th>事务数量</th>
+                        <th>创建时间</th>
+                        <th>简要概述</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for foo in module %}
+                    <tr>
+                        <td><input type="checkbox" name="ck" value="{{ foo.id }}"/></td>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ foo.module_name }}</td>
+                        <td>{{ foo.belong_project.project_name }}</td>
+                        <td>{{ foo.test_user }}</td>
+                        <td>{{ foo.dev_user }}</td>
+                        {% for key, value in sum.items %}
+                            {% ifequal foo.id key %}
+                                <td>{{ value }}</td>
+                            {% endifequal %}
+                        {% endfor %}
+                        <td>{{ foo.create_time }}</td>
+                        <td>{{ foo.simple_desc|truncatechars:15 }}</td>
+                        <td>
+                            <div class="btn-operate">
+                                 <a href="/qacenter/edit_module/{{ foo.id }}/">
+                                    <button class="btn-operate"><i class="iconfont icon-blue">&#xe60f;</i></button>
+                                 </a>
+                            </div>
+                            <div class="btn-operate">
+                                <button class="btn-operate"><i class="iconfont icon-red" onclick="invalid('{{ foo.id }}')">&#xe602;</i></button>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <ul class="pagination">
+      {{ page_list }}
+    </ul>
+</div>
+
+     <script type="text/javascript">
+
+      //批量删除
+        function alldel() {
+            var f = false;
+            //得到要删除的主键id
+            var arr = [];//用于存要删除的选中的id值
+
+            var ck = document.getElementsByName("ck");//得到一组checkbox  相当于数组
+            //循环这一组checkbox让每一个checkbox选中
+            for (var i = 0; i < ck.length; i++) {
+                if (ck[i].checked == true) {//代表选中
+                    arr.push(ck[i].value);
+                    f = true;
+                }
+            }
+            if (f==true){
+                //二次确认框
+                dialog.init({
+                    dialogId: 'all_delete_dialog',
+                    msg: '亲，此操作会删除该模块下所有事务，请谨慎操作！！！',
+                    confirmBtnId: 'del-btn-confirm',
+                    type: 3,
+                    id: arr
+                });
+            }else {
+                dialog.init({
+                    dialogId: 'all_delete_dialog',
+                    msg: '亲，请至少选中一条进行批量删除',
+                    confirmBtnId: 'del-btn-confirm',
+                    type: 0,
+                    id: arr
+                });
+            }
+        }
+
+        function invalid(name) {
+            var id = name;
+            //二次确认框
+            dialog.init({
+                dialogId: 'tdelete-confirm-dialog',
+                msg: '亲，此操作会删除该模块下所有事务，请谨慎操作！！！',
+                confirmBtnId: 'del-btn-confirm',
+                type: 3,
+                id: id
+            });
+        }
+
+
+        $(document).ready(function() {
+            var index = localStorage.getItem("currentTab",index);
+            $('.tab-span').eq(index).addClass("select").siblings().removeClass("select");
+        }).on('click','.tab-span',function(){
+            var index = $(this).index();
+            localStorage.setItem("currentTab",index);
+            $('.tab-span').removeClass('select');
+            $(this).addClass('select');
+        }).on('click', '#del-btn-confirm', function() {
+            var id = $(this).parent().next().val();
+            del_data_ajax(id, '/qacenter/data/module_list/1/')
+        })
+
+
+
+    </script>
+
+{% endblock %}
