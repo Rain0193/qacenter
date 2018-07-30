@@ -20,7 +20,7 @@ from ApiManager.activator import process
 
 app_name = 'ApiManager'
 urlpatterns = [
-    url(r'^favicon\.ico$', RedirectView.as_view(url='/static/assets/img/favicon2.ico')),
+    url(r'^favicon\.ico$', RedirectView.as_view(url='/api/static/assets/img/favicon.ico')),
     url(r'^(?P<app>(\w+))/(?P<function>(\w+))/$', process),
     url(r'^(?P<app>(\w+))/(?P<function>(\w+))/(?P<id>(\w+))/$', process),
 

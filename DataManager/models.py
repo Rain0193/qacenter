@@ -33,11 +33,10 @@ class BaseTable(models.Model):
 class UserInfo(BaseTable):
     class Meta:
         verbose_name = '用户信息'
-        db_table = 'Data_UserInfo'
+        db_table = 'UserInfo'
 
-    username = models.CharField('姓名',max_length=10)
+    username = models.CharField('姓名',max_length=30)
     type = models.IntegerField('角色',default=1)
-    account_number = models.CharField('账号',max_length=20)
     email = models.EmailField('邮箱')
     password = models.CharField('密码', max_length=20)
     status = models.IntegerField('有效/无效',default=1)

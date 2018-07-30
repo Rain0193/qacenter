@@ -20,7 +20,7 @@ from DataManager.activator import process
 
 app_name = 'DataManager'
 urlpatterns = [
-    url(r'^favicon\.ico$', RedirectView.as_view(url='/static/assets/img/favicon2.ico')),
+    url(r'^favicon\.ico$', RedirectView.as_view(url='/data/static/assets/img/favicon.ico')),
     url(r'^(?P<app>(\w+))/(?P<function>(\w+))/$', process),
     url(r'^(?P<app>(\w+))/(?P<function>(\w+))/(?P<id>(\w+))/$', process),
 

@@ -145,7 +145,7 @@
             if ($('#belong_module_id').val() !== '请选择') {
                 module_id = $('#belong_module_id').val();
                 module_name = $('#belong_module_id option:selected').text();
-                var href = "<li id=" + module_id + "><a href='/api/edit_case/" + module_id + "/' id = " + module_id + ">" + module_name + "" +
+                var href = "<li id=" + module_id + "><a href='/http/api/edit_case/" + module_id + "/' id = " + module_id + ">" + module_name + "" +
                     "</a><i class=\"js-remove\" onclick=remove_self('#" + module_id + "')>✖</i></li>";
                 $("#pre_case").append(href);
             }

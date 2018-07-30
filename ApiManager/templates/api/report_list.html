@@ -43,7 +43,7 @@
                     <tr>
                         <td><input type="checkbox" name="report_{{ foo.id }}" value="{{ foo.id }}"/></td>
                         <td>{{ forloop.counter }}</td>
-                        <td><a href="/api/view_report/{{ foo.id }}">{{ foo.report_name }}</a></td>
+                        <td><a href="/http/api/view_report/{{ foo.id }}">{{ foo.report_name }}</a></td>
                         <td>{{ foo.start_at }}</td>
                         {% if foo.status == True %}
                             <td style="color: #00e359;  font-size: 15px ">Pass</td>

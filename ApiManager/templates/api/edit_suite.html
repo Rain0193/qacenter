@@ -68,7 +68,7 @@
                         <ol id="pre_case">
                             {% for path in info.include|convert_eval %}
                                 <li style="margin-left:15px" id="test_{{ path.0 }}">
-                                    <a style="font-size: 20px" href="/api/edit_case/{{ path.0 }}/"
+                                    <a style="font-size: 20px" href="/http/api/edit_case/{{ path.0 }}/"
                                        id="{{ path.0 }}">{{ path.1 }}</a><i
                                         class="js-remove" onclick="remove_self('#test_{{ path.0 }}')">✖</i></li>
                             {% endfor %}
@@ -95,7 +95,7 @@
                 var case_name = $('#belong_case_id option[value="' + include[key] + '"]').text();
                 if (case_name !== '请选择') {
                     var href = "<li style='margin-left:15px' id=" + case_id + ">" +
-                        "<a style='font-size: 20px' href='/api/edit_case/" + case_id + "/' id = " + case_id + ">test：" + case_name + "" +
+                        "<a style='font-size: 20px' href='/http/api/edit_case/" + case_id + "/' id = " + case_id + ">test：" + case_name + "" +
                         "</a><i class=\"js-remove\" onclick=remove_self('#" + case_id + "')>✖</i></li>";
                     $("#pre_case").append(href);
                 }

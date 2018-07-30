@@ -34,16 +34,16 @@ def login(request):
     :return:
     """
     if request.method == 'POST':
-        account = request.POST.get('account')
+        username = request.POST.get('account')
         password = request.POST.get('password')
 
-        if UserInfo.objects.filter(account_number__exact=account).filter(password__exact=password).count() == 1:
-            logger.info('{account_number} 登录成功'.format(account_number=account))
+        if UserInfo.objects.filter(username__exact=username).filter(password__exact=password).count() == 1:
+            logger.info('{username} 登录成功'.format(username=username))
             request.session["login_status"] = True
-            request.session["now_account"] = account
+            request.session["now_account"] = username
             return HttpResponseRedirect('/qacenter/data/all_td/')
         else:
-            logger.info('{account_number} 登录失败, 请检查用户名或者密码'.format(account_number=account))
+            logger.info('{username} 登录失败, 请检查用户名或者密码'.format(username=username))
             request.session["login_status"] = False
             return render_to_response("data/login.html")
     elif request.method == 'GET':

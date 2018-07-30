@@ -744,7 +744,7 @@
                     改
                 </button>&nbsp;
                 &raquo; &nbsp;
-                <a type="submit" href="/api/add_case/" class="am-btn am-btn-secondary am-radius">新 增 用 例</a>
+                <a type="submit" href="/http/api/add_case/" class="am-btn am-btn-secondary am-radius">新 增 用 例</a>
             </div>
         </div>
     </div>
@@ -813,7 +813,7 @@
             if ($('#belong_case_id').val() !== '请选择') {
                 case_id = $('#belong_case_id').val();
                 case_name = $('#belong_case_id option:selected').text();
-                var href = "<li id=" + case_id + "><a href='/api/edit_case/" + case_id + "/' id = " + case_id + ">" + case_name + "" +
+                var href = "<li id=" + case_id + "><a href='/http/api/edit_case/" + case_id + "/' id = " + case_id + ">" + case_name + "" +
                     "</a><i class=\"js-remove\" onclick=remove_self('#" + case_id + "')>✖</i></li>";
                 $("#pre_case").append(href);
             }
@@ -827,7 +827,7 @@
             if ($('#config').val() !== '请选择') {
                 var case_id = $('#config').val();
                 var case_name = $('#config option:selected').text();
-                var href = "<li id=" + case_id + " name='pre_config'><a style='color: cadetblue' href='/api/edit_config/" + case_id + "/' id = " + case_id + ">" + case_name + "" +
+                var href = "<li id=" + case_id + " name='pre_config'><a style='color: cadetblue' href='/http/api/edit_config/" + case_id + "/' id = " + case_id + ">" + case_name + "" +
                     "</a><i class=\"js-remove\" onclick=remove_self('#" + case_id + "')>✖</i></li>";
                 $("li[name='pre_config']").remove();
                 $("#pre_case").prepend(href);

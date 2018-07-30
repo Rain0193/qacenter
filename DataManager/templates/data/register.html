@@ -24,7 +24,7 @@
         <form class="form-header" role="form" id="register_form">
             <div class="form-group">
                 <i class="icon iconfont">&#xe61d;</i>
-                <input type="text" class="form-control" id="username" name="username" placeholder="请输入姓名">
+                <input type="text" class="form-control" id="username" name="username" placeholder="请输入账号">
             </div>
             <div class="form-group">
                 <i class="icon iconfont">&#xe613;</i>
@@ -37,10 +37,6 @@
             <div class="form-group">
                 <i class="icon iconfont">&#xe621;</i>
                 <input type="text" class="form-control" id="email" name="email" placeholder="请输入邮箱">
-            </div>
-            <div class="form-group">
-                <i class="icon iconfont">&#xe61c;</i>
-                <input type="text" class="form-control" id="account" name="account" placeholder="请输入账号">
             </div>
             <div class="form-group">
                 <i class="icon iconfont">&#xe610;</i>
@@ -86,8 +82,8 @@
                     validators: {
                         stringLength: {
                             min: 2,
-                            max: 10,
-                            message: '姓名长度必须在2到10位之间'
+                            max: 20,
+                            message: '姓名长度必须在2到20位之间'
                         }
                     }
                 },
@@ -102,9 +98,9 @@
                     message: '用户名验证失败',
                     validators: {
                         stringLength: {
-                            min: 3,
+                            min: 2,
                             max: 15,
-                            message: '用户名长度必须在3到15位之间'
+                            message: '用户名长度必须在2到15位之间'
                         },
                         regexp: {
                             regexp: /^[a-z0-9_-]{3,16}$/,

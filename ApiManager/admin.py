@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from ApiManager.models import UserInfo, ProjectInfo, ModuleInfo, TestCaseInfo, EnvInfo
+from ApiManager.models import  ProjectInfo, ModuleInfo, TestCaseInfo, EnvInfo
+from DataManager.models import UserInfo
 
 
 @admin.register(UserInfo)

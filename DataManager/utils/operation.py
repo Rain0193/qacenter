@@ -18,16 +18,15 @@ def add_register_data(**kwargs):
     try:
         username = kwargs.pop('username')
         email = kwargs.pop('email')
-        account = kwargs.pop('account')
         password = kwargs.pop('password')
 
-        if user_info.filter(account_number__exact=account).filter(status=1).count() > 0:
-            logger.debug('{account} 已被其他用户注册'.format(account=account))
+        if user_info.filter(username__exact=username).filter(status=1).count() > 0:
+            logger.debug('{account} 已被其他用户注册'.format(username=username))
             return '该用户名已被注册，请更换用户名'
         if user_info.filter(email__exact=email).filter(status=1).count() > 0:
             logger.debug('{email} 昵称已被其他用户注册'.format(email=email))
             return '邮箱已被其他用户注册，请更换邮箱'
-        user_info.create(username=username,account_number=account, password=password, email=email)
+        user_info.create(username=username, password=password, email=email)
         logger.info('新增用户：{user_info}'.format(user_info=user_info))
         return 'ok'
     except DataError:

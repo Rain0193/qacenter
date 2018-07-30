@@ -3,11 +3,11 @@ from django.db import models
 '''用户信息表操作'''
 
 class UserInfoManager(models.Manager):
-    def insert_user(self, username, account_number, email, password):
-        self.create(username=username, type=type, account_number=account_number, email=email, password=password)
+    def insert_user(self, username, email, password):
+        self.create(username=username, type=type, email=email, password=password)
 
-    def query_user(self, account_number, password):
-        return self.filter(account_number__exact=account_number, password__exact=password).count()
+    def query_user(self, username, password):
+        return self.filter(username__exact=username, password__exact=password).count()
 
 
 '''项目信息表操作'''
