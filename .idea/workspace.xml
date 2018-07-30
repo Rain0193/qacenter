@@ -6,7 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiManager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiManager/templates/api/extent_report_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/templates/api/extent_report_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiManager/templates/api/report_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/templates/api/report_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiManager/utils/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/utils/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiManager/utils/operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/utils/operation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,56 +29,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="add_case.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ApiManager/templates/api/add_case.html">
+      <file leaf-file-name="extent_report_template.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApiManager/templates/api/extent_report_template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="426" column="25" selection-start-line="426" selection-start-column="25" selection-end-line="426" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commons.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ApiManager/static/api/assets/js/commons.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="239" column="38" selection-start-line="239" selection-start-column="35" selection-end-line="239" selection-end-column="38" />
+            <state>
               <folding>
-                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#td#5;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ApiManager/templates/api/project_list.html">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApiManager/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="common.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ApiManager/utils/common.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2174">
-              <caret line="215" column="57" selection-start-line="215" selection-start-column="57" selection-end-line="215" selection-end-column="77" />
+            <state relative-caret-position="322">
+              <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
               <folding>
-                <element signature="e#558#605#0#HTML" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataManager/templates/data/project_list.html">
+      <file leaf-file-name="operation.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ApiManager/utils/operation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="42" column="45" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="82" column="99" lean-forward="true" selection-start-line="82" selection-start-column="99" selection-end-line="82" selection-end-column="99" />
+            <state relative-caret-position="161">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -81,7 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fixed-title</find>
       <find>run_test</find>
       <find>api/add_case/</find>
       <find>am-modal-hd</find>
@@ -95,7 +83,7 @@
       <find>register-forms</find>
       <find>insert_user</find>
       <find>add_td</find>
-      <find>nav-list-menu sel</find>
+      <find />
       <find>btn</find>
       <find>dialog</find>
       <find>del-btn-confirm</find>
@@ -110,10 +98,11 @@
       <find>input</find>
       <find>project_list</find>
       <find>select_all</find>
+      <find>/master/</find>
       <find>data-am-modal-confirm</find>
     </findStrings>
     <replaceStrings>
-      <replace>1px solid #E5E9EF;</replace>
+      <replace />
       <replace>DataManager</replace>
       <replace>data</replace>
       <replace>/qacenter/data</replace>
@@ -121,8 +110,8 @@
       <replace>/qacenter/data/</replace>
       <replace>/interface/api/</replace>
       <replace>data/</replace>
-      <replace>http</replace>
       <replace>/master/DataManager/</replace>
+      <replace>http</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\qacenter\DataManager</dir>
@@ -134,9 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ApiManager/templates/api/test_list.html" />
-        <option value="$PROJECT_DIR$/ApiManager/utils/pagination.py" />
-        <option value="$PROJECT_DIR$/DataManager/templates/data/add_module.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/add_project.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/add_td.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/edit_module.html" />
@@ -171,7 +157,6 @@
         <option value="$PROJECT_DIR$/DataManager/static/data/assets/css/register.css" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/login.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/register.html" />
-        <option value="$PROJECT_DIR$/ApiManager/utils/operation.py" />
         <option value="$PROJECT_DIR$/DataManager/models.py" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/all_td.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/base.html" />
@@ -185,6 +170,10 @@
         <option value="$PROJECT_DIR$/DataManager/utils/operation.py" />
         <option value="$PROJECT_DIR$/DataManager/views.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/ApiManager/templates/api/extent_report_template.html" />
+        <option value="$PROJECT_DIR$/ApiManager/__init__.py" />
+        <option value="$PROJECT_DIR$/ApiManager/utils/common.py" />
+        <option value="$PROJECT_DIR$/ApiManager/utils/operation.py" />
       </list>
     </option>
   </component>
@@ -220,20 +209,7 @@
             <path>
               <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
               <item name="qacenter" type="462c0819:PsiDirectoryNode" />
-              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
-              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
-              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="ApiManager" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
@@ -282,11 +258,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/HttpRunnerManager/ApiManager/models.py" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/HttpRunnerManager/templates/report_template.html" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="two.files.diff.last.used.file" value="$USER_HOME$/Documents/HttpRunnerManager/ApiManager/models.py" />
+    <property name="two.files.diff.last.used.file" value="$USER_HOME$/Documents/HttpRunnerManager/templates/report_template.html" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -384,7 +360,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
@@ -496,7 +471,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/ApiManager/views.py</url>
-          <line>207</line>
+          <line>206</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -531,36 +506,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApiManager/templates/api/view_report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApiManager/templatetags/custom_tags.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApiManager/templates/api/report_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="65" column="93" selection-start-line="65" selection-start-column="90" selection-end-line="65" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ApiManager/templates/api/report_template.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -579,13 +524,6 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/platform.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApiManager/utils/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ApiManager/utils/emails.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -687,16 +625,6 @@
           <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ApiManager/utils/operation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -893,10 +821,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/images/record.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/images/register.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="82" column="99" lean-forward="true" selection-start-line="82" selection-start-column="99" selection-end-line="82" selection-end-column="99" />
+        <state relative-caret-position="239">
+          <caret line="67" column="97" selection-start-line="67" selection-start-column="97" selection-end-line="67" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/templates/api/extent_report_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#span#0;n#td#5;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#div#1;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/utils/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/utils/operation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
         </state>
       </provider>
     </entry>

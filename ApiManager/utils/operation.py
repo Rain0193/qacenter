@@ -1,16 +1,16 @@
 import datetime
 import logging
 import os
-import platform
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import DataError
 
+from ApiManager import separator
 from ApiManager.models import ProjectInfo, ModuleInfo, TestCaseInfo, EnvInfo, TestReports, DebugTalk, TestSuite
 from DataManager.models import UserInfo
 
 logger = logging.getLogger('HttpRunnerManager')
-separator = '\\' if platform.system() == 'Windows' else '/'
+
 
 def add_register_data(**kwargs):
     """
