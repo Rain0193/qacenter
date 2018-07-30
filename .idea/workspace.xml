@@ -5,7 +5,9 @@
     <bookmark url="file://$PROJECT_DIR$/DataManager/templates/data/all_td.html" line="187" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="" />
+    <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,8 +71,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1127">
-              <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            <state relative-caret-position="76">
+              <caret line="82" column="99" lean-forward="true" selection-start-line="82" selection-start-column="99" selection-end-line="82" selection-end-column="99" />
             </state>
           </provider>
         </entry>
@@ -120,6 +122,7 @@
       <replace>/interface/api/</replace>
       <replace>data/</replace>
       <replace>http</replace>
+      <replace>/master/DataManager/</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\qacenter\DataManager</dir>
@@ -131,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ApiManager/templates/api/suite_list.html" />
         <option value="$PROJECT_DIR$/ApiManager/templates/api/test_list.html" />
         <option value="$PROJECT_DIR$/ApiManager/utils/pagination.py" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/add_module.html" />
@@ -182,6 +184,7 @@
         <option value="$PROJECT_DIR$/DataManager/templates/data/module_list.html" />
         <option value="$PROJECT_DIR$/DataManager/utils/operation.py" />
         <option value="$PROJECT_DIR$/DataManager/views.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -892,8 +895,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1127">
-          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        <state relative-caret-position="76">
+          <caret line="82" column="99" lean-forward="true" selection-start-line="82" selection-start-column="99" selection-end-line="82" selection-end-column="99" />
         </state>
       </provider>
     </entry>
