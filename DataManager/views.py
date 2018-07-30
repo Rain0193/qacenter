@@ -321,7 +321,7 @@ def project_list(request, id):
             msg = del_project_data(id_list)
         else:
             msg = project_info_logic(type=False, **project_info)
-        return HttpResponse(get_ajax_msg(msg, '/qacenter/data/all_td/'))
+        return HttpResponse(get_ajax_msg(msg, 'ok'))
     else:
         filter_query = set_filter_session(request)
         pro_list = get_pager_info(

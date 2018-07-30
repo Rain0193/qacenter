@@ -122,7 +122,7 @@ def del_project_data(id):
     except ObjectDoesNotExist:
         return '删除异常，请重试'
     logger.info('{project_name} 项目已删除'.format(project_name=project_name))
-    return '删除成功'
+    return 'ok'
 
 def del_module_data(id):
     '''

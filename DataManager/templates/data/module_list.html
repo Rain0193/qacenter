@@ -21,7 +21,7 @@
             <table class="table-statistics">
                 <thead>
                     <tr>
-                        <th><input type="checkbox" name="ck" value="{{ foo.id }}"/></th>
+                        <th><input type="checkbox" name="ck" id="select_all" value="{{ foo.id }}"/></th>
                         <th>序号</th>
                         <th>模块名称</th>
                         <th>所属项目</th>
@@ -36,7 +36,7 @@
                 <tbody>
                 {% for foo in module %}
                     <tr>
-                        <td><input type="checkbox" name="ck" value="{{ foo.id }}"/></td>
+                        <td><input type="checkbox" name="module_ck" value="{{ foo.id }}"/></td>
                         <td>{{ forloop.counter }}</td>
                         <td>{{ foo.module_name }}</td>
                         <td>{{ foo.belong_project.project_name }}</td>
@@ -78,7 +78,7 @@
             //得到要删除的主键id
             var arr = [];//用于存要删除的选中的id值
 
-            var ck = document.getElementsByName("ck");//得到一组checkbox  相当于数组
+            var ck = document.getElementsByName("module_ck");//得到一组checkbox  相当于数组
             //循环这一组checkbox让每一个checkbox选中
             for (var i = 0; i < ck.length; i++) {
                 if (ck[i].checked == true) {//代表选中
@@ -133,6 +133,10 @@
         })
 
 
+        $('#select_all').click(function () {
+            var isChecked = $(this).prop("checked");
+            $("input[name^='module']").prop("checked", isChecked);
+        })
 
     </script>
 
