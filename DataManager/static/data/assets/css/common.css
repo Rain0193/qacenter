@@ -456,20 +456,18 @@ td,th {
     padding: 40px 0;text-align: center;font-size: 15px;color: #999;
 }
 
-/***By pengxin***/
 .btn{
-        width:70%;
-        height:40px;
-        line-height:40px;
-        background:#169BD5;
-        border-radius:5px;
-        margin:0 auto;
-        text-align:center;
-        display: table-cell;
-        vertical-align: middle;
-        color:#fff;
-        cursor:pointer;
-
+    width:70%;
+    height:40px;
+    line-height:40px;
+    background:#169BD5;
+    border-radius:5px;
+    margin:0 auto;
+    text-align:center;
+    display: table-cell;
+    vertical-align: middle;
+    color:#fff;
+    cursor:pointer;
 }
 
 .dialog-mask{
@@ -558,12 +556,29 @@ td,th {
 	padding: 0 10px;
 }
 .confirm-btn{
-	margin-top:30px;
+	margin-top:25px;
 }
-    .confirm-btn .btn{
+    .confirm-btn .dialog-btn-confirm{
+        float: left;
+        margin-left: 30px;
         width:30%;
-        margin-left:40px;
+        line-height:35px;
+        background:#169BD5;
+        border-radius:5px;
+        color:#fff;
+        cursor:pointer;
     }
+    .confirm-btn .dialog-btn-cancel{
+        float: right;
+        margin-right: 30px;
+        width:30%;
+        line-height:35px;
+        background:#169BD5;
+        border-radius:5px;
+        color:#fff;
+        cursor:pointer;
+    }
+
 .confirm-btn-result{
     margin-top:30px;
     display: flex;

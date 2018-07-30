@@ -167,7 +167,7 @@ function auto_load(id, url, target, flag) {
         }
         ,
         error: function () {
-            myAlert('Sorry，服务器可能开小差啦, 请重试!');
+            myAlertFail('Sorry，服务器可能开小差啦, 请重试!');
         }
     });
 
@@ -185,14 +185,14 @@ function del_data_ajax(id, url) {
         contentType: "application/json",
         success: function (data) {
             if (data !== 'ok') {
-                myAlert(data);
+                myAlertSuccess(data);
             }
             else {
                 window.location.reload();
             }
         },
         error: function () {
-            myAlert('Sorry，服务器可能开小差啦, 请重试!');
+            myAlertFail('Sorry，服务器可能开小差啦, 请重试!');
         }
     });
 }
@@ -215,9 +215,9 @@ function td_ajax(tag, id) {
     var info = $("#infoForm").serializeJSON();
     var other = $("#otherForm").serializeJSON();
     if (tag === 'edit') {
-        url = '/qacenter/edit_td/'+id+'/';
+        url = '/qacenter/data/edit_td/'+id+'/';
     } else {
-        url = '/qacenter/add_td/';
+        url = '/qacenter/data/add_td/';
     }
 
     const formData = {
@@ -237,7 +237,7 @@ function td_ajax(tag, id) {
         contentType: "application/json",
         success: function (data) {
             if (data === 'session invalid') {
-                window.location.href = "/qacenter/login/";
+                window.location.href = "/qacenter/data/login/";
             } else {
                 if (data.indexOf('/qacenter/') != -1) {
                     window.location.href = data;
@@ -264,6 +264,7 @@ function myAlertSuccess(data) {
     function next()
     {
         dialog.hide();
+        window.location.reload();
     }
 }
 

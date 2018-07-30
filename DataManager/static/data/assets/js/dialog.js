@@ -31,7 +31,7 @@
 					'<div id ="' + self.obj.dialogId + '" class="confirm-dialog dialog">',
 					'<div class="confirm-icon"><i class="iconfont icon-confirm">&#xe62b;</i></div>',
 					'<div class="confirm-txt">' + self.obj.msg + '</div>',
-					'<div class="confirm-btn"><a class="btn" id="' + self.obj.confirmBtnId + '">确认</a><a class="btn" id="J_dialog_del">取消</a></div>',
+					'<div class="confirm-btn"><a class="btn dialog-btn-confirm" id="' + self.obj.confirmBtnId + '">确认</a><a class="btn dialog-btn-cancel" id="J_dialog_del">取消</a></div>',
 					'<input type="hidden" value="' + self.obj.id + '">',
 					'</div>'
 				].join('');

@@ -315,8 +315,10 @@ def project_list(request, id):
     account = request.session["now_account"]
     if request.is_ajax():
         project_info = json.loads(request.body.decode('utf-8'))
+        id = project_info.get('id')
+        id_list = [int(x) for x in id.split(',')]
         if 'mode' in project_info.keys():
-            msg = del_project_data(list(eval(project_info.pop('id'))))
+            msg = del_project_data(id_list)
         else:
             msg = project_info_logic(type=False, **project_info)
         return HttpResponse(get_ajax_msg(msg, '/qacenter/data/all_td/'))
@@ -403,8 +405,10 @@ def module_list(request, id):
     account = request.session["now_account"]
     if request.is_ajax():
         module_info = json.loads(request.body.decode('utf-8'))
+        id = module_info.get('id')
+        id_list = [int(x) for x in id.split(',')]
         if 'mode' in module_info.keys():  # del module
-            msg = del_module_data(list(eval(module_info.pop('id'))))
+            msg = del_module_data(id_list)
         else:
             msg = module_info_logic(type=False, **module_info)
         return HttpResponse(get_ajax_msg(msg, 'ok'))

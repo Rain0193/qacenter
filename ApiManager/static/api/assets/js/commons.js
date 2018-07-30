@@ -224,9 +224,9 @@ function case_ajax(type, editor) {
         }
     };
     if (type === 'edit') {
-        url = '/api/edit_case/';
+        url = '/http/api/edit_case/';
     } else {
-        url = '/api/add_case/';
+        url = '/http/api/add_case/';
     }
     $.ajax({
         type: 'post',
@@ -235,7 +235,7 @@ function case_ajax(type, editor) {
         contentType: "application/json",
         success: function (data) {
             if (data === 'session invalid') {
-                window.location.href = "/api/login/";
+                window.location.href = "/http/api/login/";
             } else {
                 if (data.indexOf('/api/') != -1) {
                     window.location.href = data;
@@ -285,9 +285,9 @@ function config_ajax(type) {
         }
     };
     if (type === 'edit') {
-        url = '/api/edit_config/';
+        url = '/http/api/edit_config/';
     } else {
-        url = '/api/add_config/';
+        url = '/http/api/add_config/';
     }
     $.ajax({
         type: 'post',
@@ -296,7 +296,7 @@ function config_ajax(type) {
         contentType: "application/json",
         success: function (data) {
             if (data === 'session invalid') {
-                window.location.href = "/api/login/";
+                window.location.href = "/http/api/login/";
             } else {
                 if (data.indexOf('/api/') != -1) {
                     window.location.href = data;

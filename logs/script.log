@@ -36864,3 +36864,411 @@ Traceback (most recent call last):
 django.core.exceptions.FieldError: Cannot resolve keyword 'account_number' into field. Choices are: create_time, email, id, password, status, type, update_time, username
 2018-07-30 11:01:31,335 [HttpRunnerManager:34] [operation:add_register_data] [INFO]- 新增用户：DataManager.UserInfo.objects
 2018-07-30 11:01:37,099 [HttpRunnerManager:57] [views:login] [INFO]- wanghua 登录成功
+2018-07-30 11:09:46,996 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/add_td/
+2018-07-30 11:11:02,315 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/add_td/
+2018-07-30 11:12:13,133 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/add_td/
+2018-07-30 11:13:31,019 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/all_td/
+2018-07-30 11:13:31,024 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/findDaily
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8008/qacenter/data/findDaily/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-07-30 11:14:39,865 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/findDaily
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8008/qacenter/data/findDaily/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2018-07-30 13:47:30,295 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/edit_module/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+ModuleNotFoundError: No module named 'edit_module'
+2018-07-30 14:16:43,714 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 319, in project_list
+    msg = del_project_data(list(eval(project_info.pop('id'))))
+TypeError: 'int' object is not iterable
+2018-07-30 14:25:42,709 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 319, in project_list
+    msg = del_project_data(list(eval(project_info.pop('id'))))
+TypeError: 'int' object is not iterable
+2018-07-30 14:31:18,033 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 319, in project_list
+    msg = del_project_data(list(eval(project_info.pop('id'))))
+TypeError: 'int' object is not iterable
+2018-07-30 14:36:51,657 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 319, in project_list
+    msg = del_project_data(list(eval(project_info.pop('id'))))
+TypeError: 'int' object is not iterable
+2018-07-30 14:42:55,284 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data(list(eval(project_info.pop('id'))))
+TypeError: 'int' object is not iterable
+2018-07-30 14:43:04,845 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data(list(eval(project_info.pop('id'))))
+TypeError: 'int' object is not iterable
+2018-07-30 14:43:43,394 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/login
+2018-07-30 14:44:19,831 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data(list(eval(project_info.pop('id'))))
+TypeError: 'int' object is not iterable
+2018-07-30 14:44:53,606 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data(eval(project_info.pop('id')))
+  File "E:\qacenter\DataManager\utils\operation.py", line 116, in del_project_data
+    project_name = ProjectInfo.objects.get_pro_name('', type=False, id=id)
+  File "E:\qacenter\DataManager\managers.py", line 32, in get_pro_name
+    return self.filter(id__in=id).values('project_name')
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\lookups.py", line 204, in get_prep_lookup
+    for rhs_value in self.rhs:
+TypeError: 'int' object is not iterable
+2018-07-30 14:48:32,208 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data(eval(project_info.pop('id')))
+  File "E:\qacenter\DataManager\utils\operation.py", line 116, in del_project_data
+    project_name = ProjectInfo.objects.get_pro_name('', type=False, id=id)
+  File "E:\qacenter\DataManager\managers.py", line 32, in get_pro_name
+    return self.get(id__in=id).values('project_name')
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 394, in get
+    clone = self.filter(*args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\lookups.py", line 204, in get_prep_lookup
+    for rhs_value in self.rhs:
+TypeError: 'int' object is not iterable
+2018-07-30 14:50:18,649 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data(eval(project_info.pop('id')))
+  File "E:\qacenter\DataManager\utils\operation.py", line 116, in del_project_data
+    project_name = ProjectInfo.objects.get_pro_name('', type=False, id=id)
+  File "E:\qacenter\DataManager\managers.py", line 32, in get_pro_name
+    return self.values('project_name').filter(id__in=id)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1085, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\lookups.py", line 18, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\lookups.py", line 204, in get_prep_lookup
+    for rhs_value in self.rhs:
+TypeError: 'int' object is not iterable
+2018-07-30 14:53:03,320 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data("(" + eval(project_info.pop('id')) + ")")
+TypeError: must be str, not int
+2018-07-30 14:53:16,367 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data("(" + eval(project_info.pop('id')) + ")")
+TypeError: must be str, not int
+2018-07-30 14:53:52,256 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data("[" + eval(project_info.pop('id')) + "]")
+TypeError: must be str, not int
+2018-07-30 14:54:46,252 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data("[" + eval(project_info.pop('id')) + "]")
+TypeError: must be str, not int
+2018-07-30 14:59:10,579 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/login
+2018-07-30 15:10:57,248 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data(project_info.pop('id'))
+  File "E:\qacenter\DataManager\utils\operation.py", line 120, in del_project_data
+    ProjectInfo.objects.filter(id__contain=id).delete()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1079, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1115, in try_transform
+    (name, lhs.output_field.__class__.__name__))
+django.core.exceptions.FieldError: Unsupported lookup 'contain' for AutoField or join on the field not permitted.
+2018-07-30 15:11:16,307 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data(project_info.pop('id'))
+  File "E:\qacenter\DataManager\utils\operation.py", line 120, in del_project_data
+    ProjectInfo.objects.filter(id__contain=id).delete()
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 836, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\query.py", line 854, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1253, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1277, in _add_q
+    split_subq=split_subq,
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1215, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1079, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\db\models\sql\query.py", line 1115, in try_transform
+    (name, lhs.output_field.__class__.__name__))
+django.core.exceptions.FieldError: Unsupported lookup 'contain' for AutoField or join on the field not permitted.
+2018-07-30 15:12:27,088 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 322, in project_list
+    msg = del_project_data(project_info.pop('id'))
+  File "E:\qacenter\DataManager\utils\operation.py", line 120, in del_project_data
+    ProjectInfo.objects.delete().filter(id__in=id)
+AttributeError: 'ProjectInfoManager' object has no attribute 'delete'
+2018-07-30 15:26:34,680 [HttpRunnerManager:61] [operation:add_project_data] [INFO]- 项目添加成功：{'project_name': 'w心语', 'responsible_name': '上档次', 'test_user': '李洁', 'dev_user': '测试', 'publish_app': '心语', 'simple_desc': 'ces ', 'other_desc': 'ces '}
+2018-07-30 15:26:41,209 [HttpRunnerManager:75] [operation:add_project_data] [INFO]- 项目更新成功：{'project_name': 'w心语', 'responsible_name': '上档次', 'test_user': '李洁', 'dev_user': '测试', 'publish_app': '心语', 'simple_desc': 'ces ', 'other_desc': 'ces '}
+2018-07-30 15:26:51,780 [HttpRunnerManager:109] [operation:add_module_data] [INFO]- 模块添加成功：{'module_name': '心语日志2', 'test_user': '李洁', 'simple_desc': 'ces ', 'other_desc': 'ces ', 'belong_project': <ProjectInfo: ProjectInfo object (1)>}
+2018-07-30 15:26:56,498 [HttpRunnerManager:124] [operation:add_module_data] [INFO]- 模块更新成功：{'module_name': '心语日志2', 'test_user': '李洁', 'simple_desc': 'ces 1', 'other_desc': 'ces 1'}
+2018-07-30 15:27:00,317 [HttpRunnerManager:124] [operation:add_module_data] [INFO]- 模块更新成功：{'module_name': '心语日志2', 'test_user': '李洁', 'simple_desc': 'ces 1', 'other_desc': 'ces 1'}
+2018-07-30 15:27:20,957 [django.request:93] [base:get_response] [WARNING]- Not Found: /api/add_case/
+2018-07-30 15:27:26,129 [django.request:93] [base:get_response] [WARNING]- Not Found: /api/add_case/
+2018-07-30 15:28:04,266 [django.request:93] [base:get_response] [WARNING]- Not Found: /api/add_case/
+2018-07-30 15:30:52,778 [HttpRunnerManager:153] [operation:add_case_data] [INFO]- ces1用例添加成功: {'test': {'request': {'url': 'D:\\TDDOWNLOAD\\yz.png', 'method': 'GET'}, 'name': 'ces1'}}
+2018-07-30 15:31:53,808 [HttpRunnerManager:191] [operation:add_config_data] [INFO]- peizhi1配置添加成功: {'config': {'request': {}, 'name': 'peizhi1'}}
