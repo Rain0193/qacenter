@@ -657,7 +657,7 @@ def record(request, id):
     if request.method == 'GET':
         filter_query = {}
         record_list = get_pager_info(
-            Record, filter_query, '/qacenter/data/record/', id, 15)
+            Record, filter_query, '/qacenter/data/record/', id, 14)
         manage_info = {
             'account': account,
             'record': record_list[1],

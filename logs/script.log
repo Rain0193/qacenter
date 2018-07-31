@@ -37272,3 +37272,25 @@ AttributeError: 'ProjectInfoManager' object has no attribute 'delete'
 2018-07-30 15:28:04,266 [django.request:93] [base:get_response] [WARNING]- Not Found: /api/add_case/
 2018-07-30 15:30:52,778 [HttpRunnerManager:153] [operation:add_case_data] [INFO]- ces1用例添加成功: {'test': {'request': {'url': 'D:\\TDDOWNLOAD\\yz.png', 'method': 'GET'}, 'name': 'ces1'}}
 2018-07-30 15:31:53,808 [HttpRunnerManager:191] [operation:add_config_data] [INFO]- peizhi1配置添加成功: {'config': {'request': {}, 'name': 'peizhi1'}}
+2018-07-30 16:56:07,816 [HttpRunnerManager:56] [views:login] [INFO]- wangyinguang 登录成功
+2018-07-31 08:57:30,496 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 520, in add_td
+    td_info = json.loads(request.body.decode('utf-8'))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

@@ -4,7 +4,10 @@ DataManager
 Design Philosophy
 -----------------
 
-基于Django的数据工厂平台：本篇只是造数据的事务管理平台，还需要搭建一套基于spring框架，封装开发dubbo接口集合的后端平台，再通过DataManager平台调用后端平台的http接口实现造数据功能。没有编写后端平台的童鞋可以先部署个flash的mock功能来体验下DataManager的魅力
+基于Django的测试质量平台：目前包含数据工厂、接口自动化，后续规划：设备管理、代码覆盖率统计、app打包平台、发布流程、项目管理...
+目标是做成最好用、最全面的测试质量平台，先介绍下已有的两个平台情况
+数据工厂平台：本篇只是造数据的事务管理平台，还需要搭建一套基于spring框架，封装开发dubbo接口集合的后端平台，再通过DataManager平台调用后端平台的http接口实现造数据功能。没有编写后端平台的童鞋可以先部署个flash的mock功能来体验下DataManager的魅力
+接口自动化平台使用说明请参考：<a href="https://github.com/HttpRunner/HttpRunnerManager" title="接口自动化平台">
 
 Key Features
 ------------
@@ -42,7 +45,8 @@ Key Features
 
 4. 命令行窗口切换到qacenter目录 生成数据库迁移脚本,并生成表结构
     ```bash
-        python manage.py makemigrations DataManager #生成数据迁移脚本
+        python manage.py makemigrations DataManager #生成数据工厂数据迁移脚本
+        python manage.py makemigrations ApiManager #生成接口自动化平台数据迁移脚本
         python manage.py migrate  #应用到db生成数据表
     ```
 

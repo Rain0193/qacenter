@@ -6,13 +6,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiManager/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiManager/templates/api/extent_report_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/templates/api/extent_report_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiManager/templates/api/report_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/templates/api/report_template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiManager/utils/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/utils/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiManager/utils/operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/utils/operation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/images/add_module.png" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/images/add_module.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/images/add_project.png" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/images/add_project.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/images/add_td.png" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/images/add_td.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/images/all_td.png" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/images/all_td.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/images/all_td_result.png" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/images/all_td_result.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/images/module_list.png" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/images/module_list.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/images/my_fav.png" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/images/my_fav.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/images/my_tds.png" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/images/my_tds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/images/project_list.png" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/images/project_list.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/images/record.png" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/images/record.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/script.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/script.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/ApiManager/utils/common.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+              <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -57,11 +65,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="operation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="operation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ApiManager/utils/operation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+            <state relative-caret-position="345">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataManager/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="659" column="66" selection-start-line="659" selection-start-column="66" selection-end-line="659" selection-end-column="66" />
+              <folding>
+                <element signature="e#24#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,7 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>run_test</find>
       <find>api/add_case/</find>
       <find>am-modal-hd</find>
       <find>add_case</find>
@@ -83,7 +114,7 @@
       <find>register-forms</find>
       <find>insert_user</find>
       <find>add_td</find>
-      <find />
+      <find>nav-list-menu sel</find>
       <find>btn</find>
       <find>dialog</find>
       <find>del-btn-confirm</find>
@@ -100,9 +131,10 @@
       <find>select_all</find>
       <find>/master/</find>
       <find>data-am-modal-confirm</find>
+      <find>record</find>
     </findStrings>
     <replaceStrings>
-      <replace />
+      <replace>1px solid #E5E9EF;</replace>
       <replace>DataManager</replace>
       <replace>data</replace>
       <replace>/qacenter/data</replace>
@@ -159,7 +191,6 @@
         <option value="$PROJECT_DIR$/DataManager/templates/data/register.html" />
         <option value="$PROJECT_DIR$/DataManager/models.py" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/all_td.html" />
-        <option value="$PROJECT_DIR$/DataManager/templates/data/base.html" />
         <option value="$PROJECT_DIR$/DataManager/static/data/assets/css/common.css" />
         <option value="$PROJECT_DIR$/DataManager/static/data/assets/js/dialog.js" />
         <option value="$PROJECT_DIR$/DataManager/static/data/assets/js/commons.js" />
@@ -168,12 +199,13 @@
         <option value="$PROJECT_DIR$/DataManager/templates/data/project_list.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/module_list.html" />
         <option value="$PROJECT_DIR$/DataManager/utils/operation.py" />
-        <option value="$PROJECT_DIR$/DataManager/views.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/ApiManager/templates/api/extent_report_template.html" />
         <option value="$PROJECT_DIR$/ApiManager/__init__.py" />
         <option value="$PROJECT_DIR$/ApiManager/utils/common.py" />
         <option value="$PROJECT_DIR$/ApiManager/utils/operation.py" />
+        <option value="$PROJECT_DIR$/DataManager/templates/data/base.html" />
+        <option value="$PROJECT_DIR$/DataManager/views.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -209,7 +241,26 @@
             <path>
               <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
               <item name="qacenter" type="462c0819:PsiDirectoryNode" />
-              <item name="ApiManager" type="462c0819:PsiDirectoryNode" />
+              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
+              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
+              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
+              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
@@ -360,6 +411,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
@@ -506,15 +558,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ApiManager/templates/api/report_template.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/Python36-32-XfPJqKt7/Lib/site-packages/django/utils/safestring.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/Python36-32-XfPJqKt7/Lib/site-packages/httprunner/__about__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -674,13 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/templates/data/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="83" column="43" lean-forward="true" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/project_list.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -783,16 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="323" column="52" selection-start-line="323" selection-start-column="52" selection-end-line="323" selection-end-column="52" />
-          <folding>
-            <element signature="e#24#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/js/commons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2121">
@@ -827,13 +853,6 @@
     <entry file="file://$PROJECT_DIR$/DataManager/images/register.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="67" column="97" selection-start-line="67" selection-start-column="97" selection-end-line="67" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ApiManager/templates/api/extent_report_template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -846,20 +865,56 @@
     <entry file="file://$PROJECT_DIR$/ApiManager/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApiManager/utils/common.py">
+    <entry file="file://$PROJECT_DIR$/DataManager/images/all_td_result.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/images/all_td.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/images/my_fav.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/utils/operation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+        <state relative-caret-position="345">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApiManager/utils/operation.py">
+    <entry file="file://$PROJECT_DIR$/DataManager/templates/data/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        <state relative-caret-position="109">
+          <caret line="41" column="69" selection-end-line="123" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ApiManager/utils/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="659" column="66" selection-start-line="659" selection-start-column="66" selection-end-line="659" selection-end-column="66" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
