@@ -102,5 +102,9 @@ Key Features
 ![调用历史](https://github.com/wangyinguang/qacenter/blob/master/DataManager/images/record.png)<br>
 <br>
 10、调用量统计等模块待续
+<br>
+11、数据工厂进入到接口自动化平台
+![调用历史](https://github.com/wangyinguang/qacenter/blob/master/DataManager/images/floor.png)<br>
+<br>
 
 
