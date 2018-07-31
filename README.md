@@ -6,8 +6,8 @@ Design Philosophy
 
 基于Django的测试质量平台：目前包含数据工厂、接口自动化，后续规划：设备管理、代码覆盖率统计、app打包平台、发布流程、项目管理...<br>
 目标是做成最好用、最全面的测试质量平台，先介绍下已有的两个平台情况<br>
-数据工厂平台：本篇只是造数据的事务管理平台，还需要搭建一套基于spring框架，封装开发dubbo接口集合的后端平台，可以参考demo <p><a href="https://github.com/DataFactorys/xinyu-qacenter" title="Title">http接口demo</a>，再通过DataManager平台调用后端平台的http接口实现造数据功能。<br>
-接口自动化平台使用说明请参考：<p><a href="https://github.com/HttpRunner/HttpRunnerManager" title="Title">接口自动化平台</a></p>
+数据工厂平台：本篇只是造数据的事务管理平台，还需要搭建一套基于spring框架，封装开发dubbo接口集合的后端平台，再通过DataManager平台调用后端平台的http接口实现造数据功能。参考demo： <a href="https://github.com/DataFactorys/xinyu-qacenter" title="Title">http接口接入平台</a><br>
+接口自动化平台使用说明请参考：<a href="https://github.com/HttpRunner/HttpRunnerManager" title="Title">接口自动化平台</a>
 
 Key Features
 ------------
