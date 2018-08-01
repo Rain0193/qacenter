@@ -340,6 +340,7 @@ gallery.html css
 .sideMenu h3 {
     height: 32px;
     line-height: 32px;
+    font-size: 13px;
     color: #aeb2b7;
     cursor: pointer;
     padding: 0 0 0 10px;

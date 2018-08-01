@@ -6,6 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiManager/static/api/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/static/api/assets/css/admin.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +36,8 @@
       <file leaf-file-name="admin.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ApiManager/static/api/assets/css/admin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="395" column="18" selection-start-line="395" selection-start-column="18" selection-end-line="395" selection-end-column="18" />
+            <state relative-caret-position="226">
+              <caret line="342" column="17" lean-forward="true" selection-start-line="342" selection-start-column="17" selection-end-line="342" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -62,8 +63,8 @@
       <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18702">
-              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+            <state relative-caret-position="249">
+              <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -72,7 +73,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>myAlert</find>
       <find>ck</find>
       <find>api</find>
       <find>control-label</find>
@@ -101,6 +101,7 @@
       <find>fixed-left</find>
       <find>admin-sidebar</find>
       <find>.daohang .am-btn-default</find>
+      <find>.sideMenu h3.on</find>
       <find>nav-list-menu</find>
     </findStrings>
     <replaceStrings>
@@ -928,15 +929,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18702">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        <state relative-caret-position="249">
+          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ApiManager/static/api/assets/css/admin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="395" column="18" selection-start-line="395" selection-start-column="18" selection-end-line="395" selection-end-column="18" />
+        <state relative-caret-position="226">
+          <caret line="342" column="17" lean-forward="true" selection-start-line="342" selection-start-column="17" selection-end-line="342" selection-end-column="17" />
         </state>
       </provider>
     </entry>
