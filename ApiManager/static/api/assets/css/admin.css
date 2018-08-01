@@ -343,7 +343,7 @@ gallery.html css
     color: #aeb2b7;
     cursor: pointer;
     padding: 0 0 0 10px;
-    margin: 20px 0 0 0;
+    margin: 10px 0 0 0;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     font-weight: 400;
@@ -393,7 +393,7 @@ gallery.html css
 }
 
 .sideMenu li a {
-    color: #fff
+    color: #a2abb6
 }
 
 .sideMenu li a:hover {

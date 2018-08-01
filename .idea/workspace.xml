@@ -6,10 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiManager/static/api/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/static/api/assets/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiManager/templates/api/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/ApiManager/templates/api/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/static/data/assets/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/static/data/assets/css/common.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ApiManager/static/api/assets/css/admin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="1023" column="18" selection-start-line="1023" selection-start-column="12" selection-end-line="1023" selection-end-column="18" />
+            <state relative-caret-position="180">
+              <caret line="395" column="18" selection-start-line="395" selection-start-column="18" selection-end-line="395" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -57,16 +54,16 @@
         <entry file="file://$PROJECT_DIR$/DataManager/templates/data/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
-              <caret line="40" column="36" lean-forward="true" selection-start-line="40" selection-start-column="36" selection-end-line="48" selection-end-column="73" />
+              <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="48" selection-end-column="73" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+            <state relative-caret-position="-18702">
+              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -75,7 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>qacenter</find>
       <find>myAlert</find>
       <find>ck</find>
       <find>api</find>
@@ -105,6 +101,7 @@
       <find>fixed-left</find>
       <find>admin-sidebar</find>
       <find>.daohang .am-btn-default</find>
+      <find>nav-list-menu</find>
     </findStrings>
     <replaceStrings>
       <replace>1px solid #E5E9EF;</replace>
@@ -177,8 +174,8 @@
         <option value="$PROJECT_DIR$/ApiManager/views.py" />
         <option value="$PROJECT_DIR$/ApiManager/utils/common.py" />
         <option value="$PROJECT_DIR$/ApiManager/templates/api/base.html" />
-        <option value="$PROJECT_DIR$/ApiManager/static/api/assets/css/admin.css" />
         <option value="$PROJECT_DIR$/DataManager/static/data/assets/css/common.css" />
+        <option value="$PROJECT_DIR$/ApiManager/static/api/assets/css/admin.css" />
       </list>
     </option>
   </component>
@@ -911,7 +908,7 @@
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="40" column="36" lean-forward="true" selection-start-line="40" selection-start-column="36" selection-end-line="48" selection-end-column="73" />
+          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="48" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -929,17 +926,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ApiManager/static/api/assets/css/admin.css">
+    <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="1023" column="18" selection-start-line="1023" selection-start-column="12" selection-end-line="1023" selection-end-column="18" />
+        <state relative-caret-position="-18702">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/common.css">
+    <entry file="file://$PROJECT_DIR$/ApiManager/static/api/assets/css/admin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        <state relative-caret-position="180">
+          <caret line="395" column="18" selection-start-line="395" selection-start-column="18" selection-end-line="395" selection-end-column="18" />
         </state>
       </provider>
     </entry>
