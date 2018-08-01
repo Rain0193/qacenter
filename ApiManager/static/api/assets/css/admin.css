@@ -369,7 +369,8 @@ gallery.html css
 }
 
 .sideMenu h3 a {
-    color: #fff
+    color: #fff;
+    text-decoration:none;
 }
 
 .sideMenu ul {
@@ -394,7 +395,8 @@ gallery.html css
 }
 
 .sideMenu li a {
-    color: #a2abb6
+    color: #a2abb6;
+    text-decoration:none;
 }
 
 .sideMenu li a:hover {
