@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 717410 */
+  src: url('//at.alicdn.com/t/font_717410_eqrtq472wyv.eot');
+  src: url('//at.alicdn.com/t/font_717410_eqrtq472wyv.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_717410_eqrtq472wyv.woff') format('woff'),
+  url('//at.alicdn.com/t/font_717410_eqrtq472wyv.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_717410_eqrtq472wyv.svg#iconfont') format('svg');
+}
+.iconfont{font-family:"iconfont";
+font-size:20px;font-style:normal;
+-webkit-font-smoothing: antialiased;display: inline-block;}
+
 .admin-icon-yellow {
     color: #ffbe40
 }
@@ -28,12 +40,13 @@
 }
 
 .admin-sidebar {
-    width: 210px;
+    width: 180px;
     min-height: 100%;
     padding: 10px;
     font-size: 1.2rem;
     left: 0;
-    top: 0px;
+    top: 50px;
+    background: #293038;
 }
 
 .admin-sidebar-list {
@@ -355,7 +368,7 @@ gallery.html css
 }
 
 .sideMenu h3 a {
-    color: #aeb2b7
+    color: #fff
 }
 
 .sideMenu ul {
@@ -380,7 +393,7 @@ gallery.html css
 }
 
 .sideMenu li a {
-    color: #aeb2b7
+    color: #fff
 }
 
 .sideMenu li a:hover {
@@ -473,8 +486,8 @@ gallery.html css
     position: fixed;
     right: 0;
     bottom: 0;
-    top: 35px;
-    left: 210px;
+    top: 85px;
+    left: 180px;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -810,7 +823,7 @@ gallery.html css
 }
 
 .admin-biaogelist .am-btn-group {
-    z-index: 999
+    z-index: 99
 }
 
 .admin-fbneirong {
@@ -968,12 +981,12 @@ gallery.html css
     position: fixed;
     right: 0;
     bottom: 0;
-    top: 0px;
-    left: 210px;
+    top: 50px;
+    left: 180px;
     overflow: auto;
     width: 100%;
     height: 35px;
-    background-color: #35404d;
+    background: #293038;
 }
 
 .daohang ul {
@@ -1050,8 +1063,8 @@ form .form-group:last-child{padding-bottom:0;}
     position: fixed;
     right: 0;
     bottom: 0;
-    top: 35px;
-    left: 210px;
+    top: 85px;
+    left: 180px;
     overflow-y: auto;
     overflow-x: hidden;
     background-color: #f1f2f7;
@@ -1191,3 +1204,78 @@ form .form-group:last-child{padding-bottom:0;}
     overflow: hidden !important;
 }
 
+/*	通用吊顶、左侧导航	 */
+.fixed-top{
+    position: fixed;z-index: 100;left: 0;top: 0;right: 0;height: 50px;background: #09C;border-bottom: 0px solid #E5E9EF;z-index: 101;
+}
+.fixed-logo{
+    position: absolute;left: 0;top: 0;height: 50px;width: 180px;background: #09C;text-align: center;
+    color: #444;font-size: 18px;line-height: 50px;border-right: 1px solid #748395;z-index: 3;
+}
+.logo{
+    vertical-align:top;
+    line-height:50px;
+    margin-top:8px;
+}
+.fixed-title{
+    vertical-align:top;
+    line-height:50px;
+    color: #FFFFFF;
+    width: auto;
+}
+.fixed-title a{
+    text-decoration:none;
+    color: #FFFFFF;
+}
+.icon-white{color: #FFFFFF}
+.fixed-logout{
+    position: absolute;right: 0;top: 0;bottom: 0;line-height: 50px;font-size: 12px;color: #FFFFFF;
+}
+.fixed-logout a{
+    display: inline-block;width: 90px;height: 30px;background: #FF8900;color: #FFF;border-radius: 4px;line-height: 30px;text-align: center;
+    letter-spacing: 2px;margin: 0 20px;
+}
+.fixed-nav-list{
+    position: absolute;left: 0px;right: -1px;bottom: 0;z-index: -1;background: #FFF;border-right: 0px solid #E5E9EF;border-bottom: 0px solid #E5E9EF;
+    -webkit-transform: translateY(0);
+        transform: translateY(0);
+        transition: all .3s ease-out;
+}
+.fixed-nav-list a{
+    display: block;line-height: 40px;border-top: 0px solid #E5E9EF;color: #FFFFFF;background: #09C;
+    text-decoration:none;
+    font-size: 14px;
+
+}
+.fixed-nav:hover .fixed-nav-list{
+    -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+}
+.fixed-nav:hover:after{
+    -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+}
+.fixed-nav{
+    position: relative;left: 180px;top: 0;height: 50px;line-height: 50px;width: 140px;background: #09C;z-index: 112;
+    text-indent: 1.8em;cursor: default;
+}
+.fixed-nav :hover{
+    background: #394555
+}
+.fixed-nav span{
+    background: #09C;display: block;font-size: 14px;
+}
+.icon-nav{
+    font-size: 14px;
+    float: right;
+    width: 40px;
+    text-align: center;
+}
+.nav-list .sel a{
+    color: #FFFFFF;
+    text-decoration:none;
+}
+.ful a{
+    width:100%;display: inline-block;line-height: 40px;color: #FFFFFF;letter-spacing: 1px;padding-left: 15px;
+    text-decoration:none;
+}

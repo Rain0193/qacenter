@@ -16,15 +16,15 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;margin: 0;}
 
 @font-face {
   font-family: 'iconfont';  /* project id 717410 */
-  src: url('//at.alicdn.com/t/font_717410_eqrtq472wyv.eot');
-  src: url('//at.alicdn.com/t/font_717410_eqrtq472wyv.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_717410_eqrtq472wyv.woff') format('woff'),
-  url('//at.alicdn.com/t/font_717410_eqrtq472wyv.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_717410_eqrtq472wyv.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_717410_9ng20o3fu2.eot');
+  src: url('//at.alicdn.com/t/font_717410_9ng20o3fu2.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_717410_9ng20o3fu2.woff') format('woff'),
+  url('//at.alicdn.com/t/font_717410_9ng20o3fu2.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_717410_9ng20o3fu2.svg#iconfont') format('svg');
 }
 .iconfont{font-family:"iconfont";
-font-size:20px;font-style:normal;
--webkit-font-smoothing: antialiased;display: inline-block;}
+font-size:18px;font-style:normal;
+-webkit-font-smoothing: antialiased;display: inline-block;vertical-align: center}
 
 .icon-red{color: #CC0000}
 
@@ -106,6 +106,9 @@ font-size:20px;font-style:normal;
 
 .nav-list-menu{
     display: block;border-bottom: 0px solid #E5E9EF;line-height: 40px;color: #444444;letter-spacing: 1px;font-size: 14px;
+}
+.nav-list-menu a {
+    font-size: 13px;
 }
 .nav-list-menu :hover{
     background: #394555;
