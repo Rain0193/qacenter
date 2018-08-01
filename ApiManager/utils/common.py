@@ -8,6 +8,7 @@ from json import JSONDecodeError
 
 import yaml
 from django.db.models import Sum
+from django.http import HttpResponseRedirect
 from djcelery.models import PeriodicTask
 
 from ApiManager.models import ModuleInfo, TestCaseInfo, TestReports, TestSuite
@@ -449,6 +450,11 @@ def set_filter_session(request):
     :param request:
     :return:
     """
+    #出现数据工厂DataManager登录，ApiManager没有进入index页面，重新初始化下面session
+    request.session['project'] = 'All'
+    request.session['module'] = '请选择'
+    request.session['report_name'] = ''
+
     if 'user' in request.POST.keys():
         request.session['user'] = request.POST.get('user')
     if 'name' in request.POST.keys():

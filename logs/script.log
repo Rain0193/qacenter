@@ -37315,3 +37315,1001 @@ Traceback (most recent call last):
   File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 357, in raw_decode
     raise JSONDecodeError("Expecting value", s, err.value) from None
 json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-07-31 14:40:36,485 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 520, in add_td
+    td_info = json.loads(request.body.decode('utf-8'))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-07-31 14:40:38,537 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 520, in add_td
+    td_info = json.loads(request.body.decode('utf-8'))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-07-31 14:42:29,478 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 520, in add_td
+    td_info = json.loads(request.body.decode('utf-8'))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-08-01 09:04:28,987 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:04:33,727 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/test_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 371, in test_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:04:36,067 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/test_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 371, in test_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:04:36,770 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/test_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 371, in test_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:04:38,550 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/suite_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 731, in suite_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:04:39,148 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/periodictask/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 567, in periodictask
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:04:39,955 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/periodictask/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 567, in periodictask
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:04:53,971 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/periodictask/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 567, in periodictask
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:04:54,577 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/periodictask/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 567, in periodictask
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:05:03,081 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/report_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 526, in report_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:05:05,946 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:08:40,170 [HttpRunnerManager:90] [views:log_out] [INFO]- wangyinguang退出
+2018-08-01 09:08:50,292 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:08:51,367 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:08:51,922 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:08:52,290 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:08:52,547 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:09:47,434 [HttpRunnerManager:90] [views:log_out] [INFO]- wangyinguang退出
+2018-08-01 09:09:57,280 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:09:59,401 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:10:00,097 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:13:06,271 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/login
+2018-08-01 09:13:09,047 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:13:19,120 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:13:22,146 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:13:22,927 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:13:23,614 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:14:23,308 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/module_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 336, in module_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:16:54,744 [HttpRunnerManager:90] [views:log_out] [INFO]- wangyinguang退出
+2018-08-01 09:17:20,705 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:17:34,270 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:25:26,382 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 469, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:25:37,190 [HttpRunnerManager:90] [views:log_out] [INFO]- wangyinguang退出
+2018-08-01 09:29:43,598 [HttpRunnerManager:90] [views:log_out] [INFO]- wangyinguang退出
+2018-08-01 09:30:00,612 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 467, in set_filter_session
+    if request.session['project'] is '':
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:30:58,783 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/login
+2018-08-01 09:31:12,791 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 467, in set_filter_session
+    if request.session['project'] is '':
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:32:16,076 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 467, in set_filter_session
+    if request.session['project'] == '':
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:35:39,571 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 470, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\.virtualenvs\Python36-32-XfPJqKt7\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:35:54,013 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 470, in set_filter_session
+    'belong_project': request.session['project'],
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 09:36:03,032 [HttpRunnerManager:56] [views:login] [INFO]- wangyinguang 登录成功
+2018-08-01 10:02:06,823 [HttpRunnerManager:90] [views:log_out] [INFO]- wangyinguang退出
+2018-08-01 10:02:16,021 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 457, in set_filter_session
+    if 'project' in request.POST.keys() & request.POST.get('project') != '':
+TypeError: 'NoneType' object is not iterable
+2018-08-01 10:02:17,327 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 457, in set_filter_session
+    if 'project' in request.POST.keys() & request.POST.get('project') != '':
+TypeError: 'NoneType' object is not iterable
+2018-08-01 10:02:18,015 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 457, in set_filter_session
+    if 'project' in request.POST.keys() & request.POST.get('project') != '':
+TypeError: 'NoneType' object is not iterable
+2018-08-01 10:04:55,852 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 466, in set_filter_session
+    if request.session['project'] == '':
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 10:04:56,830 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 466, in set_filter_session
+    if request.session['project'] == '':
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 10:04:57,375 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 466, in set_filter_session
+    if request.session['project'] == '':
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 10:04:57,628 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 466, in set_filter_session
+    if request.session['project'] == '':
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 10:04:57,854 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 466, in set_filter_session
+    if request.session['project'] == '':
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 10:04:58,064 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 466, in set_filter_session
+    if request.session['project'] == '':
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 10:04:58,253 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 466, in set_filter_session
+    if request.session['project'] == '':
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 10:04:58,476 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 466, in set_filter_session
+    if request.session['project'] == '':
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 10:04:58,670 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 466, in set_filter_session
+    if request.session['project'] == '':
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 10:05:49,772 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 466, in set_filter_session
+    if request.session['project'] is None:
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 10:05:50,528 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 466, in set_filter_session
+    if request.session['project'] is None:
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 10:05:50,957 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 466, in set_filter_session
+    if request.session['project'] is None:
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 10:05:51,248 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /http/api/project_list/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\ApiManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\ApiManager\views.py", line 40, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\ApiManager\views.py", line 304, in project_list
+    filter_query = set_filter_session(request)
+  File "E:\qacenter\ApiManager\utils\common.py", line 466, in set_filter_session
+    if request.session['project'] is None:
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\contrib\sessions\backends\base.py", line 55, in __getitem__
+    return self._session[key]
+KeyError: 'project'
+2018-08-01 10:09:08,781 [HttpRunnerManager:90] [views:log_out] [INFO]- wangyinguang退出
