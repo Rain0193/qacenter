@@ -38744,3 +38744,48 @@ Traceback (most recent call last):
   File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 357, in raw_decode
     raise JSONDecodeError("Expecting value", s, err.value) from None
 json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-08-02 14:27:47,745 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 533, in add_td
+    td_info = json.loads(request.body.decode('utf-8'))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-08-02 14:27:59,042 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/data/add_td/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 15, in process
+    result = fun(request, index) if index else fun(request)
+  File "E:\qacenter\DataManager\views.py", line 25, in wrapper
+    return func(request, *args, **kwargs)
+  File "E:\qacenter\DataManager\views.py", line 533, in add_td
+    td_info = json.loads(request.body.decode('utf-8'))
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-08-02 15:04:51,658 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/login/
+2018-08-02 16:05:09,038 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/login/
+2018-08-02 16:05:11,759 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/login/

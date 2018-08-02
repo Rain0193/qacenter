@@ -211,9 +211,8 @@
             data: formData,
             header: 'Access-Control-Allow-Methods:*',
             success: function (res) {
-                var jsonObj = eval('(' + res + ")");
-                var content = JSON.stringify(jsonObj.entry);
-                if (jsonObj.responseCode == 1) {
+                var content = JSON.stringify(res.entry);
+                if (res.responseCode == 1) {
                     record_ajax(id, account, formData, content, '/qacenter/data/record/'+ id + '/')
                     jsonformat.init();
                     content_can = jsonformat.processFormat(content);
@@ -223,7 +222,7 @@
                         content: content_can
                     });
                 } else {
-                    if (jsonObj.responseCode == 10212) {
+                    if (res.responseCode == 10212) {
                         dialog.init({
                             dialogId: 'sessionout_dialog_add',
                             msg: '登录超时',
@@ -232,7 +231,7 @@
                     } else {
                         dialog.init({
                             dialogId: 'params_error_dialog_add',
-                            msg: jsonObj.message,
+                            msg: res.message,
                         });
                     }
                 }
