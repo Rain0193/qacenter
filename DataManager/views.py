@@ -38,9 +38,11 @@ def login(request):
         password = request.POST.get('password')
 
         if UserInfo.objects.filter(username__exact=username).filter(password__exact=password).count() == 1:
+            role = UserInfo.objects.filter(username__exact=username)[0].type
             logger.info('{username} 登录成功'.format(username=username))
             request.session["login_status"] = True
             request.session["now_account"] = username
+            request.session["role"] = role
             return HttpResponseRedirect('/qacenter/data/all_td/')
         else:
             logger.info('{username} 登录失败, 请检查用户名或者密码'.format(username=username))
@@ -144,6 +146,7 @@ def all_td(request):
     else:
         manage_info = {
             'account': request.session["now_account"],
+            'role': request.session["role"],
             'tdList': tdlist,
             'projects': projectlist
         }
@@ -185,6 +188,7 @@ def hot_td(request):
     if request.method == 'GET':
         manage_info = {
             'account': account,
+            'role': request.session["role"],
             'tdList': tdlist,
             'projects': projectlist
         }
@@ -240,6 +244,7 @@ def project_td(request, id):
     else:
         manage_info = {
             'account': request.session["now_account"],
+            'role': request.session["role"],
             'presentProject': presentProject[0]['project_name'],
             'tdList': tdlist,
             'projects': projectlist
@@ -296,6 +301,7 @@ def module_td(request, id):
     else:
         manage_info = {
             'account': request.session["now_account"],
+            'role': request.session["role"],
             'presentModule': presentModule[0]['module_name'],
             'tdList': tdlist,
             'projects': projectlist
@@ -328,6 +334,7 @@ def project_list(request, id):
             ProjectInfo, filter_query, '/qacenter/data/project_list/', id)
         manage_info = {
             'account': account,
+            'role': request.session["role"],
             'project': pro_list[1],
             'page_list': pro_list[0],
             'info': filter_query,
@@ -353,6 +360,7 @@ def add_project(request):
     elif request.method == 'GET':
         manage_info = {
             'account': account,
+            'role': request.session["role"],
             'projects': projectlist
         }
         return render_to_response('data/add_project.html', manage_info)
@@ -376,6 +384,7 @@ def edit_project(request, id):
         projectInfo = ProjectInfo.objects.get(id=id)
         manage_info = {
             'account': account,
+            'role': request.session["role"],
             'id': projectInfo.id,
             'project_name': projectInfo.project_name,
             'responsible_name': projectInfo.responsible_name,
@@ -423,6 +432,7 @@ def module_list(request, id):
             ModuleInfo, filter_query, '/qacenter/data/module_list/', id)
         manage_info = {
             'account': account,
+            'role': request.session["role"],
             'module': module_list[1],
             'page_list': module_list[0],
             'sum': module_list[2],
@@ -446,6 +456,7 @@ def add_module(request):
     elif request.method == 'GET':
         manage_info = {
             'account': account,
+            'role': request.session["role"],
             'data': ProjectInfo.objects.all().values('project_name'),
             'projects': projectlist
         }
@@ -470,6 +481,7 @@ def edit_project(request, id):
         projectInfo = ProjectInfo.objects.get(id=id)
         manage_info = {
             'account': account,
+            'role': request.session["role"],
             'id': projectInfo.id,
             'project_name': projectInfo.project_name,
             'responsible_name': projectInfo.responsible_name,
@@ -497,6 +509,7 @@ def edit_module(request, id):
         moduleInfo = ModuleInfo.objects.get(id=id)
         manage_info = {
             'account': account,
+            'role': request.session["role"],
             'id': moduleInfo.id,
             'module_name': moduleInfo.module_name,
             'belong_project': moduleInfo.belong_project,
@@ -523,6 +536,7 @@ def add_td(request):
     elif request.method == 'GET':
         manage_info = {
             'account': account,
+            'role': request.session["role"],
             'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time'),
             'projects': projectlist
         }
@@ -556,6 +570,7 @@ def edit_td(request, id):
     elif request.method == 'GET':
         manage_info = {
             'account': account,
+            'role': request.session["role"],
             'tdList': td,
             'project': ProjectInfo.objects.all().values('project_name').order_by('-create_time'),
             'projects': projectlist
@@ -596,6 +611,7 @@ def my_tds(request):
         tdlist.append(td)
     if request.method == 'GET':
         manage_info = {
+            'role': request.session["role"],
             'tdList': tdlist,
             'projects': projectlist
         }
@@ -634,6 +650,7 @@ def my_fav(request):
     if request.method == 'GET':
         manage_info = {
             'account': account,
+            'role': request.session["role"],
             'tdList': tdlist,
             'projects': projectlist
         }
@@ -660,6 +677,7 @@ def record(request, id):
             Record, filter_query, '/qacenter/data/record/', id, 14)
         manage_info = {
             'account': account,
+            'role': request.session["role"],
             'record': record_list[1],
             'page_list': record_list[0],
             'sum': record_list[2],
@@ -679,6 +697,7 @@ def summary(request):
     if request.method == 'GET':
         manage_info = {
             'account': account,
+            'role': request.session["role"],
             'projects': projectlist,
             'summary': '功能开发中~~~'
         }

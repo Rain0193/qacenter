@@ -67,7 +67,7 @@
                 class="iconfont icon-fav">
             &#xe619;</i>我的收藏</a></div>
 
-{#        #if($isTester)#}
+        {% ifequal role 1 %}
             <div class="nav-list-menu ful "><a href="/qacenter/data/project_list/1/"><i
                     class="iconfont icon-fav">&#xe611;</i>项目管理</a></div>
             <div class="nav-list-menu ful "><a href="/qacenter/data/module_list/1/"><i
@@ -76,12 +76,12 @@
                     class="iconfont icon-fav">&#xe604;</i>我的事务模板</a></div>
             <div class="nav-list-menu ful  "><a href="/qacenter/data/add_td/"><i
                     class="iconfont icon-fav">&#xe605;</i>添加事务模板</a></div>
-{#        #end#}
-        <div class="nav-list-menu ful"><a href="/qacenter/data/record/1/"><i
-                class="iconfont icon-fav">
-            &#xe617;</i>调用历史</a></div>
-        <div class="nav-list-menu ful "><a href="/qacenter/data/summary"><i
-                class="iconfont icon-fav">&#xe603;</i>调用量统计</a></div>
+            <div class="nav-list-menu ful"><a href="/qacenter/data/record/1/"><i
+                    class="iconfont icon-fav">
+                &#xe617;</i>调用历史</a></div>
+            <div class="nav-list-menu ful "><a href="/qacenter/data/summary"><i
+                    class="iconfont icon-fav">&#xe603;</i>调用量统计</a></div>
+        {% endifequal %}
 
         {% for foo in projects %}
             <div class="nav-list-menu ful">
