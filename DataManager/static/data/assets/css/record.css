@@ -96,8 +96,14 @@
         background: #D0E1EC;color: #3498db;
     }
 
-.help-dialog,.help-dialog0{
-	display:none;
+.record-result {
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    line-height: 40px;
+    height: 40px;
+}
+.record-tips {
 	position:fixed;
 	height:auto;
 	z-index:2002;
@@ -109,29 +115,12 @@
 	color:#444444;
 	line-height:15px;
 	text-align:left;
+    overflow: auto;
 }
-.help-dialog{
-	width:284px;
-	left:44.4%;
-    top:35%;
-}
-
-.help-dialog0{
-	width:400px;
-	left:58%;
-    top:20%;
-}
-    .help-dialog0 p{
+    .record-tips p{
     	border-bottom:1px dashed #DDDDDD;
     }
-    .help-dialog0 span{
+    .record-tips span{
     	font-weight:bold;
     	text-align:right;
     }
-
-.td-help-dialog{
-	display: none;
-	width:284px;
-	left: 315px;
-    top:0;
-}

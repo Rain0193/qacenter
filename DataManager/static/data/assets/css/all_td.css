@@ -4,7 +4,6 @@
 	top: 2px;
 	position: relative;
 	z-index: 2;
-	cursor:pointer;
 	display: inline-block;
 }
 .td-dialog{
@@ -120,7 +119,6 @@
 	z-index:2002;
 	padding:15px 20px;
 	border-radius:3px;
-	background:#FFFFFF;
 	box-shadow:1px 2px 4px 1px #E5E9EF;
 	font-size:12px;
 	color:#444444;
@@ -133,15 +131,15 @@
     top:35%;
 }
 
-.help-dialog0{
+.help-dialog{
 	width:400px;
 	left:58%;
     top:20%;
 }
-    .help-dialog0 p{
+    .help-dialog p{
     	border-bottom:1px dashed #DDDDDD;
     }
-    .help-dialog0 span{
+    .help-dialog span{
     	font-weight:bold;
     	text-align:right;
     }
