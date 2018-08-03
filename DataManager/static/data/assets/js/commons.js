@@ -240,7 +240,7 @@ function td_ajax(tag, id) {
                 window.location.href = "/qacenter/data/login/";
             } else {
                 if (data.indexOf('/qacenter/') != -1) {
-                    window.location.href = data;
+                    myAlertSuccess("成功");
                 } else {
                     myAlertFail(data);
                 }
