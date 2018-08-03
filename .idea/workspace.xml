@@ -71,8 +71,8 @@
       <file leaf-file-name="commons.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/js/commons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+            <state relative-caret-position="575">
+              <caret line="277" column="27" selection-start-line="277" selection-start-column="27" selection-end-line="277" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -928,8 +928,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/js/commons.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+        <state relative-caret-position="575">
+          <caret line="277" column="27" selection-start-line="277" selection-start-column="27" selection-end-line="277" selection-end-column="27" />
         </state>
       </provider>
     </entry>

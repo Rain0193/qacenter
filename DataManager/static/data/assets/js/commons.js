@@ -260,7 +260,7 @@ function myAlertSuccess(data) {
         msg: data,
         type: 2
     });
-    var t=setTimeout(next,2000);
+    var t=setTimeout(next,1000);
     function next()
     {
         dialog.hide();
@@ -279,6 +279,7 @@ function myAlertFail(data) {
     function next()
     {
         dialog.hide();
+        window.location.reload();
     }
 }
 
