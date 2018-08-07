@@ -485,7 +485,7 @@ td,th {
 }
 
 .dialog{
-    position:absolute;
+    position:fixed;
     left:40%;
     top:30%;
     width:300px;
