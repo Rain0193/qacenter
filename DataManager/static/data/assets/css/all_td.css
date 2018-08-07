@@ -102,13 +102,27 @@
 		margin-top:30px;
 	}
     .submit-btn-row .submit{
-			width:200px;
-			margin: 0 auto;
+			width:150px;
+			margin-left: 150px;
 			text-align: center;
 			align-items: center;
 			display: block;
 			vertical-align: center;
 			padding-top: 0px;
+		}
+	.del-btn-row{
+		margin-top: -40px;
+		margin-left: 50px;
+	}
+    .del-btn-row .submit{
+			width:150px;
+			margin-left: 300px;
+			text-align: center;
+			align-items: center;
+			display: block;
+			vertical-align: center;
+			padding-top: 0px;
+			background: #ee5950;
 		}
 
 .help-dialog,.help-dialog0{

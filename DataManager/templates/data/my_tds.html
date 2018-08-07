@@ -55,6 +55,7 @@
                     <input type="hidden" name="url" value="{{ tds.td_url }}"/>
 
                     <div class="submit-btn-row"><a href="/qacenter/data/edit_td/{{ tds.id }}/" class="submit btn">编辑</a></div>
+                    <div class="del-btn-row"><a onclick="invalid('{{ tds.id }}')" class="submit btn">删除</a></div>
                 </form>
             </div>
             {% endifequal %}
@@ -107,6 +108,7 @@
                     <input type="hidden" name="url" value="{{ tds.td_url }}"/>
 
                     <div class="submit-btn-row"><a href="/qacenter/data/edit_td/{{ tds.id }}/" class="submit btn">编辑</a></div>
+                    <div class="del-btn-row"><a onclick="invalid('{{ tds.id }}')" class="submit btn">删除</a></div>
                 </form>
             </div>
             {% endifequal %}
@@ -118,8 +120,20 @@
 
     <script  id="td-res-dialog-tmp">
 
+        function invalid(name) {
+            var id = name;
+            //二次确认框
+            dialog.init({
+                dialogId: 'tdelete-confirm-dialog',
+                msg: '亲，此操作会删除该事务，请谨慎操作！！！',
+                confirmBtnId: 'del-btn-confirm',
+                type: 3,
+                id: id
+            });
+        }
+
         $(document).ready(function() {
-            }).on('click', '.icon-help', function() {
+        }).on('click', '.icon-help', function() {
             var isShow = $(this).next().css('display');
             if (isShow == 'none') {
                 $(this).next().show();
@@ -133,6 +147,9 @@
             }  else {
                 $('.td-help-dialog').hide();
             }
+        }).on('click', '#del-btn-confirm', function() {
+            var id = $(this).parent().next().val();
+            del_data_ajax(id, '/qacenter/data/my_tds/')
         });
     </script>
 

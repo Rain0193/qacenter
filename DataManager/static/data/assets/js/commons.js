@@ -188,6 +188,7 @@ function del_data_ajax(id, url) {
                 myAlertSuccess(data);
             }
             else {
+                myAlertSuccess("删除成功");
                 window.location.reload();
             }
         },

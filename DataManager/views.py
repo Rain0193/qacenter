@@ -10,7 +10,7 @@ from urllib3.connectionpool import xrange
 from DataManager.models import UserInfo, ProjectInfo, ModuleInfo, TdInfo, FavTd, Record
 from DataManager.utils.common import register_info_logic, get_ajax_msg, init_filter_session, project_info_logic, set_filter_session, module_info_logic, td_info_logic, record_info_logic
 from DataManager.utils.httpGet import httpGet
-from DataManager.utils.operation import del_project_data, del_module_data, add_fav_data, add_td_pv, projectAndModule
+from DataManager.utils.operation import del_project_data, del_module_data, add_fav_data, add_td_pv, projectAndModule, del_td_data
 from DataManager.utils.pagination import get_pager_info
 
 logger = logging.getLogger('qacenter')
@@ -609,7 +609,14 @@ def my_tds(request):
         td.setdefault('belong_project', tdinfo[k].belong_project)
         td.setdefault('belong_module', tdinfo[k].belong_module)
         tdlist.append(td)
-    if request.method == 'GET':
+    if request.is_ajax():
+        td_info = json.loads(request.body.decode('utf-8'))
+        id = td_info.get('id')
+        id_list = [int(x) for x in id.split(',')]
+        if 'mode' in td_info.keys():  # del module
+            msg = del_td_data(id_list)
+        return HttpResponse(get_ajax_msg(msg, 'ok'))
+    else:
         manage_info = {
             'role': request.session["role"],
             'tdList': tdlist,

@@ -565,21 +565,23 @@ td,th {
         float: left;
         margin-left: 30px;
         width:30%;
-        line-height:35px;
+        line-height:40px;
         background:#169BD5;
         border-radius:5px;
         color:#fff;
         cursor:pointer;
+        padding-top: 0px;
     }
     .confirm-btn .dialog-btn-cancel{
         float: right;
         margin-right: 30px;
         width:30%;
-        line-height:35px;
+        line-height:40px;
         background:#169BD5;
         border-radius:5px;
         color:#fff;
         cursor:pointer;
+        padding-top: 0px;
     }
 
 .confirm-btn-result{

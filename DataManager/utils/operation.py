@@ -128,7 +128,7 @@ def del_project_data(id):
 def del_module_data(id):
     '''
     根据模块索引删除模块数据，强制删除其下所有事务
-    :param id: str or int: 项目索引
+    :param id: str or int: 模块索引
     :return: ok or tips
     '''
     try:
@@ -137,6 +137,19 @@ def del_module_data(id):
     except ObjectDoesNotExist:
         return '删除异常，请重试'
     logger.info('{module_name} 模块已删除'.format(module_name=module_name))
+    return 'ok'
+
+def del_td_data(id):
+    '''
+    根据事务索引删除事务数据
+    :param id: str or int: 事务索引
+    :return: ok or tips
+    '''
+    try:
+        TdInfo.objects.filter(id__in=id).delete()
+    except ObjectDoesNotExist:
+        return '删除异常，请重试'
+    logger.info('事务已删除'.format(id=id))
     return 'ok'
 
 def add_td_data(type, **kwargs):
