@@ -618,6 +618,7 @@ def my_tds(request):
         return HttpResponse(get_ajax_msg(msg, 'ok'))
     else:
         manage_info = {
+            'account': account,
             'role': request.session["role"],
             'tdList': tdlist,
             'projects': projectlist
