@@ -38867,3 +38867,15 @@ Traceback (most recent call last):
   File "E:\qacenter\DataManager\utils\operation.py", line 152, in del_td_data
     logger.info('{id} ÊÂÎñÒÑÉ¾³ý'.format(td_id=id))
 KeyError: 'id'
+2018-08-07 17:21:52,550 [django.request:118] [exception:handle_uncaught_exception] [ERROR]- Internal Server Error: /qacenter/edit_td/1/
+Traceback (most recent call last):
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\10067610\AppData\Local\Programs\Python\Python36-32\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\qacenter\DataManager\activator.py", line 10, in process
+    app = __import__("%s.views" % app)
+ModuleNotFoundError: No module named 'edit_td'
+2018-08-07 17:21:56,093 [django.request:93] [base:get_response] [WARNING]- Not Found: /qacenter/my_tds/

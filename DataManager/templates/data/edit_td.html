@@ -25,7 +25,10 @@
                     <select id="belong_project" name="project" class="tmp-select" onchange="auto_load('#infoForm', '/qacenter/data/edit_td/{{ tdList.id }}/', '#belong_module_id', 'module')">
                         <option value="{{ tdList.belong_project.project_name }}">{{ tdList.belong_project.project_name }}</option>
                         {% for foo in project %}
-                            <option value="{{ foo.project_name }}">{{ foo.project_name }}</option>
+                            {% if foo.project_name == tdList.belong_project.project_name %}
+                            {% else %}
+                                <option value="{{ foo.project_name }}">{{ foo.project_name }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                     <select id="belong_module_id" name="module" class="tmp-select">
