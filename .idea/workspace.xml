@@ -6,7 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/all_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/all_td.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/hot_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/hot_td.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/my_fav.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/my_fav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/my_tds.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/my_tds.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +29,17 @@
       <file leaf-file-name="all_td.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/templates/data/all_td.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="53" column="105" selection-start-line="53" selection-start-column="105" selection-end-line="53" selection-end-column="105" />
+            <state relative-caret-position="126">
+              <caret line="51" column="92" selection-start-line="51" selection-start-column="92" selection-end-line="51" selection-end-column="92" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-datetimepicker.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/js/bootstrap-datetimepicker.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2144">
+              <caret line="107" column="32" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -35,8 +47,8 @@
       <file leaf-file-name="hot_td.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/templates/data/hot_td.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="53" column="105" selection-start-line="53" selection-start-column="105" selection-end-line="53" selection-end-column="105" />
+            <state relative-caret-position="276">
+              <caret line="111" column="92" selection-start-line="111" selection-start-column="92" selection-end-line="111" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -44,26 +56,26 @@
       <file leaf-file-name="my_fav.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/templates/data/my_fav.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="54" column="105" selection-start-line="54" selection-start-column="105" selection-end-line="54" selection-end-column="105" />
+            <state relative-caret-position="161">
+              <caret line="112" column="92" selection-start-line="112" selection-start-column="92" selection-end-line="112" selection-end-column="92" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all_td.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="all_td.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="102" column="24" lean-forward="true" selection-start-line="102" selection-start-column="24" selection-end-line="103" selection-end-column="25" />
+              <caret line="102" column="24" selection-start-line="102" selection-start-column="24" selection-end-line="103" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_tds.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="my_tds.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataManager/templates/data/my_tds.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="52" column="105" selection-start-line="52" selection-start-column="105" selection-end-line="52" selection-end-column="105" />
+            <state relative-caret-position="149">
+              <caret line="111" column="92" selection-start-line="111" selection-start-column="92" selection-end-line="111" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -210,11 +222,11 @@
         <option value="$PROJECT_DIR$/DataManager/templates/data/add_td.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/edit_td.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/base.html" />
-        <option value="$PROJECT_DIR$/DataManager/templates/data/my_fav.html" />
-        <option value="$PROJECT_DIR$/DataManager/templates/data/hot_td.html" />
-        <option value="$PROJECT_DIR$/DataManager/templates/data/all_td.html" />
-        <option value="$PROJECT_DIR$/DataManager/templates/data/my_tds.html" />
         <option value="$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css" />
+        <option value="$PROJECT_DIR$/DataManager/templates/data/all_td.html" />
+        <option value="$PROJECT_DIR$/DataManager/templates/data/hot_td.html" />
+        <option value="$PROJECT_DIR$/DataManager/templates/data/my_fav.html" />
+        <option value="$PROJECT_DIR$/DataManager/templates/data/my_tds.html" />
       </list>
     </option>
   </component>
@@ -875,13 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/js/bootstrap-datetimepicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33189">
-          <caret line="1468" column="2" selection-start-line="1468" selection-start-column="2" selection-end-line="1468" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/activator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -968,20 +973,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/templates/data/my_fav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="54" column="105" selection-start-line="54" selection-start-column="105" selection-end-line="54" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/templates/data/hot_td.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="53" column="105" selection-start-line="53" selection-start-column="105" selection-end-line="53" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/edit_td.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1311">
@@ -989,24 +980,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="102" column="24" selection-start-line="102" selection-start-column="24" selection-end-line="103" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/js/bootstrap-datetimepicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2144">
+          <caret line="107" column="32" selection-start-line="107" selection-start-column="32" selection-end-line="107" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/all_td.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="53" column="105" selection-start-line="53" selection-start-column="105" selection-end-line="53" selection-end-column="105" />
+        <state relative-caret-position="126">
+          <caret line="51" column="92" selection-start-line="51" selection-start-column="92" selection-end-line="51" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/templates/data/hot_td.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="111" column="92" selection-start-line="111" selection-start-column="92" selection-end-line="111" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/templates/data/my_fav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="112" column="92" selection-start-line="112" selection-start-column="92" selection-end-line="112" selection-end-column="92" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/my_tds.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="52" column="105" selection-start-line="52" selection-start-column="105" selection-end-line="52" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="102" column="24" lean-forward="true" selection-start-line="102" selection-start-column="24" selection-end-line="103" selection-end-column="25" />
+        <state relative-caret-position="149">
+          <caret line="111" column="92" selection-start-line="111" selection-start-column="92" selection-end-line="111" selection-end-column="92" />
         </state>
       </provider>
     </entry>
