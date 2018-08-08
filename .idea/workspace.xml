@@ -6,12 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/all_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/all_td.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/hot_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/hot_td.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/my_fav.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/my_fav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/my_tds.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/my_tds.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,8 +53,8 @@
       <file leaf-file-name="all_td.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-106">
-              <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+            <state relative-caret-position="308">
+              <caret line="102" column="24" lean-forward="true" selection-start-line="102" selection-start-column="24" selection-end-line="103" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -1010,8 +1005,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+        <state relative-caret-position="308">
+          <caret line="102" column="24" lean-forward="true" selection-start-line="102" selection-start-column="24" selection-end-line="103" selection-end-column="25" />
         </state>
       </provider>
     </entry>

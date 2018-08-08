@@ -101,6 +101,7 @@
 	}
 		.form_datetime input{
 			width: 100%;
+			height: 36px;
 		}
 
 	.view-btn-row{
