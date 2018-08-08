@@ -90,6 +90,16 @@
 		.td-param select{
 			width:55%;
 		}
+	.form_datetime{
+		margin-left: 105px;
+		margin-top: -40px;
+		overflow: no-display;
+		padding-right: 20px;
+		width:58%;
+	}
+		.form_datetime input{
+			width: 100%;
+		}
 
 	.view-btn-row{
 		margin-top:30px;
@@ -129,10 +139,10 @@
 	display:none;
 	position:fixed;
 	height:auto;
-	background:#FFF;
 	z-index:2002;
 	padding:15px 20px;
 	border-radius:3px;
+	background:#FFFFFF;
 	box-shadow:1px 2px 4px 1px #E5E9EF;
 	font-size:12px;
 	color:#444444;

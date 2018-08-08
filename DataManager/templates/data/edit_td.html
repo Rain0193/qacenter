@@ -46,8 +46,16 @@
                                 {% ifequal foo.type '0' %}
                                     <option value="0" selected>文本框</option>
                                     <option value="1">下拉列表</option>
-                                {% else %}
+                                    <option value="2">日期</option>
+                                {% endifequal %}
+                                {% ifequal foo.type '1' %}
                                     <option value="1" selected>下拉列表</option>
+                                    <option value="0">文本框</option>
+                                    <option value="2">日期</option>
+                                {% endifequal %}
+                                {% ifequal foo.type '2' %}
+                                    <option value="2" selected>日期</option>
+                                    <option value="1">下拉列表</option>
                                     <option value="0">文本框</option>
                                 {% endifequal %}
                             </select>

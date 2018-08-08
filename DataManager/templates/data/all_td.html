@@ -36,15 +36,23 @@
                     </div>
                     <div class="td-author">作者：{{ tds.author }}</div>
                     {% for foo in tds.params %}
-                    <div class="td-param">
+                    <div class="td-param form-group">
                         <span class="td-param-name">{{ foo.param }}：</span>
                         {% ifequal foo.type '0' %}
-                        <input type="text" class="param-input" name="param{{forloop.counter0}}" value="" placeholder="{{ foo.exp }}"
-                               autocomplete="off"/>
-                        {% else %}
-                        <select name="param{{forloop.counter0}}" onmouseover="getOptions('{{ foo.exp }}', {{ tds.id }}, {{ forloop.counter0 }})">
-                            <option value="请选择">请选择</option>
-                        </select>
+                            <input type="text" class="param-input" name="param{{forloop.counter0}}" value="" placeholder="{{ foo.exp }}"
+                                   autocomplete="off"/>
+                        {% endifequal %}
+                        {% ifequal foo.type '1' %}
+                            <select name="param{{ forloop.counter0 }}" onmouseover="getOptions('{{ foo.exp }}', {{ tds.id }}, {{ forloop.counter0 }})">
+                                <option value="请选择">请选择</option>
+                            </select>
+                        {% endifequal %}
+                        {% ifequal foo.type '2' %}
+                            <div class="input-group date form_datetime" data-link-field="dtp_input1">
+                                <input name="param{{forloop.counter0}}" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                            </div>
                         {% endifequal %}
                         <div class="bdsug">
                             <ul>
@@ -91,12 +99,20 @@
                     <div class="td-param">
                         <span class="td-param-name">{{ foo.param }}：</span>
                         {% ifequal foo.type '0' %}
-                        <input type="text" class="param-input" name="param{{forloop.counter0}}" value="" placeholder="{{ foo.exp }}"
-                               autocomplete="off"/>
-                        {% else %}
-                        <select name="param{{ forloop.counter0 }}" onmouseover="getOptions('{{ foo.exp }}', {{ tds.id }}, {{ forloop.counter0 }})">
-                            <option value="请选择">请选择</option>
-                        </select>
+                            <input type="text" class="param-input" name="param{{forloop.counter0}}" value="" placeholder="{{ foo.exp }}"
+                                   autocomplete="off"/>
+                        {% endifequal %}
+                        {% ifequal foo.type '1' %}
+                            <select name="param{{ forloop.counter0 }}" onmouseover="getOptions('{{ foo.exp }}', {{ tds.id }}, {{ forloop.counter0 }})">
+                                <option value="请选择">请选择</option>
+                            </select>
+                        {% endifequal %}
+                        {% ifequal foo.type '2' %}
+                            <div class="input-group date form_datetime" data-link-field="dtp_input1">
+                                <input name="param{{forloop.counter0}}" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                            </div>
                         {% endifequal %}
                         <div class="bdsug">
                             <ul>
@@ -107,7 +123,7 @@
                     {% endfor %}
                     <input type="hidden" name="url" value="{{ tds.td_url }}"/>
 
-                    <div class="submit-btn-row"><a class="submit btn" onclick="pv_ajax('{{ tds.id }}', '/qacenter/all_td/', 'pv', true)">确定</a></div>
+                    <div class="submit-btn-row"><a class="submit btn" onclick="pv_ajax('{{ tds.id }}', '/qacenter/data/all_td/', 'pv', true)">确定</a></div>
                 </form>
             </div>
             {% endifequal %}
@@ -135,6 +151,17 @@
 {#        })#}
 {#</script>#}
 <script id="td-res-dialog-tmp">
+
+    $('.form_datetime').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
 
     $(document).ready(function() {
         }).on('dblclick', '.param-input', function() {

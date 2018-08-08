@@ -496,7 +496,7 @@ td,th {
     border-radius:3px;
 }
 .res-dialog{
-    position:absolute;
+    position:fixed;
     left:35%;
     top:8%;
     width:680px;
