@@ -6,7 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataManager/templates/data/my_tds.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/my_tds.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="all_td.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/templates/data/all_td.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="65" column="32" lean-forward="true" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="46" />
+            <state relative-caret-position="310">
+              <caret line="116" column="43" lean-forward="true" selection-start-line="116" selection-start-column="43" selection-end-line="116" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -54,13 +53,13 @@
       <file leaf-file-name="my_fav.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/templates/data/my_fav.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="113" column="72" lean-forward="true" selection-start-line="113" selection-start-column="72" selection-end-line="113" selection-end-column="72" />
+            <state relative-caret-position="86">
+              <caret line="143" column="4" selection-start-line="143" selection-start-column="4" selection-end-line="152" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all_td.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="all_td.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="213">
@@ -69,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_tds.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="my_tds.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataManager/templates/data/my_tds.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="109" column="53" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="53" />
+            <state relative-caret-position="293">
+              <caret line="143" column="30" lean-forward="true" selection-start-line="143" selection-start-column="30" selection-end-line="143" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -149,8 +148,8 @@
       <find>all_td</find>
       <find>param-input</find>
       <find>td-param</find>
-      <find>submit</find>
       <find>submit-btn-row</find>
+      <find>submit</find>
     </findStrings>
     <replaceStrings>
       <replace>1px solid #E5E9EF;</replace>
@@ -223,8 +222,8 @@
         <option value="$PROJECT_DIR$/DataManager/templates/data/all_td.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/hot_td.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/my_fav.html" />
-        <option value="$PROJECT_DIR$/DataManager/templates/data/my_tds.html" />
         <option value="$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css" />
+        <option value="$PROJECT_DIR$/DataManager/templates/data/my_tds.html" />
       </list>
     </option>
   </component>
@@ -985,13 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/templates/data/all_td.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="65" column="32" lean-forward="true" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/edit_td.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-529">
@@ -999,24 +991,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="125" column="8" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/templates/data/all_td.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="116" column="43" lean-forward="true" selection-start-line="116" selection-start-column="43" selection-end-line="116" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/my_fav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="113" column="72" lean-forward="true" selection-start-line="113" selection-start-column="72" selection-end-line="113" selection-end-column="72" />
+        <state relative-caret-position="86">
+          <caret line="143" column="4" selection-start-line="143" selection-start-column="4" selection-end-line="152" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/my_tds.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="109" column="53" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="125" column="8" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="8" />
+        <state relative-caret-position="293">
+          <caret line="143" column="30" lean-forward="true" selection-start-line="143" selection-start-column="30" selection-end-line="143" selection-end-column="30" />
         </state>
       </provider>
     </entry>
