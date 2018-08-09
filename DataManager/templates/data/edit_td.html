@@ -106,6 +106,12 @@
 
     $(document).ready(function() {
         paramInitRow = $("#params-row0");
+        $('.tmp-select').each(function(i) {
+            selectValue = $(this).find("option:selected").val();
+            if (selectValue == 2) {
+                $(this).next().hide();
+            }
+        });
         }).on('click', '.add-row-btn', function() {
             var row = $("#params-row0").clone();
             if (typeof(row.html()) == 'undefined') {
@@ -125,9 +131,11 @@
             } else if (selValue == 0) {
                 $(this).next().show();
                 $(this).next().attr("placeholder", "请填写placeholder");
-            } else {
+            } else if (selValue == 1){
                 $(this).next().show();
                 $(this).next().attr("placeholder", "请填写获取下拉列表的url请求");
+            } else {
+                $(this).next().hide();
             }
         });
 

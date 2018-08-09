@@ -104,9 +104,11 @@
             } else if (selValue == 0) {
                 $(this).next().show();
                 $(this).next().attr("placeholder", "请填写placeholder");
-            } else {
+            } else if (selValue == 1){
                 $(this).next().show();
                 $(this).next().attr("placeholder", "请填写获取下拉列表的url请求");
+            } else {
+                $(this).next().hide();
             }
         });
 
