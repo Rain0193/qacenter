@@ -6,9 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/add_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/add_td.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/all_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/all_td.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/edit_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/edit_td.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/record.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/record.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,16 +72,7 @@
         <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/js/commons.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="338">
-              <caret line="319" column="48" lean-forward="true" selection-start-line="319" selection-start-column="48" selection-end-line="319" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataManager/templates/data/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="21" selection-end-column="98" />
+              <caret line="319" column="48" selection-start-line="319" selection-start-column="48" selection-end-line="319" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -97,11 +86,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_td.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edit_td.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/templates/data/edit_td.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="126" column="10" lean-forward="true" selection-start-line="126" selection-start-column="10" selection-end-line="139" selection-end-column="11" />
+            <state relative-caret-position="348">
+              <caret line="139" column="11" selection-start-line="139" selection-start-column="11" selection-end-line="139" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="record.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DataManager/templates/data/record.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -213,7 +211,6 @@
         <option value="$PROJECT_DIR$/ApiManager/static/api/assets/css/admin.css" />
         <option value="$PROJECT_DIR$/qacenter/settings.py" />
         <option value="$PROJECT_DIR$/DataManager/static/data/assets/css/record.css" />
-        <option value="$PROJECT_DIR$/DataManager/templates/data/record.html" />
         <option value="$PROJECT_DIR$/DataManager/utils/operation.py" />
         <option value="$PROJECT_DIR$/DataManager/static/data/assets/js/commons.js" />
         <option value="$PROJECT_DIR$/DataManager/views.py" />
@@ -226,6 +223,7 @@
         <option value="$PROJECT_DIR$/DataManager/templates/data/all_td.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/add_td.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/edit_td.html" />
+        <option value="$PROJECT_DIR$/DataManager/templates/data/record.html" />
       </list>
     </option>
   </component>
@@ -832,13 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/templates/data/record.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="65" column="45" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/module_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="565">
@@ -996,7 +987,7 @@
     <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/js/commons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
-          <caret line="319" column="48" lean-forward="true" selection-start-line="319" selection-start-column="48" selection-end-line="319" selection-end-column="48" />
+          <caret line="319" column="48" selection-start-line="319" selection-start-column="48" selection-end-line="319" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1016,8 +1007,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/edit_td.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="126" column="10" lean-forward="true" selection-start-line="126" selection-start-column="10" selection-end-line="139" selection-end-column="11" />
+        <state relative-caret-position="348">
+          <caret line="139" column="11" selection-start-line="139" selection-start-column="11" selection-end-line="139" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/templates/data/record.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
         </state>
       </provider>
     </entry>
