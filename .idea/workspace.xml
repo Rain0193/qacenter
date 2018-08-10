@@ -6,9 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/add_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/add_td.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/edit_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/edit_td.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/project_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/project_td.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/script.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/script.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,38 +52,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all_td.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/css/all_td.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="102" column="24" selection-start-line="102" selection-start-column="24" selection-end-line="103" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="add_td.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/templates/data/add_td.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="347">
-              <caret line="99" column="10" lean-forward="true" selection-start-line="99" selection-start-column="10" selection-end-line="114" selection-end-column="11" />
+              <caret line="99" column="10" selection-start-line="99" selection-start-column="10" selection-end-line="114" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_td.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edit_td.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/templates/data/edit_td.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
+            <state relative-caret-position="1120">
               <caret line="141" column="11" selection-start-line="141" selection-start-column="11" selection-end-line="141" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_tds.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataManager/templates/data/my_tds.html">
+      <file leaf-file-name="project_td.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DataManager/templates/data/project_td.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-918">
-              <caret line="111" column="92" selection-start-line="111" selection-start-column="92" selection-end-line="111" selection-end-column="92" />
+            <state relative-caret-position="782">
+              <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module_td.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataManager/templates/data/module_td.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="100" column="24" selection-start-line="100" selection-start-column="24" selection-end-line="115" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -93,15 +93,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
               <caret line="319" column="48" selection-start-line="319" selection-start-column="48" selection-end-line="319" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module_td.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataManager/templates/data/module_td.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1074">
-              <caret line="237" column="41" selection-start-line="237" selection-start-column="41" selection-end-line="237" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -172,7 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DataManager/templates/data/summary.html" />
         <option value="$PROJECT_DIR$/DataManager/utils/pagination.py" />
         <option value="$PROJECT_DIR$/ApiManager/templates/api/login.html" />
         <option value="$PROJECT_DIR$/ApiManager/templates/api/register.html" />
@@ -223,6 +213,7 @@
         <option value="$PROJECT_DIR$/DataManager/templates/data/all_td.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/add_td.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/edit_td.html" />
+        <option value="$PROJECT_DIR$/DataManager/templates/data/project_td.html" />
       </list>
     </option>
   </component>
@@ -657,11 +648,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DataManager/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/Python36-32-XfPJqKt7/Lib/site-packages/flower/static/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -985,13 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataManager/templates/data/module_td.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1074">
-          <caret line="237" column="41" selection-start-line="237" selection-start-column="41" selection-end-line="237" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/all_td.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-288">
@@ -1009,14 +988,28 @@
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/add_td.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
-          <caret line="99" column="10" lean-forward="true" selection-start-line="99" selection-start-column="10" selection-end-line="114" selection-end-column="11" />
+          <caret line="99" column="10" selection-start-line="99" selection-start-column="10" selection-end-line="114" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/edit_td.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
+        <state relative-caret-position="1120">
           <caret line="141" column="11" selection-start-line="141" selection-start-column="11" selection-end-line="141" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/templates/data/module_td.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="100" column="24" selection-start-line="100" selection-start-column="24" selection-end-line="115" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataManager/templates/data/project_td.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
         </state>
       </provider>
     </entry>
