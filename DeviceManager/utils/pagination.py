@@ -102,11 +102,11 @@ def get_pager_info(Model, filter_query, url, id, per_items=12):
         belonger = filter_query.get('belonger')
 
     if url == '/device/dc/device_list/':
-        if manufacturer != '请选择厂商' and device_name is not '':
+        if manufacturer != '请选择品牌' and device_name is not '':
             obj = obj.filter(manufacturer__contains=manufacturer).filter(device_name__contains=device_name)
         elif belonger != '请选择归属人' and device_name is not '':
             obj = obj.filter(belonger__contains=belonger).filter(device_name__contains=device_name)
-        elif manufacturer != '请选择厂商':
+        elif manufacturer != '请选择品牌':
             obj = obj.filter(manufacturer__contains=manufacturer)
         elif belonger != '请选择归属人':
             obj = obj.filter(belonger__contains=belonger)

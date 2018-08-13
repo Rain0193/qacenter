@@ -15,7 +15,7 @@
                         <input type="text" class="form-control" id="device_name" name="device_name" placeholder="请输入设备名称" value="{{ info.device_name }}"/>
                         <select name="manufacturer" id="manufacturer" class="form-control">
                             <option value="{{ info.manufacturer }}" selected>{{ info.manufacturer }}</option>
-                            <option value="请选择厂商" {% ifequal info.manufacturer '请选择厂商' %} hidden {% endifequal %}>请选择厂商</option>
+                            <option value="请选择品牌" {% ifequal info.manufacturer '请选择品牌' %} hidden {% endifequal %}>请选择品牌</option>
                             <option value="华为" {% ifequal info.manufacturer '华为' %} hidden {% endifequal %}>华为</option>
                             <option value="苹果" {% ifequal info.manufacturer '苹果' %} hidden {% endifequal %}>苹果</option>
                             <option value="三星" {% ifequal info.manufacturer '三星' %} hidden {% endifequal %}>三星</option>
@@ -52,7 +52,7 @@
                         <th><input type="checkbox" name="ck" id="select_all" value="{{ foo.id }}"/></th>
                         <th>序号</th>
                         <th>设备名称</th>
-                        <th>厂商</th>
+                        <th>品牌</th>
                         <th>型号</th>
                         <th>内存大小</th>
                         <th>系统版本</th>

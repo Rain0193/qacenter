@@ -6,20 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/DeviceManager/templates/device/edit_device.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/all_td.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/all_td.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeviceManager/managers.py" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceManager/managers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeviceManager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceManager/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeviceManager/static/device/assets/js/commons.js" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceManager/static/device/assets/js/commons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DeviceManager/templates/device/add_device.html" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceManager/templates/device/add_device.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DeviceManager/templates/device/device_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceManager/templates/device/device_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeviceManager/utils/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceManager/utils/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeviceManager/utils/operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceManager/utils/operation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeviceManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceManager/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/script.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/script.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qacenter/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/qacenter/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeviceManager/templates/device/edit_device.html" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceManager/templates/device/edit_device.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeviceManager/utils/pagination.py" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceManager/utils/pagination.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,20 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dialog.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/js/dialog.js">
+      <file leaf-file-name="edit_device.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DeviceManager/templates/device/edit_device.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="4" selection-start-column="4" selection-end-column="4" />
+            <state relative-caret-position="69">
+              <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_device.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DeviceManager/templates/device/edit_device.html">
+      <file leaf-file-name="add_device.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DeviceManager/templates/device/add_device.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1361">
-              <caret line="10" column="108" selection-start-line="10" selection-start-column="97" selection-end-line="10" selection-end-column="108" />
+            <state relative-caret-position="138">
+              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -66,8 +56,8 @@
       <file leaf-file-name="device_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DeviceManager/templates/device/device_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="152" column="15" selection-start-line="152" selection-start-column="15" selection-end-line="152" selection-end-column="15" />
+            <state relative-caret-position="-190">
+              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -76,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/DeviceManager/static/device/assets/js/commons.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
-              <caret line="213" column="13" lean-forward="true" selection-start-line="213" selection-start-column="13" selection-end-line="213" selection-end-column="13" />
+              <caret line="213" column="13" selection-start-line="213" selection-start-column="13" selection-end-line="213" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -84,8 +74,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DeviceManager/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="44" column="30" lean-forward="true" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+            <state relative-caret-position="241">
+              <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
               <folding>
                 <element signature="e#1#12#0" expanded="true" />
               </folding>
@@ -93,11 +83,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="operation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pagination.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DeviceManager/utils/pagination.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="104" column="33" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="operation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DeviceManager/utils/operation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+            <state relative-caret-position="-50">
+              <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
               </folding>
@@ -126,23 +125,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DeviceManager/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="43" column="10" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>all_td</find>
       <find>param-input</find>
       <find>td-param</find>
       <find>submit-btn-row</find>
@@ -171,6 +157,7 @@
       <find>device_list</find>
       <find>edit_project</find>
       <find>edit_pro</find>
+      <find>品牌</find>
       <find>edit_device</find>
     </findStrings>
     <replaceStrings>
@@ -224,7 +211,6 @@
         <option value="$PROJECT_DIR$/DeviceManager/static/device/assets/css/device_list.css" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/register.html" />
         <option value="$PROJECT_DIR$/DataManager/models.py" />
-        <option value="$PROJECT_DIR$/DeviceManager/utils/pagination.py" />
         <option value="$PROJECT_DIR$/DataManager/utils/operation.py" />
         <option value="$PROJECT_DIR$/DataManager/static/data/assets/js/jquery-3.3.1.min.js" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/base.html" />
@@ -236,16 +222,17 @@
         <option value="$PROJECT_DIR$/DeviceManager/templates/device/base.html" />
         <option value="$PROJECT_DIR$/qacenter/settings.py" />
         <option value="$PROJECT_DIR$/DeviceManager/utils/common.py" />
-        <option value="$PROJECT_DIR$/DeviceManager/templates/device/add_device.html" />
-        <option value="$PROJECT_DIR$/DeviceManager/templates/device/edit_device.html" />
         <option value="$PROJECT_DIR$/DeviceManager/models.py" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/all_td.html" />
         <option value="$PROJECT_DIR$/DataManager/static/data/assets/js/dialog.js" />
-        <option value="$PROJECT_DIR$/DeviceManager/templates/device/device_list.html" />
         <option value="$PROJECT_DIR$/DeviceManager/managers.py" />
         <option value="$PROJECT_DIR$/DeviceManager/views.py" />
         <option value="$PROJECT_DIR$/DeviceManager/static/device/assets/js/commons.js" />
         <option value="$PROJECT_DIR$/DeviceManager/utils/operation.py" />
+        <option value="$PROJECT_DIR$/DeviceManager/templates/device/edit_device.html" />
+        <option value="$PROJECT_DIR$/DeviceManager/templates/device/device_list.html" />
+        <option value="$PROJECT_DIR$/DeviceManager/utils/pagination.py" />
+        <option value="$PROJECT_DIR$/DeviceManager/templates/device/add_device.html" />
       </list>
     </option>
   </component>
@@ -966,13 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DeviceManager/utils/pagination.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/utils/operation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
@@ -1132,13 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DeviceManager/templates/device/add_device.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/edit_project.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -1211,13 +1184,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DeviceManager/templates/device/edit_device.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1361">
-          <caret line="10" column="108" selection-start-line="10" selection-start-column="97" selection-end-line="10" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DeviceManager/managers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1225,37 +1191,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DeviceManager/templates/device/device_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="152" column="15" selection-start-line="152" selection-start-column="15" selection-end-line="152" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DeviceManager/static/device/assets/js/commons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="213" column="13" lean-forward="true" selection-start-line="213" selection-start-column="13" selection-end-line="213" selection-end-column="13" />
+          <caret line="213" column="13" selection-start-line="213" selection-start-column="13" selection-end-line="213" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviceManager/utils/operation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DeviceManager/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="44" column="30" lean-forward="true" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+        <state relative-caret-position="241">
+          <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
           <folding>
             <element signature="e#1#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DeviceManager/utils/operation.py">
+    <entry file="file://$PROJECT_DIR$/DeviceManager/utils/pagination.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="224">
+          <caret line="104" column="33" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviceManager/templates/device/device_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-190">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviceManager/templates/device/edit_device.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviceManager/templates/device/add_device.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
         </state>
       </provider>
     </entry>
