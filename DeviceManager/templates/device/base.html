@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    {% load staticfiles %}
+    <meta name="apple-mobile-web-app-title" content="qacenter"/>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-fileinput/4.4.8/js/fileinput.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.bootcss.com/jquery.serializeJSON/2.9.0/jquery.serializejson.min.js"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+    <script src="{% static 'device/assets/js/commons.js' %}"></script>
+    <script src="{% static 'data/assets/js/dialog.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'device/assets/css/common.css' %}">
+</head>
+<body>
+<div class="fixed-top">
+    <div class="fixed-logo">
+        <i class="iconfont icon-white">&#xe629;</i>
+        <span class="fixed-title"><a href="/qacenter/data/all_td">质量中心</a></span>
+    </div>
+    <div class="fixed-nav">
+        <span class="fixed-title">设备管理<i class="iconfont icon-nav">&#xe625;</i></span>
+        <div class="fixed-nav-list">
+                <a href="/qacenter/data/all_td/" target="_blank">数据工厂</a>
+                <a href="/http/api/index/" target="_blank">接口自动化</a>
+                <a href="/device/dc/device_list/1/" target="_blank">设备管理</a>
+                <a href="/qacenter/data/all_td/" target="_blank">代码覆盖率</a>
+                <a href="/qacenter/data/all_td/" target="_blank">app打包平台</a>
+                <a href="/qacenter/data/all_td/" target="_blank">发布流程</a>
+                <a href="/qacenter/data/all_td/" target="_blank">项目管理</a>
+                <a href="/qacenter/data/all_td/" target="_blank">性能测试</a>
+        </div>
+    </div>
+    <div class="fixed-logout">Hi&nbsp;&nbsp;{{ account }}，欢迎登录质量中心<a href="/qacenter/data/logout/">退出</a></div>
+</div>
+
+<div class="fixed-left">
+    <div class="nav-list">
+        <div class="nav-list-menu logo-menu"><a class="logo-a" href="/device/dc/device_list/1/"><i
+                class="iconfont logo-icon">
+            &#xe624;</i></a></div>
+        <div class="nav-list-menu sel"><a href="/device/dc/device_list/1/"><i
+                class="iconfont">
+            &#xe6ab;</i>设备管理</a></div>
+        <div class="nav-list-menu ful"><a href="/qacenter/data/hot_td/" id="hotTD"> <i
+                class="iconfont icon-hot">
+            &#xe626;</i>借与还</a></div>
+
+    </div>
+</div>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            var index = localStorage.getItem("currentNav",index);
+            $('.nav-list-menu').eq(index).addClass("sel").siblings().removeClass("sel");
+        }).on('click','.nav-list-menu',function(){
+            var index = $(this).index();
+            localStorage.setItem("currentNav",index);
+            $(this).addClass("sel").siblings().removeClass("sel");
+        })
+
+        $(".project-name").mouseover(function (e) {
+            $(this).next(".ul-menu").show();
+        });
+
+    </script>
+
+</body>
+</html>

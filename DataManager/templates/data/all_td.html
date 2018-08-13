@@ -63,7 +63,7 @@
                     {% endfor %}
                     <input type="hidden" name="url" value="{{ tds.td_url }}"/>
 
-                    <div class="submit-btn-row"><a class="submit btn" onclick="pv_ajax('{{ tds.id }}', '/qacenter/data/all_td/', 'pv', true)" >确定</a></div>
+                    <div class="submit-btn-row"><a class="submit btn" onclick="pv_ajax('{{ tds.id }}', '/qacenter/data/all_td/', 'pv', true)">确定</a></div>
                 </form>
             </div>
             {% endifequal %}
@@ -150,6 +150,7 @@
 {#            })#}
 {#        })#}
 {#</script>#}
+
 <script id="td-res-dialog-tmp">
 
     $('.form_datetime').datetimepicker({
@@ -249,12 +250,10 @@
                 data: formData,
                 success: function (res) {
                     content = JSON.stringify(res.entry);
-                    console.log(content)
                     if (res.responseCode == 1) {
                         record_ajax(id, account, formData, content, '/qacenter/data/record/'+ id + '/')
                         jsonformat.init();
                         content_can = jsonformat.processFormat(content);
-                        console.log(content_can)
                         dialog.init({
                             dialogId: 'td-res-dialog',
                             type: 1,

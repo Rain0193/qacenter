@@ -1,0 +1,170 @@
+{% extends "device/base.html" %}
+{% block title %}设备管理{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'device/assets/css/device_list.css' %}">
+
+<div class="crumb">
+    <span>设备管理>设备列表</span>
+</div>
+    <div class="content">
+        <div class="tab-statistics">
+            <div class="search">
+                <form class="form-header" action="/device/dc/device_list/1/" role="form" method="POST" id="device_list">
+                    <div class="search-content">
+                        <input type="text" class="form-control" id="device_name" name="device_name" placeholder="请输入设备名称" value="{{ info.device_name }}"/>
+                        <select name="manufacturer" id="manufacturer" class="form-control">
+                            <option value="{{ info.manufacturer }}" selected>{{ info.manufacturer }}</option>
+                            <option value="请选择厂商" {% ifequal info.manufacturer '请选择厂商' %} hidden {% endifequal %}>请选择厂商</option>
+                            <option value="华为" {% ifequal info.manufacturer '华为' %} hidden {% endifequal %}>华为</option>
+                            <option value="苹果" {% ifequal info.manufacturer '苹果' %} hidden {% endifequal %}>苹果</option>
+                            <option value="三星" {% ifequal info.manufacturer '三星' %} hidden {% endifequal %}>三星</option>
+                            <option value="小米" {% ifequal info.manufacturer '小米' %} hidden {% endifequal %}>小米</option>
+                            <option value="oppo" {% ifequal info.manufacturer 'oppo' %} hidden {% endifequal %}>oppo</option>
+                            <option value="vivo" {% ifequal info.manufacturer 'vivo' %} hidden {% endifequal %}>vivo</option>
+                            <option value="goggle" {% ifequal info.manufacturer 'goggle' %} hidden {% endifequal %}>goggle</option>
+                            <option value="魅族" {% ifequal info.manufacturer '魅族' %} hidden {% endifequal %}>魅族</option>
+                            <option value="联想" {% ifequal info.manufacturer '联想' %} hidden {% endifequal %}>联想</option>
+                            <option value="酷派" {% ifequal info.manufacturer '酷派' %} hidden {% endifequal %}>酷派</option>
+                            <option value="其他" {% ifequal info.manufacturer '其他' %} hidden {% endifequal %}>其他</option>
+                        </select>
+                        <select name="belonger" id="belonger" class="form-control">
+
+                            <option value="{{ info.belonger }}" selected>{{ info.belonger }}</option>
+                            <option value="请选择归属人" {% ifequal info.belonger '请选择归属人' %} hidden {% endifequal %}>请选择归属人</option>
+                            {% for foo in belonger %}
+                                {% ifnotequal info.belonger foo.username %}
+                                    <option value="{{ foo.username }}">{{ foo.username }}</option>
+                                {% endifnotequal %}
+                            {% endfor %}
+                        </select>
+                        <button id="addDevice" class="search-button" value="搜索">搜索</button>
+                    </div>
+                    <div class="button-set">
+                        <div class="addBtn" onclick="location='/device/dc/add_device/'">添加设备</div>
+                        <div class="delBtn" onclick="alldel()">删除设备</div>
+                    </div>
+                </form>
+            </div>
+            <table class="table-statistics">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" name="ck" id="select_all" value="{{ foo.id }}"/></th>
+                        <th>序号</th>
+                        <th>设备名称</th>
+                        <th>厂商</th>
+                        <th>型号</th>
+                        <th>内存大小</th>
+                        <th>系统版本</th>
+                        <th>创建时间</th>
+                        <th>归属人</th>
+                        <th>出借人</th>
+                        <th>其他附件</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for foo in device %}
+                    <tr>
+                        <td><input type="checkbox" name="device_ck" value="{{ foo.id }}"/></td>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ foo.device_name }}</td>
+                        <td>{{ foo.manufacturer }}</td>
+                        <td>{{ foo.model }}</td>
+                        <td>{{ foo.memory_size }}</td>
+                        <td>{{ foo.system_version}}</td>
+                        <td>{{ foo.create_time}}</td>
+                        <td>{{ foo.belonger}}</td>
+                        <td>{{ foo.belonger}}</td>
+                        <td>{{ foo.simple_desc|truncatechars:15}}</td>
+                        <td>
+                            <div class="btn-operate">
+                                <a href="/device/dc/edit_device/{{ foo.id }}/">
+                                    <button class="btn-operate"><i class="iconfont icon-blue" >&#xe626;</i></button>
+                                </a>
+                            </div>
+                            <div class="btn-operate">
+                                <a href="/device/dc/edit_device/{{ foo.id }}/">
+                                    <button class="btn-operate"><i class="iconfont icon-blue icon-big" >&#xe769;</i></button>
+                                </a>
+                            </div>
+                            <div class="btn-operate">
+                                <a href="/device/dc/edit_device/{{ foo.id }}/">
+                                    <button class="btn-operate"><i class="iconfont icon-blue" >&#xe60f;</i></button>
+                                </a>
+                            </div>
+                            <div class="btn-operate">
+                                <button class="btn-operate"><i class="iconfont icon-red" onclick="invalid('{{ foo.id }}')">&#xe602;</i></button>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <ul class="pagination">
+          {{ page_list }}
+        </ul>
+    </div>
+
+     <script type="text/javascript">
+
+    //批量删除
+        function alldel() {
+            var f = false;
+            //得到要删除的主键id
+            var arr = [];//用于存要删除的选中的id值
+
+            var ck = document.getElementsByName("device_ck");//得到一组checkbox  相当于数组
+            //循环这一组checkbox让每一个checkbox选中
+            for (var i = 0; i < ck.length; i++) {
+                if (ck[i].checked == true) {//代表选中
+                    arr.push(ck[i].value);
+                    f = true;
+                }
+            }
+            if (f==true){
+                //二次确认框
+                dialog.init({
+                    dialogId: 'all_delete_dialog',
+                    msg: '亲，此操作会删除选中的设备，请谨慎操作！！！',
+                    confirmBtnId: 'del-btn-confirm',
+                    type: 3,
+                    id: arr
+                });
+            }else {
+                dialog.init({
+                    dialogId: 'all_delete_dialog',
+                    msg: '亲，请至少选中一条进行批量删除',
+                    confirmBtnId: 'del-btn-confirm',
+                    type: 0,
+                    id: arr
+                });
+            }
+        }
+
+        function invalid(name) {
+            var id = name;
+            //二次确认框
+            dialog.init({
+                dialogId: 'delete-confirm-dialog',
+                msg: '亲，此操作会删除该设备，请谨慎操作！！！',
+                confirmBtnId: 'del-btn-confirm',
+                type: 3,
+                id: id
+            });
+        }
+
+         $(document).ready(function() {
+        }).on('click', '#del-btn-confirm', function() {
+            var id = $(this).parent().next().val();
+            del_data_ajax(id, '/device/dc/device_list/1/')
+        })
+
+
+        $('#select_all').click(function () {
+            var isChecked = $(this).prop("checked");
+            $("input[name^='device']").prop("checked", isChecked);
+        })
+    </script>
+{% endblock %}

@@ -21,6 +21,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^http/', include('ApiManager.urls', namespace="ApiManager")),
     url(r'^qacenter/', include('DataManager.urls', namespace="DataManager")),
+    url(r'^device/', include('DeviceManager.urls', namespace="DeviceManager")),
 
 ]
 

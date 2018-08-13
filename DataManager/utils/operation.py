@@ -239,6 +239,7 @@ def add_fav_data(type, **kwargs):
     favTd_opt = FavTd.objects
     id = kwargs.get('id')
     user = kwargs.get('user')
+    flag = favTd_opt.get_fav_by_tdAndUser(user, id)
     if type:
         try:
             belong_td = TdInfo.objects.get_td_by_id(id)
@@ -246,7 +247,10 @@ def add_fav_data(type, **kwargs):
             logging.error('事务信息读取失败：{belong_project}'.format(belong_td=belong_td))
             return '事务信息读取失败，请重试'
         try:
-            favTd_opt.insert_fav(user=user, belong_td=belong_td)
+            if flag == 0:
+                favTd_opt.insert_fav(user=user, belong_td=belong_td)
+            else:
+                return '已经订阅'
         except DataError:
             return '收藏信息过长'
         except Exception:
@@ -276,7 +280,7 @@ def add_td_pv(id):
     except ObjectDoesNotExist:
         logger.error('事务pv更新异常： {kwargs}'.format(id=id))
         return '更新失败，请重试'
-    return '事务pv更新成功'
+    return '{"entry":{"success":"事务pv更新成功"}}'
 
 def add_record_data(**kwargs):
     '''

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # 注册自己的APP
     'DataManager',
     'ApiManager',
+    'DeviceManager',
     'djcelery',
 ]
 
@@ -151,6 +152,7 @@ STATICFILES_DIRS=(
     'qacenter/static',
     'ApiManager/static/',
     'DataManager/static/',
+    'DeviceManager/static/',
 )
 
 STATICFILES_FINDERS = (

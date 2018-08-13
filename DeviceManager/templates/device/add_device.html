@@ -1,0 +1,137 @@
+{% extends "device/base.html" %}
+{% block title %}添加项目{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'device/assets/css/add_device.css' %}">
+    <div class="crumb">
+        <span>项目管理>添加项目</span>
+    </div>
+
+    <div class="add_content">
+        <form class="form-header" action="/device/dc/add_device/" role="form" method="POST" id="add_device">
+            <div class="">
+                <label class="form-label">*设备名称:</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="device_name" name="device_name" placeholder="请输入设备名称" value="">
+                </div>
+            </div>
+            <div>
+                <label class="form-label">*厂商:</label>
+                <div class="form-group">
+                    <select name="manufacturer" id="manufacturer" class="form-control">
+                        <option value="请选择厂商">请选择厂商</option>
+                        <option value="华为">华为</option>
+                        <option value="苹果">苹果</option>
+                        <option value="三星">三星</option>
+                        <option value="小米">小米</option>
+                        <option value="oppo">oppo</option>
+                        <option value="vivo">vivo</option>
+                        <option value="goggle">goggle</option>
+                        <option value="魅族">魅族</option>
+                        <option value="联想">联想</option>
+                        <option value="酷派">酷派</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label">*型号:</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="model" name="model" placeholder="请输入型号" value=""/>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label">*系统版本:</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="system_version" name="system_version" placeholder="请输入系统版本" value=""/>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label">*内存大小:</label>
+                <div class="form-group">
+                    <select name="memory_size" id="memory_size" class="form-control">
+                        <option value="请选择内存大小">请选择内存大小</option>
+                        <option value="8G">8G</option>
+                        <option value="16G">16G</option>
+                        <option value="32G">32G</option>
+                        <option value="64G">64G</option>
+                        <option value="128G">128G</option>
+                        <option value="256G">256G</option>
+                        <option value="512G">512G</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label">*归属人:</label>
+                <div class="form-group">
+                    <select name="belonger" id="belonger" class="form-control">
+                        <option value="请选择归属人">请选择归属人</option>
+                        {% for foo in belonger %}
+                            <option value="{{ foo.username }}">{{ foo.username }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label" for="simple_desc">其他附件:</label>
+                <textarea id="simple_desc" name="simple_desc" class="form-group-text form-control" placeholder="是否有其他附件，比如：耳机、充电器..." >{{ simple_desc }}</textarea>
+            </div>
+
+            <div class="add-button-div">
+                <input type="button" id="addDevice" class="add-button" value="保存" onclick="info_ajax('#add_device', '/device/dc/add_device/')">
+            </div>
+        </form>
+
+{#        <div class="admin-biaogelist" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">#}
+{#            <div class="am-tabs am-margin">#}
+{#                <div class="am-tabs-bd">#}
+{#                    <div class="am-tab-panel" id="tab1">#}
+{#                        <form class="form-horizontal" id="form_message" action="/qacenter/add_project/" role="form" method="POST">#}
+{#                            <div class="form-group">#}
+{#                                <div class="input-group col-md-4 col-md-offset-1">#}
+{#                                    <div class="input-group-addon" style="color: #0a628f">项目名称</div>#}
+{#                                    <input type="text" class="form-control" id="case_name" name="case_name"#}
+{#                                           placeholder="请输入项目名称">#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                            <div class="form-group">#}
+{#                                <div class="input-group col-md-4 col-md-offset-1">#}
+{#                                    <div class="input-group-addon" style="color: #0a628f">负责人   </div>#}
+{#                                    <input type="text" class="form-control" id="case_name" name="case_name"#}
+{#                                           placeholder="请输入负责人">#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                            <div class="form-group">#}
+{#                                <div class="input-group col-md-4 col-md-offset-1">#}
+{#                                    <div class="input-group-addon" style="color: #0a628f">测试人员</div>#}
+{#                                    <input type="text" class="form-control" id="case_name" name="case_name"#}
+{#                                           placeholder="请输入测试人员">#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                            <div class="form-group">#}
+{#                                <div class="input-group col-md-4 col-md-offset-1">#}
+{#                                    <div class="input-group-addon" style="color: #0a628f">简要描述</div>#}
+{#                                    <input type="text" class="form-control" id="case_name" name="case_name"#}
+{#                                           placeholder="项目简单概述">#}
+{#                                    </select>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </form>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="addBtn"><input type="submit" id="add_project" class="addBtn" value="保存"></div>#}
+    </div>
+
+
+
+{% endblock %}
