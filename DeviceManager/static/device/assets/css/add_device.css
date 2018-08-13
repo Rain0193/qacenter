@@ -4,8 +4,8 @@
     top: 100px;
     left: 200px;
     right: 50px;
-    width: 630px;
-    height: 70%;
+    width: 700px;
+    height: 78%;
     overflow: hidden;
     padding-top:10px;
     padding-bottom:30px;
@@ -90,7 +90,7 @@
 }
 
 .form-header .add-button-div{
-    margin-top:590px;
+    margin-top:660px;
 }
 .form-header .add-button{
     margin-top: 200px;

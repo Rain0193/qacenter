@@ -49,7 +49,7 @@ def device_list(request, id):
     else:
         filter_query = set_filter_session(request)
         dev_list = get_pager_info(
-            DeviceInfo, filter_query, '/device/dc/device_list/', id)
+            DeviceInfo, filter_query, '/device/dc/device_list/1/', id)
         belonger = UserInfo.objects.filter(type=1)
         manage_info = {
             'account': account,

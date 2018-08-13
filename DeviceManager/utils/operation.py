@@ -16,9 +16,9 @@ def add_device_data(type, **kwargs):
     :return: ok or tips
     """
     device_opt = DeviceInfo.objects
-    device_name = kwargs.get('device_name')
+    device_number = kwargs.get('device_number')
     if type:
-        if device_opt.get_dev_name(device_name) < 1:
+        if device_opt.get_dev_name(device_number) < 1:
             try:
                 device_opt.insert_device(**kwargs)
             except DataError:
@@ -28,7 +28,7 @@ def add_device_data(type, **kwargs):
                 return '添加失败，请重试'
             logger.info('设备添加成功：{kwargs}'.format(kwargs=kwargs))
         else:
-            return '该设备已存在，请重新命名'
+            return '该设备编号已存在，请重新命名'
     else:
         try:
             device_opt.update_device(kwargs.pop('id'), **kwargs)

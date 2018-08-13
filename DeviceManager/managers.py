@@ -9,6 +9,7 @@ class DeviceInfoManager(models.Manager):
     def update_device(self, id, **kwargs):  # 如此update_time才会自动更新！！
         obj = self.get(id=id)
         obj.device_name = kwargs.get('device_name')
+        obj.device_number = kwargs.get('device_number')
         obj.manufacturer = kwargs.get('manufacturer')
         obj.model = kwargs.get('model')
         obj.memory_size = kwargs.get('memory_size')
@@ -22,10 +23,10 @@ class DeviceInfoManager(models.Manager):
         obj.lender = ''
         obj.save()
 
-    def get_dev_name(self, dev_name, type=True, id=None):
+    def get_dev_name(self, device_number, type=True, id=None):
         if type:
-            return self.filter(device_name__exact=dev_name).count()
+            return self.filter(device_number__exact=device_number).count()
         else:
             if id is not None:
                 return self.values('device_name').filter(id__in=id)
-            return self.get(device_name__exact=dev_name)
+            return self.get(device_name__exact=device_number)

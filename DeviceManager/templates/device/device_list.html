@@ -52,6 +52,7 @@
                         <th><input type="checkbox" name="ck" id="select_all" value="{{ foo.id }}"/></th>
                         <th>序号</th>
                         <th>设备名称</th>
+                        <th>设备编号</th>
                         <th>品牌</th>
                         <th>型号</th>
                         <th>内存大小</th>
@@ -69,6 +70,7 @@
                         <td><input type="checkbox" name="device_ck" value="{{ foo.id }}"/></td>
                         <td>{{ forloop.counter }}</td>
                         <td>{{ foo.device_name }}</td>
+                        <td>{{ foo.device_number }}</td>
                         <td>{{ foo.manufacturer }}</td>
                         <td>{{ foo.model }}</td>
                         <td>{{ foo.memory_size }}</td>

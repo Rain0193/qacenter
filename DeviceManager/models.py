@@ -36,6 +36,7 @@ class DeviceInfo(BaseTable):
         db_table = 'Device_DeviceInfo'
 
     device_name = models.CharField('设备名称',max_length=20)
+    device_number = models.CharField('设备编号',max_length=50)
     manufacturer = models.CharField('厂商',max_length=20)
     model = models.CharField('型号',max_length=20)
     memory_size = models.CharField('内存大小',max_length=20)
