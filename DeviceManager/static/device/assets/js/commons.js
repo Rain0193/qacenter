@@ -198,6 +198,30 @@ function del_data_ajax(id, url) {
     });
 }
 
+function del_lender_ajax(id, url) {
+    var data = {
+        "id": id,
+        'mode': 'clear'
+    };
+    $.ajax({
+        type: 'post',
+        url: url,
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        success: function (data) {
+            if (data !== 'ok') {
+                myAlertSuccess(data);
+            }
+            else {
+                myAlertSuccess(data);
+                window.location.reload();
+            }
+        },
+        error: function () {
+            myAlertFail('Sorry，服务器可能开小差啦, 请重试!');
+        }
+    });
+}
 
 /*提示 弹出*/
 function myAlertSuccess(data) {

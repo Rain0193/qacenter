@@ -242,7 +242,7 @@
                 });
             }
             var kwStr = JSON.stringify(kwMap);
-            var content
+            var content = {}
             localStorage.setItem("TD_INPUT_" + id, kwStr);
             $.ajax({
                 url: url,

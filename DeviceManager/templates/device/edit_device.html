@@ -1,0 +1,101 @@
+{% extends "device/base.html" %}
+{% block title %}添加项目{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'device/assets/css/add_device.css' %}">
+    <div class="crumb">
+        <span>项目管理>添加项目</span>
+    </div>
+
+    <div class="add_content">
+        <form class="form-header" action="/device/dc/edit_device/" role="form" method="POST" id="edit_device">
+            <div class="form-group" hidden>
+                 <label class="form-label" for="id" hidden>索引值：</label>
+                 <div class="form-group">
+                     <input name="id" type="text" class="form-control" id="id" placeholder="索引值" value="{{ deviceInfo.id }}" hidden>
+                 </div>
+            </div>
+            <div class="">
+                <label class="form-label">*设备名称:</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="device_name" name="device_name" placeholder="请输入设备名称" value="{{ deviceInfo.device_name }}">
+                </div>
+            </div>
+            <div>
+                <label class="form-label">*厂商:</label>
+                <div class="form-group">
+                    <select name="manufacturer" id="manufacturer" class="form-control">
+                        <option value="{{ deviceInfo.manufacturer }}">{{ deviceInfo.manufacturer }}</option>
+                        <option value="华为" {% ifequal deviceInfo.manufacturer '华为' %} hidden {% endifequal %}>华为</option>
+                        <option value="苹果" {% ifequal deviceInfo.manufacturer '苹果' %} hidden {% endifequal %}>苹果</option>
+                        <option value="三星" {% ifequal deviceInfo.manufacturer '三星' %} hidden {% endifequal %}>三星</option>
+                        <option value="小米" {% ifequal deviceInfo.manufacturer '小米' %} hidden {% endifequal %}>小米</option>
+                        <option value="oppo" {% ifequal deviceInfo.manufacturer 'oppo' %} hidden {% endifequal %}>oppo</option>
+                        <option value="vivo" {% ifequal deviceInfo.manufacturer 'vivo' %} hidden {% endifequal %}>vivo</option>
+                        <option value="goggle" {% ifequal deviceInfo.manufacturer 'goggle' %} hidden {% endifequal %}>goggle</option>
+                        <option value="魅族" {% ifequal deviceInfo.manufacturer '魅族' %} hidden {% endifequal %}>魅族</option>
+                        <option value="联想" {% ifequal deviceInfo.manufacturer '联想' %} hidden {% endifequal %}>联想</option>
+                        <option value="酷派" {% ifequal deviceInfo.manufacturer '酷派' %} hidden {% endifequal %}>酷派</option>
+                        <option value="其他" {% ifequal deviceInfo.manufacturer '其他' %} hidden {% endifequal %}>其他</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label">*型号:</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="model" name="model" placeholder="请输入型号" value="{{ deviceInfo.model }}"/>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label">*系统版本:</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="system_version" name="system_version" placeholder="请输入系统版本" value="{{ deviceInfo.system_version }}"/>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label">*内存大小:</label>
+                <div class="form-group">
+                    <select name="memory_size" id="memory_size" class="form-control">
+                        <option value="{{ deviceInfo.memory_size }}">{{ deviceInfo.memory_size }}</option>
+                        <option value="8G" {% ifequal deviceInfo.memory_size '8G' %} hidden {% endifequal %}>8G</option>
+                        <option value="16G" {% ifequal deviceInfo.memory_size '16G' %} hidden {% endifequal %}>16G</option>
+                        <option value="32G" {% ifequal deviceInfo.memory_size '32G' %} hidden {% endifequal %}>32G</option>
+                        <option value="64G" {% ifequal deviceInfo.memory_size '64G' %} hidden {% endifequal %}>64G</option>
+                        <option value="128G" {% ifequal deviceInfo.memory_size '128G' %} hidden {% endifequal %}>128G</option>
+                        <option value="256G" {% ifequal deviceInfo.memory_size '256G' %} hidden {% endifequal %}>256G</option>
+                        <option value="512G" {% ifequal deviceInfo.memory_size '512G' %} hidden {% endifequal %}>512G</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label">*归属人:</label>
+                <div class="form-group">
+                    <select name="belonger" id="belonger" class="form-control">
+                        <option value="{{ deviceInfo.belonger }}">{{ deviceInfo.belonger }}</option>
+                        {% for foo in belonger %}
+                            {% ifnotequal deviceInfo.belonger foo.username %}
+                                <option value="{{ foo.username }}">{{ foo.username }}</option>
+                            {% endifnotequal %}
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="form-label" for="simple_desc">其他附件:</label>
+                <textarea id="simple_desc" name="simple_desc" class="form-group-text form-control" placeholder="是否有其他附件，比如：耳机、充电器..." >{{ deviceInfo.simple_desc }}</textarea>
+            </div>
+
+            <div class="add-button-div">
+                <input type="button" id="addDevice" class="add-button" value="保存" onclick="info_ajax('#edit_device', '/device/dc/edit_device/{{ deviceInfo.id }}/')">
+            </div>
+        </form>
+    </div>
+
+
+
+{% endblock %}

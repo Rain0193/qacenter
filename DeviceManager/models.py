@@ -41,5 +41,6 @@ class DeviceInfo(BaseTable):
     memory_size = models.CharField('内存大小',max_length=20)
     system_version = models.CharField('系统版本', max_length=20)
     belonger = models.CharField('归属人', max_length=20)
-    simple_desc = models.CharField('归属人', max_length=100)
+    lender = models.CharField('出借人', max_length=20)
+    simple_desc = models.CharField('其他附件', max_length=100)
     objects = DeviceInfoManager()

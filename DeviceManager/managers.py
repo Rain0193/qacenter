@@ -14,6 +14,12 @@ class DeviceInfoManager(models.Manager):
         obj.memory_size = kwargs.get('memory_size')
         obj.system_version = kwargs.get('system_version')
         obj.belonger = kwargs.get('belonger')
+        obj.simple_desc = kwargs.get('simple_desc')
+        obj.save()
+
+    def clear_lender(self, id):
+        obj = self.get(id=id)
+        obj.lender = ''
         obj.save()
 
     def get_dev_name(self, dev_name, type=True, id=None):

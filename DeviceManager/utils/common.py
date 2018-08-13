@@ -44,6 +44,10 @@ def set_filter_session(request):
     :param request:
     :return:
     """
+    # 出现数据工厂DataManager登录，DeviceManager没有进入index页面，重新初始化下面session
+    request.session['device_name'] = ''
+    request.session['manufacturer'] = '请选择厂商'
+    request.session['belonger'] = '请选择归属人'
 
     if 'device_name' in request.POST.keys():
         request.session['device_name'] = request.POST.get('device_name')

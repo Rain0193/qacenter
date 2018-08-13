@@ -55,3 +55,18 @@ def del_device_data(id):
         return '删除异常，请重试'
     logger.info('{id} 设备已删除'.format(id=id))
     return 'ok'
+
+def del_device_lender(id):
+    """
+    根据设备索引清空设备出借人
+    :param id: str or int: 设备索引
+    :return: ok or tips
+    """
+    try:
+
+        DeviceInfo.objects.clear_lender(id)
+
+    except ObjectDoesNotExist:
+        return '清空出借人异常，请重试'
+    logger.info('{id} 设备出借人已清空'.format(id=id))
+    return '归还成功'

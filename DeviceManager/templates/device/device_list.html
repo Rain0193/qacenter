@@ -75,7 +75,7 @@
                         <td>{{ foo.system_version}}</td>
                         <td>{{ foo.create_time}}</td>
                         <td>{{ foo.belonger}}</td>
-                        <td>{{ foo.belonger}}</td>
+                        <td>{% ifequal foo.lender '' %} 无 {% else %} {{ foo.lender}} {% endifequal %}</td>
                         <td>{{ foo.simple_desc|truncatechars:15}}</td>
                         <td>
                             <div class="btn-operate">
@@ -84,9 +84,7 @@
                                 </a>
                             </div>
                             <div class="btn-operate">
-                                <a href="/device/dc/edit_device/{{ foo.id }}/">
-                                    <button class="btn-operate"><i class="iconfont icon-blue icon-big" >&#xe769;</i></button>
-                                </a>
+                                <button class="btn-operate"><i class="iconfont icon-blue icon-big" onclick="give_back('{{ foo.id }}')">&#xe769;</i></button>
                             </div>
                             <div class="btn-operate">
                                 <a href="/device/dc/edit_device/{{ foo.id }}/">
@@ -155,10 +153,25 @@
             });
         }
 
-         $(document).ready(function() {
+        function give_back(id){
+            var id = id;
+            //二次确认框
+            dialog.init({
+                dialogId: 'giveback-confirm-dialog',
+                msg: '亲，此操作会清空该设备的出借人，请谨慎操作！！！',
+                confirmBtnId: 'giveback-btn-confirm',
+                type: 3,
+                id: id
+            });
+        }
+
+        $(document).ready(function() {
         }).on('click', '#del-btn-confirm', function() {
             var id = $(this).parent().next().val();
             del_data_ajax(id, '/device/dc/device_list/1/')
+        }).on('click', '#giveback-btn-confirm', function() {
+            var id = $(this).parent().next().val();
+            del_lender_ajax(id, '/device/dc/device_list/1/')
         })
 
 

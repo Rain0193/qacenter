@@ -8,7 +8,7 @@ from DeviceManager.models import DeviceInfo
 from DataManager.models import UserInfo
 from DeviceManager.utils.common import get_ajax_msg, device_info_logic, set_filter_session
 from DeviceManager.utils.pagination import get_pager_info
-from DeviceManager.utils.operation import del_device_data
+from DeviceManager.utils.operation import del_device_data, del_device_lender
 from django.shortcuts import render_to_response
 
 logger = logging.getLogger('DeviceMananger')
@@ -35,10 +35,14 @@ def device_list(request, id):
     account = request.session["now_account"]
     if request.is_ajax():
         project_info = json.loads(request.body.decode('utf-8'))
-        id = project_info.get('id')
-        id_list = [int(x) for x in id.split(',')]
         if 'mode' in project_info.keys():
-            msg = del_device_data(id_list)
+            if project_info.get('mode') == 'del':
+                id = project_info.get('id')
+                id_list = [int(x) for x in id.split(',')]
+                msg = del_device_data(id_list)
+            else:
+                id = project_info.get('id')
+                msg = del_device_lender(id)
         # else:
         #     msg = project_info_logic(type=False, **project_info)
         return HttpResponse(get_ajax_msg(msg, 'ok'))
@@ -79,4 +83,29 @@ def add_device(request):
             'belonger': belonger
         }
         return render_to_response('device/add_device.html', manage_info)
+
+
+@login_check
+def edit_device(request, id):
+    """
+    编辑设备
+    :param request:
+    :param id: 设备id
+    :return:
+    """
+    account = request.session["now_account"]
+    if request.is_ajax():
+        device_info = json.loads(request.body.decode('utf-8'))
+        msg = device_info_logic(False, **device_info)
+        return HttpResponse(get_ajax_msg(msg, '/device/dc/device_list/1/'))
+    elif request.method == 'GET':
+        deviceInfo = DeviceInfo.objects.get(id=id)
+        belonger = UserInfo.objects.filter(type=1)
+        manage_info = {
+            'account': account,
+            'role': request.session["role"],
+            'deviceInfo': deviceInfo,
+            'belonger': belonger
+        }
+        return render_to_response('device/edit_device.html', manage_info)
 
