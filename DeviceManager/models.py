@@ -40,7 +40,7 @@ class DeviceInfo(BaseTable):
     manufacturer = models.CharField('品牌',max_length=20)
     model = models.CharField('型号',max_length=20)
     memory_size = models.CharField('内存大小',max_length=20)
-    system_version = models.CharField('系统版本', max_length=20)
+    system_version = models.CharField('系统版本', max_length=50)
     belonger = models.CharField('归属人', max_length=20)
     lender = models.CharField('出借人', max_length=20)
     simple_desc = models.CharField('其他附件', max_length=100)

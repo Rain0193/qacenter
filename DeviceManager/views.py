@@ -55,7 +55,7 @@ def device_list(request, id):
     else:
         filter_query = set_filter_session(request)
         dev_list = get_pager_info(
-            DeviceInfo, filter_query, '/device/dc/device_list/1/', id)
+            DeviceInfo, filter_query, '/device/dc/device_list/', id)
         belonger = UserInfo.objects.filter(type=1)
         manage_info = {
             'account': account,
@@ -130,7 +130,7 @@ def operate_record(request, id):
     else:
         filter_query = set_filter_session(request)
         dev_list = get_pager_info(
-            OperateRecord, filter_query, '/device/dc/operate_record/1/', id)
+            OperateRecord, filter_query, '/device/dc/operate_record/', id)
         manage_info = {
             'account': account,
             'role': request.session["role"],
