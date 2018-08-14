@@ -37,10 +37,11 @@ function info_ajax(id, url) {
         contentType: "application/json",
         success: function (data) {
             if (data !== 'ok') {
-                if (data.indexOf('成功') !== -1) {
+                if (data.indexOf('/device/') !== -1) {
                     myAlertSuccess("成功");
+                    window.location.href = data;
                 } else {
-                    myAlertFail(data);
+                    myAlertSuccess(data);
                 }
             }
             else {

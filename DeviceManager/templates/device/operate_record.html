@@ -1,0 +1,73 @@
+{% extends "device/base.html" %}
+{% block title %}操作记录{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'device/assets/css/device_list.css' %}">
+
+<div class="crumb">
+    <span>设备管理>操作记录</span>
+</div>
+    <div class="content">
+        <div class="tab-statistics">
+            <div class="search">
+                <form class="form-header" action="/device/dc/operate_record/1/" role="form" method="POST" id="device_list">
+                    <div class="search-content">
+                        <input type="text" class="form-control" id="device_name" name="device_name" placeholder="请输入设备名称" value="{{ info.device_name }}"/>
+                        <input type="text" class="form-control" id="device_number" name="device_number" placeholder="请输入设备编号" value="{{ info.device_number }}"/>
+                        <button id="addDevice" class="search-button" value="搜索">搜索</button>
+                    </div>
+                </form>
+            </div>
+            <table class="table-statistics">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" name="ck" id="select_all" value="{{ foo.id }}"/></th>
+                        <th>序号</th>
+                        <th>设备名称</th>
+                        <th>设备编号</th>
+                        <th>操作人</th>
+                        <th>操作时间</th>
+                        <th>操作记录</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for foo in device %}
+                    <tr>
+                        <td><input type="checkbox" name="device_ck" value="{{ foo.id }}"/></td>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ foo.belong_device.device_name }}</td>
+                        <td>{{ foo.device_number }}</td>
+                        <td>{{ foo.operater }}</td>
+                        <td>{{ foo.create_time }}</td>
+                        <td>
+                            <div id = "record-result" class="record-result">{{ foo.operate_record|truncatechars:90 }}</div>
+                            <span id="result-hidden" hidden>{{ foo.operate_record }}</span>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <ul class="pagination">
+          {{ page_list }}
+        </ul>
+    </div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".record-result").mouseover(function (e) {
+            var tips = '<div id="record-tips" class="record-tips record-tips{{ forloop.counter0 }}">\n' +
+                '                            <div id="Canvas" class="Canvas"></div>\n' +
+                '                        </div>'
+            $(this).append(tips);
+            console.log($(this).next("#result-hidden")[0].innerText)
+            result = $(this).next("#result-hidden")[0].innerText;
+            jsonformat.processFormat(result);
+        });
+        $(".record-result").mouseout(function (e) {
+            $("#record-tips").remove();
+        });
+    });
+</script>
+{% endblock %}

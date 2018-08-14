@@ -119,7 +119,7 @@ if DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'qacenter2',  # 新建数据库名
+            'NAME': 'qacenter',  # 新建数据库名
             'USER': 'root',  # 数据库登录名
             'PASSWORD': '123456',  # 数据库登录密码
             'HOST': '127.0.0.1',  # 数据库所在服务器ip地址

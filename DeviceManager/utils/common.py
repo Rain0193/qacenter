@@ -15,9 +15,10 @@ def get_ajax_msg(msg, success):
     return success if msg is 'ok' else msg
 
 
-def device_info_logic(type=True, **kwargs):
+def device_info_logic(type=True, *account, **kwargs):
     """
     设备信息逻辑处理
+    :param account: 操作人
     :param type: boolean:True 默认新增设备
     :param kwargs: dict: 设备信息
     :return:
@@ -35,7 +36,7 @@ def device_info_logic(type=True, **kwargs):
     if kwargs.get('belonger') is '':
         return '归属人不能为空'
 
-    return add_device_data(type, **kwargs)
+    return add_device_data(type, account, **kwargs)
 
 
 def set_filter_session(request):
@@ -46,11 +47,14 @@ def set_filter_session(request):
     """
     # 出现数据工厂DataManager登录，DeviceManager没有进入index页面，重新初始化下面session
     request.session['device_name'] = ''
+    request.session['device_number'] = ''
     request.session['manufacturer'] = '请选择厂商'
     request.session['belonger'] = '请选择归属人'
 
     if 'device_name' in request.POST.keys():
         request.session['device_name'] = request.POST.get('device_name')
+    if 'device_number' in request.POST.keys():
+        request.session['device_number'] = request.POST.get('device_number')
     if 'manufacturer' in request.POST.keys():
         request.session['manufacturer'] = request.POST.get('manufacturer')
     if 'belonger' in request.POST.keys():
@@ -58,6 +62,7 @@ def set_filter_session(request):
 
     filter_query = {
         'device_name': request.session['device_name'],
+        'device_number': request.session['device_number'],
         'manufacturer': request.session['manufacturer'],
         'belonger': request.session['belonger']
     }

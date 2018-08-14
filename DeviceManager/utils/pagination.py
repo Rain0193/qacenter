@@ -1,5 +1,5 @@
 from django.utils.safestring import mark_safe
-
+from DeviceManager.models import DeviceInfo
 class PageInfo(object):
     """
     分页类
@@ -98,6 +98,7 @@ def get_pager_info(Model, filter_query, url, id, per_items=12):
     obj = Model.objects
     if filter_query:
         device_name = filter_query.get('device_name')
+        device_number = filter_query.get('device_number')
         manufacturer = filter_query.get('manufacturer')
         belonger = filter_query.get('belonger')
 
@@ -112,6 +113,18 @@ def get_pager_info(Model, filter_query, url, id, per_items=12):
             obj = obj.filter(belonger__contains=belonger)
         elif device_name is not '':
             obj = obj.filter(device_name__contains=device_name)
+        else:
+            obj = obj.all()
+
+    if url == '/device/dc/operate_record/':
+        if device_number is not '' and device_name is not '':
+            belong_device = DeviceInfo.objects.filter(device_name__contains=device_name)
+            obj = obj.filter(belong_device__contains=belong_device).filter(device_number__contains=device_number)
+        elif device_name is not '':
+            belong_device = DeviceInfo.objects.filter(device_name__contains=device_name)
+            obj = obj.filter(belong_device__contains=belong_device)
+        elif device_number is not '':
+            obj = obj.filter(device_number__contains=device_number)
         else:
             obj = obj.all()
 

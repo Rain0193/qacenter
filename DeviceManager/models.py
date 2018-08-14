@@ -1,6 +1,6 @@
 from django.db import models
 
-from DeviceManager.managers import DeviceInfoManager
+from DeviceManager.managers import DeviceInfoManager, OperateRecordManager
 from django.db.models.fields.related import ManyToManyField
 # Create your models here.
 
@@ -37,7 +37,7 @@ class DeviceInfo(BaseTable):
 
     device_name = models.CharField('设备名称',max_length=20)
     device_number = models.CharField('设备编号',max_length=50)
-    manufacturer = models.CharField('厂商',max_length=20)
+    manufacturer = models.CharField('品牌',max_length=20)
     model = models.CharField('型号',max_length=20)
     memory_size = models.CharField('内存大小',max_length=20)
     system_version = models.CharField('系统版本', max_length=20)
@@ -45,3 +45,15 @@ class DeviceInfo(BaseTable):
     lender = models.CharField('出借人', max_length=20)
     simple_desc = models.CharField('其他附件', max_length=100)
     objects = DeviceInfoManager()
+
+
+class OperateRecord(BaseTable):
+    class Meta:
+        verbose_name = '操作记录'
+        db_table = 'Device_OperateRecord'
+
+    operater = models.CharField('操作人',max_length=20)
+    device_name = models.CharField('设备名称', max_length=50)
+    device_number = models.CharField('设备编号',max_length=50)
+    operate_record = models.TextField('操作记录')
+    objects = OperateRecordManager()

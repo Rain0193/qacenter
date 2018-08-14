@@ -159,3 +159,33 @@
     padding-left: 5px;
     margin-left: 5px;
 }
+
+
+.record-result {
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    line-height: 40px;
+    height: 40px;
+}
+.record-tips {
+	position:fixed;
+	height:auto;
+	z-index:2002;
+	padding:15px 20px;
+	border-radius:3px;
+	background:#FFFFFF;
+	box-shadow:1px 2px 4px 1px #E5E9EF;
+	font-size:12px;
+	color:#444444;
+	line-height:15px;
+	text-align:left;
+    overflow: auto;
+}
+    .record-tips p{
+    	border-bottom:1px dashed #DDDDDD;
+    }
+    .record-tips span{
+    	font-weight:bold;
+    	text-align:right;
+    }

@@ -1,7 +1,6 @@
 from django.db import models
 
 '''设备信息表操作'''
-
 class DeviceInfoManager(models.Manager):
     def insert_device(self, **kwargs):
         self.create(**kwargs)
@@ -35,3 +34,18 @@ class DeviceInfoManager(models.Manager):
             if id is not None:
                 return self.values('device_name').filter(id__in=id)
             return self.get(device_name__exact=device_number)
+
+    def get_device_by_number(self, device_number):
+        return self.get(device_number=device_number)
+
+    def get_device_by_id(self, id):
+        return self.get(id=id)
+
+    def get_device_by_ids(self, id):
+        return self.filter(id__in=id)
+
+
+'''设备操作记录表'''
+class OperateRecordManager(models.Manager):
+    def insert_record(self, operater, device_number, operate_record, device_name):
+        self.create(operater=operater, device_number=device_number, operate_record=operate_record, device_name=device_name)

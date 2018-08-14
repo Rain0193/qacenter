@@ -1,5 +1,5 @@
 {% extends "device/base.html" %}
-{% block title %}设备管理{% endblock %}
+{% block title %}设备列表{% endblock %}
 {% load staticfiles %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'device/assets/css/device_list.css' %}">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="button-set">
                         <div class="addBtn" onclick="location='/device/dc/add_device/'">添加设备</div>
-                        <div class="delBtn" onclick="alldel()">删除设备</div>
+{#                        <div class="delBtn" onclick="alldel()">删除设备</div>#}
                     </div>
                 </form>
             </div>
