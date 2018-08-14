@@ -50,6 +50,7 @@ Key Features
     ```bash
         python manage.py makemigrations DataManager #生成数据工厂数据迁移脚本
         python manage.py makemigrations ApiManager #生成接口自动化平台数据迁移脚本
+        python manage.py makemigrations DeviceManager #生成设备管理平台数据迁移脚本
         python manage.py migrate  #应用到db生成数据表
     ```
 

@@ -6,7 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/qacenter/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/qacenter/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,15 +43,6 @@
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="operate_record.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DeviceManager/templates/device/operate_record.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -110,7 +101,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/qacenter/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="92">
@@ -118,6 +109,15 @@
               <folding>
                 <element signature="e#309#318#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -192,7 +192,6 @@
         <option value="$PROJECT_DIR$/ApiManager/templates/api/extent_report_template.html" />
         <option value="$PROJECT_DIR$/ApiManager/__init__.py" />
         <option value="$PROJECT_DIR$/ApiManager/utils/operation.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/ApiManager/views.py" />
         <option value="$PROJECT_DIR$/ApiManager/utils/common.py" />
         <option value="$PROJECT_DIR$/ApiManager/static/api/assets/css/admin.css" />
@@ -239,6 +238,7 @@
         <option value="$PROJECT_DIR$/DeviceManager/views.py" />
         <option value="$PROJECT_DIR$/DeviceManager/utils/pagination.py" />
         <option value="$PROJECT_DIR$/qacenter/settings.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -659,13 +659,13 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16791044" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16791044" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.4002181" />
+      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.4002181" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -841,13 +841,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.virtualenvs/Python36-32-XfPJqKt7/Lib/site-packages/flower/static/js/jquery.dataTables.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="145" column="376" selection-start-line="145" selection-start-column="376" selection-end-line="145" selection-end-column="376" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ApiManager/templates/api/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
@@ -1229,6 +1222,13 @@
           <folding>
             <element signature="e#309#318#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
         </state>
       </provider>
     </entry>
