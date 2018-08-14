@@ -23,6 +23,11 @@ class DeviceInfoManager(models.Manager):
         obj.lender = ''
         obj.save()
 
+    def update_lender(self, id, lender):
+        obj = self.get(id=id)
+        obj.lender = lender
+        obj.save()
+
     def get_dev_name(self, device_number, type=True, id=None):
         if type:
             return self.filter(device_number__exact=device_number).count()

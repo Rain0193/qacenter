@@ -892,5 +892,30 @@ ul.pagination li a.active {
 
 ul.pagination li a:hover:not(.active) {background-color: #ddd;}
 
+.dialog-lend-device{
+    position:fixed;
+    left:40%;
+    top:30%;
+    width:400px;
+    height:240px;
+    background:#FFF;
+    z-index:2001;
+    padding-top:10px;
+    border-radius:3px;
+}
+.form-header .form-label{
+    height:40px;
+    width: 80px;
+    font-size: 15px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
 
-
+.form-header .form-group{
+    position: relative;
+    width:1000px;
+    font-size: 40px;
+    height: 40px;
+    border-radius:3px ;
+}

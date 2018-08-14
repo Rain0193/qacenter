@@ -70,3 +70,20 @@ def del_device_lender(id):
         return '清空出借人异常，请重试'
     logger.info('{id} 设备出借人已清空'.format(id=id))
     return '归还成功'
+
+def update_device_lender(id, lender):
+    """
+    根据设备索引更新设备出借人
+    :param id: str or int: 设备索引
+    :return: ok or tips
+    """
+    try:
+        device_lender = DeviceInfo.objects.values('lender').filter(id=id)
+        if device_lender[0].get('lender') != '':
+            return '该设备已借出，请先操作归还，再出借'
+        DeviceInfo.objects.update_lender(id, lender)
+
+    except ObjectDoesNotExist:
+        return '更新设备出借人异常，请重试'
+    logger.info('{id} 设备出借成功'.format(id=id))
+    return '借出成功'

@@ -8,7 +8,7 @@ from DeviceManager.models import DeviceInfo
 from DataManager.models import UserInfo
 from DeviceManager.utils.common import get_ajax_msg, device_info_logic, set_filter_session
 from DeviceManager.utils.pagination import get_pager_info
-from DeviceManager.utils.operation import del_device_data, del_device_lender
+from DeviceManager.utils.operation import del_device_data, del_device_lender, update_device_lender
 from django.shortcuts import render_to_response
 
 logger = logging.getLogger('DeviceMananger')
@@ -40,11 +40,17 @@ def device_list(request, id):
                 id = project_info.get('id')
                 id_list = [int(x) for x in id.split(',')]
                 msg = del_device_data(id_list)
-            else:
+            elif project_info.get('mode') == 'clear':
                 id = project_info.get('id')
                 msg = del_device_lender(id)
+            elif project_info.get('mode') == 'lend':
+                id = project_info.get('id')
+                lender = project_info.get('lender')
+                msg = update_device_lender(id, lender)
         # else:
-        #     msg = project_info_logic(type=False, **project_info)
+        #     id = project_info.get('id')
+        #     lender = project_info.get('lender')
+        #     msg = update_device_lender(id, lender)
         return HttpResponse(get_ajax_msg(msg, 'ok'))
     else:
         filter_query = set_filter_session(request)

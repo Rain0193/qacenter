@@ -37,11 +37,10 @@ function info_ajax(id, url) {
         contentType: "application/json",
         success: function (data) {
             if (data !== 'ok') {
-                if (data.indexOf('/device/') !== -1) {
+                if (data.indexOf('成功') !== -1) {
                     myAlertSuccess("成功");
-                    window.location.href = data;
                 } else {
-                    myAlertSuccess(data);
+                    myAlertFail(data);
                 }
             }
             else {
@@ -198,10 +197,10 @@ function del_data_ajax(id, url) {
     });
 }
 
-function del_lender_ajax(id, url) {
+function clear_lender_ajax(id, mode, url) {
     var data = {
         "id": id,
-        'mode': 'clear'
+        'mode': mode
     };
     $.ajax({
         type: 'post',
@@ -209,12 +208,37 @@ function del_lender_ajax(id, url) {
         data: JSON.stringify(data),
         contentType: "application/json",
         success: function (data) {
-            if (data !== 'ok') {
+            if (data.indexOf('成功') !== -1) {
                 myAlertSuccess(data);
             }
             else {
-                myAlertSuccess(data);
+                myAlertFail(data);
                 window.location.reload();
+            }
+        },
+        error: function () {
+            myAlertFail('Sorry，服务器可能开小差啦, 请重试!');
+        }
+    });
+}
+
+function add_lender_ajax(id, lender, mode, url) {
+    var data = {
+        "id": id,
+        "lender":lender,
+        'mode': mode
+    };
+    $.ajax({
+        type: 'post',
+        url: url,
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        success: function (data) {
+            if (data.indexOf('成功') !== -1) {
+                myAlertLendSuccess(data);
+            }
+            else {
+                myAlertLendFail(data);
             }
         },
         error: function () {
@@ -230,7 +254,7 @@ function myAlertSuccess(data) {
         msg: data,
         type: 2
     });
-    var t=setTimeout(next,1000);
+    var t=setTimeout(next,2000);
     function next()
     {
         dialog.hide();
@@ -252,6 +276,36 @@ function myAlertFail(data) {
         window.location.reload();
     }
 }
+
+/*提示 弹出*/
+function myAlertLendSuccess(data) {
+    dialog.init({
+        dialogId: 'myAlert',
+        msg: data,
+        type: 7
+    });
+    var t=setTimeout(next,2000);
+    function next()
+    {
+        dialog.hide();
+        window.location.reload();
+    }
+}
+/*提示 弹出*/
+function myAlertLendFail(data) {
+    dialog.init({
+        dialogId: 'myAlert',
+        msg: data,
+        type: 6
+    });
+    var t=setTimeout(next,2000);
+    function next()
+    {
+        dialog.hide();
+        window.location.reload();
+    }
+}
+
 
 function module_by_project_post(url, id) {
     var params = []

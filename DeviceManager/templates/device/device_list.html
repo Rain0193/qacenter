@@ -29,7 +29,6 @@
                             <option value="其他" {% ifequal info.manufacturer '其他' %} hidden {% endifequal %}>其他</option>
                         </select>
                         <select name="belonger" id="belonger" class="form-control">
-
                             <option value="{{ info.belonger }}" selected>{{ info.belonger }}</option>
                             <option value="请选择归属人" {% ifequal info.belonger '请选择归属人' %} hidden {% endifequal %}>请选择归属人</option>
                             {% for foo in belonger %}
@@ -81,9 +80,7 @@
                         <td>{{ foo.simple_desc|truncatechars:15}}</td>
                         <td>
                             <div class="btn-operate">
-                                <a href="/device/dc/edit_device/{{ foo.id }}/">
-                                    <button class="btn-operate"><i class="iconfont icon-blue" >&#xe626;</i></button>
-                                </a>
+                                <button class="btn-operate"><i class="iconfont icon-blue" onclick="lend('{{ foo.id }}','{{ foo.device_number }}','{{ foo.device_name }}','{{ foo.memory_size }}')">&#xe626;</i></button>
                             </div>
                             <div class="btn-operate">
                                 <button class="btn-operate"><i class="iconfont icon-blue icon-big" onclick="give_back('{{ foo.id }}')">&#xe769;</i></button>
@@ -167,13 +164,29 @@
             });
         }
 
+        function lend(id, device_number, device_name, memory_size){
+            var id = id;
+            //二次确认框
+            dialog.init({
+                dialogId: 'lend-confirm-dialog',
+                msg: '(' + device_number + ')' + device_name + ','+ memory_size,
+                confirmBtnId: 'lend-btn-confirm',
+                type: 5,
+                id: id
+            });
+        }
+
         $(document).ready(function() {
         }).on('click', '#del-btn-confirm', function() {
             var id = $(this).parent().next().val();
             del_data_ajax(id, '/device/dc/device_list/1/')
         }).on('click', '#giveback-btn-confirm', function() {
             var id = $(this).parent().next().val();
-            del_lender_ajax(id, '/device/dc/device_list/1/')
+            clear_lender_ajax(id, 'clear', '/device/dc/device_list/1/')
+        }).on('click', '#lend-btn-confirm', function() {
+            var id = $(this).parent().next().val();
+            var lender = $(this).parent().parent().children().first().next().children().first().next().children().val();
+            add_lender_ajax(id, lender, 'lend', '/device/dc/device_list/1/')
         })
 
 
