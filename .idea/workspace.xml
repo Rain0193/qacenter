@@ -6,9 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/DeviceManager/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceManager/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeviceManager/utils/pagination.py" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceManager/utils/pagination.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeviceManager/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceManager/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qacenter/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/qacenter/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +26,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DeviceManager/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
+            <state relative-caret-position="333">
               <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
               <folding>
                 <element signature="e#1#12#0" expanded="true" />
@@ -37,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pagination.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pagination.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DeviceManager/utils/pagination.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="155">
-              <caret line="118" column="41" lean-forward="true" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+              <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -104,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/DeviceManager/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="43" column="53" lean-forward="true" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
+              <caret line="43" column="53" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -112,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/qacenter/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="123" column="31" selection-start-line="123" selection-start-column="25" selection-end-line="123" selection-end-column="31" />
+            <state relative-caret-position="92">
+              <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
               <folding>
                 <element signature="e#309#318#0" expanded="true" />
               </folding>
@@ -236,11 +234,11 @@
         <option value="$PROJECT_DIR$/DeviceManager/utils/operation.py" />
         <option value="$PROJECT_DIR$/DeviceManager/templates/device/operate_record.html" />
         <option value="$PROJECT_DIR$/DeviceManager/utils/common.py" />
-        <option value="$PROJECT_DIR$/qacenter/settings.py" />
         <option value="$PROJECT_DIR$/DataManager/static/data/assets/css/common.css" />
         <option value="$PROJECT_DIR$/DeviceManager/models.py" />
         <option value="$PROJECT_DIR$/DeviceManager/views.py" />
         <option value="$PROJECT_DIR$/DeviceManager/utils/pagination.py" />
+        <option value="$PROJECT_DIR$/qacenter/settings.py" />
       </list>
     </option>
   </component>
@@ -661,13 +659,13 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16791044" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16791044" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.4002181" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.4002181" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1160,16 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qacenter/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="123" column="31" selection-start-line="123" selection-start-column="25" selection-end-line="123" selection-end-column="31" />
-          <folding>
-            <element signature="e#309#318#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-207">
@@ -1207,19 +1195,9 @@
     <entry file="file://$PROJECT_DIR$/DeviceManager/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="43" column="53" lean-forward="true" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
+          <caret line="43" column="53" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DeviceManager/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
-          <folding>
-            <element signature="e#1#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1227,9 +1205,29 @@
     <entry file="file://$PROJECT_DIR$/DeviceManager/utils/pagination.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
-          <caret line="118" column="41" lean-forward="true" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+          <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeviceManager/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
+          <folding>
+            <element signature="e#1#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qacenter/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
+          <folding>
+            <element signature="e#309#318#0" expanded="true" />
           </folding>
         </state>
       </provider>
