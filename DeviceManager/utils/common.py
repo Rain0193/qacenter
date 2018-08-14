@@ -26,7 +26,7 @@ def device_info_logic(type=True, *account, **kwargs):
     if kwargs.get('device_name') is '':
         return '设备名称不能为空'
     if kwargs.get('manufacturer') is '':
-        return '厂商不能为空'
+        return '品牌不能为空'
     if kwargs.get('model') is '':
         return '型号不能为空'
     if kwargs.get('memory_size') is '':
@@ -48,7 +48,7 @@ def set_filter_session(request):
     # 出现数据工厂DataManager登录，DeviceManager没有进入index页面，重新初始化下面session
     request.session['device_name'] = ''
     request.session['device_number'] = ''
-    request.session['manufacturer'] = '请选择厂商'
+    request.session['manufacturer'] = '请选择品牌'
     request.session['belonger'] = '请选择归属人'
 
     if 'device_name' in request.POST.keys():
