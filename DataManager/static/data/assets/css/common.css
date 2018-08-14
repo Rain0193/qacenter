@@ -72,6 +72,7 @@ font-size:18px;font-style:normal;
 }
 .fixed-title a{
     text-decoration:none;
+    color: #FFFFFF
 }
 
 
@@ -162,7 +163,7 @@ li-menu {
         transition: all .3s ease-out;
 }
 .fixed-nav-list a{
-    display: block;line-height: 40px;border-top: 0px solid #E5E9EF;color: #777;background: #09C;
+    display: block;line-height: 40px;border-top: 0px solid #E5E9EF;color: #FFFFFF;background: #09C;
     text-decoration:none;
 }
 .fixed-nav:hover .fixed-nav-list{
