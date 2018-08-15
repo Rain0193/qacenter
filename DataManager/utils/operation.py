@@ -280,7 +280,7 @@ def add_td_pv(id):
     except ObjectDoesNotExist:
         logger.error('事务pv更新异常： {kwargs}'.format(id=id))
         return '更新失败，请重试'
-    return '{"entry":{"success":"事务pv更新成功"}}'
+    return '{"responseCode":1,"entry":{"success":"事务pv更新成功"}}'
 
 def add_record_data(**kwargs):
     '''

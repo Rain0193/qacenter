@@ -18,7 +18,8 @@
 					'</div>'
 				].join('');
 			} else if (self.obj.type == 1) {	//确定
-				dialogHtml = self.obj.content;
+				// dialogHtml = self.obj.content;
+				dialogHtml = ['<div></div>'].join()
 			} else if (self.obj.type == 2) {	//成功
 				dialogHtml = [
 					'<div id ="' + self.obj.dialogId + '" class="info-dialog dialog">',
