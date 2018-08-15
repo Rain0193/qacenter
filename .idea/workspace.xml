@@ -6,11 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="736bbfd8-ab05-4073-81f2-c921381d36f6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/static/data/assets/js/dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/static/data/assets/js/dialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/templates/data/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/templates/data/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataManager/utils/operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/utils/operation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qacenter/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/qacenter/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,16 +39,16 @@
         <entry file="file://$PROJECT_DIR$/DataManager/templates/data/all_td.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="218">
-              <caret line="257" column="54" lean-forward="true" selection-start-line="257" selection-start-column="54" selection-end-line="258" selection-end-column="36" />
+              <caret line="257" column="54" selection-start-line="257" selection-start-column="54" selection-end-line="258" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dialog.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dialog.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/js/dialog.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="63">
-              <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="21" selection-end-column="51" />
+              <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="21" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -74,6 +69,18 @@
               <caret line="282" column="30" selection-start-line="282" selection-start-column="30" selection-end-line="282" selection-end-column="30" />
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/qacenter/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
+              <folding>
+                <element signature="e#309#318#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -182,11 +189,11 @@
         <option value="$PROJECT_DIR$/DeviceManager/views.py" />
         <option value="$PROJECT_DIR$/DeviceManager/static/device/assets/js/commons.js" />
         <option value="$PROJECT_DIR$/DeviceManager/static/device/assets/css/common.css" />
-        <option value="$PROJECT_DIR$/qacenter/settings.py" />
         <option value="$PROJECT_DIR$/DataManager/utils/operation.py" />
         <option value="$PROJECT_DIR$/DataManager/static/data/assets/js/dialog.js" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/all_td.html" />
         <option value="$PROJECT_DIR$/DataManager/templates/data/register.html" />
+        <option value="$PROJECT_DIR$/qacenter/settings.py" />
       </list>
     </option>
   </component>
@@ -218,54 +225,6 @@
             <path>
               <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
               <item name="qacenter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
-              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
-              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
-              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
-              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
-              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
-              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
-              <item name="DataManager" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
@@ -323,6 +282,11 @@
               <item name="DeviceManager" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="device" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
+              <item name="qacenter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="qacenter" type="b2602c69:ProjectViewProjectNode" />
@@ -1210,16 +1174,6 @@
         <state relative-caret-position="-966" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qacenter/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="121" column="30" selection-start-line="121" selection-start-column="30" selection-end-line="121" selection-end-column="30" />
-          <folding>
-            <element signature="e#309#318#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataManager/utils/operation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1233,7 +1187,7 @@
     <entry file="file://$PROJECT_DIR$/DataManager/templates/data/all_td.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
-          <caret line="257" column="54" lean-forward="true" selection-start-line="257" selection-start-column="54" selection-end-line="258" selection-end-column="36" />
+          <caret line="257" column="54" selection-start-line="257" selection-start-column="54" selection-end-line="258" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1257,7 +1211,17 @@
     <entry file="file://$PROJECT_DIR$/DataManager/static/data/assets/js/dialog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
-          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="21" selection-end-column="51" />
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="21" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qacenter/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
+          <folding>
+            <element signature="e#309#318#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
