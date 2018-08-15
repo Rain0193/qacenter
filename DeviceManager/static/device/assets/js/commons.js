@@ -36,13 +36,8 @@ function info_ajax(id, url) {
         data: JSON.stringify(data),
         contentType: "application/json",
         success: function (data) {
-            if (data !== 'ok') {
-                if (data.indexOf('/device/') !== -1) {
-                    myAlertSuccess("成功");
-                    window.location.href = data;
-                } else {
-                    myAlertSuccess(data);
-                }
+            if (data.indexOf('成功') !== -1) {
+                myAlertSuccess(data);
             }
             else {
                 myAlertFail(data);
@@ -184,12 +179,11 @@ function del_data_ajax(id, url) {
         data: JSON.stringify(data),
         contentType: "application/json",
         success: function (data) {
-            if (data !== 'ok') {
+            if (data.indexOf('成功') !== -1) {
                 myAlertSuccess(data);
             }
             else {
-                myAlertSuccess("删除成功");
-                window.location.reload();
+                myAlertFail(data);
             }
         },
         error: function () {
@@ -214,7 +208,6 @@ function clear_lender_ajax(id, mode, url) {
             }
             else {
                 myAlertFail(data);
-                window.location.reload();
             }
         },
         error: function () {

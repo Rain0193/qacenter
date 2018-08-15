@@ -38,7 +38,10 @@ def add_device_data(type, account, **kwargs):
         id = kwargs.pop('id')
         device_info = device_opt.get_device_by_id(id)
         try:
-            device_opt.update_device(id, **kwargs)
+            if operater == device_info.belonger:
+                device_opt.update_device(id, **kwargs)
+            else:
+                return '更新失败，只允许设备归属人操作'
         except DataError:
             return '设备信息过长'
         except Exception:
@@ -83,7 +86,11 @@ def del_device_data(id, account):
         operate_record = operate_record + ',"设备编号":' + '"' + device_number + '"'
         operate_record = operate_record + '}]'
         operate_record_opt.insert_record(operater=operater, device_number=device_number, operate_record=operate_record,device_name=device_name)
-        device_opt.filter(id__in=id).delete()
+
+        if operater == belong_device.belonger:
+            device_opt.filter(id__in=id).delete()
+        else:
+            return '删除失败，只允许设备归属人操作'
     except ObjectDoesNotExist:
         return '删除异常，请重试'
     logger.info('{id} 设备已删除'.format(id=id))
@@ -100,7 +107,10 @@ def del_device_lender(id, account):
     operater = account
     try:
         belong_device = device_opt.get_device_by_id(id)
-        DeviceInfo.objects.clear_lender(id)
+        if operater == belong_device.belonger:
+            device_opt.clear_lender(id)
+        else:
+            return '归还失败，只允许设备归属人操作'
 
     except ObjectDoesNotExist:
         return '清空出借人异常，请重试'
@@ -127,10 +137,14 @@ def update_device_lender(id, lender, account):
     operate_record_opt = OperateRecord.objects
     operater = account
     try:
-        device_lender = DeviceInfo.objects.values('lender').filter(id=id)
-        if device_lender[0].get('lender') != '':
+        belong_device = device_opt.get_device_by_id(id)
+        device_lender = belong_device.lender
+        if device_lender != '':
             return '该设备已借出，请先操作归还，再出借'
-        DeviceInfo.objects.update_lender(id, lender)
+        if operater == belong_device.belonger:
+            device_opt.update_lender(id, lender)
+        else:
+            return '借出失败，只允许设备归属人操作'
 
     except ObjectDoesNotExist:
         return '更新设备出借人异常，请重试'

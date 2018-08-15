@@ -103,7 +103,7 @@ def edit_device(request, id):
     if request.is_ajax():
         device_info = json.loads(request.body.decode('utf-8'))
         msg = device_info_logic(False, account, **device_info)
-        return HttpResponse(get_ajax_msg(msg, '/device/dc/device_list/1/'))
+        return HttpResponse(get_ajax_msg(msg, '成功'))
     elif request.method == 'GET':
         deviceInfo = DeviceInfo.objects.get(id=id)
         belonger = UserInfo.objects.filter(type=1)
