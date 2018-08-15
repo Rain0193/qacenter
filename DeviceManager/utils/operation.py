@@ -45,21 +45,20 @@ def add_device_data(type, account, **kwargs):
             logger.error('更新失败：{kwargs}'.format(kwargs=kwargs))
             return '更新失败，请重试'
         logger.info('设备更新成功：{kwargs}'.format(kwargs=kwargs))
-        belong_device = device_opt.get_device_by_number(device_number)
-        operate_record = '[{"操作":' + '"设备更新成功"},'
+        operate_record = '[{"操作":' + '"设备更新成功"},{'
         if device_info.device_name != kwargs.get('device_name'):
-            operate_record = operate_record + '{"设备名称":' + '"'+ device_info.device_name + ' 修改成: ' + kwargs.get('device_name') + '"'
+            operate_record = operate_record + '"设备名称":' + '"'+ device_info.device_name + ' 修改成: ' + kwargs.get('device_name') + '"'
         if device_info.manufacturer != kwargs.get('manufacturer'):
             operate_record = operate_record + ',"品牌":' + '"'+ device_info.manufacturer + ' 修改成: ' + kwargs.get('manufacturer') + '"'
-        if device_info.manufacturer != kwargs.get('model'):
+        if device_info.model != kwargs.get('model'):
             operate_record = operate_record + ',"型号":' + '"'+ device_info.model + ' 修改成: ' + kwargs.get('model') + '"'
-        if device_info.manufacturer != kwargs.get('memory_size'):
+        if device_info.memory_size != kwargs.get('memory_size'):
             operate_record = operate_record + ',"内存大小":' + '"'+ device_info.memory_size + ' 修改成: ' + kwargs.get('memory_size') + '"'
-        if device_info.manufacturer != kwargs.get('system_version'):
+        if device_info.system_version != kwargs.get('system_version'):
             operate_record = operate_record + ',"系统版本":' + '"'+ device_info.system_version + ' 修改成: ' + kwargs.get('system_version') + '"'
         if device_info.belonger != kwargs.get('belonger'):
             operate_record = operate_record + ',"归属人":' + '"'+ device_info.belonger + ' 修改成: ' + kwargs.get('belonger') + '"'
-        if device_info.belonger != kwargs.get('simple_desc'):
+        if device_info.simple_desc != kwargs.get('simple_desc'):
             operate_record = operate_record + ',"其他附件":' + '"'+ device_info.simple_desc + ' 修改成: ' + kwargs.get('simple_desc') + '"'
         operate_record = operate_record + '}]'
         operate_record_opt.insert_record(operater=operater, device_number=device_number, operate_record=operate_record,device_name=device_name)
